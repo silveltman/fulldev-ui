@@ -1,0 +1,55 @@
+h1 {
+	@apply text-heading-2xl font-bold leading-[1.12] text-neutral-1000;
+}
+h2 {
+	@apply text-heading-xl font-bold leading-[1.12] text-neutral-1000;
+}
+h3 {
+	@apply text-heading-lg font-bold leading-[1.12] text-neutral-1000;
+}
+h4 {
+	@apply text-heading-md font-medium leading-[1.12] text-neutral-1000;
+}
+h5 {
+	@apply text-heading-sm font-medium leading-[1.12] text-neutral-1000;
+}
+h6 {
+	@apply text-heading-xs font-medium leading-[1.12] text-neutral-1000;
+}
+p,
+ul,
+li,
+ol,
+blockquote {
+	@apply text-body-md leading-relaxed text-neutral-600;
+}
+
+.prose {
+	h1,
+	h2 {
+		@apply mb-md;
+
+		* + & {
+			@apply mt-sm;
+		}
+	}
+
+	p {
+		@apply mb-lg;
+	}
+}
+
+.prose-lg {
+	h1,
+	h2 {
+		@apply mb-lg;
+
+		* + & {
+			@apply mt-md;
+		}
+	}
+
+	p {
+		@apply mb-xl;
+	}
+}
