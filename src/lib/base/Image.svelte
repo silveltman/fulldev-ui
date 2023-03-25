@@ -1,18 +1,16 @@
 <script lang="ts">
-	// base props
 	let className = ''
 	export { className as class }
-
-	// image props
+	export let sizes: string = '100vw'
+	export let widths: number[] = [320, 640, 1024, 1280, 1920]
+	export let loading: 'eager' | 'lazy' = 'lazy'
+	export let decoding: 'async' | 'auto' | 'sync' = 'async'
+	export let ratio: number | undefined = undefined
+	export let alt: string | undefined = undefined
 	export let src: string =
-			'https://res.cloudinary.com/dsnnqav5j/image/upload/v1674074441/myimage.jpg',
-		alt: string | undefined = undefined,
-		sizes: string = '100vw',
-		widths: number[] = [320, 640, 1024, 1280, 1920],
-		loading: 'eager' | 'lazy' = 'lazy',
-		decoding: 'async' | 'auto' | 'sync' = 'async',
-		ratio: number | undefined = undefined
+		'https://res.cloudinary.com/dsnnqav5j/image/upload/v1674074441/myimage.jpg'
 
+	// functions
 	function getTransformedSrc(src: string, width: number = 1920) {
 		const baseUrl = 'https://res.cloudinary.com/dsnnqav5j/image/upload/'
 		const params =
@@ -22,6 +20,7 @@
 		return url
 	}
 
+	// computed
 	const srcset = widths.map((width) => `${getTransformedSrc(src, width)} ${width}w`).join(', ')
 </script>
 

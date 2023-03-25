@@ -26,16 +26,38 @@ blockquote {
 
 .prose {
 	h1,
-	h2 {
+	h2,
+	h3 {
 		@apply mb-md;
 
-		* + & {
-			@apply mt-sm;
+		&:not(:first-child) {
+			@apply mt-md;
 		}
 	}
 
-	p {
-		@apply mb-lg;
+	p,
+	ul {
+		@apply mb-md;
+
+		&:last-child {
+			@apply mb-0;
+		}
+	}
+
+	ul {
+		@apply flex flex-col gap-sm;
+
+		li {
+			@apply flex items-start;
+
+			&:before {
+				@apply inline-flex items-center pr-sm align-middle leading-none;
+				content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24"><path d="M382 816 154 588l57-57 171 171 367-367 57 57-424 424Z"/></svg>');
+			}
+		}
+	}
+	.button-group {
+		@apply pt-md;
 	}
 }
 
@@ -49,7 +71,11 @@ blockquote {
 		}
 	}
 
-	p {
-		@apply mb-xl;
+	p,
+	ul {
+		@apply mb-lg;
+	}
+	.button-group {
+		@apply pt-lg;
 	}
 }
