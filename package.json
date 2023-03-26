@@ -1,6 +1,6 @@
 {
 	"name": "@silveltman/fullui",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -15,12 +15,12 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js"
+			"svelte": "./dist/index.js",
+			"plugin": "./dist/plugin.cjs"
 		}
 	},
 	"files": [
-		"dist",
-		"plugin.cjs"
+		"dist"
 	],
 	"peerDependencies": {
 		"svelte": "^3.54.0"
@@ -53,11 +53,8 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
-		"@cloudinary/svelte": "^1.0.0-beta.11",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/forms": "^0.5.3",
-		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
-		"marked": "^4.3.0",
-		"mdsvex": "^0.10.6"
+		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e"
 	}
 }
