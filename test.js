@@ -206,13 +206,6 @@ module.exports = plugin(
 					heading: ['Roboto', 'sans-serif'],
 					body: ['Roboto', 'sans-serif']
 				},
-				borderRadius: {
-					box: '24px',
-					button: '12px',
-					input: '12px',
-					image: '4px',
-					eyebrow: '4px'
-				},
 				fontSize: {
 					'heading-xs': 'var(--text-heading-xs)',
 					'heading-sm': 'var(--text-heading-sm)',
@@ -277,6 +270,13 @@ module.exports = plugin(
 					xl: 'var(--space-xl)',
 					'2xl': 'var(--space-2xl)',
 					'3xl': 'var(--space-3xl)'
+				},
+				borderRadius: {
+					box: '24px',
+					button: '12px',
+					input: '12px',
+					image: '4px',
+					eyebrow: '4px'
 				}
 			}
 		}

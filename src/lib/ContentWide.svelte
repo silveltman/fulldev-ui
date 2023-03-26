@@ -25,6 +25,9 @@
 				</div>
 			{/if}
 		</Prose>
-		<Image ratio={16 / 9} />
+		<Image
+			sizes={{ base: '100vw', '2xl': '1472px' }}
+			ratio={16 / 9}
+		/>
 	</Container>
 </section>

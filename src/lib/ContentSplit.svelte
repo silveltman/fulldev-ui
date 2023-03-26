@@ -29,7 +29,7 @@
 			"
 		>
 			<Prose
-				class="lg:px-xl xl:px-2xl"
+				class={reverse ? 'lg:pl-xl xl:pl-2xl' : 'lg:pr-xl xl:pr-2xl'}
 				size={prose}
 			>
 				{#if cms.eyebrow}
@@ -44,7 +44,7 @@
 				{/if}
 
 				{#if cms.button_primary || cms.button_secondary}
-					<ButtonGroup>
+					<ButtonGroup class="pt-md">
 						{#if cms.button_primary}
 							<Button>{cms.button_primary.text}</Button>
 						{/if}
@@ -57,6 +57,7 @@
 			<div>
 				{#if cms.image?.src}
 					<Image
+						sizes={{ base: '100vw', lg: '50vw', '2xl': '703px' }}
 						src={cms.image.src}
 						alt={cms.image.alt}
 					/>

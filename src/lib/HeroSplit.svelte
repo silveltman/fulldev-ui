@@ -15,7 +15,7 @@
 </script>
 
 <section class="bg-neutral-0 {className}">
-	<Container class="max-2xl:px-0">
+	<Container class="max-2xl:!px-0">
 		<Split
 			class="items-start lg:items-center"
 			reverse
@@ -23,6 +23,7 @@
 			<div>
 				{#if cms.image}
 					<Image
+						sizes={{ base: '100vw', lg: '50vw', '2xl': '703px' }}
 						ratio={16 / 9}
 						src={cms.image.src}
 						alt={cms.image.alt}

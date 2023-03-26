@@ -1,7 +1,7 @@
 <script lang="ts">
 	let className = ''
 	export { className as class }
-	export let sizes: string = '100vw'
+
 	export let widths: number[] = [320, 640, 1024, 1280, 1920]
 	export let loading: 'eager' | 'lazy' = 'lazy'
 	export let decoding: 'async' | 'auto' | 'sync' = 'async'
@@ -9,6 +9,26 @@
 	export let alt: string | undefined = undefined
 	export let src: string =
 		'https://res.cloudinary.com/dsnnqav5j/image/upload/v1674074441/myimage.jpg'
+
+	export let sizes: {
+		'2xl'?: string
+		xl?: string
+		lg?: string
+		md?: string
+		sm?: string
+		base?: string
+	} = {
+		base: '100vw'
+	}
+
+	const sizesString: any = `
+		${sizes['2xl'] ? `(min-width: 1536px) ${sizes['2xl']},` : ''}
+		${sizes.xl ? `(min-width: 1280px) ${sizes.xl},` : ''}
+		${sizes.lg ? `(min-width: 1024px) ${sizes.lg},` : ''}
+		${sizes.md ? `(min-width: 768px) ${sizes.md},` : ''}
+		${sizes.sm ? `(min-width: 640px) ${sizes.sm},` : ''}
+		${sizes.base}
+	`
 
 	// functions
 	function getTransformedSrc(src: string, width: number = 1920) {
@@ -22,10 +42,12 @@
 
 	// computed
 	const srcset = widths.map((width) => `${getTransformedSrc(src, width)} ${width}w`).join(', ')
+
+	console.log('test:', sizesString)
 </script>
 
 <img
-	{sizes}
+	sizes={sizesString}
 	{srcset}
 	{alt}
 	{loading}

@@ -8,6 +8,13 @@ interface Button {
 	href: string
 }
 
+interface Link {
+	text: string
+	href: string
+}
+
+type Logo = string
+
 export interface Hero {
 	eyebrow?: string
 	heading?: string
@@ -31,4 +38,14 @@ export interface Cta {
 	text?: string
 	button_primary?: Button
 	button_secondary?: Button
+}
+
+export interface Header {
+	logo: Logo
+	links: Link[]
+}
+
+export interface Footer {
+	logo: Logo
+	tagline: string
 }
