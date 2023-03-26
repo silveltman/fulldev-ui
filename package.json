@@ -19,7 +19,8 @@
 		}
 	},
 	"files": [
-		"dist"
+		"dist",
+		"plugin.cjs"
 	],
 	"peerDependencies": {
 		"svelte": "^3.54.0"
