@@ -1,6 +1,6 @@
 {
 	"name": "@silveltman/fullui",
-	"version": "0.1.2",
+	"version": "0.1.4",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -15,9 +15,9 @@
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js",
-			"plugin": "./dist/plugin.cjs"
-		}
+			"svelte": "./dist/index.js"
+		},
+		"./plugin": "./dist/plugin.cjs"
 	},
 	"files": [
 		"dist"
