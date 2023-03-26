@@ -1,4 +1,4 @@
-// Base components
+// Base
 export { default as Button } from './base/Button.svelte'
 export { default as Eyebrow } from './base/Eyebrow.svelte'
 export { default as Image } from './base/Image.svelte'
@@ -16,3 +16,6 @@ export { default as HeroWide } from './HeroWide.svelte'
 export { default as ContentSplit } from './ContentSplit.svelte'
 export { default as ContentWide } from './ContentSplit.svelte'
 export { default as ContactNarrow } from './ContactNarrow.svelte'
+
+// Tailwind plugin
+export { default as plugin } from './plugin.cjs'

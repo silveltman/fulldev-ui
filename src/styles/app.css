@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 @layer components {
-	.container {
-		@apply mx-auto w-full max-w-screen-2xl px-lg;
-	}
 	.flex-split,
 	.flex-split-reverse {
 		@apply flex flex-col lg:flex-row [&>*]:lg:basis-full;

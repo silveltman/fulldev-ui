@@ -3,6 +3,10 @@
 	import Button from '$lib/base/Button.svelte'
 	import Eyebrow from '$lib/base/Eyebrow.svelte'
 	import Image from '$lib/base/Image.svelte'
+	import Container from './layout/Container.svelte'
+	import Split from './layout/Split.svelte'
+	import Prose from './layout/Prose.svelte'
+	import ButtonGroup from './layout/ButtonGroup.svelte'
 
 	let className = ''
 	export { className as class }
@@ -15,20 +19,18 @@
 </script>
 
 <section class="bg-neutral-0 py-2xl {className}">
-	<div
-		class="container"
-		class:flex-split={!reverse}
-		class:flex-split-reverse={reverse}
-		class:items-start={align === 'start'}
-		class:items-center={align === 'center'}
-		class:items-end={align === 'end'}
-	>
-		<div>
-			<div
-				class="prose lg:px-xl xl:px-2xl"
-				class:!pl-0={!reverse}
-				class:!pr-0={reverse}
-				class:prose-lg={prose === 'lg'}
+	<Container class="container">
+		<Split
+			{reverse}
+			class="items-start gap-y-lg lg:items-center
+			{align === 'center' ? 'lg:items-center' : ''}
+			{align === 'start' ? 'lg:items-start' : ''}
+			{align === 'end' ? 'items-end' : ''}
+			"
+		>
+			<Prose
+				class="lg:px-xl xl:px-2xl"
+				size={prose}
 			>
 				{#if cms.eyebrow}
 					<Eyebrow>lorem opsu</Eyebrow>
@@ -42,22 +44,24 @@
 				{/if}
 
 				{#if cms.button_primary || cms.button_secondary}
-					<div class="button-group">
+					<ButtonGroup>
 						{#if cms.button_primary}
 							<Button>{cms.button_primary.text}</Button>
 						{/if}
 						{#if cms.button_secondary}
 							<Button variant="secondary">{cms.button_secondary.text}</Button>
 						{/if}
-					</div>
+					</ButtonGroup>
+				{/if}
+			</Prose>
+			<div>
+				{#if cms.image?.src}
+					<Image
+						src={cms.image.src}
+						alt={cms.image.alt}
+					/>
 				{/if}
 			</div>
-		</div>
-		<div>
-			<Image
-				src={cms.image.src}
-				alt={cms.image.alt}
-			/>
-		</div>
-	</div>
+		</Split>
+	</Container>
 </section>

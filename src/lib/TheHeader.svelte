@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Link from '$lib/base/Link.svelte'
+	import Container from './layout/Container.svelte'
 
 	let className = ''
 	export { className as class }
@@ -20,8 +21,8 @@
 	]
 </script>
 
-<header class="fixed top-0 left-0 right-0 w-full bg-neutral-0 py-lg {className}">
-	<div class="container flex items-center justify-between">
+<header class="fixed top-0 left-0 right-0 w-full bg-neutral-0 py-md lg:py-lg {className}">
+	<Container class="flex items-center justify-between">
 		<span class="text-body-xl font-bold text-neutral-1000">{company}</span>
 		<ul class="flex gap-lg">
 			{#each links as link}
@@ -30,5 +31,5 @@
 				</li>
 			{/each}
 		</ul>
-	</div>
+	</Container>
 </header>

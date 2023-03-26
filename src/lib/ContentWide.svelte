@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { Content } from '$lib/types'
 	import Image from '$lib/base/Image.svelte'
+	import Container from './layout/Container.svelte'
+	import Prose from './layout/Prose.svelte'
 
 	let className = ''
 	export { className as class }
@@ -9,8 +11,11 @@
 </script>
 
 <section class="bg-neutral-0 py-2xl {className}">
-	<div class="container">
-		<div class="prose-lg pb-lg">
+	<Container class="container">
+		<Prose
+			size="lg"
+			class="pb-xl"
+		>
 			{#if cms.heading}
 				<h2>{cms.heading}</h2>
 			{/if}
@@ -19,7 +24,7 @@
 					{@html cms.html}
 				</div>
 			{/if}
-		</div>
+		</Prose>
 		<Image ratio={16 / 9} />
-	</div>
+	</Container>
 </section>

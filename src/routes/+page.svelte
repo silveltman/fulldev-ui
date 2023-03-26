@@ -8,7 +8,8 @@
 	import object from './index.yml'
 </script>
 
-<TheHeader class="dark absolute" />
+<div class="bg-test" />
+<TheHeader class="dark relative lg:absolute" />
 <HeroSplit
 	cms={object.hero}
 	class="dark"

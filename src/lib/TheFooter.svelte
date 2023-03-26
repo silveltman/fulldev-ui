@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Link from '$lib/base/Link.svelte'
+	import Container from './layout/Container.svelte'
 
 	let className = ''
 	export { className as class }
@@ -21,7 +22,7 @@
 </script>
 
 <footer class="bg-neutral-0 {className}">
-	<div class="container">
+	<Container>
 		<div class="border-t border-neutral-100 py-xl">
 			<div class="container flex max-w-md flex-col items-center">
 				<span class="text-body-xl font-bold text-neutral-1000">Elynfoods</span>
@@ -45,5 +46,5 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+	</Container>
 </footer>

@@ -1,7 +1,12 @@
 <script lang="ts">
 	import type { Hero } from '$lib/types'
 	import Image from '$lib/base/Image.svelte'
-	import HeroSlotContent from './HeroSlotContent.svelte'
+	import Container from './layout/Container.svelte'
+	import Split from './layout/Split.svelte'
+	import Button from '$lib/base/Button.svelte'
+	import Eyebrow from './base/Eyebrow.svelte'
+	import ButtonGroup from './layout/ButtonGroup.svelte'
+	import Prose from './layout/Prose.svelte'
 
 	let className = ''
 	export { className as class }
@@ -10,9 +15,12 @@
 </script>
 
 <section class="bg-neutral-0 {className}">
-	<div class="container flex-split-reverse items-start max-2xl:p-0 lg:items-center">
-		<div>
-			<slot name="media">
+	<Container class="max-2xl:px-0">
+		<Split
+			class="items-start lg:items-center"
+			reverse
+		>
+			<div>
 				{#if cms.image}
 					<Image
 						ratio={16 / 9}
@@ -20,12 +28,42 @@
 						alt={cms.image.alt}
 					/>
 				{/if}
-			</slot>
-		</div>
-		<div class="container py-2xl lg:m-0 lg:py-3xl lg:pr-xl 2xl:pl-0 2xl:pr-2xl">
-			<slot name="content">
-				<HeroSlotContent {cms} />
-			</slot>
-		</div>
-	</div>
+			</div>
+			<Container class="pb-2xl pt-xl lg:m-0 lg:py-3xl lg:pr-xl 2xl:pl-0 2xl:pr-2xl">
+				<Prose class="max-w-xl">
+					{#if cms.eyebrow}
+						<Eyebrow>lorem opsu</Eyebrow>
+					{/if}
+
+					{#if cms.heading}
+						<h1>{cms.heading}</h1>
+					{/if}
+
+					{#if cms.text}
+						<p class="text-body-lg">{cms.text}</p>
+					{/if}
+
+					{#if cms.button_primary || cms.button_secondary}
+						<ButtonGroup class="pt-md">
+							{#if cms.button_primary}
+								<Button
+									size="lg"
+									href={cms.button_primary.href}
+									>{cms.button_primary.text}
+								</Button>
+							{/if}
+							{#if cms.button_secondary}
+								<Button
+									size="lg"
+									variant="secondary"
+									href={cms.button_secondary.href}
+									>{cms.button_secondary.text}
+								</Button>
+							{/if}
+						</ButtonGroup>
+					{/if}
+				</Prose>
+			</Container>
+		</Split>
+	</Container>
 </section>
