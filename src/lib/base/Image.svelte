@@ -42,8 +42,6 @@
 
 	// computed
 	const srcset = widths.map((width) => `${getTransformedSrc(src, width)} ${width}w`).join(', ')
-
-	console.log('test:', sizesString)
 </script>
 
 <img
