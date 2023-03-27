@@ -1,3 +1,16 @@
+<script
+	context="module"
+	lang="ts"
+>
+	export interface ButtonProps {
+		className?: string
+		variant?: 'primary' | 'secondary' | 'tertiary'
+		size?: 'sm' | 'md' | 'lg'
+		color?: boolean
+		href?: string
+	}
+</script>
+
 <script lang="ts">
 	let className = ''
 	export { className as class }

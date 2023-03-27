@@ -11,7 +11,7 @@
 	let className = ''
 	export { className as class }
 
-	export let cms: Hero
+	export let cms: Hero = {}
 </script>
 
 <section class="bg-neutral-0 {className}">
