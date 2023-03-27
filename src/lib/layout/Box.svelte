@@ -6,7 +6,7 @@
 
 <svelte:element
 	this={as}
-	class="grid grid-cols-1 gap-xl lg:grid-cols-2 {className}"
+	class="rounded-3xl px-lg py-xl lg:px-xl lg:py-2xl {className}"
 >
 	<slot />
 </svelte:element>

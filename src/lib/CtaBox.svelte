@@ -4,6 +4,7 @@
 	import Container from './layout/Container.svelte'
 	import Prose from './layout/Prose.svelte'
 	import ButtonGroup from './layout/ButtonGroup.svelte'
+	import Box from './layout/Box.svelte'
 
 	// Base props
 	let className = ''
@@ -14,7 +15,7 @@
 
 <section class="bg-neutral-0 py-2xl {className}">
 	<Container>
-		<div class="dark rounded-3xl bg-neutral-0 py-xl px-lg lg:py-2xl">
+		<Box class="dark bg-neutral-0">
 			<Prose class="prose mx-auto flex max-w-3xl flex-col items-center text-center">
 				{#if cms.heading}
 					<h2>{cms.heading}</h2>
@@ -36,6 +37,6 @@
 					</ButtonGroup>
 				{/if}
 			</Prose>
-		</div>
+		</Box>
 	</Container>
 </section>

@@ -13,24 +13,17 @@
 
 	export let reverse: boolean = false
 	export let prose: 'md' | 'lg' = 'md'
-	export let align: 'center' | 'start' | 'end' = 'center'
+	export let align: 'center' | 'start' = 'center'
 
 	export let cms: Content
 </script>
 
 <section class="bg-neutral-0 py-2xl {className}">
-	<Container class="container">
-		<Split
-			{reverse}
-			class="items-start gap-y-lg lg:items-center
-			{align === 'center' ? 'lg:items-center' : ''}
-			{align === 'start' ? 'lg:items-start' : ''}
-			{align === 'end' ? 'items-end' : ''}
-			"
-		>
+	<Container>
+		<Split class={align === 'center' ? 'lg:items-center' : ''}>
 			<Prose
-				class={reverse ? 'lg:pl-xl xl:pl-2xl' : 'lg:pr-xl xl:pr-2xl'}
 				size={prose}
+				class={reverse ? 'order-2 pl-xl' : 'pr-xl'}
 			>
 				{#if cms.eyebrow}
 					<Eyebrow>lorem opsu</Eyebrow>
@@ -54,15 +47,13 @@
 					</ButtonGroup>
 				{/if}
 			</Prose>
-			<div>
-				{#if cms.image?.src}
-					<Image
-						sizes={{ base: '100vw', lg: '50vw', '2xl': '703px' }}
-						src={cms.image.src}
-						alt={cms.image.alt}
-					/>
-				{/if}
-			</div>
+			{#if cms.image?.src}
+				<Image
+					sizes={{ base: '100vw', lg: '50vw', '2xl': '703px' }}
+					src={cms.image.src}
+					alt={cms.image.alt}
+				/>
+			{/if}
 		</Split>
 	</Container>
 </section>

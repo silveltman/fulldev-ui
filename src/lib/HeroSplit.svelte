@@ -16,21 +16,17 @@
 
 <section class="bg-neutral-0 {className}">
 	<Container class="max-2xl:!px-0">
-		<Split
-			class="items-start lg:items-center"
-			reverse
-		>
-			<div>
-				{#if cms.image}
-					<Image
-						sizes={{ base: '100vw', lg: '50vw', '2xl': '703px' }}
-						ratio={16 / 9}
-						src={cms.image.src}
-						alt={cms.image.alt}
-					/>
-				{/if}
-			</div>
-			<Container class="pb-2xl pt-xl lg:m-0 lg:py-3xl lg:pr-xl 2xl:pl-0 2xl:pr-2xl">
+		<Split class="lg:items-center">
+			{#if cms.image}
+				<Image
+					class="lg:order-2"
+					sizes={{ base: '100vw', lg: '50vw', '2xl': '703px' }}
+					ratio={16 / 9}
+					src={cms.image.src}
+					alt={cms.image.alt}
+				/>
+			{/if}
+			<Container class="pb-2xl lg:mx-0 lg:py-3xl lg:pr-0 2xl:px-0">
 				<Prose class="max-w-xl">
 					{#if cms.eyebrow}
 						<Eyebrow>lorem opsu</Eyebrow>
