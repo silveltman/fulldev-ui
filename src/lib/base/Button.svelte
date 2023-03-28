@@ -5,11 +5,13 @@
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 	export let color: boolean = false
 	export let href: string | undefined = undefined
+	export let rel: string | undefined = 'prefetch'
 </script>
 
 <svelte:element
 	this={href ? 'a' : 'button'}
 	on:click
+	rel={href ? rel : undefined}
 	{href}
 	class="flex items-center justify-center rounded-button text-center leading-none disabled:cursor-not-allowed disabled:opacity-50
 	
