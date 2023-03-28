@@ -7,7 +7,7 @@
 	let className = ''
 	export { className as class }
 
-	export let cms: Content
+	export let block: Content
 </script>
 
 <section class="bg-neutral-0 py-2xl {className}">
@@ -16,12 +16,12 @@
 			size="lg"
 			class="pb-xl"
 		>
-			{#if cms.heading}
-				<h2>{cms.heading}</h2>
+			{#if block.heading}
+				<h2>{block.heading}</h2>
 			{/if}
-			{#if cms.html}
+			{#if block.html}
 				<div class="lg:columns-2 lg:gap-xl">
-					{@html cms.html}
+					{@html block.html}
 				</div>
 			{/if}
 		</Prose>

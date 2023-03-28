@@ -1,40 +1,40 @@
 <script>
-	import ContentSplit from '$lib/ContentSplit.svelte'
-	import ContentWide from '$lib/ContentWide.svelte'
-	import CtaBox from '$lib/CtaBox.svelte'
-	import HeroSplit from '$lib/HeroSplit.svelte'
-	import TheFooter from '$lib/TheFooter.svelte'
-	import TheHeader from '$lib/TheHeader.svelte'
+	import ContentSplit from '$lib/BlockContentSplit.svelte'
+	import ContentWide from '$lib/BlockContentWide.svelte'
+	import CtaBox from '$lib/BlockCtaBox.svelte'
+	import HeroSplit from '$lib/BlockHeroSplit.svelte'
+	import TheFooter from '$lib/BlockFooterSimple.svelte'
+	import TheHeader from '$lib/BlockHeaderSimple.svelte'
 	import object from './index.yml'
 </script>
 
 <div class="bg-test" />
 <TheHeader class="dark relative lg:absolute" />
 <HeroSplit
-	cms={object.hero}
+	block={object.hero}
 	class="dark"
 />
 
 <ContentSplit
-	cms={object.feature}
+	block={object.feature}
 	reverse
 />
 <ContentSplit
 	class="py-0"
-	cms={object.feature}
+	block={object.feature}
 />
 <ContentSplit
-	cms={object.feature}
+	block={object.feature}
 	reverse
 />
-<CtaBox cms={object.cta_box} />
-<ContentWide cms={object.about} />
+<CtaBox block={object.cta_box} />
+<ContentWide block={object.about} />
 <ContentSplit
-	cms={object.ontwikkeling}
+	block={object.ontwikkeling}
 	reverse
 />
 <ContentSplit
 	class="dark"
-	cms={object.cta_content}
+	block={object.cta_content}
 />
 <TheFooter class="dark" />

@@ -10,28 +10,28 @@
 	let className = ''
 	export { className as class }
 
-	export let cms: Cta
+	export let block: Cta
 </script>
 
 <section class="bg-neutral-0 py-2xl {className}">
 	<Container>
 		<Box class="dark bg-neutral-0">
 			<Prose class="prose mx-auto flex max-w-3xl flex-col items-center text-center">
-				{#if cms.heading}
-					<h2>{cms.heading}</h2>
+				{#if block.heading}
+					<h2>{block.heading}</h2>
 				{/if}
-				{#if cms.text}
-					<p class="text-body-lg">{cms.text}</p>
+				{#if block.text}
+					<p class="text-body-lg">{block.text}</p>
 				{/if}
-				{#if cms.button_primary || cms.button_secondary}
+				{#if block.button_primary || block.button_secondary}
 					<ButtonGroup class="justify-center pt-md">
-						{#if cms.button_primary}
-							<Button href={cms.button_primary.href}>{cms.button_primary.text}</Button>
+						{#if block.button_primary}
+							<Button href={block.button_primary.href}>{block.button_primary.text}</Button>
 						{/if}
-						{#if cms.button_secondary}
+						{#if block.button_secondary}
 							<Button
 								variant="secondary"
-								href={cms.button_secondary.href}>{cms.button_secondary.text}</Button
+								href={block.button_secondary.href}>{block.button_secondary.text}</Button
 							>
 						{/if}
 					</ButtonGroup>

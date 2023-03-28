@@ -7,7 +7,7 @@
 	let className = ''
 	export { className as class }
 
-	export let cms: Footer = {
+	export let block: Footer = {
 		logo: 'LogoIpsum',
 		tagline: 'Your tagline goed right here'
 	}
@@ -18,10 +18,10 @@
 		<div class="border-t border-neutral-100 py-xl">
 			<div class="mx-auto flex max-w-md flex-col items-center">
 				<span class="text-body-xl font-bold text-neutral-1000">
-					{cms.logo}
+					{block.logo}
 				</span>
 				<p class="mt-xs mb-md text-center text-body-sm text-neutral-800">
-					{cms.tagline}
+					{block.tagline}
 				</p>
 
 				<ul class="flex justify-center gap-lg">

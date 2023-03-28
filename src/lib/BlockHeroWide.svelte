@@ -10,49 +10,49 @@
 	let className = ''
 	export { className as class }
 
-	export let cms: Hero
+	export let block: Hero
 </script>
 
 <section class="bg-neutral-0 {className} py-2xl">
 	<Container class="flex flex-col gap-y-xl">
 		<Prose class="mx-auto max-w-3xl items-center text-center">
-			{#if cms.eyebrow}
+			{#if block.eyebrow}
 				<Eyebrow>lorem opsu</Eyebrow>
 			{/if}
 
-			{#if cms.heading}
-				<h1>{cms.heading}</h1>
+			{#if block.heading}
+				<h1>{block.heading}</h1>
 			{/if}
 
-			{#if cms.text}
-				<p class="text-body-lg">{cms.text}</p>
+			{#if block.text}
+				<p class="text-body-lg">{block.text}</p>
 			{/if}
 
-			{#if cms.button_primary || cms.button_secondary}
+			{#if block.button_primary || block.button_secondary}
 				<ButtonGroup class="pt-md">
-					{#if cms.button_primary}
+					{#if block.button_primary}
 						<Button
 							size="lg"
-							href={cms.button_primary.href}
-							>{cms.button_primary.text}
+							href={block.button_primary.href}
+							>{block.button_primary.text}
 						</Button>
 					{/if}
-					{#if cms.button_secondary}
+					{#if block.button_secondary}
 						<Button
 							size="lg"
 							variant="secondary"
-							href={cms.button_secondary.href}
-							>{cms.button_secondary.text}
+							href={block.button_secondary.href}
+							>{block.button_secondary.text}
 						</Button>
 					{/if}
 				</ButtonGroup>
 			{/if}
 		</Prose>
-		{#if cms.image}
+		{#if block.image}
 			<Image
 				ratio={16 / 9}
-				src={cms.image.src}
-				alt={cms.image.alt}
+				src={block.image.src}
+				alt={block.image.alt}
 			/>
 		{/if}
 	</Container>

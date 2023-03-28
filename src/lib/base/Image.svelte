@@ -4,7 +4,7 @@
 	export let widths: number[] = [320, 640, 1024, 1280, 1920]
 	export let loading: 'eager' | 'lazy' = 'lazy'
 	export let decoding: 'async' | 'auto' | 'sync' = 'async'
-	export let ratio: number
+	export let ratio: number | undefined = undefined
 	export let alt: string
 	export let src: string =
 		'https://res.cloudinary.com/dsnnqav5j/image/upload/v1674074441/myimage.jpg'

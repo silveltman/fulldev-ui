@@ -15,7 +15,7 @@
 	export let prose: 'md' | 'lg' = 'md'
 	export let align: 'center' | 'start' = 'center'
 
-	export let cms: Content
+	export let block: Content
 </script>
 
 <section class="bg-neutral-0 py-2xl {className}">
@@ -25,33 +25,33 @@
 				size={prose}
 				class={reverse ? 'order-2 pl-xl' : 'pr-xl'}
 			>
-				{#if cms.eyebrow}
+				{#if block.eyebrow}
 					<Eyebrow>lorem opsu</Eyebrow>
 				{/if}
-				{#if cms.heading}
-					<h2>{cms.heading}</h2>
+				{#if block.heading}
+					<h2>{block.heading}</h2>
 				{/if}
 
-				{#if cms.html}
-					{@html cms.html}
+				{#if block.html}
+					{@html block.html}
 				{/if}
 
-				{#if cms.button_primary || cms.button_secondary}
+				{#if block.button_primary || block.button_secondary}
 					<ButtonGroup class="pt-md">
-						{#if cms.button_primary}
-							<Button>{cms.button_primary.text}</Button>
+						{#if block.button_primary}
+							<Button>{block.button_primary.text}</Button>
 						{/if}
-						{#if cms.button_secondary}
-							<Button variant="secondary">{cms.button_secondary.text}</Button>
+						{#if block.button_secondary}
+							<Button variant="secondary">{block.button_secondary.text}</Button>
 						{/if}
 					</ButtonGroup>
 				{/if}
 			</Prose>
-			{#if cms.image?.src}
+			{#if block.image?.src}
 				<Image
 					sizes={{ base: '100vw', lg: '50vw', '2xl': '703px' }}
-					src={cms.image.src}
-					alt={cms.image.alt}
+					src={block.image.src}
+					alt={block.image.alt}
 				/>
 			{/if}
 		</Split>
