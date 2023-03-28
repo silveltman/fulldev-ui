@@ -10,10 +10,9 @@
 
 <div class="flex flex-col">
 	{#if label}
-		<Label
-			{name}
-			text={label}
-		/>
+		<Label {name}>
+			{label}
+		</Label>
 	{/if}
 	<input
 		{type}
@@ -21,6 +20,6 @@
 		{name}
 		{placeholder}
 		{required}
-		class="flex rounded-xl border-neutral-400 py-3 px-3 text-body-md leading-none"
+		class="flex rounded-input border-neutral-400 py-3 px-3 text-body-md leading-none"
 	/>
 </div>

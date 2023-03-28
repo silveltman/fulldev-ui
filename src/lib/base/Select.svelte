@@ -10,15 +10,14 @@
 
 <div class="flex flex-col">
 	{#if label}
-		<Label
-			{name}
-			text={label}
-		/>
+		<Label {name}>
+			{label}
+		</Label>
 	{/if}
 	<select
 		id={name}
 		{name}
-		class="inline-flex rounded-xl border-neutral-400 py-2 px-3 pr-10 text-base sm:text-sm"
+		class="inline-flex rounded-input border-neutral-400 py-2 px-3 pr-10 text-base sm:text-sm"
 		{required}
 	>
 		{#if placeholder}

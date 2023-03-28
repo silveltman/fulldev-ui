@@ -11,7 +11,7 @@
 	this={href ? 'a' : 'button'}
 	on:click
 	{href}
-	class="flex items-center justify-center rounded-xl text-center leading-none disabled:cursor-not-allowed disabled:opacity-50
+	class="flex items-center justify-center rounded-button text-center leading-none disabled:cursor-not-allowed disabled:opacity-50
 	
 	{size === 'sm' && 'py-3 px-4 text-body-sm'}
 	{size === 'md' && 'py-4 px-6 text-body-md'}

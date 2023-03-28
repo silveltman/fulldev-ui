@@ -6,7 +6,7 @@
 
 <svelte:element
 	this={as}
-	class="rounded-3xl px-lg py-xl lg:px-xl lg:py-2xl {className}"
+	class="rounded-box px-lg py-xl lg:px-xl lg:py-2xl {className}"
 >
 	<slot />
 </svelte:element>

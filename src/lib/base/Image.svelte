@@ -49,6 +49,6 @@
 	{alt}
 	{loading}
 	{decoding}
-	class={className}
+	class="rounded-image {className}"
 	src={getTransformedSrc(src)}
 />

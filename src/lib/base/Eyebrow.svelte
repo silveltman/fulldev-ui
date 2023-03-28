@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="inline-block rounded-xl leading-none
+	class="inline-block rounded-eyebrow leading-none
 	
 	{size === 'sm' && 'py-1 px-2 text-body-sm'}
 	{size === 'md' && 'py-2 px-3 text-body-md'}
