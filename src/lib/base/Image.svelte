@@ -50,7 +50,7 @@
 		{alt}
 		{loading}
 		{decoding}
-		class="rounded-image {className}"
+		class="h-auto w-full rounded-image {className}"
 		src={getTransformedSrc(src)}
 	/>
 {:else}
@@ -58,7 +58,7 @@
 		{alt}
 		{loading}
 		{decoding}
-		class="rounded-image {className}"
+		class="h-auto w-full rounded-image {className}"
 		{src}
 	/>
 {/if}
