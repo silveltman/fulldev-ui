@@ -29,7 +29,7 @@
 			<Container class="pb-2xl lg:mx-0 lg:py-3xl lg:pr-0 2xl:px-0">
 				<Prose class="max-w-xl">
 					{#if block.eyebrow}
-						<Eyebrow>lorem opsu</Eyebrow>
+						<Eyebrow>{block.eyebrow}</Eyebrow>
 					{/if}
 
 					{#if block.heading}

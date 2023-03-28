@@ -16,7 +16,7 @@
 <section class="bg-neutral-0 py-2xl {className}">
 	<Container>
 		<Box class="dark bg-neutral-0">
-			<Prose class="prose mx-auto flex max-w-3xl flex-col items-center text-center">
+			<Prose class="mx-auto flex max-w-3xl flex-col items-center text-center">
 				{#if block.heading}
 					<h2>{block.heading}</h2>
 				{/if}

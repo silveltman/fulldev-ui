@@ -23,7 +23,7 @@
 		<Split class={align === 'center' ? 'lg:items-center' : ''}>
 			<Prose
 				size={prose}
-				class={reverse ? 'order-2 pl-xl' : 'pr-xl'}
+				class="max-w-xl {reverse ? 'lg:order-2 lg:pl-xl' : 'lg:pr-xl'}"
 			>
 				{#if block.eyebrow}
 					<Eyebrow>lorem opsu</Eyebrow>

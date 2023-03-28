@@ -25,9 +25,13 @@
 				</div>
 			{/if}
 		</Prose>
-		<Image
-			sizes={{ base: '100vw', '2xl': '1472px' }}
-			ratio={16 / 9}
-		/>
+		{#if block.image}
+			<Image
+				src={block.image.src}
+				alt={block.image.alt}
+				sizes={{ base: '100vw', '2xl': '1472px' }}
+				ratio={16 / 9}
+			/>
+		{/if}
 	</Container>
 </section>
