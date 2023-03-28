@@ -3,11 +3,15 @@
 	export { className as class }
 	export let as: string = 'div'
 	export let size: 'sm' | 'md' | 'lg' = 'md'
+	export let center: boolean = false
 </script>
 
 <svelte:element
 	this={as}
-	class="prose {className}"
+	class="prose flex flex-col 
+	{center ? 'mx-auto items-center text-center' : 'items-start'}
+	{className}
+	"
 	class:prose-sm={size === 'sm'}
 	class:prose-md={size === 'md'}
 	class:prose-lg={size === 'lg'}
@@ -28,7 +32,6 @@
 	}
 
 	.prose {
-		@apply flex flex-col;
 		gap: var(--prose-space);
 
 		:global(ul),
