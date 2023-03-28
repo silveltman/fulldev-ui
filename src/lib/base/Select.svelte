@@ -18,7 +18,7 @@
 	<select
 		id={name}
 		{name}
-		class="text-base sm:text-sm inline-flex rounded-xl border-neutral-400 py-2 px-3 pr-10"
+		class="inline-flex rounded-xl border-neutral-400 py-2 px-3 pr-10 text-base sm:text-sm"
 		{required}
 	>
 		{#if placeholder}
