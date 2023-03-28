@@ -27,6 +27,17 @@ module.exports = plugin(
 				'--text-body-lg': '18px',
 				'--text-body-xl': '20px',
 
+				// Font
+				'--font-heading': '"Roboto", sans-serif',
+				'--font-body': '"Roboto", sans-serif',
+
+				// Radius
+				'--radius-box': '24px',
+				'--radius-button': '12px',
+				'--radius-input': '12px',
+				'--radius-eyebrow': '12px',
+				'--radius-image': '4px',
+
 				// Neutral
 				'--color-neutral-0': '#ffffff',
 				'--color-neutral-50': '#fafafa',
@@ -143,6 +154,7 @@ module.exports = plugin(
 				'--color-danger-700': '#b34d4d'
 			},
 			body: {
+				fontFamily: theme('fontFamily.body'),
 				fontSize: theme('fontSize.body-md'),
 				fontWeight: theme('fontWeight.normal'),
 				color: theme('colors.neutral.600'),
@@ -152,36 +164,42 @@ module.exports = plugin(
 				color: theme('colors.neutral.600')
 			},
 			h1: {
+				fontFamily: theme('fontFamily.heading'),
 				color: theme('colors.neutral.1000'),
 				fontSize: theme('fontSize.heading-2xl'),
 				fontWeight: theme('fontWeight.bold'),
 				lineHeight: theme('lineHeight.tight')
 			},
 			h2: {
+				fontFamily: theme('fontFamily.heading'),
 				color: theme('colors.neutral.1000'),
 				fontSize: theme('fontSize.heading-xl'),
 				fontWeight: theme('fontWeight.bold'),
 				lineHeight: theme('lineHeight.tight')
 			},
 			h3: {
+				fontFamily: theme('fontFamily.heading'),
 				color: theme('colors.neutral.1000'),
 				fontSize: theme('fontSize.heading-lg'),
 				fontWeight: theme('fontWeight.bold'),
 				lineHeight: theme('lineHeight.tight')
 			},
 			h4: {
+				fontFamily: theme('fontFamily.heading'),
 				color: theme('colors.neutral.1000'),
 				fontSize: theme('fontSize.heading-md'),
 				fontWeight: theme('fontWeight.medium'),
 				lineHeight: theme('lineHeight.tight')
 			},
 			h5: {
+				fontFamily: theme('fontFamily.heading'),
 				color: theme('colors.neutral.1000'),
 				fontSize: theme('fontSize.heading-sm'),
 				fontWeight: theme('fontWeight.medium'),
 				lineHeight: theme('lineHeight.tight')
 			},
 			h6: {
+				fontFamily: theme('fontFamily.heading'),
 				color: theme('colors.neutral.1000'),
 				fontSize: theme('fontSize.heading-xs'),
 				fontWeight: theme('fontWeight.medium'),
@@ -198,15 +216,15 @@ module.exports = plugin(
 		theme: {
 			extend: {
 				fontFamily: {
-					heading: ['Roboto', 'sans-serif'],
-					body: ['Roboto', 'sans-serif']
+					heading: 'var(--font-heading)',
+					body: 'var(--font-body)'
 				},
 				borderRadius: {
-					box: '24px',
-					button: '12px',
-					input: '12px',
-					image: '4px',
-					eyebrow: '4px'
+					box: 'var(--radius-box)',
+					button: 'var(--radius-button)',
+					input: 'var(--radius-input)',
+					eyebrow: 'var(--radius-eyebrow)',
+					image: 'var(--radius-image)'
 				},
 				fontSize: {
 					'heading-xs': 'var(--text-heading-xs)',

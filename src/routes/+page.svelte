@@ -8,7 +8,7 @@
 	import object from './index.yml'
 </script>
 
-<div class="bg-test" />
+<div class="font-heading" />
 <TheHeader class="dark relative lg:absolute" />
 <HeroSplit
 	block={object.hero}

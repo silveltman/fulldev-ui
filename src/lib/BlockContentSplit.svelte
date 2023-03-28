@@ -15,7 +15,7 @@
 	export let prose: 'md' | 'lg' = 'md'
 	export let align: 'center' | 'start' = 'center'
 
-	export let block: Content
+	export let block: Content = {}
 </script>
 
 <section class="bg-neutral-0 py-2xl {className}">

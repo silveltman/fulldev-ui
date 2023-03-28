@@ -10,7 +10,7 @@
 	let className = ''
 	export { className as class }
 
-	export let block: Hero
+	export let block: Hero = {}
 </script>
 
 <section class="bg-neutral-0 {className} py-2xl">

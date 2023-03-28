@@ -7,10 +7,7 @@
 	let className = ''
 	export { className as class }
 
-	export let block: Footer = {
-		logo: 'LogoIpsum',
-		tagline: 'Your tagline goed right here'
-	}
+	export let block: Footer = {}
 </script>
 
 <footer class="bg-neutral-0 {className}">

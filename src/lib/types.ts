@@ -41,11 +41,11 @@ export interface Cta {
 }
 
 export interface Header {
-	logo: Logo
-	links: Link[]
+	logo?: Logo
+	links?: Link[]
 }
 
 export interface Footer {
-	logo: Logo
-	tagline: string
+	logo?: Logo
+	tagline?: string
 }

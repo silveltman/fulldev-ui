@@ -6,30 +6,20 @@
 	let className = ''
 	export { className as class }
 
-	export let block: Header = {
-		logo: 'logo',
-		links: [
-			{
-				text: 'Home',
-				href: '/'
-			},
-			{
-				text: 'Contact',
-				href: '/contact'
-			}
-		]
-	}
+	export let block: Header = {}
 </script>
 
-<header class="fixed top-0 left-0 right-0 w-full bg-neutral-0 py-md lg:py-lg {className}">
+<header class="top-0 left-0 right-0 w-full bg-neutral-0 py-md lg:py-lg {className}">
 	<Container class="flex items-center justify-between">
 		<span class="text-body-xl font-bold text-neutral-1000">{block.logo}</span>
 		<ul class="flex gap-lg">
-			{#each block.links as link}
-				<li>
-					<Link href={link.href}>{link.text}</Link>
-				</li>
-			{/each}
+			{#if block.links}
+				{#each block.links as link}
+					<li>
+						<Link href={link.href}>{link.text}</Link>
+					</li>
+				{/each}
+			{/if}
 		</ul>
 	</Container>
 </header>
