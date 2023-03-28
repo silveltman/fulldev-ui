@@ -19,7 +19,7 @@
 		<Split class="lg:items-center">
 			{#if block.image}
 				<Image
-					class="lg:order-2"
+					class="rounded-none lg:order-2 lg:rounded-l-image 2xl:rounded-r-image"
 					sizes={{ base: '100vw', lg: '50vw', '2xl': '703px' }}
 					ratio={16 / 9}
 					src={block.image.src}

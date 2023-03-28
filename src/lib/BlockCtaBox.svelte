@@ -13,9 +13,9 @@
 	export let block: Cta = {}
 </script>
 
-<section class="bg-neutral-0 py-2xl {className}">
+<section>
 	<Container>
-		<Box class="dark bg-neutral-0">
+		<Box class="dark my-2xl bg-neutral-0 {className}">
 			<Prose
 				class="max-w-3xl"
 				center

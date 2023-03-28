@@ -208,7 +208,7 @@ module.exports = plugin(
 		})
 	},
 	{
-		darkMode: 'class',
+		darkMode: false,
 		corePlugins: {
 			aspectRatio: false,
 			container: false
