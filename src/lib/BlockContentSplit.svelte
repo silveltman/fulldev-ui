@@ -18,7 +18,7 @@
 	export let block: Content = {}
 </script>
 
-<section class="bg-neutral-0 py-2xl {className}">
+<section class="relative bg-neutral-0 py-2xl {className}">
 	<Container>
 		<Split class={align === 'center' ? 'lg:items-center' : ''}>
 			<Prose
@@ -39,10 +39,13 @@
 				{#if block.button_primary || block.button_secondary}
 					<ButtonGroup class="pt-md">
 						{#if block.button_primary}
-							<Button>{block.button_primary.text}</Button>
+							<Button href={block.button_primary.href}>{block.button_primary.text}</Button>
 						{/if}
 						{#if block.button_secondary}
-							<Button variant="secondary">{block.button_secondary.text}</Button>
+							<Button
+								href={block.button_secondary.href}
+								variant="secondary">{block.button_secondary.text}</Button
+							>
 						{/if}
 					</ButtonGroup>
 				{/if}
