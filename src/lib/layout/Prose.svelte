@@ -8,7 +8,7 @@
 
 <svelte:element
 	this={as}
-	class="prose flex flex-col 
+	class="prose flex flex-col relative
 	{center ? 'mx-auto items-center text-center' : 'items-start'}
 	{className}
 	"
