@@ -3,29 +3,4 @@
 @tailwind utilities;
 
 @layer components {
-	.flex-split,
-	.flex-split-reverse {
-		@apply flex flex-col lg:flex-row [&>*]:lg:basis-full;
-	}
-	.flex-split-reverse {
-		@apply lg:flex-row-reverse;
-	}
-	.button-group {
-		@apply flex w-full flex-col gap-md sm:w-auto sm:flex-row;
-	}
-
-	.checklist {
-		li {
-			@apply flex items-start;
-
-			&:before {
-				@apply inline-flex items-center pr-sm align-middle leading-none;
-				content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24"><path d="M382 816 154 588l57-57 171 171 367-367 57 57-424 424Z"/></svg>');
-			}
-
-			& + & {
-				@apply mt-sm;
-			}
-		}
-	}
 }

@@ -43,12 +43,22 @@
 	const srcset = widths.map((width) => `${getTransformedSrc(src, width)} ${width}w`).join(', ')
 </script>
 
-<img
-	sizes={sizesString}
-	{srcset}
-	{alt}
-	{loading}
-	{decoding}
-	class="rounded-image {className}"
-	src={getTransformedSrc(src)}
-/>
+{#if src.includes('cloudinary')}
+	<img
+		sizes={sizesString}
+		{srcset}
+		{alt}
+		{loading}
+		{decoding}
+		class="rounded-image {className}"
+		src={getTransformedSrc(src)}
+	/>
+{:else}
+	<img
+		{alt}
+		{loading}
+		{decoding}
+		class="rounded-image {className}"
+		{src}
+	/>
+{/if}
