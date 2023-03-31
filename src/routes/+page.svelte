@@ -9,7 +9,10 @@
 </script>
 
 <div class="font-heading" />
-<TheHeader class="dark relative lg:absolute" />
+<TheHeader
+	class="dark relative lg:absolute"
+	block={object.header}
+/>
 <HeroSplit
 	block={object.hero}
 	class="dark"

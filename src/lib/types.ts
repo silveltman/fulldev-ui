@@ -13,7 +13,7 @@ interface Link {
 	href: string
 }
 
-type Logo = string
+type Logo = Image
 
 export interface Hero {
 	eyebrow?: string

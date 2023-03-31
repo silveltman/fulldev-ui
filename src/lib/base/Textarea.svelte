@@ -21,6 +21,6 @@
 		{name}
 		{placeholder}
 		{required}
-		class="flex rounded-input border-neutral-400 py-4 px-6 text-body-md"
+		class="flex rounded-input border-neutral-400 py-3 px-3 text-body-md"
 	/>
 </div>
