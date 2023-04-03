@@ -17,17 +17,8 @@
 <section class="relative bg-neutral-0 {className}">
 	<Container class="max-2xl:!px-0">
 		<Split class="lg:items-center">
-			{#if block.image}
-				<Image
-					class="rounded-none lg:order-2 lg:rounded-l-image 2xl:rounded-r-image"
-					sizes={{ base: '100vw', lg: '50vw', '2xl': '703px' }}
-					ratio={16 / 9}
-					src={block.image.src}
-					alt={block.image.alt}
-				/>
-			{/if}
-			<Container class="pb-2xl lg:mx-0 lg:py-3xl lg:pr-0 2xl:px-0">
-				<Prose class="max-w-xl">
+			<Container class="pt-2xl lg:mx-0 lg:py-3xl lg:pr-0 2xl:px-0">
+				<div class="max-w-xl">
 					{#if block.eyebrow}
 						<Eyebrow>{block.eyebrow}</Eyebrow>
 					{/if}
@@ -41,7 +32,7 @@
 					{/if}
 
 					{#if block.button_primary || block.button_secondary}
-						<ButtonGroup class="pt-md">
+						<ButtonGroup>
 							{#if block.button_primary}
 								<Button
 									size="lg"
@@ -59,8 +50,17 @@
 							{/if}
 						</ButtonGroup>
 					{/if}
-				</Prose>
+				</div>
 			</Container>
+			{#if block.image}
+				<Image
+					class="rounded-none lg:order-2 lg:rounded-l-image 2xl:rounded-r-image"
+					sizes={{ base: '100vw', lg: '50vw', '2xl': '703px' }}
+					ratio={16 / 9}
+					src={block.image.src}
+					alt={block.image.alt}
+				/>
+			{/if}
 		</Split>
 	</Container>
 </section>

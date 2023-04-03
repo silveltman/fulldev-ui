@@ -21,18 +21,18 @@
 
     {variant === 'primary' &&
 		(color
-			? 'bg-primary-700 text-neutral-0 shadow-md hover:bg-primary-800'
-			: 'bg-neutral-900 text-neutral-0 shadow-md hover:bg-neutral-800')}
+			? 'bg-primary-700 text-neutral-0 shadow-md hover:bg-primary-600'
+			: 'bg-neutral-1000 text-neutral-0 shadow-md hover:bg-neutral-800')}
 
     {variant === 'secondary' &&
 		(color
 			? 'text-primary-700 ring-1 ring-inset ring-primary-700 hover:ring-2'
-			: 'text-neutral-900 ring-1 ring-inset ring-neutral-900 hover:ring-2')}
+			: 'text-neutral-1000 ring-1 ring-inset ring-neutral-1000 hover:ring-2')}
 
     {variant === 'tertiary' &&
 		(color
 			? 'inline !p-0 text-primary-700 decoration-1 hover:underline'
-			: 'inline !p-0 text-neutral-900 decoration-1 hover:underline')}
+			: 'inline !p-0 text-neutral-1000 decoration-1 hover:underline')}
 	
 	{className}
 	"
