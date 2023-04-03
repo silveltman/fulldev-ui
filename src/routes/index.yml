@@ -1,5 +1,6 @@
 hero:
-  heading: Lorem ipsum dolor, sit amet consectetur
+  eyebrow: test
+  heading: Lorem ipsum dolor consectetur sit
   text: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident consequuntur praesentium cupiditate voluptate.
   button_primary:
     text: Lorem ipsum
@@ -8,7 +9,7 @@ hero:
     text: Lorem ipsum
     href: '#'
   image:
-    src: placeholder.png
+    src: placeholder.jpg
     alt: My image
 
 feature:
@@ -16,7 +17,7 @@ feature:
   subheading: Lorem ipsum
   heading: Lorem ipsum dolor, sit amet consectetur
   image:
-    src: placeholder.png
+    src: placeholder.jpg
     alt: My image
   html: |
     <ul>
@@ -29,7 +30,7 @@ about:
   subheading: Lorem ipsum
   heading: Lorem ipsum dolor, sit amet consectetur
   image:
-    src: placeholder.png
+    src: placeholder.jpg
     alt: My image
   html: |
     <p>
@@ -54,7 +55,7 @@ ontwikkeling:
   subheading: Lorem ipsum
   heading: Lorem ipsum dolor, sit amet consectetur
   image:
-    src: placeholder.png
+    src: placeholder.jpg
     alt: My image
   html: |
     <ul>
@@ -75,7 +76,7 @@ cta_content:
   subheading: Lorem ipsum
   heading: Lorem ipsum dolor, sit amet consectetur
   image:
-    src: placeholder.png
+    src: placeholder.jpg
     alt: My image
   html: |
     <p>

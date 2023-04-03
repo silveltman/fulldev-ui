@@ -6,7 +6,7 @@
 
 <svelte:element
 	this={as}
-	class="flex w-full flex-col gap-md sm:w-auto sm:flex-row {className}"
+	class="flex w-full flex-col gap-md sm:inline-flex sm:w-auto sm:flex-row [*+&]:pt-12 {className}"
 	{...$$restProps}
 >
 	<slot />
