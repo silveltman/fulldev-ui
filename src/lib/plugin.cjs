@@ -24,17 +24,15 @@ module.exports = plugin(
 					image: 'var(--radius-image)'
 				},
 				fontSize: {
+					'body-sm': 'var(--text-body-sm)',
+					'body-md': 'var(--text-body-md)',
+					'body-lg': 'var(--text-body-lg)',
 					'heading-xs': 'var(--text-heading-xs)',
 					'heading-sm': 'var(--text-heading-sm)',
 					'heading-md': 'var(--text-heading-md)',
 					'heading-lg': 'var(--text-heading-lg)',
 					'heading-xl': 'var(--text-heading-xl)',
-					'heading-2xl': 'var(--text-heading-2xl)',
-					'body-xs': 'var(--text-body-xs)',
-					'body-sm': 'var(--text-body-sm)',
-					'body-md': 'var(--text-body-md)',
-					'body-lg': 'var(--text-body-lg)',
-					'body-xl': 'var(--text-body-xl)'
+					'heading-2xl': 'var(--text-heading-2xl)'
 				},
 				colors: {
 					neutral: {
@@ -86,7 +84,9 @@ module.exports = plugin(
 					lg: 'var(--space-lg)',
 					xl: 'var(--space-xl)',
 					'2xl': 'var(--space-2xl)',
-					'3xl': 'var(--space-3xl)'
+					'3xl': 'var(--space-3xl)',
+					'4xl': 'var(--space-4xl)',
+					'5xl': 'var(--space-5xl)'
 				}
 			}
 		}
