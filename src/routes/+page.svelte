@@ -1,9 +1,13 @@
 <script>
-	import HeroSplit from '$lib/BlockHeroSplit.svelte'
 	import object from './index.yml'
+	import BlockFormStack from '$lib/BlockFormStack.svelte'
+	import Textfield from '$lib/base/Textfield.svelte'
+	import BlockHeroStack from '$lib/BlockHeroStack.svelte'
+	import BlockFaqStack from '$lib/BlockFaqStack.svelte'
 </script>
 
-<HeroSplit
-	block={object.hero}
-	class="dar"
-/>
+<BlockHeroStack block={object.hero} />
+
+<BlockFormStack block={object.form} />
+
+<BlockFaqStack block={object.faq} />

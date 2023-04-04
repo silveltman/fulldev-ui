@@ -12,6 +12,22 @@ hero:
     src: placeholder.jpg
     alt: My image
 
+form:
+  heading: Regel gemakkelijk je reparatie
+  text: We komen snel bij je langs, in en om Amsterdam
+
+faq:
+  eyebrow: lorem
+  heading: Lorem ipsum dolor sit
+  text: Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+  questions:
+    - heading: Lorem ipsim dolor sit?
+      text: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident consequuntur praesentium cupiditate voluptate. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident consequuntur praesentium cupiditate voluptate.
+    - heading: Lorem ipsim dolor sit?
+      text: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident consequuntur praesentium cupiditate voluptate. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident consequuntur praesentium cupiditate voluptate.
+    - heading: Lorem ipsim dolor sit?
+      text: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident consequuntur praesentium cupiditate voluptate. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident consequuntur praesentium cupiditate voluptate.
+
 feature:
   eyebrow: lorem ipsum
   subheading: Lorem ipsum
