@@ -25,7 +25,7 @@
 				{#if block.heading}
 					<h2>{block.heading}</h2>
 				{/if}
-
+				
 				{#if block.text}
 					<p class="text-body-lg">{block.text}</p>
 				{/if}
