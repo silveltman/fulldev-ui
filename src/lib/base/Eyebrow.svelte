@@ -2,13 +2,15 @@
 	let className = ''
 	export { className as class }
 	export let variant: 'primary' | 'secondary' = 'primary'
+	export let color: boolean = true
 </script>
 
 <div
-	class="inline-block rounded-eyebrow text-body-md font-medium leading-none text-primary-700
+	class="hello bg-test inline-block rounded-eyebrow bg-hello text-body-md font-medium leading-none text-primary-700
 
-	{variant === 'primary' && 'border border-primary-100 !bg-primary-50 py-2 px-3 text-primary-500'}
-	
+	{variant === 'primary' && color
+		? 'border-primary-500/20 !bg-primary-500/5 border py-2 px-3 text-primary-500'
+		: 'border-neutral-500/20 !bg-neutral-500/5 border py-2 px-3 text-neutral-500'}
 	{className}
 	"
 	{...$$restProps}
