@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Form from './Form.svelte'
+	import Form from '../Form.svelte'
 	import Container from './layout/Container.svelte'
 
 	let className = ''

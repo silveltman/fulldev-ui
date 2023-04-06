@@ -4,7 +4,7 @@
 
 <label
 	for={name}
-	class="text-body-sm font-medium text-neutral-700"
+	class="text-sm font-medium text-neutral-700"
 >
 	<slot />
 </label>

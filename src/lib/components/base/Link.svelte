@@ -8,7 +8,7 @@
 	{href}
 	{rel}
 	class="text-neutral-1000 hover:underline
-    {variant === 'primary' ? 'text-body-md text-neutral-1000' : 'text-body-sm text-neutral-600'}
+    {variant === 'primary' ? 'text-md text-neutral-1000' : 'text-sm text-neutral-600'}
     "
 >
 	<slot />

@@ -1,13 +1,19 @@
-<script lang="ts">
-	import type { Content } from '$lib/types'
-	import Image from '$lib/base/Image.svelte'
+<script>
+	import Image from './base/Image.svelte'
 	import Container from './layout/Container.svelte'
 	import Prose from './layout/Prose.svelte'
 
 	let className = ''
 	export { className as class }
 
-	export let block: Content = {}
+	export let block = {
+		heading: 'My Heading',
+		html: '',
+		image: {
+			src: '',
+			alt: ''
+		}
+	}
 </script>
 
 <section class="bg-neutral-0 py-2xl {className}">

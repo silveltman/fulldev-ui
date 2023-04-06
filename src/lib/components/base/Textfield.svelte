@@ -20,6 +20,6 @@
 		{name}
 		{placeholder}
 		{required}
-		class="flex rounded-input border-neutral-400 py-3 px-3 text-body-md leading-none"
+		class="text-md flex rounded-input border-neutral-400 py-3 px-3 leading-none"
 	/>
 </div>

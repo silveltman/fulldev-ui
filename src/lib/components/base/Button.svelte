@@ -15,9 +15,9 @@
 	{href}
 	class="flex items-center justify-center rounded-button text-center leading-none disabled:cursor-not-allowed disabled:opacity-50
 	
-	{size === 'sm' && 'py-3 px-4 text-body-sm'}
-	{size === 'md' && 'py-4 px-6 text-body-md'}
-	{size === 'lg' && 'py-5 px-8 text-body-lg'}
+	{size === 'sm' && 'py-3 px-4 text-sm'}
+	{size === 'md' && 'text-md py-4 px-6'}
+	{size === 'lg' && 'py-5 px-8 text-lg'}
 
     {variant === 'primary' &&
 		(color

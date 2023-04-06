@@ -28,7 +28,7 @@
 				{/if}
 
 				{#if block.text}
-					<p class="text-body-lg">{block.text}</p>
+					<p class="text-lg">{block.text}</p>
 				{/if}
 
 				{#if block.button_primary || block.button_secondary}

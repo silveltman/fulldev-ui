@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { Content } from '$lib/types'
-	import Button from '$lib/base/Button.svelte'
-	import Eyebrow from '$lib/base/Eyebrow.svelte'
-	import Image from '$lib/base/Image.svelte'
+	import Button from './base/Button.svelte'
+	import Eyebrow from './base/Eyebrow.svelte'
+	import Image from './base/Image.svelte'
 	import Container from './layout/Container.svelte'
 	import Split from './layout/Split.svelte'
 	import Prose from './layout/Prose.svelte'

@@ -17,7 +17,7 @@
 <section class="relative overflow-hidden bg-neutral-0 {className}">
 	<Container>
 		<Split class="lg:items-center">
-			<div class="py-4xl max-w-xl">
+			<div class="max-w-xl py-4xl">
 				{#if block.eyebrow}
 					<Eyebrow>{block.eyebrow}</Eyebrow>
 				{/if}
@@ -27,7 +27,7 @@
 				{/if}
 
 				{#if block.text}
-					<p class="text-body-lg">{block.text}</p>
+					<p class="text-lg">{block.text}</p>
 				{/if}
 
 				{#if block.button_primary || block.button_secondary}
@@ -54,7 +54,7 @@
 				<div class="h-full w-full overflow-visible">
 					<div class="relative h-full w-[50vw] max-w-4xl bg-red-200">
 						<Image
-							class="absolute h-full w-full object-cover block"
+							class="absolute block h-full w-full object-cover"
 							sizes={{ base: '100vw', lg: '50vw', '2xl': '703px' }}
 							src={block.image.src}
 							alt={block.image.alt}

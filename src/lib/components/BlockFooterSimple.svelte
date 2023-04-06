@@ -14,10 +14,10 @@
 	<Container>
 		<div class="border-t border-neutral-100 py-xl">
 			<div class="mx-auto flex max-w-md flex-col items-center">
-				<span class="text-body-xl font-bold text-neutral-1000">
+				<span class="text-xl font-bold text-neutral-1000">
 					{block.logo}
 				</span>
-				<p class="mt-xs mb-md text-center text-body-sm text-neutral-800">
+				<p class="mt-xs mb-md text-center text-sm text-neutral-800">
 					{block.tagline}
 				</p>
 

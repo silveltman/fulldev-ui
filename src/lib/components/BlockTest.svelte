@@ -20,7 +20,7 @@
 
 <section class="relative max-w-2xl bg-neutral-0 py-2xl {className}">
 	<h1>Hello world</h1>
-	<p class="text-body-lg">
+	<p class="text-lg">
 		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque at perspiciatis vero aliquid
 		incidunt. Aperiam facilis deserunt aliquid quia a.
 	</p>

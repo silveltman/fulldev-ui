@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="hello bg-test inline-block rounded-eyebrow bg-hello text-body-md font-medium leading-none text-primary-700
+	class="hello bg-test bg-hello text-md inline-block rounded-eyebrow font-medium leading-none text-primary-700
 
 	{variant === 'primary' && color
 		? 'border-primary-500/20 !bg-primary-500/5 border py-2 px-3 text-primary-500'

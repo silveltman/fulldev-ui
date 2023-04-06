@@ -3,12 +3,15 @@
 	import Container from './layout/Container.svelte'
 	import Eyebrow from './base/Eyebrow.svelte'
 	import Stack from './layout/Stack.svelte'
-	import Accordion from './base/Accordion.svelte'
+	import Form from './base/Form.svelte'
+	import Textfield from './base/Textfield.svelte'
+	import Textarea from './base/Textarea.svelte'
+	import Button from './base/Button.svelte'
 
 	let className = ''
 	export { className as class }
 
-	export let block: any = {}
+	export let block: Hero = {}
 </script>
 
 <section class="bg-neutral-0 py-4xl {className}">
@@ -24,13 +27,29 @@
 				{/if}
 
 				{#if block.text}
-					<p class="text-body-lg">{block.text}</p>
+					<p class="text-lg">{block.text}</p>
 				{/if}
 			</div>
 
-			{#if block.questions}
-				<Accordion items={block.questions} />
-			{/if}
+			<slot>
+				<Form action="/bericht-verstuurd">
+					<Textfield
+						name="naam"
+						label="Naam"
+					/>
+					<Textfield
+						name="tel"
+						label="Email"
+						type="email"
+						required
+					/>
+					<Textarea
+						name="probleem en type"
+						label="Probleem en type"
+					/>
+					<Button color>Verstuur</Button>
+				</Form>
+			</slot>
 		</Stack>
 	</Container>
 </section>
