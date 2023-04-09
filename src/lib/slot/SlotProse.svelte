@@ -1,42 +1,21 @@
 <script lang="ts">
+	import type { Prose } from '$lib/types'
 	import ButtonGroup from 'layout/ButtonGroup.svelte'
 	import Button from 'base/Button.svelte'
 	import Eyebrow from 'base/Eyebrow.svelte'
 
-	interface Prose {
-		eyebrow?: string
-		heading?: string
-		text?: string
-		html?: string
-		button_primary?: any
-		button_secondary?: any
-	}
-
-	export const block: Prose = {
-		eyebrow: 'lorem ipsum',
-		heading: 'Lorem ipsum dolor',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		html: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>',
-		button_primary: {
-			text: 'Lorem ipsum',
-			href: '#'
-		},
-		button_secondary: {
-			text: 'Lorem ipsum',
-			href: '#'
-		}
-	}
-
+	// Styling props
 	let className = ''
 	export { className as class }
-	export let center: boolean = false
 	export let size: 'lg' | 'md' | 'sm' = 'md'
+
+	// Content props
+	export let block: Prose
+	//
 </script>
 
 <div
-	class="c-prose {className}"
-	class:mx-auto={center}
-	class:text-center={center}
+	class="slot-prose {className}"
 	class:max-w-3xl={size === 'lg'}
 	class:max-w-2xl={size === 'md'}
 	class:max-w-lg={size === 'sm'}

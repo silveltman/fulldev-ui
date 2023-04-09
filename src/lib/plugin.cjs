@@ -47,6 +47,7 @@ module.exports = plugin(
 				fontSize: theme('fontSize.md'),
 				lineHeight: theme('lineHeight.relaxed'),
 				color: theme('colors.neutral.600'),
+				fontWeight: theme('fontWeight.light'),
 			},
 			'h1, h2, h3, h4, h5, h6': {
 				fontFamily: theme('fontFamily.heading'),

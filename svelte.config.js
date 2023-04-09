@@ -13,8 +13,9 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			base: './src/lib/base',
-			blocks: './src/lib/block',
+			block: './src/lib/block',
 			layout: './src/lib/layout',
+			slot: './src/lib/slot',
 		},
 	}
 }

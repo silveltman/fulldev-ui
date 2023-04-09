@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Hst } from '@histoire/plugin-svelte'
-	import type { Content } from '$lib/types'
-	import BlockContent from './BlockContent.svelte'
+	import type { Features } from '$lib/types'
+	import BlockFeatures from './BlockFeatures.svelte'
 	export let Hst: Hst
 
 	// Section props
@@ -11,18 +11,24 @@
 	let reverse: boolean = false
 
 	// Component props
-	let block: Content = {
+	let block: Features = {
 		eyebrow: 'lorem ipsum',
 		heading: 'Lorem ipsum dolor',
-		html: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		button_primary: {
-			text: 'Lorem ipsum',
-			href: '#'
-		},
-		button_secondary: {
-			text: 'Lorem ipsum',
-			href: '#'
-		},
+		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		checklist: [
+			{
+				heading: 'Lorem ipsum dolor',
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+			},
+			{
+				heading: 'Lorem ipsum dolor',
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+			},
+			{
+				heading: 'Lorem ipsum dolor',
+				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+			}
+		],
 		image: {
 			src: 'https://picsum.photos/1600/900',
 			alt: 'Lorem ipsum'
@@ -54,7 +60,7 @@
 		/>
 	</svelte:fragment>
 
-	<BlockContent
+	<BlockFeatures
 		{box}
 		{split}
 		{center}

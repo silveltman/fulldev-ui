@@ -8,7 +8,7 @@ export { default as Select } from './components/base/Select.svelte'
 export { default as Textarea } from './components/base/Textarea.svelte'
 export { default as Textfield } from './components/base/Textfield.svelte'
 
-// Blocks
+// block
 export { default as BlockHeaderSimple } from './BlockHeaderSimple.svelte'
 export { default as BlockFooterSimple } from './BlockFooterSimple.svelte'
 export { default as BlockHeroSplit } from './BlockHeroSplit.svelte'

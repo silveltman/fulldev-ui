@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { IconChevronRight } from '@tabler/icons-svelte'
+
 	let className = ''
 	export { className as class }
 	export let variant: 'primary' | 'secondary' | 'tertiary' = 'primary'
@@ -32,12 +34,20 @@
 
     {variant === 'tertiary' &&
 		(color
-			? 'inline !p-0 text-primary-700 decoration-1 hover:underline'
-			: 'inline !p-0 text-neutral-1000 decoration-1 hover:underline')}
+			? '!p-0 text-primary-700 decoration-1 hover:underline'
+			: '!p-0 text-neutral-1000 decoration-1 hover:underline')}
 	
 	{className}
 	"
 	{...$$restProps}
 >
 	{text}
+
+	{#if variant == 'tertiary'}
+		<IconChevronRight
+			class="ml-0.5 -translate-y-px"
+			stroke={1.3}
+			size={20}
+		/>
+	{/if}
 </svelte:element>

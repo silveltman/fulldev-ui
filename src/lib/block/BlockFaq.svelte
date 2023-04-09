@@ -1,9 +1,8 @@
 <script lang="ts">
-	import type { BlockType } from './BlockFaq'
-	import { blockDefaults } from './BlockFaq'
+	import type { Faq } from '$lib/types'
 	import Section from 'layout/Section.svelte'
-	import Image from 'base/Image.svelte'
-	import Prose from '$lib/slot/Prose.svelte'
+	import Prose from '$lib/slot/SlotProse.svelte'
+	import Accordion from 'slot/SlotAccordion.svelte'
 
 	// Section props
 	let className: string = ''
@@ -14,8 +13,8 @@
 	export let reverse: boolean = false
 
 	// Component props
-	export let block: BlockType = blockDefaults
-	export let size: 'lg' | 'md' | 'sm' = 'md'
+	export let block: Faq
+	//
 </script>
 
 <Section
@@ -27,18 +26,12 @@
 	{...$$restProps}
 >
 	<slot name="prose">
-		<Prose
-			{size}
-			{block}
-		/>
+		<Prose {block} />
 	</slot>
 
 	<slot name="image">
-		{#if block.image}
-			<Image
-				sizes={{ base: '100vw', lg: '50vw', '2xl': '703px' }}
-				{...block.image}
-			/>
+		{#if block.accordion}
+			<Accordion {block} />
 		{/if}
 	</slot>
 </Section>

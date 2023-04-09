@@ -1,60 +1,64 @@
 <script lang="ts">
-	import BlockContent from 'blocks/BlockContent.svelte'
+	import BlockContent from 'block/BlockContent.svelte'
 
-	// const blocks: any = import.meta.glob('../lib/block/*.svelte', {
-	// 	eager: true
-	// })
-	// console.log(blocks['../lib/block/HeroSplit.svelte'])
-
-	// let selected: any = null
+	let block = {
+		eyebrow: 'lorem ipsum',
+		heading: 'Lorem ipsum dolor',
+		html: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		button_primary: {
+			text: 'Lorem ipsum',
+			href: '#'
+		},
+		button_secondary: {
+			text: 'Lorem ipsum',
+			href: '#'
+		},
+		image: {
+			src: '/placeholder.jpg',
+			alt: 'Lorem ipsum'
+		}
+	}
 </script>
 
-<!-- <svelte:component this={blocks['../lib/block/HeroSplit.svelte'].default} /> -->
-
-<!-- <div class="flex w-full justify-center bg-black p-sm">
-	<select bind:value={selected}>
-		{#each Object.entries(blocks) as [key, value]}
-			<option value={key}>{key}</option>
-		{/each}
-	</select>
-</div>
-
-{#if selected}
-	<svelte:component this={blocks[selected].default} />
-{/if} -->
-
 <BlockContent
+	{block}
 	size="lg"
 	split
 	center
 	class="dark"
 />
 <BlockContent
+	{block}
 	split
 	center
 />
 <BlockContent
+	{block}
 	split
 	center
 	reverse
 />
 <BlockContent
+	{block}
 	split
 	center
 />
 
 <BlockContent
+	{block}
 	center
 	box
 	reverse
 	class="dark"
 />
-<BlockContent />
+<BlockContent {block} />
 <BlockContent
+	{block}
 	split
 	reverse
 />
 <BlockContent
+	{block}
 	class="dark"
 	split
 	center
