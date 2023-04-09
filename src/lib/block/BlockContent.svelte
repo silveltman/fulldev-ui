@@ -1,6 +1,5 @@
 <script lang="ts">
-	import type { BlockType } from './BlockContent'
-	import { blockDefaults } from './BlockContent'
+	import type { Content } from '$lib/types'
 	import Section from 'layout/Section.svelte'
 	import Image from 'base/Image.svelte'
 	import Prose from '$lib/slot/Prose.svelte'
@@ -14,7 +13,7 @@
 	export let reverse: boolean = false
 
 	// Component props
-	export let block: BlockType = blockDefaults
+	export let block: Content = {}
 	export let size: 'lg' | 'md' | 'sm' = 'md'
 </script>
 
