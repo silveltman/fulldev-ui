@@ -1,12 +1,12 @@
 <script lang="ts">
 	import type { Hero } from '$lib/types'
-	import Container from './layout/Container.svelte'
-	import Eyebrow from './base/Eyebrow.svelte'
-	import Stack from './layout/Stack.svelte'
-	import Form from './base/Form.svelte'
-	import Textfield from './base/Textfield.svelte'
-	import Textarea from './base/Textarea.svelte'
-	import Button from './base/Button.svelte'
+	import Container from 'layout/Container.svelte'
+	import Eyebrow from 'base/Eyebrow.svelte'
+	import Stack from 'layout/Stack.svelte'
+	import Form from 'base/Form.svelte'
+	import Textfield from 'base/Textfield.svelte'
+	import Textarea from 'base/Textarea.svelte'
+	import Button from 'base/Button.svelte'
 
 	let className = ''
 	export { className as class }

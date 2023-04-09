@@ -1,12 +1,13 @@
 <script lang="ts">
-	let className: string = ''
+	let className = ''
 	export { className as class }
 	export let as: string = 'div'
 </script>
 
 <svelte:element
 	this={as}
-	class="grid grid-cols-1 gap-x-xl gap-y-3xl lg:grid-cols-2 {className}"
+	class="flex w-full flex-col gap-md sm:inline-flex sm:w-auto sm:flex-row {className}"
+	{...$$restProps}
 >
 	<slot />
 </svelte:element>

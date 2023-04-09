@@ -2,6 +2,7 @@
 	export let href: string = '#'
 	export let variant: 'primary' | 'secondary' = 'primary'
 	export let rel: string | undefined = 'prefetch'
+	export let text: string = 'Lorem ipsum'
 </script>
 
 <a
@@ -11,5 +12,5 @@
     {variant === 'primary' ? 'text-md text-neutral-1000' : 'text-sm text-neutral-600'}
     "
 >
-	<slot />
+	{text}
 </a>

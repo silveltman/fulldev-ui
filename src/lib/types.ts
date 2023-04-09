@@ -1,20 +1,31 @@
-interface Image {
+export interface Image {
 	src: string
 	alt: string
 }
 
-interface Button {
+export interface Social {
+	icon: string
+	href: string
+}
+
+export interface Button {
 	text: string
 	href: string
 }
 
-interface Link {
+export interface Link {
 	text: string
 	href: string
 }
 
-type Logo = Image
+export interface Logo {
+	light?: Image
+	dark?: Image
+	disableLink?: boolean
+}
 
+
+// Block types
 export interface Hero {
 	eyebrow?: string
 	heading?: string

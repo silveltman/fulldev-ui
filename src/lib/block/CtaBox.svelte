@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { Cta } from '$lib/types'
-	import Button from '$lib/base/Button.svelte'
-	import Container from './layout/Container.svelte'
-	import Prose from './layout/Prose.svelte'
-	import ButtonGroup from './layout/ButtonGroup.svelte'
-	import Box from './layout/Box.svelte'
+	import Button from 'base/Button.svelte'
+	import Container from 'layout/Container.svelte'
+	import Prose from 'layout/Prose.svelte'
+	import ButtonGroup from 'layout/ButtonGroup.svelte'
+	import Box from 'layout/Box.svelte'
 
 	// Base props
 	let className = ''

@@ -1,9 +1,9 @@
 <script lang="ts">
 	import type { Hero } from '$lib/types'
-	import Container from './layout/Container.svelte'
-	import Eyebrow from './base/Eyebrow.svelte'
-	import Stack from './layout/Stack.svelte'
-	import Accordion from './base/Accordion.svelte'
+	import Container from 'layout/Container.svelte'
+	import Eyebrow from 'base/Eyebrow.svelte'
+	import Stack from 'layout/Stack.svelte'
+	import Accordion from 'base/Accordion.svelte'
 
 	let className = ''
 	export { className as class }

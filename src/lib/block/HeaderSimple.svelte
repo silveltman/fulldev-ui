@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { Header } from '$lib/types'
-	import Link from '$lib/base/Link.svelte'
-	import Container from './layout/Container.svelte'
-	import Logo from './base/Logo.svelte'
+	import Link from 'base/Link.svelte'
+	import Container from 'layout/Container.svelte'
+	import Logo from 'base/Logo.svelte'
 
 	let className = ''
 	export { className as class }

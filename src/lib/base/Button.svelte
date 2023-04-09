@@ -4,8 +4,9 @@
 	export let variant: 'primary' | 'secondary' | 'tertiary' = 'primary'
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 	export let color: boolean = false
-	export let href: string | undefined = undefined
 	export let rel: string | undefined = 'prefetch'
+	export let href: string | undefined = undefined
+	export let text: string = 'Lorem ipsum'
 </script>
 
 <svelte:element
@@ -16,7 +17,7 @@
 	class="flex items-center justify-center rounded-button text-center leading-none disabled:cursor-not-allowed disabled:opacity-50
 	
 	{size === 'sm' && 'py-3 px-4 text-sm'}
-	{size === 'md' && 'text-md py-4 px-6'}
+	{size === 'md' && 'py-4 px-6 text-md'}
 	{size === 'lg' && 'py-5 px-8 text-lg'}
 
     {variant === 'primary' &&
@@ -38,5 +39,5 @@
 	"
 	{...$$restProps}
 >
-	<slot />
+	{text}
 </svelte:element>

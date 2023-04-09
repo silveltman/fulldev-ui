@@ -1,13 +1,61 @@
-<script>
-	import object from './index.yml'
-	import BlockFormStack from '$lib/BlockFormStack.svelte'
-	import Textfield from '$lib/components/base/Textfield.svelte'
-	import BlockHeroStack from '$lib/BlockHeroStack.svelte'
-	import BlockFaqStack from '$lib/BlockFaqStack.svelte'
+<script lang="ts">
+	import BlockContent from 'blocks/BlockContent.svelte'
+
+	// const blocks: any = import.meta.glob('../lib/block/*.svelte', {
+	// 	eager: true
+	// })
+	// console.log(blocks['../lib/block/HeroSplit.svelte'])
+
+	// let selected: any = null
 </script>
 
-<BlockHeroStack block={object.hero} />
+<!-- <svelte:component this={blocks['../lib/block/HeroSplit.svelte'].default} /> -->
 
-<BlockFormStack block={object.form} />
+<!-- <div class="flex w-full justify-center bg-black p-sm">
+	<select bind:value={selected}>
+		{#each Object.entries(blocks) as [key, value]}
+			<option value={key}>{key}</option>
+		{/each}
+	</select>
+</div>
 
-<BlockFaqStack block={object.faq} />
+{#if selected}
+	<svelte:component this={blocks[selected].default} />
+{/if} -->
+
+<BlockContent
+	size="lg"
+	split
+	center
+	class="dark"
+/>
+<BlockContent
+	split
+	center
+/>
+<BlockContent
+	split
+	center
+	reverse
+/>
+<BlockContent
+	split
+	center
+/>
+
+<BlockContent
+	center
+	box
+	reverse
+	class="dark"
+/>
+<BlockContent />
+<BlockContent
+	split
+	reverse
+/>
+<BlockContent
+	class="dark"
+	split
+	center
+/>

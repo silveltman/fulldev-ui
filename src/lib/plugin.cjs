@@ -42,15 +42,15 @@ module.exports = plugin(
 					'--space-5xl': '256px',
 				}
 			},
-			body: {
+			'body,html': {
 				fontFamily: theme('fontFamily.body'),
 				fontSize: theme('fontSize.md'),
 				lineHeight: theme('lineHeight.relaxed'),
-				color: theme('colors.neutral-600'),
+				color: theme('colors.neutral.600'),
 			},
 			'h1, h2, h3, h4, h5, h6': {
 				fontFamily: theme('fontFamily.heading'),
-				color: theme('colors.neutral-1000'),
+				color: theme('colors.neutral.1000'),
 			},
 			h1: {
 				fontSize: theme('fontSize.3xl'),
@@ -82,15 +82,9 @@ module.exports = plugin(
 				fontSize: theme('fontSize.sm'),
 				fontWeight: theme('fontWeight.medium'),
 			},
-			'* + h1': {
-				marginTop: theme('spacing.xl'),
+			'p, ul, ol, dl, dd, blockquote, pre, figure, hr': {
+				color: theme('colors.neutral.600'),
 			},
-			'* + h2': {
-				marginTop: theme('spacing.md'),
-			},
-			'* + p, ul, ol, dl, dd, blockquote, pre, figure, hr': {
-				marginTop: theme('spacing.lg'),
-			}
 		})
 	},
 	{
@@ -98,10 +92,11 @@ module.exports = plugin(
 			aspectRatio: false,
 			container: false
 		},
+		darkMode: 'class',
 		theme: {
 			fontFamily: {
-				heading: '"inter", sans-serif',
-				body: '"inter", sans-serif',
+				heading: '"Inter", sans-serif',
+				body: '"Inter", sans-serif',
 			},
 			borderRadius: {
 				box: '24px',
@@ -109,6 +104,7 @@ module.exports = plugin(
 				input: '12px',
 				eyebrow: '12px',
 				image: '4px',
+				full: '9999px',
 			},
 			fontSize: {
 				'sm': 'var(--text-sm)',

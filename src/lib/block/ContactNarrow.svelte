@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Form from '../Form.svelte'
-	import Container from './layout/Container.svelte'
+	import Form from 'base/Form.svelte'
+	import Container from 'layout/Container.svelte'
 
 	let className = ''
 	export { className as class }

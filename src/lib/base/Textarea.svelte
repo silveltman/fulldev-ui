@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { text } from 'svelte/internal'
 	import Label from './Label.svelte'
 
 	export let required: boolean = false
@@ -21,6 +20,6 @@
 		{name}
 		{placeholder}
 		{required}
-		class="text-md flex rounded-input border-neutral-400 py-3 px-3"
+		class="flex rounded-input border-neutral-400 py-3 px-3 text-md"
 	/>
 </div>
