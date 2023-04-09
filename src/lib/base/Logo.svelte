@@ -1,16 +1,10 @@
 <script lang="ts">
-	export let light:
-		| {
-				src: string
-				alt: string
-		  }
-		| undefined = undefined
-	export let dark:
-		| {
-				src: string
-				alt: string
-		  }
-		| undefined = undefined
+	interface Logo {
+		src: string
+		alt: string
+	}
+	export let light: Logo | undefined = undefined
+	export let dark: Logo | undefined = undefined
 	export let disableLink: boolean = false
 </script>
 

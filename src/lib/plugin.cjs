@@ -85,6 +85,12 @@ module.exports = plugin(
 			'p, ul, ol, dl, dd, blockquote, pre, figure, hr': {
 				color: theme('colors.neutral.600'),
 			},
+			'a[href]': {
+				color: theme('colors.primary.1000'),
+			},
+			'a[href]:hover': {
+				textDeoration: 'underline',
+			},
 		})
 	},
 	{

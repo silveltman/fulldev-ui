@@ -3,7 +3,7 @@
 	import Container from 'layout/Container.svelte'
 	import Eyebrow from 'base/Eyebrow.svelte'
 	import Stack from 'layout/Stack.svelte'
-	import Accordion from 'base/Accordion.svelte'
+	import Accordion from '$lib/slot/Accordion.svelte'
 
 	let className = ''
 	export { className as class }

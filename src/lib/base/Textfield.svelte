@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Label from './Label.svelte'
-
 	export let type: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search' | 'number' = 'text'
 	export let required: boolean = false
 	export let name: string = type
@@ -10,9 +8,15 @@
 
 <div class="flex flex-col">
 	{#if label}
-		<Label {name}>
+		<label
+			for={name}
+			class="text-sm font-medium text-neutral-700"
+		>
 			{label}
-		</Label>
+			{#if required}
+				*
+			{/if}
+		</label>
 	{/if}
 	<input
 		{type}
@@ -20,6 +24,6 @@
 		{name}
 		{placeholder}
 		{required}
-		class="text-md flex rounded-input border-neutral-400 py-3 px-3 leading-none"
+		class="flex rounded-input border-neutral-400 bg-neutral-200 py-3 px-3 text-md leading-none"
 	/>
 </div>

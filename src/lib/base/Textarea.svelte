@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Label from './Label.svelte'
-
 	export let required: boolean = false
 	export let rows: number = 5
 	export let name: string = 'textarea'
@@ -10,9 +8,15 @@
 
 <div class="flex flex-col">
 	{#if label}
-		<Label {name}>
+		<label
+			for={name}
+			class="text-sm font-medium text-neutral-700"
+		>
 			{label}
-		</Label>
+			{#if required}
+				*
+			{/if}
+		</label>
 	{/if}
 	<textarea
 		id={name}
@@ -20,6 +24,6 @@
 		{name}
 		{placeholder}
 		{required}
-		class="flex rounded-input border-neutral-400 py-3 px-3 text-md"
+		class="flex rounded-input border-neutral-400 bg-neutral-200 py-3 px-3 text-md"
 	/>
 </div>
