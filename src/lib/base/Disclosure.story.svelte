@@ -4,7 +4,7 @@
 	export let Hst: Hst
 
 	let heading: string = 'Lorem ipsum'
-	let text: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+	let textarea: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 </script>
 
 <Hst.Story>
@@ -14,13 +14,13 @@
 			title="Heading"
 		/>
 		<Hst.Text
-			bind:value={text}
+			bind:value={textarea}
 			title="Text"
 		/>
 	</svelte:fragment>
 
 	<Disclosure
 		{heading}
-		{text}
+		{textarea}
 	/>
 </Hst.Story>

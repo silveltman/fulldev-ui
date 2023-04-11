@@ -12,7 +12,7 @@
 
 <Section
 	{layout}
-	class={className}
+	class="d {className}"
 	{...$$restProps}
 >
 	<slot name="highlight">

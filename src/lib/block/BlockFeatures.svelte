@@ -24,7 +24,7 @@
 
 	<slot name="checklist">
 		{#if content.checklist}
-			<SlotChecklist {content} />
+			<SlotChecklist content={content.checklist} />
 		{/if}
 	</slot>
 

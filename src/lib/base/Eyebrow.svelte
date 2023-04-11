@@ -2,20 +2,20 @@
 	let className = ''
 	export { className as class }
 	export let size: 'sm' | 'md' | 'lg' = 'md'
-	export let color: boolean = true
+	// export let variant: 'primary' | 'secondary' = 'primary'
 	export let text: string = 'Lorem ipsum'
 </script>
 
-<div
-	class="hello bg-test bg-hello inline-block rounded-eyebrow text-md font-medium leading-none text-primary-700
+<p
+	class="text-primary-700 text-eyebrow inline-block font-medium leading-none
 
-	{size === 'lg' &&
-		(color
-			? 'border border-primary-500/20 !bg-primary-500/5 py-2 px-3 text-primary-500'
-			: 'border border-neutral-500/20 !bg-neutral-500/5 py-2 px-3 text-neutral-500')}
+	{size == 'sm' && 'text-sm'}
+	{size == 'md' && 'text-md'}
+	{size == 'lg' && 'text-lg'}
+
 	{className}
 	"
 	{...$$restProps}
 >
 	{text}
-</div>
+</p>

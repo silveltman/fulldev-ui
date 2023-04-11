@@ -3,7 +3,6 @@
 	import Button from './Button.svelte'
 	export let Hst: Hst
 
-	let color: boolean = true
 	let href: string | undefined = undefined
 	let text: string = 'Lorem ipsum'
 	let disabled: boolean = false
@@ -12,26 +11,21 @@
 <Hst.Story layout={{ type: 'grid', width: 300 }}>
 	<svelte:fragment slot="controls">
 		<Hst.Text
-			bind:value={text}
 			title="Content"
+			bind:value={text}
 		/>
 		<Hst.Text
-			bind:value={href}
 			title="Href"
+			bind:value={href}
 		/>
 		<Hst.Checkbox
-			bind:value={disabled}
 			title="Disabled"
-		/>
-		<Hst.Checkbox
-			bind:value={color}
-			title="Color"
+			bind:value={disabled}
 		/>
 	</svelte:fragment>
 
 	<Hst.Variant title="Primary/sm">
 		<Button
-			{color}
 			{href}
 			{text}
 			{disabled}
@@ -41,7 +35,6 @@
 	</Hst.Variant>
 	<Hst.Variant title="Primary/md">
 		<Button
-			{color}
 			{href}
 			{text}
 			{disabled}
@@ -51,7 +44,6 @@
 	</Hst.Variant>
 	<Hst.Variant title="Primary/lg">
 		<Button
-			{color}
 			{href}
 			{text}
 			{disabled}
@@ -61,7 +53,6 @@
 	</Hst.Variant>
 	<Hst.Variant title="Secondary/sm">
 		<Button
-			{color}
 			{href}
 			{text}
 			{disabled}
@@ -71,7 +62,6 @@
 	</Hst.Variant>
 	<Hst.Variant title="Secondary/md">
 		<Button
-			{color}
 			{href}
 			{text}
 			{disabled}
@@ -81,7 +71,6 @@
 	</Hst.Variant>
 	<Hst.Variant title="Secondary/lg">
 		<Button
-			{color}
 			{href}
 			{text}
 			{disabled}
@@ -91,7 +80,6 @@
 	</Hst.Variant>
 	<Hst.Variant title="Tertiary/sm">
 		<Button
-			{color}
 			{href}
 			{text}
 			{disabled}
@@ -101,7 +89,6 @@
 	</Hst.Variant>
 	<Hst.Variant title="Tertiary/md">
 		<Button
-			{color}
 			{href}
 			{text}
 			{disabled}
@@ -111,7 +98,6 @@
 	</Hst.Variant>
 	<Hst.Variant title="Tertiary/lg">
 		<Button
-			{color}
 			{href}
 			{text}
 			{disabled}

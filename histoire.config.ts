@@ -2,7 +2,7 @@ import { defineConfig } from 'histoire'
 import { HstSvelte } from '@histoire/plugin-svelte'
 
 export default defineConfig({
-    setupFile: '/src/histoire/histoire-setup.js',
+    setupFile: '/src/histoire-setup.js',
     tree: {
         file: 'path',
     },

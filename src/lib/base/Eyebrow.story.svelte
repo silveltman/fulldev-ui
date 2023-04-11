@@ -4,13 +4,13 @@
 	export let Hst: Hst
 
 	let color: boolean = true
-	let text: string = 'Lorem ipsum'
+	let textarea: string = 'Lorem ipsum'
 </script>
 
 <Hst.Story layout={{ type: 'grid', width: 300 }}>
 	<svelte:fragment slot="controls">
 		<Hst.Text
-			bind:value={text}
+			bind:value={textarea}
 			title="Content"
 		/>
 		<Hst.Checkbox
@@ -22,21 +22,21 @@
 	<Hst.Variant title="sm">
 		<Eyebrow
 			{color}
-			{text}
+			{textarea}
 			size="sm"
 		/>
 	</Hst.Variant>
 	<Hst.Variant title="md">
 		<Eyebrow
 			{color}
-			{text}
+			{textarea}
 			size="md"
 		/>
 	</Hst.Variant>
 	<Hst.Variant title="lg">
 		<Eyebrow
 			{color}
-			{text}
+			{textarea}
 			size="lg"
 		/>
 	</Hst.Variant>

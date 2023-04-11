@@ -6,7 +6,7 @@ module.exports = plugin(
 		addBase({
 			':root': {
 				'--text-sm': '14px',
-				'--text-nd': '16px',
+				'--text-md': '16px',
 				'--text-lg': '18px',
 				'--text-xl': '24px',
 				'--text-2xl': '30px',
@@ -99,12 +99,14 @@ module.exports = plugin(
 			aspectRatio: false,
 			container: false
 		},
-		darkMode: 'class',
 		theme: {
+			// Font family
 			fontFamily: {
 				heading: '"Inter", sans-serif',
 				body: '"Inter", sans-serif',
 			},
+
+			// Border Radius
 			borderRadius: {
 				box: '24px',
 				button: '12px',
@@ -113,6 +115,20 @@ module.exports = plugin(
 				image: '4px',
 				full: '9999px',
 			},
+
+			// Shadow
+			boxShadow: {
+				box: '0 0 0 1px',
+				image: '0 0 0 1px',
+				'button-primary': '0 0 0 1px',
+			},
+			boxShadowColor: {
+				box: '#000000',
+				image: '#000000',
+				'button-primary': '#000000',
+			},
+
+			// Font size
 			fontSize: {
 				'sm': 'var(--text-sm)',
 				'md': 'var(--text-md)',
@@ -122,6 +138,54 @@ module.exports = plugin(
 				'3xl': 'var(--text-3xl)',
 			},
 			extend: {
+				// Color
+				backgroundColor: {
+					300: '#ffffff',
+					500: '#f8fafc',
+					700: '#f1f5f9',
+					'button-primary': '#000000',
+				},
+				textColor: {
+					300: '#1e293b',
+					500: '#0f172a',
+					700: '#020617',
+					'button-primary': '#ffffff',
+					'button-secondary': '#000000',
+					'button-tertiary': '#000000',
+					'eyebrow': '#000000',
+				},
+				borderColor: {
+					300: '#e2e8f0',
+					500: '#cbd5e1',
+					700: '#94a3b8',
+				},
+				ringColor: {
+					'button-secondary': '#000000',
+				},
+				colors: {
+					accent: {
+						300: '#a5b4fc',
+						500: '#6366f1',
+						700: '#a5b4fc',
+					},
+					success: {
+						300: '#86efac',
+						500: '#22c55e',
+						700: '#15803d',
+					},
+					warning: {
+						300: '#fdba74',
+						500: '#f97316',
+						700: '#c2410c',
+					},
+					danger: {
+						300: '#fca5a5',
+						500: '#ef4444',
+						700: '#b91c1c',
+					},
+				},
+
+				// Spacing
 				spacing: {
 					xs: 'var(--space-xs)',
 					sm: 'var(--space-sm)',
@@ -132,7 +196,7 @@ module.exports = plugin(
 					'3xl': 'var(--space-3xl)',
 					'4xl': 'var(--space-4xl)',
 					'5xl': 'var(--space-5xl)'
-				}
+				},
 			}
 		}
 	}

@@ -1,6 +1,5 @@
 <script lang="ts">
-	import type { Layout, CtaContent } from '$lib/types'
-	import type { Hst } from '@histoire/plugin-svelte'
+	import type { Layout, CtaContent, Hst } from '$lib/types'
 	import BlockCta from './BlockCta.svelte'
 	import BlockControls from '../../histoire/BlockControls.svelte'
 
@@ -29,10 +28,10 @@
 </script>
 
 <Hst.Story>
-	<BlockControls
+	<!-- <BlockControls
 		slot="controls"
 		bind:layout
-	/>
+	/> -->
 
 	<BlockCta
 		{layout}

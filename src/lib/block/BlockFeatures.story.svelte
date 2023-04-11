@@ -1,35 +1,35 @@
 <script lang="ts">
 	import type { Hst } from '@histoire/plugin-svelte'
-	import type { Features } from '$lib/types'
+	import type { Layout } from '$lib/types'
+	import type { FeaturesContent } from '$lib/types'
 	import BlockFeatures from './BlockFeatures.svelte'
 	export let Hst: Hst
 
 	// Section props
-	let box: boolean = false
-	let split: boolean = false
-	let center: boolean = false
-	let reverse: boolean = false
+	let layout: Layout = {}
 
 	// Component props
-	let block: Features = {
-		eyebrow: 'lorem ipsum',
-		heading: 'Lorem ipsum dolor',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+	let content: FeaturesContent = {
+		highlight: {
+			eyebrow: 'lorem ipsum',
+			heading: 'Lorem ipsum dolor',
+			textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+		},
 		checklist: [
 			{
-				heading: 'Lorem ipsum dolor',
-				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+				heading: 'Lorem ipsum dolor sit amet',
+				textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 			},
 			{
-				heading: 'Lorem ipsum dolor',
-				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+				heading: 'Lorem ipsum dolor sit amet',
+				textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 			},
 			{
-				heading: 'Lorem ipsum dolor',
-				text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+				heading: 'Lorem ipsum dolor sit amet',
+				textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 			}
 		],
-		image: {
+		media: {
 			src: 'https://picsum.photos/1600/900',
 			alt: 'Lorem ipsum'
 		}
@@ -40,27 +40,24 @@
 	<svelte:fragment slot="controls">
 		<Hst.Checkbox
 			title="Box"
-			bind:value={box}
+			bind:value={layout.box}
 		/>
 		<Hst.Checkbox
 			title="Split"
-			bind:value={split}
+			bind:value={layout.split}
 		/>
 		<Hst.Checkbox
 			title="Center"
-			bind:value={center}
+			bind:value={layout.center}
 		/>
 		<Hst.Checkbox
 			title="Reverse"
-			bind:value={reverse}
+			bind:value={layout.reverse}
 		/>
 	</svelte:fragment>
 
 	<BlockFeatures
-		{box}
-		{split}
-		{center}
-		{reverse}
-		{block}
+		{layout}
+		{content}
 	/>
 </Hst.Story>

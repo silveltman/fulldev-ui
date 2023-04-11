@@ -3,8 +3,7 @@
 	import { IconMinus, IconPlus } from '@tabler/icons-svelte'
 
 	export let heading: string = ''
-	export let text: string = ''
-	//
+	export let textarea: string = ''
 </script>
 
 <Disclosure
@@ -22,6 +21,6 @@
 		{/if}
 	</DisclosureButton>
 	<DisclosurePanel>
-		{text}
+		{textarea}
 	</DisclosurePanel>
 </Disclosure>
