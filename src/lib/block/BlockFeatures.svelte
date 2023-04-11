@@ -1,49 +1,36 @@
 <script lang="ts">
-	import type { Features } from '$lib/types'
+	import type { FeaturesContent, Layout } from '$lib/types'
 	import Section from 'layout/Section.svelte'
-	import Image from 'base/Image.svelte'
-	import SlotProse from '$lib/slot/SlotProse.svelte'
+	import SlotHighlight from 'slot/SlotHighlight.svelte'
 	import SlotChecklist from 'slot/SlotChecklist.svelte'
+	import SlotMedia from 'slot/SlotMedia.svelte'
 
-	// Section props
 	let className: string = ''
 	export { className as class }
-	export let box: boolean = false
-	export let split: boolean = false
-	export let center: boolean = false
-	export let reverse: boolean = false
-
-	// Component props
-	export let block: Features
-	//
+	export let layout: Layout = {}
+	export let content: FeaturesContent = {}
 </script>
 
 <Section
-	{box}
-	{split}
-	{center}
-	{reverse}
+	{layout}
 	class={className}
 	{...$$restProps}
 >
-	<!-- <div class="flex w-full flex-col gap-2xl"> -->
-	<slot name="prose">
-		<SlotProse
-			size="md"
-			{block}
-		/>
+	<slot name="highlight">
+		{#if content.highlight}
+			<SlotHighlight content={content.highlight} />
+		{/if}
 	</slot>
+
 	<slot name="checklist">
-		<SlotChecklist {block} />
+		{#if content.checklist}
+			<SlotChecklist {content} />
+		{/if}
 	</slot>
-	<!-- </div> -->
 
 	<slot name="image">
-		{#if block.image}
-			<Image
-				sizes={{ base: '100vw', lg: '50vw', '2xl': '703px' }}
-				{...block.image}
-			/>
+		{#if content.media}
+			<SlotMedia content={content.media} />
 		{/if}
 	</slot>
 </Section>

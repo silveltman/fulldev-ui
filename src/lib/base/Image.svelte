@@ -5,7 +5,7 @@
 	export let loading: 'eager' | 'lazy' = 'lazy'
 	export let decoding: 'async' | 'auto' | 'sync' = 'async'
 	export let ratio: number | undefined = undefined
-	export let alt: string
+	export let alt: string = ''
 	export let src: string =
 		'https://res.cloudinary.com/starter-astro/image/upload/v1680037452/axzdpjcdaheucvk09e3u.webp'
 

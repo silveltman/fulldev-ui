@@ -3,15 +3,15 @@
 	import { IconCircleCheck } from '@tabler/icons-svelte'
 	import Button from 'base/Button.svelte'
 	export let center: boolean = false
-	export let block: Checklist
-	//
+
+	export let content: Checklist = []
 </script>
 
 <ul
 	class="slot-checklist grid w-full grid-cols-[repeat(auto-fit,minmax(332px,1fr))] gap-x-2xl gap-y-2xl"
 	class:justify-center={center}
 >
-	{#each block.checklist as item}
+	{#each content as item}
 		<li class="relative max-w-lg pl-8 text-left">
 			<IconCircleCheck
 				stroke={1.3}

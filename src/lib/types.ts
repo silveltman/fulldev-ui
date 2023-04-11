@@ -1,26 +1,29 @@
+// --------------------------------------------
+// Base 
+// --------------------------------------------
 export interface Disclosure {
-	heading: string
-	text: string
+	heading?: string
+	textarea?: string
 }
 
 export interface Image {
-	src: string
-	alt: string
+	src?: string
+	alt?: string
 }
 
 export interface Social {
-	icon: string
-	href: string
+	icon?: string
+	href?: string
 }
 
 export interface Button {
-	text: string
-	href: string
+	text?: string
+	href?: string
 }
 
 export interface Link {
-	text: string
-	href: string
+	text?: string
+	href?: string
 }
 
 export interface Logo {
@@ -30,64 +33,60 @@ export interface Logo {
 }
 
 
+// --------------------------------------------
+// Slot
+// --------------------------------------------
 
+export type AccordionContent = Disclosure[]
 
+interface ChecklistItem {
+	heading?: string
+	textarea?: string
+}
+export type ChecklistContent = ChecklistItem[]
 
-// Slots
-export interface Prose {
+export interface HighlightContent {
 	eyebrow?: string
 	heading?: string
-	text?: string
+	textarea?: string
+	button_primary?: Button
+	button_secondary?: Button
+	button_tertiary?: Button
+
+}
+
+export type MediaContent = Image
+
+export interface RichtextContent {
 	html?: string
-	button_primary?: Button
-	button_secondary?: Button
 }
 
-export interface Accordion {
-	accordion: Disclosure[]
+interface StatsItem {
+	label?: string
+	value?: string
+}
+export type StatsContent = StatsItem[]
+
+
+
+// --------------------------------------------
+// Block
+// --------------------------------------------
+
+export interface CtaContent {
+	highlight?: HighlightContent
+	media?: MediaContent
 }
 
-export interface Checklist {
-	checklist: {
-		heading: string
-		text: string
-	}[]
+export interface FaqContent {
+	highlight?: HighlightContent
+	accordion?: AccordionContent
 }
 
-
-// Block Blocks
-export interface Hero {
-	eyebrow?: string
-	heading?: string
-	text?: string
-	button_primary?: Button
-	button_secondary?: Button
-	image?: Image
-}
-
-export interface Content {
-	eyebrow?: string
-	heading?: string
-	html?: string
-	button_primary?: Button
-	button_secondary?: Button
-	image?: Image
-}
-
-export interface Cta {
-	heading?: string
-	text?: string
-	button_primary?: Button
-	button_secondary?: Button
-}
-
-export interface Faq {
-	eyebrow?: string
-	heading?: string
-	text?: string
-	button_primary?: Button
-	button_secondary?: Button
-	accordion: Disclosure[]
+export interface FeaturesContent {
+	highlight?: HighlightContent
+	checklist?: ChecklistContent
+	media?: MediaContent
 }
 
 export interface Header {
@@ -119,4 +118,17 @@ export interface Features {
 		}
 	],
 	image?: Image
+}
+
+
+
+// --------------------------------------------
+// Layout
+// --------------------------------------------
+
+export interface Layout {
+	box?: boolean
+	split?: boolean
+	center?: boolean
+	reverse?: boolean
 }

@@ -3,13 +3,12 @@
 
 	let className: string = ''
 	export { className as class }
-	export let as: string = 'section'
 </script>
 
-<svelte:element this={as}>
+<section>
 	<Container>
 		<div class="relative my-4xl rounded-box bg-neutral-200 px-4 py-2xl md:px-2xl {className}">
 			<slot />
 		</div>
 	</Container>
-</svelte:element>
+</section>

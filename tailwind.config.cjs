@@ -8,6 +8,7 @@ module.exports = {
 		require('tailwind-scrollbar'),
 		require('@tailwindcss/aspect-ratio'),
 		require('@tailwindcss/forms'),
+		require('@tailwindcss/typography'),
 		require('./src/lib/plugin.cjs'),
 		require('tailwindcss-themer')({
 			defaultTheme: {

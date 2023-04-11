@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import type { Block } from './Footer'
 	import { defaults } from './Footer'
 
@@ -39,4 +39,4 @@
 			</ul>
 		{/if}
 	</Container>
-</footer>
+</footer> -->

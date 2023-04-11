@@ -1,5 +1,5 @@
 <script lang="ts">
-	import BlockContent from 'block/BlockContent.svelte'
+	import BlockContent from 'block/BlockCta.svelte'
 
 	let block = {
 		eyebrow: 'lorem ipsum',

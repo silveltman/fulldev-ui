@@ -1,23 +1,27 @@
 <script lang="ts">
 	import type { Hst } from '@histoire/plugin-svelte'
-	import type { Prose } from '$lib/types'
-	import SlotProse from 'slot/SlotProse.svelte'
+	import type { HighlightContent } from '$lib/types'
+	import SlotHighlight from 'slot/SlotHighlight.svelte'
 	export let Hst: Hst
 
 	// Styling props
 	let size: 'lg' | 'md' | 'sm' = 'md'
 
 	// Content props
-	let block: Prose = {
-		eyebrow: 'lorem ipsum',
-		heading: 'Lorem ipsum dolor',
-		html: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+	let content: HighlightContent = {
+		eyebrow: 'Lorem ipsum',
+		heading: 'Lorem ipsum dolor sit amet',
+		textarea:
+			'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl vel ultricies lacinia, nisl nisl aliquam nisl, eu aliquam nisl nisl eu ante.',
 		button_primary: {
 			text: 'Lorem ipsum',
 			href: '#'
 		},
 		button_secondary: {
+			text: 'Lorem ipsum',
+			href: '#'
+		},
+		button_tertiary: {
 			text: 'Lorem ipsum',
 			href: '#'
 		}
@@ -31,14 +35,10 @@
 			bind:value={size}
 			options={['sm', 'md', 'lg']}
 		/>
-		<Hst.Json
-			title="Block"
-			bind:value={block}
-		/>
 	</svelte:fragment>
 
-	<SlotProse
+	<SlotHighlight
 		{size}
-		{block}
+		{content}
 	/>
 </Hst.Story>

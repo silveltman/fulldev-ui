@@ -54,10 +54,6 @@
 			title="Reverse"
 			bind:value={reverse}
 		/>
-		<Hst.Json
-			title="Block"
-			bind:value={block}
-		/>
 	</svelte:fragment>
 
 	<BlockFeatures

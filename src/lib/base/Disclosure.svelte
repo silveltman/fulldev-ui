@@ -2,8 +2,8 @@
 	import { Disclosure, DisclosureButton, DisclosurePanel } from '@rgossiaux/svelte-headlessui'
 	import { IconMinus, IconPlus } from '@tabler/icons-svelte'
 
-	export let heading: string
-	export let text: string
+	export let heading: string = ''
+	export let text: string = ''
 	//
 </script>
 
