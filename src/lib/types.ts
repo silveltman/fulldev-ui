@@ -17,7 +17,7 @@ export interface Social {
 	href?: string
 }
 
-export interface Button {
+export interface ButtonContent {
 	text?: string
 	href?: string
 }

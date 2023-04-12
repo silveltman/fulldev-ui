@@ -1,22 +1,25 @@
 <script lang="ts">
-	import type { Hst } from '@histoire/plugin-svelte'
+	import type { Hst, ButtonContent } from '$lib/types'
 	import Button from './Button.svelte'
 	export let Hst: Hst
 
-	let href: string | undefined = undefined
-	let text: string = 'Lorem ipsum'
+	let content: ButtonContent = {
+		text: 'Click me',
+		href: '#'
+	}
+
 	let disabled: boolean = false
 </script>
 
-<Hst.Story layout={{ type: 'grid', width: 300 }}>
+<Hst.Story layout={{ type: 'grid', width: 200 }}>
 	<svelte:fragment slot="controls">
 		<Hst.Text
 			title="Content"
-			bind:value={text}
+			bind:value={content.text}
 		/>
 		<Hst.Text
 			title="Href"
-			bind:value={href}
+			bind:value={content.href}
 		/>
 		<Hst.Checkbox
 			title="Disabled"
@@ -26,8 +29,7 @@
 
 	<Hst.Variant title="Primary/sm">
 		<Button
-			{href}
-			{text}
+			{content}
 			{disabled}
 			variant="primary"
 			size="sm"
@@ -35,8 +37,7 @@
 	</Hst.Variant>
 	<Hst.Variant title="Primary/md">
 		<Button
-			{href}
-			{text}
+			{content}
 			{disabled}
 			variant="primary"
 			size="md"
@@ -44,8 +45,7 @@
 	</Hst.Variant>
 	<Hst.Variant title="Primary/lg">
 		<Button
-			{href}
-			{text}
+			{content}
 			{disabled}
 			variant="primary"
 			size="lg"
@@ -53,8 +53,7 @@
 	</Hst.Variant>
 	<Hst.Variant title="Secondary/sm">
 		<Button
-			{href}
-			{text}
+			{content}
 			{disabled}
 			variant="secondary"
 			size="sm"
@@ -62,8 +61,7 @@
 	</Hst.Variant>
 	<Hst.Variant title="Secondary/md">
 		<Button
-			{href}
-			{text}
+			{content}
 			{disabled}
 			variant="secondary"
 			size="md"
@@ -71,8 +69,7 @@
 	</Hst.Variant>
 	<Hst.Variant title="Secondary/lg">
 		<Button
-			{href}
-			{text}
+			{content}
 			{disabled}
 			variant="secondary"
 			size="lg"
@@ -80,8 +77,7 @@
 	</Hst.Variant>
 	<Hst.Variant title="Tertiary/sm">
 		<Button
-			{href}
-			{text}
+			{content}
 			{disabled}
 			variant="tertiary"
 			size="sm"
@@ -89,8 +85,7 @@
 	</Hst.Variant>
 	<Hst.Variant title="Tertiary/md">
 		<Button
-			{href}
-			{text}
+			{content}
 			{disabled}
 			variant="tertiary"
 			size="md"
@@ -98,8 +93,7 @@
 	</Hst.Variant>
 	<Hst.Variant title="Tertiary/lg">
 		<Button
-			{href}
-			{text}
+			{content}
 			{disabled}
 			variant="tertiary"
 			size="lg"
