@@ -20,6 +20,8 @@ When creating base components, follow these guidelines to maintain consistency a
 
 2. Always use dynamic expressions within the class="... {place here}" for assigning attributes or classes based on component properties. This gives greater flexibility, because components for example do not accept the class:myclass={} syntax
 
+3. Always export className as class and include it in class="..."
+
 ### Story
 1. Import types
 2. Import component

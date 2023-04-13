@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { ChecklistContent } from '$lib/types'
+	import type { SlotChecklistContent } from '$lib/types'
 	import { IconCircleCheck } from '@tabler/icons-svelte'
 	import Button from 'base/Button.svelte'
 	export let center: boolean = false
 
-	export let content: ChecklistContent = []
+	export let content: SlotChecklistContent = []
 </script>
 
 <ul
@@ -15,7 +15,7 @@
 		<li class="relative max-w-lg pl-8 text-left">
 			<IconCircleCheck
 				stroke={1.3}
-				class="absolute left-0 top-0 text-primary-700"
+				class="text-primary-700 absolute left-0 top-0"
 			/>
 			<h5 class="inline">{item.heading}</h5>
 			<p class="inline">{item.textarea}</p>

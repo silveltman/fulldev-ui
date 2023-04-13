@@ -3,7 +3,7 @@
 	import Textfield from './Textfield.svelte'
 	export let Hst: Hst
 
-	export let type: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search' | 'number' = 'text'
+	let type: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search' | 'number' = 'text'
 	let required = false
 	let name = type
 	let label = 'Lorem'

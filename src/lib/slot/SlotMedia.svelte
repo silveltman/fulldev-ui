@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { MediaContent } from '$lib/types'
+	import type { SlotMediaContent } from '$lib/types'
 	import Image from 'base/Image.svelte'
 
-	export let content: MediaContent = {}
+	export let content: SlotMediaContent = {}
 </script>
 
 <Image

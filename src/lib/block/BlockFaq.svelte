@@ -16,10 +16,12 @@
 	{...$$restProps}
 >
 	<slot name="highlight">
-		<SlotHighlight content={content.highlight} />
+		{#if content.highlight}
+			<SlotHighlight content={content.highlight} />
+		{/if}
 	</slot>
 
-	<slot name="image">
+	<slot name="accordion">
 		{#if content.accordion}
 			<SlotAccordion content={content.accordion} />
 		{/if}

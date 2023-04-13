@@ -8,6 +8,7 @@
 	{action}
 	method="POST"
 	class="flex w-full max-w-md flex-col gap-md"
+	{...$$restProps}
 >
 	{#if key}
 		<input

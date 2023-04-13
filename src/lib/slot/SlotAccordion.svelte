@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { AccordionContent } from '$lib/types'
+	import type { SlotAccordionContent } from '$lib/types'
 	import Disclosure from 'base/Disclosure.svelte'
 
-	export let content: AccordionContent = []
+	export let content: SlotAccordionContent = []
 </script>
 
 <div class="slot-accordion flex w-full max-w-md flex-col divide-y divide-neutral-200">

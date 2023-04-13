@@ -12,7 +12,7 @@
 
 <Section
 	{layout}
-	class="d {className}"
+	class="block-cta {className}"
 	{...$$restProps}
 >
 	<slot name="highlight">
@@ -21,7 +21,7 @@
 		{/if}
 	</slot>
 
-	<slot name="image">
+	<slot name="media">
 		{#if content.media}
 			<SlotMedia content={content.media} />
 		{/if}
