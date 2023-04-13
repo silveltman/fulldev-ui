@@ -1,5 +1,5 @@
-# Svelte Components Guidelines
-When creating Svelte components, follow these guidelines to maintain consistency and code quality in our repository:
+# Base Components Guidelines
+When creating base components, follow these guidelines to maintain consistency and code quality in our repository:
 
 ## General guidelines
 - Refer to the provided Button.svelte component as a reference for implementing these guidelines.
