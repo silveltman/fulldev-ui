@@ -13,13 +13,9 @@
 
 <Hst.Story layout={{ type: 'grid', width: 200 }}>
 	<svelte:fragment slot="controls">
-		<Hst.Text
+		<Hst.Json
 			title="Content"
-			bind:value={content.text}
-		/>
-		<Hst.Text
-			title="Href"
-			bind:value={content.href}
+			bind:value={content}
 		/>
 		<Hst.Checkbox
 			title="Disabled"
