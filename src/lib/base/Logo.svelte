@@ -1,10 +1,8 @@
 <script lang="ts">
-	interface Logo {
-		src: string
-		alt: string
-	}
-	export let light: Logo | undefined = undefined
+	import type { LogoContent } from '$lib/types'
+
 	export let dark: Logo | undefined = undefined
+	export let content: LogoContent
 	export let disableLink: boolean = false
 </script>
 
@@ -12,18 +10,18 @@
 	this={disableLink ? 'div' : 'a'}
 	href={disableLink ? undefined : '/'}
 >
-	{#if light}
+	{#if content.light}
 		<img
 			class="inline-block dark:hidden"
-			src={light.src}
-			alt={light.alt}
+			src={content.light.src}
+			alt={content.light.alt}
 		/>
 	{/if}
-	{#if dark}
+	{#if content.dark}
 		<img
 			class="hidden dark:inline-block"
-			src={dark.src}
-			alt={dark.alt}
+			src={content.dark.src}
+			alt={content.dark.alt}
 		/>
 	{/if}
 </svelte:element>

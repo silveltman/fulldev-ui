@@ -1,26 +1,31 @@
 <script lang="ts">
-	import { Disclosure, DisclosureButton, DisclosurePanel } from '@rgossiaux/svelte-headlessui'
+	import type { DisclosureContent } from '$lib/types'
 	import { IconMinus, IconPlus } from '@tabler/icons-svelte'
 
-	export let heading: string = ''
-	export let textarea: string = ''
+	let className = ''
+	export { className as class }
+	export let content: DisclosureContent
+
+	export let name: string = 'disclosure'
+	//
 </script>
 
-<Disclosure
-	class="flex flex-col items-start gap-y-sm py-lg"
-	let:open
+<label
+	for={name}
+	class="flex w-full cursor-pointer flex-col items-start gap-y-sm py-lg {className}"
 >
-	<DisclosureButton class="flex w-full items-center justify-between gap-sm">
-		<h5 class="inline-block">
-			{heading}
-		</h5>
-		{#if open}
-			<IconMinus />
-		{:else}
-			<IconPlus />
-		{/if}
-	</DisclosureButton>
-	<DisclosurePanel>
-		{textarea}
-	</DisclosurePanel>
-</Disclosure>
+	<input
+		type="checkbox"
+		{name}
+		id={name}
+		class="peer hidden"
+	/>
+	<div
+		class="flex w-full items-center justify-between gap-md peer-checked:[&>.min]:block peer-checked:[&>.plus]:hidden"
+	>
+		<h5 class="inline-block">{content.heading}</h5>
+		<IconPlus class="plus" />
+		<IconMinus class="min hidden" />
+	</div>
+	<p class="hidden peer-checked:block">{content.textarea}</p>
+</label>

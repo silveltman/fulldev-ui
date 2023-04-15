@@ -1,26 +1,25 @@
 <script lang="ts">
-	import type { Hst } from '@histoire/plugin-svelte'
+	import type { DisclosureContent, Hst } from '$lib/types'
 	import Disclosure from './Disclosure.svelte'
 	export let Hst: Hst
 
-	let heading: string = 'Lorem ipsum'
-	let textarea: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+	let content: DisclosureContent = {
+		heading: 'Lorem ipsum dolor sit amet',
+		textarea: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'
+	}
+	let name: string = 'disclosure'
 </script>
 
 <Hst.Story>
 	<svelte:fragment slot="controls">
-		<Hst.Text
-			bind:value={heading}
+		<Hst.Json
+			bind:value={content}
 			title="Heading"
-		/>
-		<Hst.Text
-			bind:value={textarea}
-			title="Text"
 		/>
 	</svelte:fragment>
 
 	<Disclosure
-		{heading}
-		{textarea}
+		{content}
+		{name}
 	/>
 </Hst.Story>

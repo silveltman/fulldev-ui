@@ -4,7 +4,7 @@
 
 	let className = ''
 	export { className as class }
-	export let content: ButtonContent = {}
+	export let content: ButtonContent
 
 	export let variant: 'primary' | 'secondary' | 'tertiary' = 'primary'
 	export let size: 'sm' | 'md' | 'lg' = 'md'

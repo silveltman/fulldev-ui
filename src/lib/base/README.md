@@ -2,27 +2,34 @@
 When creating base components, follow these guidelines to maintain consistency and code quality in our repository:
 
 ## General guidelines
-- Refer to the provided Button.svelte component as a reference for implementing these guidelines.
+- Refer to the provided Button.svelte component as a reference for implementing these guidelfireines.
 - Refer to plugin.js for tailwind theme config to apply
 
 ## Component
+### General
+- Use consistent naming conventions for components and their files.
+- Keep components lightweight and simple for optimal performance.
+- Remember that components will be rendered statically using Astro and shipped with zero JavaScript by default.
+- Use tailwindcss classes for consistent styling and theming, specified in plugin.js.
+- Always import content interfaces from types.ts to ensure consistency and avoid typing errors.
+- Use $$restProps to allow passing of additional attributes to the component, if needed.
 
-### Script
-1. Import types (if neccesary, create interface in types.ts)
-2. Import components
-3. Declare base/default props
-4. Declare component-specific props
-5. Optionally define variables
-6. optinally define functions
+### Script tag
+1. Import content interface from types.ts
+2. Import component dependencies
+3. Only if needed, import other dependencies
+4. Declare a variable called className and export it as class
+5. export content prop and use the imported interface as type
+6. export other component specific props
+7. Add any additional variables, functions or other things
 
 ### Markup
-1. Wrap component in {#if} block if that makes sense. This way, if our client leaves the button text empty for example, the button will not render on the page. This makes the editing experience in our CMS (CloudCannon) more dynamic. (we will use Astro, so the component will literally not be rendered)
+- Wrap component in {#if} block for conditional rendering based on content prop values.
+- Use dynamic expressions within class="..." for assigning attributes or classes based on component properties. For example, class="button {isActive ? 'active' : ''}".
+- Export className as class and use it in class="..." for consistency with other components. For example, class="container {className}".
+- Use tailwindcss classes for consistent styling and theming and avoid using a separate style-tag.
 
-2. Always use dynamic expressions within the class="... {place here}" for assigning attributes or classes based on component properties. This gives greater flexibility, because components for example do not accept the class:myclass={} syntax
-
-3. Always export className as class and include it in class="..."
-
-### Story
+## Story
 1. Import types
 2. Import component
 3. Export Hst

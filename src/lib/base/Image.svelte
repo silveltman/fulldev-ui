@@ -1,13 +1,14 @@
 <script lang="ts">
+	import type { ImageContent } from '$lib/types'
+
 	let className = ''
 	export { className as class }
+	export let content: ImageContent
+
 	export let widths: number[] = [320, 640, 1024, 1280, 1920]
 	export let loading: 'eager' | 'lazy' = 'lazy'
 	export let decoding: 'async' | 'auto' | 'sync' = 'async'
 	export let ratio: number | undefined = undefined
-	export let alt: string = ''
-	export let src: string =
-		'https://res.cloudinary.com/starter-astro/image/upload/v1680037452/axzdpjcdaheucvk09e3u.webp'
 
 	export let sizes: {
 		'2xl'?: string
@@ -40,25 +41,19 @@
 	}
 
 	// computed
-	const srcset = widths.map((width) => `${getTransformedSrc(src, width)} ${width}w`).join(', ')
+	const srcset = widths
+		.map((width) => `${getTransformedSrc(content.src, width)} ${width}w`)
+		.join(', ')
 </script>
 
-{#if src.includes('cloudinary')}
+{#if content.src}
 	<img
-		sizes={sizesString}
-		{srcset}
-		{alt}
+		sizes={content.src.includes('cloudinary') ? sizesString : undefined}
+		srcset={content.src.includes('cloudinary') ? srcset : undefined}
+		src={getTransformedSrc(content.src)}
+		alt={content.alt}
 		{loading}
 		{decoding}
 		class="h-auto w-full rounded-image {className}"
-		src={getTransformedSrc(src)}
-	/>
-{:else}
-	<img
-		{alt}
-		{loading}
-		{decoding}
-		class="h-auto w-full rounded-image {className}"
-		{src}
 	/>
 {/if}

@@ -1,46 +1,52 @@
 export type { Hst } from '@histoire/plugin-svelte'
 
-// Cloudcannon types
-type heading = string
-type textarea = string
-type text = string
-type eyebrow = string
-
-
-
-
 // --------------------------------------------
 // Base 
 // --------------------------------------------
-export interface Disclosure {
-	heading?: string
-	textarea?: string
-}
-
-export interface Image {
-	src?: string
-	alt?: string
-}
-
-export interface Social {
-	icon?: string
-	href?: string
-}
-
 export interface ButtonContent {
-	text?: string
-	href?: string
+	text: string
+	href: string
 }
 
-export interface Link {
-	text?: string
-	href?: string
+export interface DisclosureContent {
+	heading: string
+	textarea: string
 }
 
-export interface Logo {
-	light?: Image
-	dark?: Image
-	disableLink?: boolean
+export type EyebrowContent = string
+
+export interface ImageContent {
+	src: string
+	alt: string
+}
+
+export interface SocialContent {
+	icon: string
+	href: string
+}
+
+
+export interface LinkContent {
+	text: string
+	href: string
+}
+
+export interface LogoContent {
+	light?: ImageContent
+	dark?: ImageContent
+}
+
+export interface PersonContent {
+	heading: string
+	text: string
+	image: ImageContent
+}
+
+export interface CardContent {
+	heading: string
+	textarea: string
+	image: ImageContent
+	person?: PersonContent
 }
 
 
@@ -48,7 +54,7 @@ export interface Logo {
 // Slot
 // --------------------------------------------
 
-export type SlotAccordionContent = Disclosure[]
+export type SlotAccordionContent = DisclosureContent[]
 
 interface ChecklistItem {
 	heading?: string
@@ -78,7 +84,9 @@ interface StatsItem {
 }
 export type SlotStatsContent = StatsItem[]
 
-export interface SlotNewsletterContent {
+export type SlotCardsContent = CardContent[]
+
+export interface SlotNewsletterContent { }
 
 
 // --------------------------------------------

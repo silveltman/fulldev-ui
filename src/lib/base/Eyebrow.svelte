@@ -1,13 +1,16 @@
 <script lang="ts">
+	import type { EyebrowContent } from '$lib/types'
+
 	let className = ''
 	export { className as class }
+	export let content: EyebrowContent
+
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 	// export let variant: 'primary' | 'secondary' = 'primary'
-	export let text: string = 'Lorem ipsum'
 </script>
 
 <p
-	class="text-primary-700 text-eyebrow inline-block font-medium leading-none
+	class="text-primary-700 inline-block font-medium leading-none text-eyebrow
 
 	{size == 'sm' && 'text-sm'}
 	{size == 'md' && 'text-md'}
@@ -17,5 +20,5 @@
 	"
 	{...$$restProps}
 >
-	{text}
+	{content}
 </p>
