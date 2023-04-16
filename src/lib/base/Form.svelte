@@ -1,4 +1,7 @@
 <script lang="ts">
+	let className = ''
+	export { className as class }
+
 	export let key: string | undefined = undefined
 	export let subject: string | undefined = undefined
 	export let action: string | undefined = undefined
@@ -7,7 +10,7 @@
 <form
 	{action}
 	method="POST"
-	class="flex w-full max-w-md flex-col gap-md"
+	class="flex w-full max-w-md flex-col gap-md {className}"
 	{...$$restProps}
 >
 	{#if key}

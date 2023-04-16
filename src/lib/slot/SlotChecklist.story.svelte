@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Hst } from '@histoire/plugin-svelte'
-	import type { SlotChecklistContent } from '$lib/types'
+	import type { SlotChecklistContent, Hst } from '$lib/types'
 	import SlotChecklist from 'slot/SlotChecklist.svelte'
+
 	export let Hst: Hst
 
 	let content: SlotChecklistContent = [

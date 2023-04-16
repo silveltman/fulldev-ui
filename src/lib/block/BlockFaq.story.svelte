@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Hst } from '@histoire/plugin-svelte'
-	import type { Layout, FaqContent } from '$lib/types'
+	import type { Layout, FaqContent, Hst } from '$lib/types'
 	import BlockFaq from 'block/BlockFaq.svelte'
+	import LayoutControls from '../../histoire/LayoutControls.svelte'
 
 	export let Hst: Hst
 
@@ -14,15 +14,15 @@
 		},
 		accordion: [
 			{
-				heading: 'Lorem ipsum dolor sit amet',
+				heading: 'Lorem ipsum dolor sit amet 1',
 				textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 			},
 			{
-				heading: 'Lorem ipsum dolor sit amet',
+				heading: 'Lorem ipsum dolor sit amet 2',
 				textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 			},
 			{
-				heading: 'Lorem ipsum dolor sit amet',
+				heading: 'Lorem ipsum dolor sit amet 3',
 				textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 			}
 		]
@@ -30,24 +30,10 @@
 </script>
 
 <Hst.Story>
-	<svelte:fragment slot="controls">
-		<Hst.Checkbox
-			title="box"
-			bind:value={layout.box}
-		/>
-		<Hst.Checkbox
-			title="split"
-			bind:value={layout.split}
-		/>
-		<Hst.Checkbox
-			title="center"
-			bind:value={layout.center}
-		/>
-		<Hst.Checkbox
-			title="reverse"
-			bind:value={layout.reverse}
-		/>
-	</svelte:fragment>
+	<LayoutControls
+		slot="controls"
+		bind:layout
+	/>
 
 	<BlockFaq
 		{layout}

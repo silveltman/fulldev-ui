@@ -2,11 +2,12 @@
 	import type { SlotAccordionContent } from '$lib/types'
 	import Disclosure from 'base/Disclosure.svelte'
 
-	export let content: SlotAccordionContent = []
+	export let content: SlotAccordionContent
+	//
 </script>
 
 <div class="slot-accordion flex w-full max-w-md flex-col divide-y divide-neutral-200">
 	{#each content as item}
-		<Disclosure {...item} />
+		<Disclosure content={item} />
 	{/each}
 </div>

@@ -3,9 +3,8 @@
 	import Button from 'base/Button.svelte'
 	import Eyebrow from 'base/Eyebrow.svelte'
 
+	export let content: HighlightContent
 	export let size: 'lg' | 'md' | 'sm' = 'md'
-
-	export let content: HighlightContent = {}
 </script>
 
 <div
@@ -22,7 +21,7 @@
 				{size === 'sm' && 'mb-md'}
 			"
 			{size}
-			text={content.eyebrow}
+			content={content.eyebrow}
 		/>
 	{/if}
 
@@ -50,21 +49,21 @@
 			{#if content.button_primary}
 				<Button
 					{size}
-					{...content.button_primary}
+					content={content.button_primary}
 				/>
 			{/if}
 			{#if content.button_secondary}
 				<Button
 					{size}
 					variant="secondary"
-					{...content.button_secondary}
+					content={content.button_secondary}
 				/>
 			{/if}
 			{#if content.button_tertiary}
 				<Button
 					{size}
 					variant="tertiary"
-					{...content.button_tertiary}
+					content={content.button_tertiary}
 				/>
 			{/if}
 		</div>

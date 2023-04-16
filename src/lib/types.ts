@@ -5,7 +5,7 @@ export type { Hst } from '@histoire/plugin-svelte'
 // --------------------------------------------
 export interface ButtonContent {
 	text: string
-	href: string
+	href?: string
 }
 
 export interface DisclosureContent {
@@ -59,6 +59,7 @@ export type SlotAccordionContent = DisclosureContent[]
 interface ChecklistItem {
 	heading?: string
 	textarea?: string
+	button?: ButtonContent
 }
 export type SlotChecklistContent = ChecklistItem[]
 
@@ -69,10 +70,9 @@ export interface HighlightContent {
 	button_primary?: ButtonContent
 	button_secondary?: ButtonContent
 	button_tertiary?: ButtonContent
-
 }
 
-export type SlotMediaContent = Image
+export type SlotMediaContent = ImageContent
 
 export interface RichtextContent {
 	html?: string
@@ -86,7 +86,10 @@ export type SlotStatsContent = StatsItem[]
 
 export type SlotCardsContent = CardContent[]
 
-export interface SlotNewsletterContent { }
+export interface SlotNewsletterContent {
+	placeholder?: string
+	button: ButtonContent
+}
 
 
 // --------------------------------------------

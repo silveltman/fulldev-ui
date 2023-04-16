@@ -1,7 +1,8 @@
 <script lang="ts">
 	import type { RichtextContent } from '$lib/types'
 
-	export let content: RichtextContent = {}
+	export let content: RichtextContent
+	//
 </script>
 
 <div class="slot-richtext max-w-3xl ">

@@ -32,7 +32,6 @@
 		slot="controls"
 		bind:layout
 	/>
-
 	<BlockCta
 		{layout}
 		{content}

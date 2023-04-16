@@ -5,19 +5,17 @@
 	let className = ''
 	export { className as class }
 	export let content: DisclosureContent
-
-	export let name: string = 'disclosure'
 	//
 </script>
 
 <label
-	for={name}
+	for={content.heading}
 	class="flex w-full cursor-pointer flex-col items-start gap-y-sm py-lg {className}"
 >
 	<input
 		type="checkbox"
-		{name}
-		id={name}
+		name={content.heading}
+		id={content.heading}
 		class="peer hidden"
 	/>
 	<div

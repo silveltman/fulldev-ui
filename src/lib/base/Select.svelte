@@ -1,23 +1,28 @@
 <script lang="ts">
-	import Label from './Label.svelte'
-
 	export let required: boolean = false
 	export let name: string = 'select'
 	export let label: string | undefined = undefined
 	export let placeholder: string | undefined = undefined
 	export let options: string[]
+	//
 </script>
 
 <div class="flex flex-col">
 	{#if label}
-		<Label {name}>
+		<label
+			for={name}
+			class="text-sm font-medium text-neutral-700"
+		>
 			{label}
-		</Label>
+			{#if required}
+				*
+			{/if}
+		</label>
 	{/if}
 	<select
 		id={name}
 		{name}
-		class="inline-flex rounded-input border-neutral-400 py-2 px-3 pr-10 text-base sm:text-sm"
+		class="text-base inline-flex rounded-input border-neutral-400 py-2 px-3 pr-10 sm:text-sm"
 		{required}
 	>
 		{#if placeholder}

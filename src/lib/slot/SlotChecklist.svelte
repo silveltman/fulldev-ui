@@ -4,7 +4,8 @@
 	import Button from 'base/Button.svelte'
 	export let center: boolean = false
 
-	export let content: SlotChecklistContent = []
+	export let content: SlotChecklistContent
+	//
 </script>
 
 <ul
@@ -19,12 +20,13 @@
 			/>
 			<h5 class="inline">{item.heading}</h5>
 			<p class="inline">{item.textarea}</p>
-			<Button
-				color
-				class="mt-md"
-				variant="tertiary"
-				text="Meer weten"
-			/>
+			{#if item.button}
+				<Button
+					class="mt-md"
+					variant="tertiary"
+					content={item.button}
+				/>
+			{/if}
 		</li>
 	{/each}
 </ul>
