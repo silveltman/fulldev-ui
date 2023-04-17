@@ -1,13 +1,13 @@
 <script lang="ts">
-	import type { FaqContent, Layout } from '$lib/types'
+	import type { BlockCardsContent, Layout } from '$lib/types'
 	import Section from 'layout/LayoutBlock.svelte'
 	import SlotHighlight from 'slot/SlotHighlight.svelte'
-	import SlotAccordion from 'slot/SlotAccordion.svelte'
+	import SlotCards from 'slot/SlotCards.svelte'
 
 	let className: string = ''
 	export { className as class }
 	export let layout: Layout = {}
-	export let content: FaqContent = {}
+	export let content: BlockCardsContent = {}
 </script>
 
 <Section
@@ -21,9 +21,9 @@
 		{/if}
 	</slot>
 
-	<slot name="accordion">
-		{#if content.accordion}
-			<SlotAccordion content={content.accordion} />
+	<slot name="cards">
+		{#if content.cards}
+			<SlotCards content={content.cards} />
 		{/if}
 	</slot>
 </Section>

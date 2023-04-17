@@ -37,15 +37,16 @@ export interface LogoContent {
 }
 
 export interface PersonContent {
-	heading: string
-	text: string
-	image: ImageContent
+	heading?: string
+	text?: string
+	image?: ImageContent
 }
 
 export interface CardContent {
-	heading: string
-	textarea: string
-	image: ImageContent
+	eyebrow?: string
+	heading?: string
+	textarea?: string
+	image?: ImageContent
 	person?: PersonContent
 }
 
@@ -63,7 +64,7 @@ interface ChecklistItem {
 }
 export type SlotChecklistContent = ChecklistItem[]
 
-export interface HighlightContent {
+export interface SlotHighlightContent {
 	eyebrow?: string
 	heading?: string
 	textarea?: string
@@ -97,24 +98,29 @@ export interface SlotNewsletterContent {
 // --------------------------------------------
 
 export interface HeroContent {
-	highlight?: HighlightContent
+	highlight?: SlotHighlightContent
 	media?: SlotMediaContent
 }
 
 export interface CtaContent {
-	highlight?: HighlightContent
+	highlight?: SlotHighlightContent
 	media?: SlotMediaContent
 }
 
 export interface FaqContent {
-	highlight?: HighlightContent
+	highlight?: SlotHighlightContent
 	accordion?: SlotAccordionContent
 }
 
 export interface FeaturesContent {
-	highlight?: HighlightContent
+	highlight?: SlotHighlightContent
 	checklist?: SlotChecklistContent
 	media?: SlotMediaContent
+}
+
+export interface BlockCardsContent {
+	highlight?: SlotHighlightContent
+	cards?: SlotCardsContent
 }
 
 // export interface Header {

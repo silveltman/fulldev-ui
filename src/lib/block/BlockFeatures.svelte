@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { FeaturesContent, Layout } from '$lib/types'
-	import Section from 'layout/Section.svelte'
+	import Section from 'layout/LayoutBlock.svelte'
 	import SlotHighlight from 'slot/SlotHighlight.svelte'
 	import SlotChecklist from 'slot/SlotChecklist.svelte'
 	import SlotMedia from 'slot/SlotMedia.svelte'

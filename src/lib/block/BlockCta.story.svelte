@@ -25,14 +25,21 @@
 			alt: 'Lorem ipsum'
 		}
 	}
+	let size: 'sm' | 'md' | 'lg' = 'md'
 </script>
 
 <Hst.Story>
-	<LayoutControls
-		slot="controls"
-		bind:layout
-	/>
+	<svelte:fragment slot="controls">
+		<LayoutControls bind:layout />
+		<Hst.Select
+			title="size"
+			bind:value={size}
+			options={['lg', 'md', 'sm']}
+		/>
+	</svelte:fragment>
+
 	<BlockCta
+		{size}
 		{layout}
 		{content}
 	/>

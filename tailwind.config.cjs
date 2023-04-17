@@ -11,106 +11,108 @@ module.exports = {
 		require('@tailwindcss/forms'),
 		require('@tailwindcss/typography'),
 		require('./src/lib/plugin.cjs'),
-		// require('tailwindcss-themer')({
-		// 	defaultTheme: {
-		// 		extend: {
-		// 			colors: {
-		// 				neutral: {
-		// 					0: '#ffffff',
-		// 					50: '#f8fafc',
-		// 					100: '#f1f5f9',
-		// 					200: '#e2e8f0',
-		// 					300: '#cbd5e1',
-		// 					400: '#94a3b8',
-		// 					500: '#64748b',
-		// 					600: '#475569',
-		// 					700: '#334155',
-		// 					800: '#1e293b',
-		// 					900: '#0f172a',
-		// 					1000: '#020617'
-		// 				},
-		// 				primary: {
-		// 					50: '#eef2ff',
-		// 					100: '#e0e7ff',
-		// 					200: '#c7d2fe',
-		// 					300: '#a5b4fc',
-		// 					400: '#818cf8',
-		// 					500: '#6366f1',
-		// 					600: '#4f46e5',
-		// 					700: '#4338ca',
-		// 					800: '#3730a3',
-		// 					900: '#312e81',
-		// 					950: '#1e1b4b',
-		// 				},
-		// 				success: {
-		// 					300: '#86efac',
-		// 					500: '#22c55e',
-		// 					700: '#15803d',
-		// 				},
-		// 				warning: {
-		// 					300: '#fdba74',
-		// 					500: '#f97316',
-		// 					700: '#c2410c',
-		// 				},
-		// 				danger: {
-		// 					300: '#fca5a5',
-		// 					500: '#ef4444',
-		// 					700: '#b91c1c',
-		// 				}
-		// 			},
-		// 		}
-		// 	},
-		// 	themes: [
-		// 		{
-		// 			name: 'dark',
-		// 			extend: {
-		// 				colors: {
-		// 					neutral: {
-		// 						0: '#020617',
-		// 						50: '#0f172a',
-		// 						100: '#1e293b',
-		// 						200: '#334155',
-		// 						300: '#475569',
-		// 						400: '#64748b',
-		// 						500: '#94a3b8',
-		// 						600: '#cbd5e1',
-		// 						700: '#e2e8f0',
-		// 						800: '#f1f5f9',
-		// 						900: '#f8fafc',
-		// 						1000: '#ffffff'
-		// 					},
-		// 					primary: {
-		// 						50: '#1e1b4b',
-		// 						100: '#312e81',
-		// 						200: '#3730a3',
-		// 						300: '#4338ca',
-		// 						400: '#4f46e5',
-		// 						500: '#6366f1',
-		// 						600: '#818cf8',
-		// 						700: '#a5b4fc',
-		// 						800: '#c7d2fe',
-		// 						900: '#e0e7ff',
-		// 						950: '#eef2ff',
-		// 					},
-		// 					success: {
-		// 						300: '#15803d',
-		// 						500: '#22c55e',
-		// 						700: '#86efac',
-		// 					},
-		// 					warning: {
-		// 						300: '#c2410c',
-		// 						500: '#f97316',
-		// 						700: '#fdba74',
-		// 					},
-		// 					danger: {
-		// 						300: '#b91c1c',
-		// 						500: '#ef4444',
-		// 						700: '#fca5a5',
-		// 					}
-		// 				}
-		// 			}
-		// 		},
-		// 	]
-		// })
+		require('tailwindcss-themer')({
+			defaultTheme: {
+				extend: {
+					backgroundColor: {
+						300: '#ffffff',
+						500: '#f8fafc',
+						700: '#f1f5f9',
+						'button-primary': '#000000',
+					},
+					textColor: {
+						300: '#1e293b',
+						500: '#0f172a',
+						700: '#0000',
+						'button-primary': '#ffffff',
+						'button-secondary': '#000000',
+						'button-tertiary': '#000000',
+						'eyebrow': '#000000',
+					},
+					borderColor: {
+						300: '#e2e8f0',
+						500: '#cbd5e1',
+						700: '#94a3b8',
+					},
+					ringColor: {
+						'button-secondary': '#000000',
+					},
+					colors: {
+						accent: {
+							300: '#a5b4fc',
+							500: '#6366f1',
+							700: '#a5b4fc',
+						},
+						success: {
+							300: '#86efac',
+							500: '#22c55e',
+							700: '#15803d',
+						},
+						warning: {
+							300: '#fdba74',
+							500: '#f97316',
+							700: '#c2410c',
+						},
+						danger: {
+							300: '#fca5a5',
+							500: '#ef4444',
+							700: '#b91c1c',
+						},
+					},
+				}
+			},
+			themes: [
+				{
+					name: 'dark',
+					extend: {
+						backgroundColor: {
+							300: '#362818',
+							500: '#2D2215',
+							700: '#231A10',
+							'button-primary': '#000000',
+						},
+						textColor: {
+							300: '#1e293b',
+							500: '#0f172a',
+							700: '#020617',
+							'button-primary': '#ffffff',
+							'button-secondary': '#000000',
+							'button-tertiary': '#000000',
+							'eyebrow': '#000000',
+						},
+						borderColor: {
+							300: '#e2e8f0',
+							500: '#cbd5e1',
+							700: '#94a3b8',
+						},
+						ringColor: {
+							'button-secondary': '#000000',
+						},
+						colors: {
+							accent: {
+								300: '#a5b4fc',
+								500: '#6366f1',
+								700: '#a5b4fc',
+							},
+							success: {
+								300: '#86efac',
+								500: '#22c55e',
+								700: '#15803d',
+							},
+							warning: {
+								300: '#fdba74',
+								500: '#f97316',
+								700: '#c2410c',
+							},
+							danger: {
+								300: '#fca5a5',
+								500: '#ef4444',
+								700: '#b91c1c',
+							},
+						}
+					},
+				},
+			]
+		})
 	]
 }

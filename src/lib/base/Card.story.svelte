@@ -4,6 +4,7 @@
 	export let Hst: Hst
 
 	let content: CardContent = {
+		eyebrow: 'Lorem ipsum',
 		heading: 'Heading',
 		textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 		image: {
