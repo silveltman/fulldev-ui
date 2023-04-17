@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { LogoContent } from '$lib/types'
 
-	export let dark: Logo | undefined = undefined
 	export let content: LogoContent
 	export let disableLink: boolean = false
 </script>

@@ -6,7 +6,7 @@
 	//
 </script>
 
-<div class="slot-accordion flex w-full max-w-md flex-col divide-y divide-neutral-200">
+<div class="slot-accordion flex w-full max-w-md flex-col divide-y divide-300">
 	{#each content as item}
 		<Disclosure content={item} />
 	{/each}

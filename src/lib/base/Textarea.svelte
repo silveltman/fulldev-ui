@@ -10,7 +10,7 @@
 	{#if label}
 		<label
 			for={name}
-			class="text-sm font-medium text-neutral-700"
+			class="text-sm font-medium text-500"
 		>
 			{label}
 			{#if required}
@@ -24,6 +24,6 @@
 		{name}
 		{placeholder}
 		{required}
-		class="flex rounded-input border-neutral-400 bg-neutral-200 py-3 px-3 text-md"
+		class="flex rounded-input border-700 py-3 px-3 text-md"
 	/>
 </div>

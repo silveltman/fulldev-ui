@@ -46,12 +46,12 @@ module.exports = plugin(
 				fontFamily: theme('fontFamily.body'),
 				fontSize: theme('fontSize.md'),
 				lineHeight: theme('lineHeight.relaxed'),
-				color: theme('colors.neutral.600'),
+				color: theme('textColor.500'),
 				fontWeight: theme('fontWeight.light'),
 			},
 			'h1, h2, h3, h4, h5, h6': {
 				fontFamily: theme('fontFamily.heading'),
-				color: theme('colors.neutral.1000'),
+				color: theme('textColor.700'),
 			},
 			h1: {
 				fontSize: theme('fontSize.3xl'),
@@ -84,14 +84,8 @@ module.exports = plugin(
 				fontWeight: theme('fontWeight.medium'),
 			},
 			'p, ul, ol, dl, dd, blockquote, pre, figure, hr': {
-				color: theme('colors.neutral.600'),
-			},
-			'a[href]': {
-				color: theme('colors.primary.1000'),
-			},
-			'a[href]:hover': {
-				textDeoration: 'underline',
-			},
+				color: theme('textColor.500'),
+			}
 		})
 	},
 	{
@@ -114,6 +108,7 @@ module.exports = plugin(
 				eyebrow: '12px',
 				image: '4px',
 				full: '9999px',
+				none: '0px',
 			},
 
 			// Shadow

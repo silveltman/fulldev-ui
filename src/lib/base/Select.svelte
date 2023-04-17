@@ -11,7 +11,7 @@
 	{#if label}
 		<label
 			for={name}
-			class="text-sm font-medium text-neutral-700"
+			class="text-sm font-medium text-700"
 		>
 			{label}
 			{#if required}
@@ -22,7 +22,7 @@
 	<select
 		id={name}
 		{name}
-		class="text-base inline-flex rounded-input border-neutral-400 py-2 px-3 pr-10 sm:text-sm"
+		class="text-base inline-flex rounded-input border-500 py-2 px-3 pr-10 sm:text-sm"
 		{required}
 	>
 		{#if placeholder}

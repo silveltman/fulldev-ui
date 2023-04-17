@@ -40,5 +40,9 @@
 		:global(p:not(:first-child)) {
 			@apply mt-lg;
 		}
+
+		:global(a[href]) {
+			@apply text-700 hover:underline;
+		}
 	}
 </style>

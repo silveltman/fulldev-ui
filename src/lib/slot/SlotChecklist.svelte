@@ -16,7 +16,7 @@
 		<li class="relative max-w-lg pl-8 text-left">
 			<IconCircleCheck
 				stroke={1.3}
-				class="text-primary-700 absolute left-0 top-0"
+				class="absolute left-0 top-0 text-accent-500"
 			/>
 			<h5 class="inline">{item.heading}</h5>
 			<p class="inline">{item.textarea}</p>

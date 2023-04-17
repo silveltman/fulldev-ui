@@ -38,7 +38,7 @@
 	target="_blank"
 	{href}
 	title={icon}
-	class="rounded-full inline-block bg-neutral-100 p-1 text-neutral-600 hover:bg-neutral-200 hover:text-neutral-900"
+	class="inline-block rounded-full bg-500 p-1 text-500 hover:bg-700 hover:text-700"
 >
 	<svelte:component
 		this={componentMap[icon]}
