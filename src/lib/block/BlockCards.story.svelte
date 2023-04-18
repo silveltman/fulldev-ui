@@ -28,31 +28,39 @@
 					src: 'https://via.placeholder.com/150',
 					alt: 'Alt text'
 				}
-			},
-			{
-				heading: 'Lorem ipsum dolor sit amet',
-				textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-				image: {
-					src: 'https://via.placeholder.com/150',
-					alt: 'Alt text'
-				}
-			},
-			{
-				heading: 'Lorem ipsum dolor sit amet',
-				textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-				image: {
-					src: 'https://via.placeholder.com/150',
-					alt: 'Alt text'
-				}
-			},
-			{
-				heading: 'Lorem ipsum dolor sit amet',
-				textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-				image: {
-					src: 'https://via.placeholder.com/150',
-					alt: 'Alt text'
-				}
 			}
+			// {
+			// 	heading: 'Lorem ipsum dolor sit amet',
+			// 	textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+			// 	image: {
+			// 		src: 'https://via.placeholder.com/150',
+			// 		alt: 'Alt text'
+			// 	}
+			// },
+			// {
+			// 	heading: 'Lorem ipsum dolor sit amet',
+			// 	textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+			// 	image: {
+			// 		src: 'https://via.placeholder.com/150',
+			// 		alt: 'Alt text'
+			// 	}
+			// },
+			// {
+			// 	heading: 'Lorem ipsum dolor sit amet',
+			// 	textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+			// 	image: {
+			// 		src: 'https://via.placeholder.com/150',
+			// 		alt: 'Alt text'
+			// 	}
+			// },
+			// {
+			// 	heading: 'Lorem ipsum dolor sit amet',
+			// 	textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+			// 	image: {
+			// 		src: 'https://via.placeholder.com/150',
+			// 		alt: 'Alt text'
+			// 	}
+			// }
 		]
 	}
 </script>

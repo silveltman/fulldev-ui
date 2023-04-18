@@ -20,10 +20,11 @@
 </script>
 
 <div
-	class="slot-highlight relative"
-	class:max-w-2xl={size === 'lg'}
-	class:max-w-xl={size === 'md'}
-	class:max-w-md={size === 'sm'}
+	class="slot-highlight relative
+	{size === 'lg' && 'max-w-2xl'}
+	{size === 'md' && 'max-w-xl'}
+	{size === 'sm' && 'max-w-md'}
+	"
 >
 	{#if content.eyebrow}
 		<Eyebrow

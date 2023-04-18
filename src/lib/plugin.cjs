@@ -5,6 +5,7 @@ module.exports = plugin(
 	function ({ addBase, theme }) {
 		addBase({
 			':root': {
+				'--text-xs': '12px',
 				'--text-sm': '14px',
 				'--text-md': '16px',
 				'--text-lg': '18px',
@@ -24,6 +25,7 @@ module.exports = plugin(
 			},
 			'@screen sm': {
 				':root': {
+					'--text-xs': '14px',
 					'--text-sm': '16px',
 					'--text-md': '18px',
 					'--text-lg': '20px',
@@ -126,6 +128,7 @@ module.exports = plugin(
 
 			// Font size
 			fontSize: {
+				'xs': 'var(--text-xs)	',
 				'sm': 'var(--text-sm)',
 				'md': 'var(--text-md)',
 				'lg': 'var(--text-lg)',
@@ -145,7 +148,7 @@ module.exports = plugin(
 					'3xl': 'var(--space-3xl)',
 					'4xl': 'var(--space-4xl)',
 					'5xl': 'var(--space-5xl)'
-				},
+				}
 			}
 		}
 	}

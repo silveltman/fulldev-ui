@@ -8,6 +8,8 @@
 	export let content: CardContent
 	export let layout: Layout = {}
 
+	export let size: 'sm' | 'md' | 'lg' = 'md'
+
 	//
 </script>
 
@@ -25,18 +27,29 @@
 		{#if content.eyebrow || content.heading || content.textarea}
 			<div class="flex flex-col gap-sm">
 				{#if content.eyebrow}
-					<span class="text-sm text-300">Lorem ipsum</span>
+					<span
+						class="text-sm text-300
+							{size === 'sm' ? 'text-xs' : 'text-sm'}
+							"
+					>
+						Lorem ipsum
+					</span>
 				{/if}
 				{#if content.heading}
-					<h4>{content.heading}</h4>
+					<svelte:element this={size == 'sm' ? 'h5' : 'h4'}>
+						{content.heading}
+					</svelte:element>
 				{/if}
 				{#if content.textarea}
-					<p>{content.textarea}</p>
+					<p class={size == 'sm' ? 'text-sm' : ''}>{content.textarea}</p>
 				{/if}
 			</div>
 		{/if}
 		{#if content.person}
-			<Person content={content.person} />
+			<Person
+				{size}
+				content={content.person}
+			/>
 		{/if}
 	</div>
 </div>

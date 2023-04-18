@@ -4,29 +4,15 @@
 
 	export let content: SlotCardsContent
 
-	export let size: 'sm' | 'md' | 'lg' = 'sm'
-
-	let itemCount = content.length
-
-	function getSize() {
-		if (itemCount <= 3) {
-			return 'lg'
-		} else if (itemCount === 4) {
-			return 'md'
-		} else {
-			return size
-		}
-	}
+	export let size: 'sm' | 'md' | 'lg' = 'lg'
 </script>
 
-<!-- <div class="slot-accordion grid w-full grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-2xl"> -->
 <div
-	class=" grid w-full gap-2xl 
-
-{getSize() === 'sm' && 'lg:grid-cols-5'}
-{getSize() === 'md' && 'lg:grid-cols-4'}
-{getSize() === 'lg' && 'sm:grid-cols-2 lg:grid-cols-3'}
-"
+	class="grid w-full justify-center gap-x-md gap-y-3xl md:gap-x-lg
+		{size === 'sm' && 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-6'}
+		{size === 'md' && 'grid-cols-2 sm:grid-cols-2 lg:grid-cols-4'}
+		{size === 'lg' && 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}
+		"
 >
 	{#each content as item}
 		<Card content={item} />
