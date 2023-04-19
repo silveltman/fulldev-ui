@@ -8,6 +8,8 @@
 	export { className as class }
 	export let layout: Layout = {}
 	export let content: BlockCardsContent = {}
+
+	export let size: 'sm' | 'md' | 'lg' = 'md'
 </script>
 
 <Section
@@ -23,7 +25,10 @@
 
 	<slot name="cards">
 		{#if content.cards}
-			<SlotCards content={content.cards} />
+			<SlotCards
+				{size}
+				content={content.cards}
+			/>
 		{/if}
 	</slot>
 </Section>

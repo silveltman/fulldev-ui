@@ -46,6 +46,7 @@ export interface CardContent {
 	eyebrow?: string
 	heading?: string
 	textarea?: string
+	href?: string
 	image?: ImageContent
 	person?: PersonContent
 }
@@ -123,15 +124,15 @@ export interface BlockCardsContent {
 	cards?: SlotCardsContent
 }
 
-// export interface Header {
-// 	logo?: Logo
-// 	links?: Link[]
-// }
+export interface HeaderContent {
+	logo?: LogoContent
+	links?: LinkContent[]
+}
 
-// export interface Footer {
-// 	logo?: Logo
-// 	tagline?: string
-// }
+export interface FooterContent {
+	logo?: LogoContent
+	tagline?: string
+}
 
 
 // --------------------------------------------

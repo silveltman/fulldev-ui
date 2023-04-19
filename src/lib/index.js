@@ -28,3 +28,7 @@ export { default as SlotStats } from 'slot/SlotStats.svelte'
 export { default as BlockCta } from 'block/BlockCta.svelte'
 export { default as BlockFaq } from 'block/BlockFaq.svelte'
 export { default as BlockFeatures } from 'block/BlockFeatures.svelte'
+export { default as BlockCards } from 'block/BlockCards.svelte'
+
+export { default as TheHeader } from 'block/TheHeader.svelte'
+export { default as TheFooter } from 'block/TheFooter.svelte'

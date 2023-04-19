@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Layout, FeaturesContent, Hst } from '$lib/types'
-	import BlockFeatures from './BlockFeatures.svelte'
 	import LayoutControls from '../../histoire/LayoutControls.svelte'
+	import BlockFeatures from './BlockFeatures.svelte'
 
 	export let Hst: Hst
 

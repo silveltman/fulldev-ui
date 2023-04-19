@@ -18,6 +18,7 @@
 	class="block-cta {className}"
 	{...$$restProps}
 >
+	<slot />
 	<slot name="highlight">
 		{#if content.highlight}
 			<SlotHighlight

@@ -1,16 +1,18 @@
 <script lang="ts">
-	export let href: string = '#'
+	import type { LinkContent } from '$lib/types'
+
 	export let variant: 'primary' | 'secondary' = 'primary'
 	export let rel: string | undefined = 'prefetch'
-	export let text: string = 'Lorem ipsum'
+	export let content: LinkContent
+	//
 </script>
 
 <a
-	{href}
+	href={content.href}
 	{rel}
 	class="text-neutral-1000 hover:underline
-    {variant === 'primary' ? 'text-md text-neutral-1000' : 'text-sm text-neutral-600'}
+    {variant === 'primary' ? 'text-neutral-1000 text-md' : 'text-sm text-neutral-600'}
     "
 >
-	{text}
+	{content.text}
 </a>

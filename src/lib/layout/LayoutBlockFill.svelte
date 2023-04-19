@@ -5,7 +5,7 @@
 	export { className as class }
 </script>
 
-<section class="relative bg-neutral-0 py-4xl {className}">
+<section class="relative bg-500 py-4xl {className}">
 	<Container>
 		<slot />
 	</Container>

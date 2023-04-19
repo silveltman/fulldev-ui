@@ -7,7 +7,7 @@
 
 <section>
 	<Container>
-		<div class="relative my-4xl rounded-box bg-neutral-200 px-4 py-2xl md:px-2xl {className}">
+		<div class="relative my-4xl rounded-box bg-700 px-4 py-2xl md:px-2xl {className}">
 			<slot />
 		</div>
 	</Container>

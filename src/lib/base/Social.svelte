@@ -1,4 +1,6 @@
 <script lang="ts">
+	// no content prop
+
 	import {
 		IconBrandFacebook,
 		IconBrandTwitter,

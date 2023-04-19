@@ -13,35 +13,40 @@
 	//
 </script>
 
-<div
-	class="gap-lg {className}
+<svelte:element
+	this={content.href ? 'a' : 'div'}
+	href={content.href}
+	class="group gap-lg {className}
 		{layout.box ? 'rounded-card overflow-hidden bg-700 p-lg' : ''}
 		{layout.split ? 'grid grid-cols-1 sm:grid-cols-2' : 'flex flex-col'}
 		{layout.split && layout.center ? 'sm:items-center' : ''}
 	"
 >
 	{#if content.image}
-		<Image content={content.image} />
+		<Image
+			class={content.href ? 'group-hover:opacity-75' : ''}
+			content={content.image}
+		/>
 	{/if}
 	<div class="flex flex-col gap-lg">
 		{#if content.eyebrow || content.heading || content.textarea}
-			<div class="flex flex-col gap-sm">
+			<div class="flex flex-col gap-xs">
 				{#if content.eyebrow}
 					<span
 						class="text-sm text-300
-							{size === 'sm' ? 'text-xs' : 'text-sm'}
+							{size === 'lg' ? 'text-sm' : 'text-xs'}
 							"
 					>
 						Lorem ipsum
 					</span>
 				{/if}
 				{#if content.heading}
-					<svelte:element this={size == 'sm' ? 'h5' : 'h4'}>
+					<svelte:element this={size == 'lg' ? 'h4' : 'h5'}>
 						{content.heading}
 					</svelte:element>
 				{/if}
 				{#if content.textarea}
-					<p class={size == 'sm' ? 'text-sm' : ''}>{content.textarea}</p>
+					<p class={size == 'lg' ? 'text-md' : 'text-sm'}>{content.textarea}</p>
 				{/if}
 			</div>
 		{/if}
@@ -52,4 +57,4 @@
 			/>
 		{/if}
 	</div>
-</div>
+</svelte:element>

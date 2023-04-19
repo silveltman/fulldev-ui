@@ -4,7 +4,7 @@
 	export let label: string | undefined = undefined
 	export let placeholder: string | undefined = undefined
 	export let options: string[]
-	//
+	// no content prop
 </script>
 
 <div class="flex flex-col">

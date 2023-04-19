@@ -4,6 +4,8 @@
 	export let name: string = type
 	export let label: string | undefined = undefined
 	export let placeholder: string | undefined = undefined
+
+	// no content prop
 </script>
 
 <div class="flex flex-col">
