@@ -20,12 +20,6 @@ export interface ImageContent {
 	alt: string
 }
 
-export interface SocialContent {
-	icon: string
-	href: string
-}
-
-
 export interface LinkContent {
 	text: string
 	href: string
@@ -55,7 +49,8 @@ export interface CardContent {
 export interface ToggleContent {
 	heading: string,
 	text: string,
-	id: string
+	id: string,
+	required? : boolean
 }
 
 export interface SelectContent {
@@ -67,20 +62,55 @@ export interface SelectContent {
 }
 
 export interface RadioContent {
+	name?: string,
 	heading: string,
 	text: string,
 	value: string
 	required?: boolean;
 }
 
-// export interface FormContent {
-
-// }
+export interface FormContent {
+	action?: string,
+	// fields?: (TextFieldContent | TextAreaContent | SelectContent | RadioContent | ToggleContent | CheckboxContent)[],
+}
 
 export interface CheckboxContent {
 	heading: string,
 	text: string,
-	id: string
+	id: string,
+	required?: boolean
+}
+
+export interface WhatsappContent {
+	contactNo: string,
+}
+
+export interface TextFieldContent {
+	type: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search',
+	name : string,
+	label?: string,
+	placeholder?: string,
+	required: boolean,
+}
+
+export interface TextAreaContent {
+	name : string,
+	label?: string,
+	placeholder?: string,
+	required: boolean,
+	rows: number,
+}
+
+export interface SocialContent {
+	icon:  | 'facebook'
+	| 'twitter'
+	| 'linkedin'
+	| 'pinterest'
+	| 'whatsapp'
+	| 'telegram'
+	| 'email'
+	| 'phone',
+	href: string
 }
 
 // --------------------------------------------
@@ -161,8 +191,9 @@ export interface HeaderContent {
 }
 
 export interface FooterContent {
+	text?: string
 	logo?: LogoContent
-	tagline?: string
+	links? : LinkContent[]
 }
 
 

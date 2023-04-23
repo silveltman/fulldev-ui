@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { SocialContent } from '$lib/types'
 
-	// no content prop
+
 
 	import {
 		IconBrandFacebook,
@@ -14,15 +14,18 @@
 		IconPhone
 	} from '@tabler/icons-svelte'
 
-	export let icon:
-		| 'facebook'
-		| 'twitter'
-		| 'linkedin'
-		| 'pinterest'
-		| 'whatsapp'
-		| 'telegram'
-		| 'email'
-		| 'phone' = 'facebook'
+
+
+
+	// export let icon:
+	// 	| 'facebook'
+	// 	| 'twitter'
+	// 	| 'linkedin'
+	// 	| 'pinterest'
+	// 	| 'whatsapp'
+	// 	| 'telegram'
+	// 	| 'email'
+	// 	| 'phone' = 'facebook'
 
 
 	const componentMap = {
@@ -36,12 +39,13 @@
 		phone: IconPhone
 	}
 
-	export let href: string = '#'
+	// export let href: string = '#'
+
+	// export let content : SocialContent
 
 	let className = ''
 	export { className as class }
-	// export let content : SocialContent
-
+	export let content: SocialContent
 
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 
@@ -49,22 +53,17 @@
 
 <a
 	target="_blank"
-	{href}
-	title={icon}
-	class="inline-block rounded-full bg-500 p-1 text-500 hover:bg-700 hover:text-700"
+	href={content.href}
+	title={content.icon}
+	class="inline-block rounded-full bg-500 p-1 text-500 hover:bg-700 hover:text-700
+
+		{size === 'sm' ? 'w-8 h-8' : size === 'md' ? 'w-10 h-10' : size === 'lg' ? 'w-12 h-12' : 'w-10 h-10'}
+
+		{className}
+	"
 >
 	<svelte:component
-		this= { componentMap[icon]  }
-		size={
-			size === 'sm'
-				? 20
-				: size === 'md'
-				? 24
-				: size === 'lg'
-				? 28
-				: 24
-		}
-		class={className}
+		this= { componentMap[content.icon]  }
 		stroke={1.5}
 	/>
 </a>

@@ -7,7 +7,6 @@
 		heading: 'Lorem ipsum dolor sit amet',
 		textarea: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'
 	}
-	let name: string = 'disclosure'
 </script>
 
 <Hst.Story>
@@ -20,6 +19,5 @@
 
 	<Disclosure
 		{content}
-		{name}
 	/>
 </Hst.Story>

@@ -9,7 +9,7 @@
 		placeholder: 'Select an option',
 		options: ['Option 1', 'Option 2', 'Option 3'],
 		required: false
-	}
+	} 
 </script>
 
 <Hst.Story>
@@ -24,13 +24,13 @@
 		{content}
 		size="sm"
 	/>
-	<Select
+	<!-- <Select
 		{content}
 		size="md"
 	/>
 	<Select
 		{content}
 		size="lg"
-	/>
+	/> -->
     
 </Hst.Story>

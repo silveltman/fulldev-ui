@@ -5,8 +5,9 @@
 
 	let content: ToggleContent = {
 		heading: 'Annual',
-		text: '-20%',
-		id: 'option1'
+		text: '-10%',
+		id: 'option1',
+		required : false
 	}
 </script>
 

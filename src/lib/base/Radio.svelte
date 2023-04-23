@@ -1,9 +1,7 @@
 <script lang="ts">
 	import type { RadioContent } from "$lib/types"
 
-	// export let type: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' = 'text'
-	// export let required: boolean = false
-	export let name: string = "radio"
+
 
 	export let options: RadioContent[] = []
 
@@ -11,9 +9,6 @@
 	let className = ''
 	export { className as class}
 	// let content: RadioContent 
-	
-
-	
 </script> 
 
 <fieldset class="flex flex-col gap-y-md {className}">
@@ -23,7 +18,7 @@
 				type="radio"
 				class="mt-xs"
 				id={option.value}
-				{name}
+				name = {option.name}
 				required = {option.required}
 			/>
 			<label

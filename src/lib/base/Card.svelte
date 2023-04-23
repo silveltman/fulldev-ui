@@ -4,7 +4,7 @@
 	import Person from 'base/Person.svelte'
   
 	let className = ''
-	export { className as class }
+	export { className as class } 
 	export let content: CardContent
 	export let layout: Layout = {}
   

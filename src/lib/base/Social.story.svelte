@@ -4,7 +4,7 @@
     export let Hst: Hst
 
     let content: SocialContent = {
-        icon : ' ',
+        icon : 'facebook',
         href: '#'
     }
 
@@ -20,20 +20,19 @@
 
     <Hst.Variant title="Facebook">
         <Social
-            icon="facebook"
-            size="sm"
+            content={content}
         />
     </Hst.Variant>
-    <Hst.Variant title="Twitter">
+    <!-- <Hst.Variant title="Twitter">
         <Social
-            icon="twitter" 
-            size="md"
-        />
+        content= {
+            icon="twitter"
+        }
+            />
     </Hst.Variant>
     <Hst.Variant title="Linkedin">
         <Social
             icon="linkedin"
-            size="lg"
         />
     </Hst.Variant>
     <Hst.Variant title="Pinterest">
@@ -63,6 +62,6 @@
             icon="phone"
         />
     </Hst.Variant>
-    
+     -->
 
 </Hst.Story>

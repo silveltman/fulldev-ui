@@ -6,13 +6,13 @@
 	let content: CheckboxContent = {
 		heading: 'Option 1',
 		text: 'This is option 1',
-		id: 'option1'
+		id: 'option1',
+		required: false
 	}
 </script>
 
 <Hst.Story>
 	
-
 	<Checkbox 
 	{content}
 	 />

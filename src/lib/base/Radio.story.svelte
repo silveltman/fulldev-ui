@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Hst, } from '$lib/types'
+	import type { Hst, RadioContent } from '$lib/types'
 	import Radio from './Radio.svelte'
 	export let Hst: Hst
 
-	let options = [
+	let options : RadioContent[] = [
 		{
 			heading: 'Option 1',
 			text: 'This is option 1',
