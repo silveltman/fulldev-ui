@@ -11,7 +11,7 @@
 			alt: 'Alt text'
 		}
 	}
-	//
+	
 </script>
 
 <Hst.Story>

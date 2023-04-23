@@ -7,7 +7,7 @@
 	export let content: PersonContent
 
 	export let size: 'sm' | 'md' | 'lg' = 'md'
-	//
+	// 
 </script>
 
 <div class="flex items-center gap-md {className}">

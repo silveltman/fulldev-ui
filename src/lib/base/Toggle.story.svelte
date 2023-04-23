@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Hst } from '$lib/types'
+	import type { Hst, ToggleContent } from '$lib/types'
 	import Toggle from './Toggle.svelte'
 	export let Hst: Hst
 
-	let content = {
+	let content: ToggleContent = {
 		heading: 'Annual',
 		text: '-20%',
 		id: 'option1'

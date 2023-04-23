@@ -51,6 +51,37 @@ export interface CardContent {
 	person?: PersonContent
 }
 
+// -------------------------------------------- 
+export interface ToggleContent {
+	heading: string,
+	text: string,
+	id: string
+}
+
+export interface SelectContent {
+    required?: boolean;
+    name: string;
+    label?: string;
+    placeholder?: string;
+    options: string[];
+}
+
+export interface RadioContent {
+	heading: string,
+	text: string,
+	value: string
+	required?: boolean;
+}
+
+// export interface FormContent {
+
+// }
+
+export interface CheckboxContent {
+	heading: string,
+	text: string,
+	id: string
+}
 
 // --------------------------------------------
 // Slot

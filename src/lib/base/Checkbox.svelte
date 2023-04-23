@@ -1,13 +1,13 @@
 <script lang="ts">
+	import type { CheckboxContent } from "$lib/types"
+
 	export let required: boolean = false
 
-	export let content: any = {
-		heading: 'Heading',
-		text: 'Text',
-		id: 'id'
-	}
+	let className = ''
+	export { className as Class}
 
-	// no content prop
+	export let content: CheckboxContent
+	
 </script>
 
 <div class="flex items-start">
@@ -17,10 +17,11 @@
 		id={content.id}
 		name={content.id}
 		{required}
+		
 	/>
 	<label
 		for={content.id}
-		class="flex cursor-pointer flex-col pl-md"
+		class="flex cursor-pointer flex-col pl-md {className}"
 	>
 		{#if content.heading}
 			<h6>{content.heading}</h6>

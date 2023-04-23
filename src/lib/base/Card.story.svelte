@@ -30,5 +30,8 @@
 		/>
 	</svelte:fragment>
 
-	<Card {content} />
+	<Card 
+	{content} 
+	size = 'lg'
+	/>
 </Hst.Story>

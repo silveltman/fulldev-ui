@@ -10,7 +10,7 @@
 	let placeholder: string | undefined = undefined
 </script>
 
-<Hst.Story layout={{ type: 'grid', width: 300 }}>
+<Hst.Story layout={{ type: 'grid', width: 350 }}>
 	<svelte:fragment slot="controls">
 		<Hst.Select
 			bind:value={type}

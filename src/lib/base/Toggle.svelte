@@ -1,11 +1,8 @@
 <script lang="ts">
+	import type {ToggleContent} from '$lib/types'
 	export let required: boolean = false
 
-	export let content: any = {
-		heading: 'Heading',
-		text: 'Text',
-		id: 'id'
-	}
+	export let content: ToggleContent
 
 	// no content prop
 </script>

@@ -4,7 +4,7 @@
 	let className = ''
 	export { className as class }
 	export let content: LogoContent
-	export let disableLink: boolean = false
+	export let disableLink: boolean = false 
 </script>
 
 <svelte:element
@@ -15,6 +15,7 @@
 	{#if content.light}
 		<img
 			class="inline-block dark:hidden"
+			
 			src={content.light.src}
 			alt={content.light.alt}
 		/>

@@ -6,7 +6,7 @@
 	export let subject: string | undefined = undefined
 	export let action: string | undefined = undefined
 
-	// no content prop
+	
 </script>
 
 <form
