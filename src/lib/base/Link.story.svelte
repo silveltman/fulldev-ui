@@ -8,6 +8,8 @@
 		text: 'Click me',
 		href: '#'
 	}
+
+	let size: 'sm'
 </script>
 
 <Hst.Story layout={{ type: 'grid', width: 200 }}>
@@ -16,11 +18,16 @@
 			title="Content"
 			bind:value={content}
 		/>
+		<Hst.Json
+			title="Size"
+			bind:value={size}
+		/>
 	</svelte:fragment>
 
 	<Hst.Variant title="Primary">
 		<Link
 			{content}
+			{size}
 			variant="primary"
 		/>
 	</Hst.Variant>
@@ -28,29 +35,8 @@
 	<Hst.Variant title="Secondary">
 		<Link
 			{content}
+			{size}
 			variant="secondary"
-		/>
-	</Hst.Variant>
-
-	<Hst.Variant title="Primary/sm">
-		<Link
-			{content}
-			variant="primary"
-			size="sm"
-		/>
-	</Hst.Variant>
-	<Hst.Variant title="Primary/md">
-		<Link
-			{content}
-			variant="primary"
-			size="md"
-		/>
-	</Hst.Variant>
-	<Hst.Variant title="Primary/lg">
-		<Link
-			{content}
-			variant="primary"
-			size="lg"
 		/>
 	</Hst.Variant>
 </Hst.Story>

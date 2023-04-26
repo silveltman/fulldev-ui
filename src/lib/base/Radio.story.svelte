@@ -3,7 +3,7 @@
 	import Radio from './Radio.svelte'
 	export let Hst: Hst
 
-	let options : RadioContent[] = [
+	let options: RadioContent = [
 		{
 			heading: 'Option 1',
 			text: 'This is option 1',
@@ -17,11 +17,8 @@
 			required: false
 		}
 	]
-
 </script>
 
 <Hst.Story>
-	<Radio 
-	{options}
-	/>
+	<Radio {options} />
 </Hst.Story>

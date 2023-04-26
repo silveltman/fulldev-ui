@@ -21,6 +21,8 @@
 			}
 		}
 	}
+
+	let size: 'sm'
 </script>
 
 <Hst.Story>
@@ -29,10 +31,11 @@
 			bind:value={content}
 			title="Content"
 		/>
+		<Hst.Json
+			bind:value={size}
+			title="Size"
+		/>
 	</svelte:fragment>
 
-	<Card
-		{content}
-		size="lg"
-	/>
+	<Card {content} />
 </Hst.Story>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { RadioContent } from '$lib/types'
 
-	export let options: RadioContent[] = []
+	export let options: RadioContent = []
 
 	let className = ''
 	export { className as class }

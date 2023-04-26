@@ -18,11 +18,15 @@
 			bind:value={content}
 			title="Content"
 		/>
+		<Hst.Json
+			bind:value={size}
+			title="Size"
+			/>
 	</svelte:fragment>
 
 	<Select
 		{content}
-		size="sm"
+		{size}
 	/>
 	<!-- <Select
 		{content}
