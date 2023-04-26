@@ -12,8 +12,5 @@
 </script>
 
 <Hst.Story>
-	
-	<Checkbox 
-	{content}
-	 />
+	<Checkbox {content} />
 </Hst.Story>

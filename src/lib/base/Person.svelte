@@ -7,10 +7,13 @@
 	export let content: PersonContent
 
 	export let size: 'sm' | 'md' | 'lg' = 'md'
-	// 
+	//
 </script>
 
-<div class="flex items-center gap-md {className}">
+<div
+	class="flex items-center gap-md {className}"
+	{...$$restProps}
+>
 	{#if content.image}
 		<div class="h-14 w-14 overflow-hidden rounded-full">
 			<Image

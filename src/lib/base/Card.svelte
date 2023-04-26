@@ -2,18 +2,18 @@
 	import type { CardContent, Layout } from '$lib/types'
 	import Image from 'base/Image.svelte'
 	import Person from 'base/Person.svelte'
-  
+
 	let className = ''
-	export { className as class } 
+	export { className as class }
 	export let content: CardContent
 	export let layout: Layout = {}
-  
+
 	export let size: 'sm' | 'md' | 'lg' = 'md'
-  
+
 	// ...
-  </script>
-  
-  <svelte:element
+</script>
+
+<svelte:element
 	this={content.href ? 'a' : 'div'}
 	href={content.href}
 	class="group gap-lg {className}
@@ -21,41 +21,41 @@
 	  {layout.split ? 'grid grid-cols-1 sm:grid-cols-2' : 'flex flex-col'}
 	  {layout.split && layout.center ? 'sm:items-center' : ''}
 	"
-  >
+	{...$$restProps}
+>
 	{#if content.image}
-	  <Image
-		class={content.href ? 'group-hover:opacity-75' : ''}
-		content={content.image}
-	  />
+		<Image
+			class={content.href ? 'group-hover:opacity-75' : ''}
+			content={content.image}
+		/>
 	{/if}
 	<div class="flex flex-col gap-lg">
-	  {#if content.eyebrow || content.heading || content.textarea}
-		<div class="flex flex-col gap-xs">
-		  {#if content.eyebrow}
-			<span
-			  class="text-sm text-300
+		{#if content.eyebrow || content.heading || content.textarea}
+			<div class="flex flex-col gap-xs">
+				{#if content.eyebrow}
+					<span
+						class="text-sm text-300
 				{size === 'lg' ? 'text-sm' : 'text-xs'}
 			  "
-			>
-			  Lorem ipsum
-			</span>
-		  {/if}
-		  {#if content.heading}
-			<svelte:element this={size == 'lg' ? 'h4' : 'h5'}>
-			  {content.heading}
-			</svelte:element>
-		  {/if}
-		  {#if content.textarea}
-			<p class={size == 'lg' ? 'text-md' : 'text-sm'}>{content.textarea}</p>
-		  {/if}
-		</div>
-	  {/if}
-	  {#if content.person}
-		<Person
-		  {size}
-		  content={content.person}
-		/>
-	  {/if}
+					>
+						Lorem ipsum
+					</span>
+				{/if}
+				{#if content.heading}
+					<svelte:element this={size == 'lg' ? 'h4' : 'h5'}>
+						{content.heading}
+					</svelte:element>
+				{/if}
+				{#if content.textarea}
+					<p class={size == 'lg' ? 'text-md' : 'text-sm'}>{content.textarea}</p>
+				{/if}
+			</div>
+		{/if}
+		{#if content.person}
+			<Person
+				{size}
+				content={content.person}
+			/>
+		{/if}
 	</div>
-  </svelte:element>
-  
+</svelte:element>

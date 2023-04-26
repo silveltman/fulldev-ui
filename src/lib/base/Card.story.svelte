@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { CardContent, Hst } from '$lib/types'
+	import { json } from '@sveltejs/kit'
 	import Card from './Card.svelte'
 	export let Hst: Hst
 
@@ -26,12 +27,12 @@
 	<svelte:fragment slot="controls">
 		<Hst.Json
 			bind:value={content}
-			title="Heading"
+			title="Content"
 		/>
 	</svelte:fragment>
 
-	<Card 
-	{content} 
-	size = 'lg'
+	<Card
+		{content}
+		size="lg"
 	/>
 </Hst.Story>

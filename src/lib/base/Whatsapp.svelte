@@ -8,15 +8,15 @@
 	export let size: 'sm' | 'md' | 'lg' = 'md'
 
 	export let content: WhatsappContent
-	
 </script>
 
 <a
 	target="_blank"
-	href="https://wa.me/{content.contactNo}"
+	href="https://wa.me/{content.tel}"
 	class="absolute right-1 bottom-1 rounded-[12px] bg-[#24D466] p-1 hover:bg-[#1DB954]
 		{className}
 	"
+	{...$$restProps}
 >
 	<IconBrandWhatsapp
 		class="text-white
@@ -27,5 +27,3 @@
 		stroke={1.6}
 	/>
 </a>
-
-

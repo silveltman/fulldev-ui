@@ -3,11 +3,9 @@
 	import Whatsapp from './Whatsapp.svelte'
 	export let Hst: Hst
 
-	export let content : WhatsappContent = { contactNo:'31683485163'}
+	export let content: WhatsappContent = { tel: '31683485163' }
 </script>
 
 <Hst.Story>
-	<Hst.Variant title="whatsapp">
-		<Whatsapp {content} />
-	</Hst.Variant>
+	<Whatsapp {content} />
 </Hst.Story>

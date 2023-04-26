@@ -13,11 +13,9 @@
 	<svelte:fragment slot="controls">
 		<Hst.Json
 			bind:value={content}
-			title="Heading"
+			title="Content"
 		/>
 	</svelte:fragment>
 
-	<Disclosure
-		{content}
-	/>
+	<Disclosure {content} />
 </Hst.Story>

@@ -1,21 +1,22 @@
 <script lang="ts">
-	import type { CheckboxContent } from "$lib/types"
+	import type { CheckboxContent } from '$lib/types'
 
-	
 	let className = ''
-	export { className as Class}
+	export { className as Class }
 
 	export let content: CheckboxContent
-	
-</script> 
+</script>
 
-<div class="flex items-start {className}">
+<div
+	class="flex items-start {className}"
+	{...$$restProps}
+>
 	<input
 		type="checkbox"
 		class="mt-xs"
 		id={content.id}
 		name={content.id}
-		required = {content.required}
+		required={content.required}
 	/>
 	<label
 		for={content.id}

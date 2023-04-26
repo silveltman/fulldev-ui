@@ -1,21 +1,16 @@
 <script lang="ts">
 	import type { SocialContent } from '$lib/types'
 
-
-
 	import {
 		IconBrandFacebook,
 		IconBrandTwitter,
 		IconBrandLinkedin,
 		IconBrandPinterest,
 		IconBrandWhatsapp,
-		IconBrandTelegram, 
+		IconBrandTelegram,
 		IconMail,
 		IconPhone
 	} from '@tabler/icons-svelte'
-
-
-
 
 	// export let icon:
 	// 	| 'facebook'
@@ -26,7 +21,6 @@
 	// 	| 'telegram'
 	// 	| 'email'
 	// 	| 'phone' = 'facebook'
-
 
 	const componentMap = {
 		facebook: IconBrandFacebook,
@@ -48,7 +42,6 @@
 	export let content: SocialContent
 
 	export let size: 'sm' | 'md' | 'lg' = 'md'
-
 </script>
 
 <a
@@ -57,13 +50,21 @@
 	title={content.icon}
 	class="inline-block rounded-full bg-500 p-1 text-500 hover:bg-700 hover:text-700
 
-		{size === 'sm' ? 'w-8 h-8' : size === 'md' ? 'w-10 h-10' : size === 'lg' ? 'w-12 h-12' : 'w-10 h-10'}
+		{size === 'sm'
+		? 'h-8 w-8'
+		: size === 'md'
+		? 'h-10 w-10'
+		: size === 'lg'
+		? 'h-12 w-12'
+		: 'h-10 w-10'}
 
 		{className}
+		
 	"
+	{...$$restProps}
 >
 	<svelte:component
-		this= { componentMap[content.icon]  }
+		this={componentMap[content.icon]}
 		stroke={1.5}
 	/>
 </a>

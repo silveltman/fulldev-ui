@@ -11,6 +11,7 @@
 <label
 	for={content.heading}
 	class="flex w-full cursor-pointer flex-col items-start gap-y-sm py-lg {className}"
+	{...$$restProps}
 >
 	<input
 		type="checkbox"

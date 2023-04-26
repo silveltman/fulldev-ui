@@ -1,28 +1,27 @@
 <script lang="ts">
-    import type { Hst,LogoContent } from '$lib/types';
-    import Logo from './Logo.svelte';
-    export let Hst: Hst;
+	import type { Hst, LogoContent } from '$lib/types'
+	import Logo from './Logo.svelte'
+	export let Hst: Hst
 
-    let content: LogoContent = {
-        light: {
-            src: 'https://via.placeholder.com/150',
-            alt: 'Alt text'
-        },
-        dark: {
-            src: 'https://via.placeholder.com/150',
-            alt: 'Alt text'
-        }
-    }
-
+	let content: LogoContent = {
+		light: {
+			src: 'https://via.placeholder.com/150',
+			alt: 'Alt text'
+		},
+		dark: {
+			src: 'https://via.placeholder.com/150',
+			alt: 'Alt text'
+		}
+	}
 </script>
 
 <Hst.Story>
-    <svelte:fragment slot="controls">
-        <Hst.Json
-            bind:value={content}
-            title="Heading"
-        />
-    </svelte:fragment>
+	<svelte:fragment slot="controls">
+		<Hst.Json
+			bind:value={content}
+			title="Content"
+		/>
+	</svelte:fragment>
 
-    <Logo {content} />
+	<Logo {content} />
 </Hst.Story>

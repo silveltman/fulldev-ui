@@ -3,15 +3,14 @@
 	import Textarea from './Textarea.svelte'
 	export let Hst: Hst
 
-
 	let content: TextAreaContent = {
-		rows:10,
 		required: false,
-		name : 'temp',
-		label : 'text',
-		placeholder : 'write here'
+		name: 'temp',
+		label: 'text',
+		placeholder: 'write here'
 	}
 
+	let rows = 5
 </script>
 
 <Hst.Story>
@@ -20,10 +19,14 @@
 			title="Content"
 			bind:value={content}
 		/>
+		<Hst.Number
+			title="Rows"
+			bind:value={rows}
+		/>
 	</svelte:fragment>
 
 	<Textarea
 		{content}
+		{rows}
 	/>
-	
 </Hst.Story>

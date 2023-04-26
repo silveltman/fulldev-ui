@@ -61,13 +61,15 @@ export interface SelectContent {
     options: string[];
 }
 
-export interface RadioContent {
+export interface RadioItem {
 	name?: string,
 	heading: string,
 	text: string,
 	value: string
 	required?: boolean;
 }
+
+export type RadioContent = RadioItem[]
 
 export interface FormContent {
 	action?: string,
@@ -82,7 +84,7 @@ export interface CheckboxContent {
 }
 
 export interface WhatsappContent {
-	contactNo: string,
+	tel: string,
 }
 
 export interface TextFieldContent {
@@ -98,7 +100,7 @@ export interface TextAreaContent {
 	label?: string,
 	placeholder?: string,
 	required: boolean,
-	rows: number,
+	// rows: number,
 }
 
 export interface SocialContent {

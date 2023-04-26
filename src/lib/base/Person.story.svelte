@@ -11,14 +11,13 @@
 			alt: 'Alt text'
 		}
 	}
-	
 </script>
 
 <Hst.Story>
 	<svelte:fragment slot="controls">
 		<Hst.Json
 			bind:value={content}
-			title="Heading"
+			title="Content"
 		/>
 	</svelte:fragment>
 

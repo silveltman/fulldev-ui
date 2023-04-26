@@ -1,25 +1,25 @@
 <script lang="ts">
-	import type { RadioContent } from "$lib/types"
-
-
+	import type { RadioContent } from '$lib/types'
 
 	export let options: RadioContent[] = []
 
-	
 	let className = ''
-	export { className as class}
-	// let content: RadioContent 
-</script> 
+	export { className as class }
+	// let content: RadioContent
+</script>
 
-<fieldset class="flex flex-col gap-y-md {className}">
+<fieldset
+	class="flex flex-col gap-y-md {className}"
+	{...$$restProps}
+>
 	{#each options as option}
 		<div class="flex items-start">
 			<input
 				type="radio"
 				class="mt-xs"
 				id={option.value}
-				name = {option.name}
-				required = {option.required}
+				name={option.name}
+				required={option.required}
 			/>
 			<label
 				for={option.value}

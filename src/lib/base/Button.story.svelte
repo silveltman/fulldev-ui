@@ -23,7 +23,7 @@
 		/>
 	</svelte:fragment>
 
-	<Hst.Variant title="Primary/sm">
+	<Hst.Variant title="Primary">
 		<Button
 			{content}
 			{disabled}
@@ -31,23 +31,7 @@
 			size="sm"
 		/>
 	</Hst.Variant>
-	<Hst.Variant title="Primary/md">
-		<Button
-			{content}
-			{disabled}
-			variant="primary"
-			size="md"
-		/>
-	</Hst.Variant>
-	<Hst.Variant title="Primary/lg">
-		<Button
-			{content}
-			{disabled}
-			variant="primary"
-			size="lg"
-		/>
-	</Hst.Variant>
-	<Hst.Variant title="Secondary/sm">
+	<Hst.Variant title="Secondary">
 		<Button
 			{content}
 			{disabled}
@@ -55,44 +39,12 @@
 			size="sm"
 		/>
 	</Hst.Variant>
-	<Hst.Variant title="Secondary/md">
-		<Button
-			{content}
-			{disabled}
-			variant="secondary"
-			size="md"
-		/>
-	</Hst.Variant>
-	<Hst.Variant title="Secondary/lg">
-		<Button
-			{content}
-			{disabled}
-			variant="secondary"
-			size="lg"
-		/>
-	</Hst.Variant>
-	<Hst.Variant title="Tertiary/sm">
+	<Hst.Variant title="Tertiary">
 		<Button
 			{content}
 			{disabled}
 			variant="tertiary"
 			size="sm"
-		/>
-	</Hst.Variant>
-	<Hst.Variant title="Tertiary/md">
-		<Button
-			{content}
-			{disabled}
-			variant="tertiary"
-			size="md"
-		/>
-	</Hst.Variant>
-	<Hst.Variant title="Tertiary/lg">
-		<Button
-			{content}
-			{disabled}
-			variant="tertiary"
-			size="lg"
 		/>
 	</Hst.Variant>
 </Hst.Story>
