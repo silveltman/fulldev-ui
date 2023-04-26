@@ -10,6 +10,8 @@
 		options: ['Option 1', 'Option 2', 'Option 3'],
 		required: false
 	}
+
+	let size: 'sm' | 'md' | 'lg' = 'md'
 </script>
 
 <Hst.Story>
@@ -21,19 +23,11 @@
 		<Hst.Json
 			bind:value={size}
 			title="Size"
-			/>
+		/>
 	</svelte:fragment>
 
 	<Select
 		{content}
 		{size}
 	/>
-	<!-- <Select
-		{content}
-		size="md"
-	/>
-	<Select
-		{content}
-		size="lg"
-	/> -->
 </Hst.Story>

@@ -5,7 +5,6 @@
 
 	let className = ''
 	export { className as class }
-	// let content: RadioContent
 </script>
 
 <fieldset

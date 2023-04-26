@@ -10,8 +10,8 @@
 <svelte:element
 	this={disableLink ? 'div' : 'a'}
 	class="h-lg {className}"
-	{...$$restProps}
 	href={disableLink ? undefined : '/'}
+	{...$$restProps}
 >
 	{#if content.light}
 		<img

@@ -1,11 +1,7 @@
 <script lang="ts">
 	import type { TextAreaContent } from '$lib/types'
 
-	// export let required: boolean = false
 	export let rows: number = 5
-	// export let name: string = 'textarea'
-	// export let label: string | undefined = undefined
-	// export let placeholder: string | undefined = undefined
 
 	let className = ''
 	export { className as class }

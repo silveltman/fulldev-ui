@@ -9,8 +9,6 @@
 	export let layout: Layout = {}
 
 	export let size: 'sm' | 'md' | 'lg' = 'md'
-
-	// ...
 </script>
 
 <svelte:element

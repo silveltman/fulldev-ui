@@ -1,17 +1,10 @@
 <script lang="ts">
 	import type { TextFieldContent } from '$lib/types'
 
-	// export let type: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search' | 'number' = 'text'
-	// export let required: boolean = false
-	// export let name: string = type
-	// export let label: string | undefined = undefined
-	// export let placeholder: string | undefined = undefined
-
 	let className = ''
 	export { className as class }
 
 	export let content: TextFieldContent
-	// no content prop
 </script>
 
 <div

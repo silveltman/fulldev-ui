@@ -27,15 +27,6 @@
 	{className}"
 	{...$$restProps}
 >
-	<!-- <input
-			type="hidden"
-			name="_subject"
-			value="text"
-		/> -->
-	<!-- <Textfield  
-			content = {field}
-		/> -->
-
 	{#if key}
 		<input
 			type="hidden"

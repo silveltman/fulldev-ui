@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { CardContent, Hst } from '$lib/types'
-	import { json } from '@sveltejs/kit'
 	import Card from './Card.svelte'
 	export let Hst: Hst
 
@@ -22,7 +21,7 @@
 		}
 	}
 
-	let size: 'sm'
+	let size: 'sm' | 'md' | 'lg' = 'md'
 </script>
 
 <Hst.Story>

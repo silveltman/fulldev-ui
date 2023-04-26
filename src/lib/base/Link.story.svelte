@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { Hst, LinkContent } from '$lib/types'
-	import { json } from '@sveltejs/kit'
 	import Link from './Link.svelte'
 	export let Hst: Hst
 
@@ -9,7 +8,7 @@
 		href: '#'
 	}
 
-	let size: 'sm'
+	let size: 'sm' | 'md' | 'lg' = 'md'
 </script>
 
 <Hst.Story layout={{ type: 'grid', width: 200 }}>
