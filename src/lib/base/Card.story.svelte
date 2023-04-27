@@ -20,13 +20,19 @@
 			}
 		}
 	}
+
+	let size: 'sm' | 'md' | 'lg' = 'md'
 </script>
 
 <Hst.Story>
 	<svelte:fragment slot="controls">
 		<Hst.Json
 			bind:value={content}
-			title="Heading"
+			title="Content"
+		/>
+		<Hst.Json
+			bind:value={size}
+			title="Size"
 		/>
 	</svelte:fragment>
 

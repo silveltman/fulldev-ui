@@ -1,22 +1,24 @@
 <script lang="ts">
-	export let type: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' = 'text'
-	export let required: boolean = false
-	export let name: string = type
+	import type { RadioContent } from '$lib/types'
 
-	export let options: any = []
+	export let options: RadioContent = []
 
-	// no content prop
+	let className = ''
+	export { className as class }
 </script>
 
-<fieldset class="flex flex-col gap-y-md">
+<fieldset
+	class="flex flex-col gap-y-md {className}"
+	{...$$restProps}
+>
 	{#each options as option}
 		<div class="flex items-start">
 			<input
 				type="radio"
 				class="mt-xs"
 				id={option.value}
-				{name}
-				{required}
+				name={option.name}
+				required={option.required}
 			/>
 			<label
 				for={option.value}

@@ -1,18 +1,30 @@
 <script lang="ts">
+	import type { FormContent, TextFieldContent } from '$lib/types'
+	import Textfield from './Textfield.svelte'
+
 	let className = ''
 	export { className as class }
 
 	export let key: string | undefined = undefined
 	export let subject: string | undefined = undefined
-	export let action: string | undefined = undefined
+	// export let action: string | undefined = undefined
 
-	// no content prop
+	let content: FormContent
+
+	// let field : TextFieldContent = {
+	// 	type: 'text',
+	// 	name: 'name',
+	// 	label: 'Name',
+	// 	placeholder: 'Your name',
+	// 	required: true,
+	// }
 </script>
 
 <form
-	{action}
+	action={content.action}
 	method="POST"
-	class="flex w-full max-w-md flex-col gap-md {className}"
+	class="flex w-full max-w-md flex-col gap-md 
+	{className}"
 	{...$$restProps}
 >
 	{#if key}

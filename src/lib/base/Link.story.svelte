@@ -1,14 +1,14 @@
 <script lang="ts">
-	import type { Hst, ButtonContent } from '$lib/types'
-	import Button from './Button.svelte'
+	import type { Hst, LinkContent } from '$lib/types'
+	import Link from './Link.svelte'
 	export let Hst: Hst
 
-	let content: ButtonContent = {
+	let content: LinkContent = {
 		text: 'Click me',
 		href: '#'
 	}
 
-	let disabled: boolean = false
+	let size: 'sm' | 'md' | 'lg' = 'md'
 </script>
 
 <Hst.Story layout={{ type: 'grid', width: 200 }}>
@@ -17,34 +17,25 @@
 			title="Content"
 			bind:value={content}
 		/>
-		<Hst.Checkbox
-			title="Disabled"
-			bind:value={disabled}
+		<Hst.Json
+			title="Size"
+			bind:value={size}
 		/>
 	</svelte:fragment>
 
 	<Hst.Variant title="Primary">
-		<Button
+		<Link
 			{content}
-			{disabled}
+			{size}
 			variant="primary"
-			size="sm"
 		/>
 	</Hst.Variant>
+
 	<Hst.Variant title="Secondary">
-		<Button
+		<Link
 			{content}
-			{disabled}
+			{size}
 			variant="secondary"
-			size="sm"
-		/>
-	</Hst.Variant>
-	<Hst.Variant title="Tertiary">
-		<Button
-			{content}
-			{disabled}
-			variant="tertiary"
-			size="sm"
 		/>
 	</Hst.Variant>
 </Hst.Story>

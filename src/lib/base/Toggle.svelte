@@ -1,13 +1,10 @@
 <script lang="ts">
-	export let required: boolean = false
+	import type { ToggleContent } from '$lib/types'
 
-	export let content: any = {
-		heading: 'Heading',
-		text: 'Text',
-		id: 'id'
-	}
+	let className = ''
+	export { className as class }
 
-	// no content prop
+	export let content: ToggleContent
 </script>
 
 <!-- <div class="flex items-start">
@@ -34,13 +31,16 @@
 		{/if}
 	</div>
 </div> -->
-<div class="flex gap-md">
+<div
+	class="flex gap-md {className}"
+	{...$$restProps}
+>
 	<input
 		type="checkbox"
 		class="peer hidden"
 		id={content.id}
 		name={content.id}
-		{required}
+		required={content.required}
 	/>
 	<label
 		for={content.id}

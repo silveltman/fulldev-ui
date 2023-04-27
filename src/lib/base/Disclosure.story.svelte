@@ -7,19 +7,15 @@
 		heading: 'Lorem ipsum dolor sit amet',
 		textarea: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'
 	}
-	let name: string = 'disclosure'
 </script>
 
 <Hst.Story>
 	<svelte:fragment slot="controls">
 		<Hst.Json
 			bind:value={content}
-			title="Heading"
+			title="Content"
 		/>
 	</svelte:fragment>
 
-	<Disclosure
-		{content}
-		{name}
-	/>
+	<Disclosure {content} />
 </Hst.Story>

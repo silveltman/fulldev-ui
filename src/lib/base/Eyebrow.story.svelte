@@ -14,22 +14,18 @@
 		/>
 	</svelte:fragment>
 
-	<Hst.Variant title="sm">
+	<Hst.Variant title="Primary">
 		<Eyebrow
 			{content}
 			size="sm"
+			variant="primary"
 		/>
 	</Hst.Variant>
-	<Hst.Variant title="md">
+	<Hst.Variant title="Secondary">
 		<Eyebrow
 			{content}
 			size="md"
-		/>
-	</Hst.Variant>
-	<Hst.Variant title="lg">
-		<Eyebrow
-			{content}
-			size="lg"
+			variant="secondary"
 		/>
 	</Hst.Variant>
 </Hst.Story>

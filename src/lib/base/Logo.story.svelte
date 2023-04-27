@@ -1,12 +1,14 @@
 <script lang="ts">
-	import type { PersonContent, Hst } from '$lib/types'
-	import Person from './Person.svelte'
+	import type { Hst, LogoContent } from '$lib/types'
+	import Logo from './Logo.svelte'
 	export let Hst: Hst
 
-	let content: PersonContent = {
-		heading: 'Heading',
-		text: 'Text',
-		image: {
+	let content: LogoContent = {
+		light: {
+			src: 'https://via.placeholder.com/150',
+			alt: 'Alt text'
+		},
+		dark: {
 			src: 'https://via.placeholder.com/150',
 			alt: 'Alt text'
 		}
@@ -21,5 +23,5 @@
 		/>
 	</svelte:fragment>
 
-	<Person {content} />
+	<Logo {content} />
 </Hst.Story>

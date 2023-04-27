@@ -1,29 +1,34 @@
 <script lang="ts">
-	export let required: boolean = false
+	import type { TextAreaContent } from '$lib/types'
+
 	export let rows: number = 5
-	export let name: string = 'textarea'
-	export let label: string | undefined = undefined
-	export let placeholder: string | undefined = undefined
+
+	let className = ''
+	export { className as class }
+	export let content: TextAreaContent
 </script>
 
-<div class="flex flex-col">
-	{#if label}
+<div
+	class="flex flex-col {className}"
+	{...$$restProps}
+>
+	{#if content.label}
 		<label
-			for={name}
+			for={content.name}
 			class="text-sm font-medium text-500"
 		>
-			{label}
-			{#if required}
+			{content.label}
+			{#if content.required}
 				*
 			{/if}
 		</label>
 	{/if}
 	<textarea
-		id={name}
+		id={content.name}
 		{rows}
-		{name}
-		{placeholder}
-		{required}
+		name={content.name}
+		placeholder={content.placeholder}
+		required={content.required}
 		class="flex rounded-input border-700 py-3 px-3 text-md"
 	/>
 </div>

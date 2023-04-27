@@ -9,18 +9,17 @@
 	export let layout: Layout = {}
 
 	export let size: 'sm' | 'md' | 'lg' = 'md'
-
-	//
 </script>
 
 <svelte:element
 	this={content.href ? 'a' : 'div'}
 	href={content.href}
 	class="group gap-lg {className}
-		{layout.box ? 'rounded-card overflow-hidden bg-700 p-lg' : ''}
-		{layout.split ? 'grid grid-cols-1 sm:grid-cols-2' : 'flex flex-col'}
-		{layout.split && layout.center ? 'sm:items-center' : ''}
+	  {layout.box ? 'rounded-card overflow-hidden bg-700 p-lg' : ''}
+	  {layout.split ? 'grid grid-cols-1 sm:grid-cols-2' : 'flex flex-col'}
+	  {layout.split && layout.center ? 'sm:items-center' : ''}
 	"
+	{...$$restProps}
 >
 	{#if content.image}
 		<Image
@@ -34,8 +33,8 @@
 				{#if content.eyebrow}
 					<span
 						class="text-sm text-300
-							{size === 'lg' ? 'text-sm' : 'text-xs'}
-							"
+				{size === 'lg' ? 'text-sm' : 'text-xs'}
+			  "
 					>
 						Lorem ipsum
 					</span>

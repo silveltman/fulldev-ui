@@ -11,6 +11,7 @@
 	this={disableLink ? 'div' : 'a'}
 	class="h-lg {className}"
 	href={disableLink ? undefined : '/'}
+	{...$$restProps}
 >
 	{#if content.light}
 		<img
