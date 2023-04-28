@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { ToggleContent } from '$lib/types'
+	// import type { ToggleContent } from '$lib/types';
 
-	let className = ''
-	export { className as class }
+	// let className = '';
+	// export { className as class };
 
-	export let content: ToggleContent
+	// export let content: ToggleContent;
 </script>
 
 <!-- <div class="flex items-start">
@@ -31,7 +31,8 @@
 		{/if}
 	</div>
 </div> -->
-<div
+
+<!-- <div
 	class="flex gap-md {className}"
 	{...$$restProps}
 >
@@ -56,4 +57,4 @@
 			<p class="ml-xs inline">{content.text}</p>
 		{/if}
 	</div>
-</div>
+</div> -->

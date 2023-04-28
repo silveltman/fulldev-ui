@@ -1,13 +1,11 @@
 <script lang="ts">
-	import type { WhatsappContent } from '$lib/types'
-	import { IconBrandWhatsapp } from '@tabler/icons-svelte'
+	import type { WhatsappContent } from '$lib/types';
+	import { IconBrandWhatsapp } from '@tabler/icons-svelte';
 
-	let className = ''
-	export { className as class }
+	let className = '';
+	export { className as class };
 
-	export let size: 'sm' | 'md' | 'lg' = 'md'
-
-	export let content: WhatsappContent
+	export let content: WhatsappContent;
 </script>
 
 <a
@@ -19,11 +17,8 @@
 	{...$$restProps}
 >
 	<IconBrandWhatsapp
-		class="text-white
-		{size === 'sm' && 'h-10 w-10'}
-		{size === 'md' && 'h-12 w-12'}
-		{size === 'lg' && 'h-14 w-14'}
-		"
+		class="text-white"
+		size={48}
 		stroke={1.6}
 	/>
 </a>

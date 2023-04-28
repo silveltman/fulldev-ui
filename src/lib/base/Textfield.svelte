@@ -1,10 +1,14 @@
 <script lang="ts">
-	import type { TextFieldContent } from '$lib/types'
+	import type { TextFieldContent } from '$lib/types';
 
-	let className = ''
-	export { className as class }
+	let className = '';
+	export { className as class };
 
-	export let content: TextFieldContent
+	export let content: TextFieldContent;
+
+	export let type: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search' = 'text';
+	export let required: boolean = false;
+	export let name: string;
 </script>
 
 <div
@@ -13,21 +17,21 @@
 >
 	{#if content.label}
 		<label
-			for={content.name}
+			for={name}
 			class="text-sm font-medium text-500"
 		>
 			{content.label}
-			{#if content.required}
+			{#if required}
 				*
 			{/if}
 		</label>
 	{/if}
 	<input
-		type={content.type}
-		id={content.name}
-		name={content.name}
+		{type}
+		id={name}
+		{name}
 		placeholder={content.placeholder}
-		required={content.required}
+		{required}
 		class="flex rounded-input border-700 py-3 px-3 text-md leading-none"
 	/>
 </div>

@@ -1,11 +1,13 @@
 <script lang="ts">
-	import type { TextAreaContent } from '$lib/types'
+	import type { TextAreaContent } from '$lib/types';
 
-	export let rows: number = 5
+	let className = '';
+	export { className as class };
+	export let content: TextAreaContent;
 
-	let className = ''
-	export { className as class }
-	export let content: TextAreaContent
+	export let required: boolean = false;
+	export let name: string;
+	export let rows: number = 5;
 </script>
 
 <div
@@ -14,21 +16,21 @@
 >
 	{#if content.label}
 		<label
-			for={content.name}
+			for={name}
 			class="text-sm font-medium text-500"
 		>
 			{content.label}
-			{#if content.required}
+			{#if required}
 				*
 			{/if}
 		</label>
 	{/if}
 	<textarea
-		id={content.name}
+		id={name}
 		{rows}
-		name={content.name}
+		{name}
 		placeholder={content.placeholder}
-		required={content.required}
+		{required}
 		class="flex rounded-input border-700 py-3 px-3 text-md"
 	/>
 </div>

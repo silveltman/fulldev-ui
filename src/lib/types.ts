@@ -54,28 +54,21 @@ export interface ToggleContent {
 }
 
 export interface SelectContent {
-	required?: boolean;
-	name: string;
 	label?: string;
 	placeholder?: string;
 	options: string[];
 }
 
 export interface RadioItem {
-	name?: string,
-	heading: string,
-	text: string,
-	value: string
-	required?: boolean;
+	heading?: string,
+	text?: string,
 }
 
 export type RadioContent = RadioItem[]
 
 export interface CheckboxContent {
-	heading: string,
-	text: string,
-	id: string,
-	required?: boolean
+	heading?: string,
+	text?: string,
 }
 
 export interface WhatsappContent {
@@ -83,18 +76,13 @@ export interface WhatsappContent {
 }
 
 export interface TextFieldContent {
-	type: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search',
-	name: string,
 	label?: string,
 	placeholder?: string,
-	required: boolean,
 }
 
 export interface TextAreaContent {
-	name: string,
 	label?: string,
 	placeholder?: string,
-	required: boolean,
 }
 
 export interface SocialContent {
@@ -146,7 +134,7 @@ export type SlotStatsContent = StatsItem[]
 export type SlotCardsContent = CardContent[]
 
 export interface SlotNewsletterContent {
-	placeholder?: string
+	textfield: TextFieldContent
 	button: ButtonContent
 }
 

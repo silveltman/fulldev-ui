@@ -1,16 +1,14 @@
 <script lang="ts">
-	import type { Hst, TextAreaContent } from '$lib/types'
-	import Textarea from './Textarea.svelte'
-	export let Hst: Hst
+	import type { Hst, TextAreaContent } from '$lib/types';
+	import Textarea from './Textarea.svelte';
+	export let Hst: Hst;
 
 	let content: TextAreaContent = {
-		required: false,
-		name: 'temp',
-		label: 'text',
-		placeholder: 'write here'
-	}
+		label: 'Label',
+		placeholder: 'Placeholder'
+	};
 
-	let rows = 5
+	let rows = 5;
 </script>
 
 <Hst.Story>
@@ -28,5 +26,6 @@
 	<Textarea
 		{content}
 		{rows}
+		name="textarea"
 	/>
 </Hst.Story>

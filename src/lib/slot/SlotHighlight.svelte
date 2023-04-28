@@ -1,22 +1,22 @@
 <script lang="ts">
-	import type { SlotHighlightContent } from '$lib/types'
-	import Button from 'base/Button.svelte'
-	import Eyebrow from 'base/Eyebrow.svelte'
+	import type { SlotHighlightContent } from '$lib/types';
+	import Button from 'base/Button.svelte';
+	import Eyebrow from 'base/Eyebrow.svelte';
 
-	export let content: SlotHighlightContent
+	export let content: SlotHighlightContent;
 
 	const headingMap: {
-		lg: 'h1'
-		md: 'h2'
-		sm: 'h3'
+		lg: 'h1';
+		md: 'h2';
+		sm: 'h3';
 	} = {
 		lg: 'h1',
 		md: 'h2',
 		sm: 'h3'
-	}
+	};
 
-	export let size: 'lg' | 'md' | 'sm' = 'md'
-	export let heading: 'h1' | 'h2' | 'h3' = headingMap[size]
+	export let size: 'lg' | 'md' | 'sm' = 'md';
+	export let heading: 'h1' | 'h2' | 'h3' = headingMap[size];
 </script>
 
 <div
@@ -78,6 +78,7 @@
 			{#if content.button_tertiary}
 				<Button
 					{size}
+					class="ml-sm"
 					variant="tertiary"
 					content={content.button_tertiary}
 				/>

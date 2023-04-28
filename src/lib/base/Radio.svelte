@@ -1,10 +1,13 @@
 <script lang="ts">
-	import type { RadioContent } from '$lib/types'
+	import type { RadioContent } from '$lib/types';
 
-	export let options: RadioContent = []
+	export let options: RadioContent = [];
 
-	let className = ''
-	export { className as class }
+	let className = '';
+	export { className as class };
+
+	export let required: boolean = false;
+	export let name: string;
 </script>
 
 <fieldset
@@ -16,12 +19,13 @@
 			<input
 				type="radio"
 				class="mt-xs"
-				id={option.value}
-				name={option.name}
-				required={option.required}
+				id="{option.heading} - {option.text}"
+				value="{option.heading} - {option.text}"
+				{name}
+				{required}
 			/>
 			<label
-				for={option.value}
+				for="{option.heading} - {option.text}"
 				class="flex cursor-pointer flex-col pl-md"
 			>
 				{#if option.heading}
