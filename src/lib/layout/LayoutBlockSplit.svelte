@@ -1,15 +1,14 @@
 <script lang="ts">
-	import type { Layout } from '$lib/types'
+	import type { Layout } from '$lib/types';
 
-	export let layout: Layout = {}
+	export let layout: Layout = {};
 </script>
 
 <div
-	class="grid grid-cols-1 gap-x-2xl gap-y-3xl lg:grid-cols-2
+	class="grid grid-cols-1 gap-x-3xl gap-y-3xl lg:grid-cols-2
 		lg:[&>*:nth-child(3)]:col-start-2 lg:[&>*:nth-child(3)]:row-span-2 lg:[&>*:nth-child(3)]:row-start-1
-
         {layout.center && 'lg:items-center'}
-		{layout.reverse && '[&>*:first-child]:order-last'}
+		{layout.reverse && '[&>*:last-child]:order-first'}
     "
 >
 	<slot />

@@ -1,65 +1,31 @@
 <script lang="ts">
-	import BlockContent from 'block/BlockCta.svelte'
+	import BlockFaq from 'block/BlockFaq.svelte';
+	import BlockRichtext from 'block/BlockRichtext.svelte';
 
-	let block = {
-		eyebrow: 'lorem ipsum',
-		heading: 'Lorem ipsum dolor',
-		html: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		button_primary: {
-			text: 'Lorem ipsum',
-			href: '#'
+	const content = {
+		highlight: {
+			eyebrow: 'lorem ipsum',
+			heading: 'Lorem ipsum dolor',
+			textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 		},
-		button_secondary: {
-			text: 'Lorem ipsum',
-			href: '#'
+		richtext: {
+			html: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>'
 		},
-		image: {
-			src: '/placeholder.jpg',
+		media: {
+			src: 'https://picsum.photos/1600/900',
 			alt: 'Lorem ipsum'
 		}
-	}
+	};
+
+	const layout = {
+		box: false,
+		split: true,
+		center: false,
+		reverse: false
+	};
 </script>
 
-<BlockContent
-	{block}
-	size="lg"
-	split
-	center
-	class="dark"
-/>
-<BlockContent
-	{block}
-	split
-	center
-/>
-<BlockContent
-	{block}
-	split
-	center
-	reverse
-/>
-<BlockContent
-	{block}
-	split
-	center
-/>
-
-<BlockContent
-	{block}
-	center
-	box
-	reverse
-	class="dark"
-/>
-<BlockContent {block} />
-<BlockContent
-	{block}
-	split
-	reverse
-/>
-<BlockContent
-	{block}
-	class="dark"
-	split
-	center
+<BlockRichtext
+	{content}
+	{layout}
 />

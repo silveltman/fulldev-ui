@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { SlotAccordionContent } from '$lib/types'
-	import Disclosure from 'base/Disclosure.svelte'
+	import type { SlotAccordionContent } from '$lib/types';
+	import Disclosure from 'base/Disclosure.svelte';
 
-	export let content: SlotAccordionContent
+	export let content: SlotAccordionContent;
 	//
 </script>
 

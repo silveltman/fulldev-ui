@@ -50,15 +50,15 @@ export interface ToggleContent {
 	heading: string,
 	text: string,
 	id: string,
-	required? : boolean
+	required?: boolean
 }
 
 export interface SelectContent {
-    required?: boolean;
-    name: string;
-    label?: string;
-    placeholder?: string;
-    options: string[];
+	required?: boolean;
+	name: string;
+	label?: string;
+	placeholder?: string;
+	options: string[];
 }
 
 export interface RadioItem {
@@ -70,11 +70,6 @@ export interface RadioItem {
 }
 
 export type RadioContent = RadioItem[]
-
-export interface FormContent {
-	action?: string,
-	// fields?: (TextFieldContent | TextAreaContent | SelectContent | RadioContent | ToggleContent | CheckboxContent)[],
-}
 
 export interface CheckboxContent {
 	heading: string,
@@ -89,22 +84,21 @@ export interface WhatsappContent {
 
 export interface TextFieldContent {
 	type: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search',
-	name : string,
+	name: string,
 	label?: string,
 	placeholder?: string,
 	required: boolean,
 }
 
 export interface TextAreaContent {
-	name : string,
+	name: string,
 	label?: string,
 	placeholder?: string,
 	required: boolean,
-	// rows: number,
 }
 
 export interface SocialContent {
-	icon:  | 'facebook'
+	icon: | 'facebook'
 	| 'twitter'
 	| 'linkedin'
 	| 'pinterest'
@@ -195,7 +189,7 @@ export interface HeaderContent {
 export interface FooterContent {
 	text?: string
 	logo?: LogoContent
-	links? : LinkContent[]
+	links?: LinkContent[]
 }
 
 

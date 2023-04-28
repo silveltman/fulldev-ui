@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { CheckboxContent } from '$lib/types'
+	import type { CheckboxContent } from '$lib/types';
 
-	let className = ''
-	export { className as Class }
+	let className = '';
+	export { className as Class };
 
-	export let content: CheckboxContent
+	export let content: CheckboxContent;
 </script>
 
 <div

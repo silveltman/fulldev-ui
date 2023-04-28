@@ -14,12 +14,12 @@
 	action="/"
 >
 	<div class="flex gap-sm">
-		<Textfield
+		<!-- <Textfield
 			name="email"
 			type="email"
 			placeholder={content.placeholder}
 			required
-		/>
+		/> -->
 		<Button
 			content={content.button}
 			type="submit"
