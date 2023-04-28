@@ -19,11 +19,20 @@ module.exports = {
 						500: '#f8fafc',
 						700: '#f1f5f9',
 						'button-primary': '#000000',
+						'button-primary-hover': '#1e293b',
+						// 'button-secondary': '#000000',
+						// 'button-secondary-hover': '#000000',
+					},
+					ringColor: {
+						'button-primary': '#000000',
+						'button-primary-hover': '#1e293b',
+						'button-secondary': '#000000',
+						'button-secondary-hover': '#1e293b',
 					},
 					textColor: {
 						300: '#1e293b',
 						500: '#0f172a',
-						700: '#0000',
+						700: '#000000',
 						'button-primary': '#ffffff',
 						'button-secondary': '#000000',
 						'button-tertiary': '#000000',
@@ -33,9 +42,6 @@ module.exports = {
 						300: '#e2e8f0',
 						500: '#cbd5e1',
 						700: '#94a3b8',
-					},
-					ringColor: {
-						'button-secondary': '#000000',
 					},
 					colors: {
 						accent: {

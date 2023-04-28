@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { SlotChecklistContent } from '$lib/types'
-	import { IconCircleCheck } from '@tabler/icons-svelte'
-	import Button from 'base/Button.svelte'
-	export let center: boolean = false
+	import type { SlotChecklistContent } from '$lib/types';
+	import { IconCircleCheck } from '@tabler/icons-svelte';
+	import Button from 'base/Button.svelte';
+	import Grid from 'layout/Grid.svelte';
+	export let center: boolean = true;
 
-	export let content: SlotChecklistContent
-	//
+	export let content: SlotChecklistContent;
 </script>
 
 <ul
