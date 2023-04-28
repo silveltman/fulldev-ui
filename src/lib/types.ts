@@ -134,7 +134,9 @@ export type SlotStatsContent = StatsItem[]
 export type SlotCardsContent = CardContent[]
 
 export interface SlotNewsletterContent {
-	textfield: TextFieldContent
+	textfield: {
+		placeholder?: string
+	}
 	button: ButtonContent
 }
 

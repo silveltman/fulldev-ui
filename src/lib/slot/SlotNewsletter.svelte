@@ -5,7 +5,6 @@
 	import Button from 'base/Button.svelte';
 
 	export let content: SlotNewsletterContent;
-	//
 </script>
 
 <Form
@@ -16,12 +15,12 @@
 	<div class="flex gap-sm">
 		<Textfield
 			content={content.textfield}
-			name="email"
+			name="newsletter-email"
 			type="email"
-			placeholder={content.placeholder}
 			required
 		/>
 		<Button
+			size="sm"
 			content={content.button}
 			type="submit"
 		/>

@@ -1,23 +1,25 @@
 <script lang="ts">
-	import type { CardContent, Layout } from '$lib/types'
-	import Image from 'base/Image.svelte'
-	import Person from 'base/Person.svelte'
+	import type { CardContent } from '$lib/types';
+	import Image from 'base/Image.svelte';
+	import Person from 'base/Person.svelte';
 
-	let className = ''
-	export { className as class }
-	export let content: CardContent
-	export let layout: Layout = {}
+	let className = '';
+	export { className as class };
+	export let content: CardContent;
 
-	export let size: 'sm' | 'md' | 'lg' = 'md'
+	export let size: 'sm' | 'md' | 'lg' = 'md';
+	export let box: boolean = false;
+	export let split: boolean = false;
+	export let center: boolean = false;
 </script>
 
 <svelte:element
 	this={content.href ? 'a' : 'div'}
 	href={content.href}
 	class="group gap-lg {className}
-	  {layout.box ? 'rounded-card overflow-hidden bg-700 p-lg' : ''}
-	  {layout.split ? 'grid grid-cols-1 sm:grid-cols-2' : 'flex flex-col'}
-	  {layout.split && layout.center ? 'sm:items-center' : ''}
+	  {box ? 'rounded-card overflow-hidden bg-700 p-lg' : ''}
+	  {split ? 'grid grid-cols-1 sm:grid-cols-2' : 'flex flex-col'}
+	  {split && center ? 'sm:items-center' : ''}
 	"
 	{...$$restProps}
 >

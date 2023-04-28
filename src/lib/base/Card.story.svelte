@@ -1,7 +1,8 @@
 <script lang="ts">
-	import type { CardContent, Hst } from '$lib/types'
-	import Card from './Card.svelte'
-	export let Hst: Hst
+	import type { CardContent, Hst } from '$lib/types';
+	import Card from './Card.svelte';
+	import Select from './Select.svelte';
+	export let Hst: Hst;
 
 	let content: CardContent = {
 		eyebrow: 'Lorem ipsum',
@@ -19,22 +20,39 @@
 				alt: 'Engineer'
 			}
 		}
-	}
+	};
 
-	let size: 'sm' | 'md' | 'lg' = 'md'
+	let size: 'sm' | 'md' | 'lg' = 'md';
+	let box: boolean = false;
+	let split: boolean = false;
+	let center: boolean = false;
 </script>
 
 <Hst.Story>
 	<svelte:fragment slot="controls">
-		<Hst.Json
-			bind:value={content}
-			title="Content"
-		/>
-		<Hst.Json
+		<Hst.Select
+			title="size"
 			bind:value={size}
-			title="Size"
+			options={['sm', 'md', 'lg']}
+		/>
+		<Hst.Checkbox
+			title="Box"
+			bind:value={box}
+		/>
+		<Hst.Checkbox
+			title="Split"
+			bind:value={split}
+		/>
+		<Hst.Checkbox
+			title="Center"
+			bind:value={center}
 		/>
 	</svelte:fragment>
 
-	<Card {content} />
+	<Card
+		{content}
+		{box}
+		{split}
+		{center}
+	/>
 </Hst.Story>
