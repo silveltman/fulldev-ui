@@ -17,7 +17,7 @@
 	this={content.href ? 'a' : 'div'}
 	href={content.href}
 	class="group gap-lg {className}
-	  {box ? 'rounded-card overflow-hidden bg-700 p-lg' : ''}
+	  {box ? 'rounded-card bg-300 overflow-hidden p-lg' : ''}
 	  {split ? 'grid grid-cols-1 sm:grid-cols-2' : 'flex flex-col'}
 	  {split && center ? 'sm:items-center' : ''}
 	"
@@ -34,7 +34,7 @@
 			<div class="flex flex-col gap-xs">
 				{#if content.eyebrow}
 					<span
-						class="text-sm text-300
+						class="text-100 text-sm
 				{size === 'lg' ? 'text-sm' : 'text-xs'}
 			  "
 					>

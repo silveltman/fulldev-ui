@@ -33,4 +33,4 @@
 	<slot name="end" />
 </svelte:element>
 
-<div class="devider divider input-bordered" />
+<div class="devider footer card divider input-bordered" />

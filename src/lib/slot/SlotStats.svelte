@@ -8,7 +8,7 @@
 	{#each content as item}
 		<div class="items flex flex-col">
 			<dt class="">{item.label}</dt>
-			<dd class="order-first text-2xl font-semibold tracking-tight text-700">
+			<dd class="text-300 order-first text-2xl font-semibold tracking-tight">
 				{item.value}
 			</dd>
 		</div>
