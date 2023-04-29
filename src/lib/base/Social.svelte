@@ -48,7 +48,7 @@
 	target="_blank"
 	href={content.href}
 	title={content.icon}
-	class="bg-200 text-200 hover:bg-300 hover:text-300 inline-block rounded-full p-1
+	class="bg-200 content-200 hover:bg-300 hover:content-300 inline-block rounded-full p-1
 
 		{size === 'sm'
 		? 'h-8 w-8'

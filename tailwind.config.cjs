@@ -7,18 +7,11 @@ module.exports = {
 		}
 	},
 	plugins: [
+		require('./src/lib/plugin.cjs'),
 		require('tailwind-scrollbar'),
 		require('@tailwindcss/aspect-ratio'),
-		require('./src/lib/plugin.cjs'),
 		require('@tailwindcss/typography'),
 		require("daisyui"),
-		require('tailwindcss-themer')({
-			defaultTheme: {
-				extend: {
-				}
-			},
-
-		})
 	],
 	daisyui: {
 		themes: [
@@ -27,6 +20,11 @@ module.exports = {
 					//------------------------------------------------
 					// ----------------- Base Colors -----------------
 					//------------------------------------------------
+					// Background
+					"base-100": "#ffffff",
+					"base-200": "#ffffff",
+					"base-300": "#F4F4F5",
+
 					// Primary, used for primary buttons
 					primary: "black",
 					"primary-focus": "darkgray",
@@ -60,14 +58,10 @@ module.exports = {
 					//--------------------------------------------------
 					// ----------------- Custom Colors -----------------
 					//--------------------------------------------------
-					// Background
-					"base-100": "#ffffff",
-					"base-200": "#ffffff",
-					"base-300": "#ffffff",
 
 					// Foreground
-					'--content-100': '#1e293b',
-					'--content-200': '#0f172a',
+					'--content-100': '#a3a3a3',
+					'--content-200': '#525252',
 					'--content-300': '#000000',
 					// Set equal to base-200
 					"base-content": "#0f172a",

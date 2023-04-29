@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { SlotCardsContent } from '$lib/types';
+	import type { SlotCardContent } from '$lib/types';
 	import Card from 'base/Card.svelte';
 
-	export let content: SlotCardsContent;
+	export let content: SlotCardContent;
 
 	export let size: 'sm' | 'md' | 'lg' = 'lg';
 </script>

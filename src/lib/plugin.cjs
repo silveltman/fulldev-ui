@@ -165,9 +165,9 @@ module.exports = plugin(
 					'5xl': 'var(--space-5xl)'
 				},
 				colors: {
-					'content-100': withOpacityValue('--content-100'),
-					'content-200': withOpacityValue('--content-200'),
-					'content-300': withOpacityValue('--content-300'),
+					'content-100': 'var(--content-100)',
+					'content-200': 'var(--content-200)',
+					'content-300': 'var(--content-300)',
 				}
 			}
 		}

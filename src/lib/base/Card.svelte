@@ -34,7 +34,7 @@
 			<div class="flex flex-col gap-xs">
 				{#if content.eyebrow}
 					<span
-						class="text-100 text-sm
+						class="content-100 text-sm
 				{size === 'lg' ? 'text-sm' : 'text-xs'}
 			  "
 					>

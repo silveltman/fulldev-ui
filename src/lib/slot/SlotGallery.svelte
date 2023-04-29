@@ -46,7 +46,7 @@
 </div>
 
 <style lang="postcss">
-	:global(.scrollbar-block::-webkit-scrollbar) {
+	.scrollbar-block::-webkit-scrollbar {
 		display: block !important;
 	}
 </style>

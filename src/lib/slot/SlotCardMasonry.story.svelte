@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { SlotCardsContent, Hst } from '$lib/types'
-	import SlotCardMasonry from 'slot/SlotCardMasonry.svelte'
+	import type { SlotCardContent, Hst } from '$lib/types';
+	import SlotCardMasonry from 'slot/SlotCardMasonry.svelte';
 
-	export let Hst: Hst
+	export let Hst: Hst;
 
-	let content: SlotCardsContent = [
+	let content: SlotCardContent = [
 		{
 			heading: 'Heading',
 			textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -29,7 +29,7 @@
 				alt: 'Alt text'
 			}
 		}
-	]
+	];
 </script>
 
 <Hst.Story>
