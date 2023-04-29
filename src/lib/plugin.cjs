@@ -58,15 +58,15 @@ module.exports = plugin(
 			'body,html': {
 				fontFamily: theme('fontFamily.body'),
 				lineHeight: theme('lineHeight.relaxed'),
-				color: theme('textColor.500'),
+				color: theme('color.content-500'),
 				fontWeight: theme('fontWeight.light'),
-				backgroundColor: theme('backgroundColor.500'),
+				backgroundColor: theme('color.base-200'),
 			},
 			body: {
 				fontSize: theme('fontSize.md'),
 			},
 			'h1, h2, h3, h4, h5, h6': {
-				color: theme('textColor.700'),
+				color: theme('color.content-300'),
 			},
 			'h1, h2, h3': {
 				fontFamily: theme('fontFamily.heading'),
@@ -102,7 +102,7 @@ module.exports = plugin(
 				fontWeight: theme('fontWeight.medium'),
 			},
 			'p, ul, ol, dl, dd, blockquote, pre, figure, hr': {
-				color: theme('textColor.500'),
+				color: theme('color.content-200'),
 			}
 		})
 	},
