@@ -16,7 +16,7 @@ export { default as Whatsapp } from 'base/Whatsapp.svelte'
 
 // Slot
 export { default as SlotAccordion } from 'slot/SlotAccordion.svelte'
-export { default as SlotCards } from 'slot/SlotCards.svelte'
+export { default as SlotCards } from 'slot/SlotCardGrid.svelte'
 export { default as SlotChecklist } from 'slot/SlotChecklist.svelte'
 export { default as SlotHighlight } from 'slot/SlotHighlight.svelte'
 export { default as SlotMedia } from 'slot/SlotMedia.svelte'

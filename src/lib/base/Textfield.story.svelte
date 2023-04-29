@@ -1,18 +1,15 @@
 <script lang="ts">
-	import type { Hst, TextFieldContent } from '$lib/types'
-	import Textfield from './Textfield.svelte'
-	export let Hst: Hst
+	import type { Hst, TextFieldContent } from '$lib/types';
+	import Textfield from './Textfield.svelte';
+	export let Hst: Hst;
 
 	let content: TextFieldContent = {
-		type: 'text',
-		required: false,
-		name: 'text',
-		label: 'Lorem',
-		placeholder: 'name'
-	}
+		label: 'Label',
+		placeholder: 'Placeholder'
+	};
 </script>
 
-<Hst.Story layout={{ type: 'grid', width: 350 }}>
+<Hst.Story>
 	<svelte:fragment slot="controls">
 		<Hst.Json
 			title="Content"
@@ -20,5 +17,8 @@
 		/>
 	</svelte:fragment>
 
-	<Textfield {content} />
+	<Textfield
+		{content}
+		name="textfield"
+	/>
 </Hst.Story>

@@ -1,15 +1,17 @@
 <script lang="ts">
-	import type { Hst, SlotNewsletterContent } from '$lib/types'
-	import SlotNewsletter from 'slot/SlotNewsletter.svelte'
+	import type { Hst, SlotNewsletterContent } from '$lib/types';
+	import SlotNewsletter from 'slot/SlotNewsletter.svelte';
 
-	export let Hst: Hst
+	export let Hst: Hst;
 
 	let content: SlotNewsletterContent = {
-		placeholder: 'Your email',
+		textfield: {
+			placeholder: 'Your email'
+		},
 		button: {
 			text: 'Subscribe'
 		}
-	}
+	};
 </script>
 
 <Hst.Story>

@@ -1,11 +1,10 @@
 <script lang="ts">
-	import type { SlotNewsletterContent } from '$lib/types'
-	import Form from 'base/Form.svelte'
-	import Textfield from 'base/Textfield.svelte'
-	import Button from 'base/Button.svelte'
+	import type { SlotNewsletterContent } from '$lib/types';
+	import Form from 'base/Form.svelte';
+	import Textfield from 'base/Textfield.svelte';
+	import Button from 'base/Button.svelte';
 
-	export let content: SlotNewsletterContent
-	//
+	export let content: SlotNewsletterContent;
 </script>
 
 <Form
@@ -14,13 +13,14 @@
 	action="/"
 >
 	<div class="flex gap-sm">
-		<!-- <Textfield
-			name="email"
+		<Textfield
+			content={content.textfield}
+			name="newsletter-email"
 			type="email"
-			placeholder={content.placeholder}
 			required
-		/> -->
+		/>
 		<Button
+			size="sm"
 			content={content.button}
 			type="submit"
 		/>

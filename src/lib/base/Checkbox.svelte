@@ -5,6 +5,9 @@
 	export { className as Class };
 
 	export let content: CheckboxContent;
+
+	export let required: boolean = false;
+	export let name: string;
 </script>
 
 <div
@@ -14,12 +17,12 @@
 	<input
 		type="checkbox"
 		class="mt-xs"
-		id={content.id}
-		name={content.id}
-		required={content.required}
+		id={name}
+		{name}
+		{required}
 	/>
 	<label
-		for={content.id}
+		for={name}
 		class="flex cursor-pointer flex-col pl-md"
 	>
 		{#if content.heading}

@@ -1,13 +1,12 @@
 <script lang="ts">
-	import type { PersonContent } from '$lib/types'
-	import Image from 'base/Image.svelte'
+	import type { PersonContent } from '$lib/types';
+	import Image from 'base/Image.svelte';
 
-	let className = ''
-	export { className as class }
-	export let content: PersonContent
+	let className = '';
+	export { className as class };
+	export let content: PersonContent;
 
-	export let size: 'sm' | 'md' | 'lg' = 'md'
-	//
+	export let size: 'sm' | 'md' | 'lg' = 'md';
 </script>
 
 <div
@@ -23,7 +22,7 @@
 		</div>
 	{/if}
 	<div>
-		<h6 class={size == 'sm' ? 'text-xs' : 'text-sm'}>{content.heading}</h6>
-		<p class={size == 'sm' ? 'text-xs' : 'text-sm'}>{content.text}</p>
+		<h6 class={size == 'lg' ? 'text-sm' : 'text-xs'}>{content.heading}</h6>
+		<p class={size == 'lg' ? 'text-sm' : 'text-xs'}>{content.text}</p>
 	</div>
 </div>

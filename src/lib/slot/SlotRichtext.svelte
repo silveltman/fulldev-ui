@@ -1,11 +1,10 @@
 <script lang="ts">
-	import type { RichtextContent } from '$lib/types'
+	import type { RichtextContent } from '$lib/types';
 
-	export let content: RichtextContent
-	//
+	export let content: RichtextContent;
 </script>
 
-<div class="slot-richtext max-w-3xl ">
+<div class="slot-richtext max-w-2xl">
 	{#if content.html}
 		{@html content.html}
 	{/if}
