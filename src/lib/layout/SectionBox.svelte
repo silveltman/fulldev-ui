@@ -1,13 +1,13 @@
 <script lang="ts">
-	import Container from 'layout/Container.svelte'
+	import Container from 'layout/Container.svelte';
 
-	let className: string = ''
-	export { className as class }
+	let className: string = '';
+	export { className as class };
 </script>
 
 <section>
 	<Container>
-		<div class="relative my-4xl rounded-box bg-700 px-4 py-2xl md:px-2xl {className}">
+		<div class="bg-200 relative my-4xl rounded-box px-4 py-2xl md:px-2xl {className}">
 			<slot />
 		</div>
 	</Container>

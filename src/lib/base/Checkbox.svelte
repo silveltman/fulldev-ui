@@ -10,26 +10,23 @@
 	export let name: string;
 </script>
 
-<div
-	class="flex items-start {className}"
+<label
+	for={name}
+	class="flex flex-wrap items-center gap-x-md gap-y-xs cursor-pointer{className}"
 	{...$$restProps}
 >
 	<input
 		type="checkbox"
-		class="mt-xs"
+		class="checkbox checkbox-sm mr-sm"
 		id={name}
+		value={name}
 		{name}
 		{required}
 	/>
-	<label
-		for={name}
-		class="flex cursor-pointer flex-col pl-md"
-	>
-		{#if content.heading}
-			<h6>{content.heading}</h6>
-		{/if}
-		{#if content.text}
-			<p>{content.text}</p>
-		{/if}
-	</label>
-</div>
+	{#if content.heading}
+		<h6 class="inline">{content.heading}</h6>
+	{/if}
+	{#if content.text}
+		<p class="inline text-sm">{content.text}</p>
+	{/if}
+</label>

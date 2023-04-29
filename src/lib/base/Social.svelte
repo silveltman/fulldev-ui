@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { SocialContent } from '$lib/types'
+	import type { SocialContent } from '$lib/types';
 
 	import {
 		IconBrandFacebook,
@@ -10,7 +10,7 @@
 		IconBrandTelegram,
 		IconMail,
 		IconPhone
-	} from '@tabler/icons-svelte'
+	} from '@tabler/icons-svelte';
 
 	// export let icon:
 	// 	| 'facebook'
@@ -31,24 +31,24 @@
 		telegram: IconBrandTelegram,
 		email: IconMail,
 		phone: IconPhone
-	}
+	};
 
 	// export let href: string = '#'
 
 	// export let content : SocialContent
 
-	let className = ''
-	export { className as class }
-	export let content: SocialContent
+	let className = '';
+	export { className as class };
+	export let content: SocialContent;
 
-	export let size: 'sm' | 'md' | 'lg' = 'md'
+	export let size: 'sm' | 'md' | 'lg' = 'md';
 </script>
 
 <a
 	target="_blank"
 	href={content.href}
 	title={content.icon}
-	class="inline-block rounded-full bg-500 p-1 text-500 hover:bg-700 hover:text-700
+	class="bg-200 content-200 hover:bg-300 hover:content-300 inline-block rounded-full p-1
 
 		{size === 'sm'
 		? 'h-8 w-8'

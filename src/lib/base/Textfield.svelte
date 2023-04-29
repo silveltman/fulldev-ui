@@ -12,13 +12,13 @@
 </script>
 
 <div
-	class="flex flex-col {className}"
+	class="form-control w-full {className}"
 	{...$$restProps}
 >
 	{#if content.label}
 		<label
 			for={name}
-			class="text-sm font-medium text-500"
+			class="label text-sm"
 		>
 			{content.label}
 			{#if required}
@@ -32,6 +32,6 @@
 		{name}
 		placeholder={content.placeholder}
 		{required}
-		class="flex rounded-input border-700 py-3 px-3 text-md leading-none"
+		class="input-bordered input text-md"
 	/>
 </div>

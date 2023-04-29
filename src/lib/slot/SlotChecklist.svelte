@@ -13,13 +13,12 @@
 >
 	{#each content as item}
 		<li class="relative max-w-lg pl-8 text-left">
-			<IconCircleCheck class="absolute top-0.5 left-0 text-accent-500" />
+			<IconCircleCheck class="text-accent-500 absolute top-0.5 left-0" />
 			<h5 class="inline">{item.heading}</h5>
 			<p class="inline">{item.textarea}</p>
 			{#if item.button}
 				<Button
-					class="mt-md"
-					variant="tertiary"
+					class="btn-link mt-md"
 					content={item.button}
 				/>
 			{/if}

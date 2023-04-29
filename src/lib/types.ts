@@ -116,7 +116,6 @@ export interface SlotHighlightContent {
 	textarea?: string
 	button_primary?: ButtonContent
 	button_secondary?: ButtonContent
-	button_tertiary?: ButtonContent
 }
 
 export type SlotMediaContent = ImageContent
@@ -131,7 +130,7 @@ interface StatsItem {
 }
 export type SlotStatsContent = StatsItem[]
 
-export type SlotCardsContent = CardContent[]
+export type SlotCardContent = CardContent[]
 
 export interface SlotNewsletterContent {
 	textfield: {
@@ -171,7 +170,7 @@ export interface FeaturesContent {
 
 export interface BlockCardsContent {
 	highlight?: SlotHighlightContent
-	cards?: SlotCardsContent
+	cards?: SlotCardContent
 }
 
 export interface HeaderContent {
