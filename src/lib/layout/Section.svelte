@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Fill from './LayoutBlockFill.svelte';
-	import Box from './LayoutBlockBox.svelte';
+	import Fill from './SectionFill.svelte';
+	import Box from './SectionBox.svelte';
 	import Stack from './SectionStack.svelte';
 	import Split from './SectionSplit.svelte';
 
