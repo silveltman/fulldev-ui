@@ -7,7 +7,7 @@
 	export let size: 'sm' | 'md' | 'lg' = 'lg';
 </script>
 
-<!-- <div
+<div
 	class="w-full gap-x-md space-y-xl md:gap-x-lg md:space-y-2xl
 		{size === 'sm' && 'columns-2 sm:columns-3 lg:columns-6'}
 		{size === 'md' && 'columns-2 sm:columns-2 lg:columns-4'}
@@ -20,4 +20,4 @@
 			content={item}
 		/>
 	{/each}
-</div> -->
+</div>

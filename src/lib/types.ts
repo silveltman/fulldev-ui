@@ -116,7 +116,6 @@ export interface SlotHighlightContent {
 	textarea?: string
 	button_primary?: ButtonContent
 	button_secondary?: ButtonContent
-	button_tertiary?: ButtonContent
 }
 
 export type SlotMediaContent = ImageContent

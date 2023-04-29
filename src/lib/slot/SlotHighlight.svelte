@@ -60,7 +60,7 @@
 		</p>
 	{/if}
 
-	{#if content.button_primary || content.button_secondary || content.button_tertiary}
+	{#if content.button_primary || content.button_secondary}
 		<div class="mt-2xl flex w-full flex-col gap-md sm:inline-flex sm:w-auto sm:flex-row">
 			{#if content.button_primary}
 				<Button
@@ -73,14 +73,6 @@
 					{size}
 					variant="secondary"
 					content={content.button_secondary}
-				/>
-			{/if}
-			{#if content.button_tertiary}
-				<Button
-					{size}
-					class="ml-sm"
-					variant="tertiary"
-					content={content.button_tertiary}
 				/>
 			{/if}
 		</div>

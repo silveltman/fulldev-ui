@@ -13,7 +13,7 @@
 				id="image{i}"
 			>
 				<a
-					class="btn-outline btn-sm btn-square btn absolute left-0 hidden opacity-50 group-hover:opacity-100 sm:flex"
+					class="btn-outline btn-square btn-sm btn absolute left-0 hidden opacity-50 group-hover:opacity-100 sm:flex"
 					href="#image{i - 1 < 0 ? content.length - 1 : i - 1}"
 				>
 					<IconChevronLeft />
@@ -23,7 +23,7 @@
 					class="h-full w-full object-contain"
 				/>
 				<a
-					class="btn-outline btn-sm btn-square btn absolute right-0 hidden opacity-50 group-hover:opacity-100 sm:flex"
+					class="btn-outline btn-square btn-sm btn absolute right-0 hidden opacity-50 group-hover:opacity-100 sm:flex"
 					href="#image{i + 1 > content.length - 1 ? 0 : i + 1}"
 				>
 					<IconChevronRight />
@@ -32,7 +32,7 @@
 		{/each}
 	</div>
 	<div
-		class="scrollbar-block carousel relative flex items-center gap-4 pb-xs !scrollbar-thin scrollbar-thumb-neutral"
+		class="scrollbar-block carousel relative flex items-center gap-xs pb-xs !scrollbar-thin scrollbar-thumb-neutral"
 	>
 		{#each content as item, i}
 			<a
@@ -44,7 +44,6 @@
 		{/each}
 	</div>
 </div>
-<div class="text-[4rem]">Hello</div>
 
 <style lang="postcss">
 	:global(.scrollbar-block::-webkit-scrollbar) {

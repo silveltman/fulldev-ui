@@ -45,12 +45,4 @@
 			variant="secondary"
 		/>
 	</Hst.Variant>
-	<Hst.Variant title="Tertiary">
-		<Button
-			{content}
-			{disabled}
-			{size}
-			variant="tertiary"
-		/>
-	</Hst.Variant>
 </Hst.Story>

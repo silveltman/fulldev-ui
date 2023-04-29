@@ -1,8 +1,7 @@
 <script lang="ts">
-	import type { SlotStatsContent } from '$lib/types'
+	import type { SlotStatsContent } from '$lib/types';
 
-	export let content: SlotStatsContent
-	//
+	export let content: SlotStatsContent;
 </script>
 
 <dl class="grid w-full grid-cols-[repeat(auto-fit,minmax(128px,1fr))] gap-x-2xl gap-y-2xl">
