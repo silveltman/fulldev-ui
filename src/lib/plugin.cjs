@@ -1,17 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const plugin = require('tailwindcss/plugin')
 
-// this function handles the opacity of color for DaisyUI
-// Got it from this example: https://github.com/saadeghi/daisyui/discussions/653#discussioncomment-2438428
-function withOpacityValue(variable) {
-	return ({ opacityValue }) => {
-		if (opacityValue === undefined) {
-			return `hsl(var(${variable}))`
-		}
-		return `hsl(var(${variable}) / ${opacityValue})`
-	}
-}
-
 module.exports = plugin(
 	function ({ addBase, theme }) {
 		addBase({
@@ -116,29 +105,6 @@ module.exports = plugin(
 			fontFamily: {
 				heading: '"Inter", sans-serif',
 				body: '"Inter", sans-serif',
-			},
-
-			// Border Radius
-			borderRadius: {
-				box: '24px',
-				button: '12px',
-				input: '12px',
-				eyebrow: '12px',
-				image: '4px',
-				full: '9999px',
-				none: '0px',
-			},
-
-			// Shadow
-			boxShadow: {
-				box: '0 0 0 1px',
-				image: '0 0 0 1px',
-				'button-primary': '0 0 0 1px',
-			},
-			boxShadowColor: {
-				box: '#000000',
-				image: '#000000',
-				'button-primary': '#000000',
 			},
 
 			// Font size
