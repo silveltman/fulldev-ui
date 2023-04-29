@@ -15,26 +15,24 @@
 	{...$$restProps}
 >
 	{#each options as option}
-		<div class="flex items-start">
+		<label
+			for="{option.heading} - {option.text}"
+			class="flex flex-wrap items-center gap-x-sm gap-y-xs cursor-pointer{className}"
+		>
 			<input
 				type="radio"
-				class="mt-xs"
+				class="radio radio-sm mr-sm"
 				id="{option.heading} - {option.text}"
 				value="{option.heading} - {option.text}"
 				{name}
 				{required}
 			/>
-			<label
-				for="{option.heading} - {option.text}"
-				class="flex cursor-pointer flex-col pl-md"
-			>
-				{#if option.heading}
-					<h6>{option.heading}</h6>
-				{/if}
-				{#if option.text}
-					<p>{option.text}</p>
-				{/if}
-			</label>
-		</div>
+			{#if option.heading}
+				<h6 class="inline">{option.heading}</h6>
+			{/if}
+			{#if option.text}
+				<p class="inline text-sm">{option.text}</p>
+			{/if}
+		</label>
 	{/each}
 </fieldset>

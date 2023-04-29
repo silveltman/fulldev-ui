@@ -8,9 +8,10 @@ module.exports = {
 	plugins: [
 		require('tailwind-scrollbar'),
 		require('@tailwindcss/aspect-ratio'),
-		require('@tailwindcss/forms'),
+		// require('@tailwindcss/forms'),
 		require('@tailwindcss/typography'),
 		require('./src/lib/plugin.cjs'),
+		require("daisyui"),
 		require('tailwindcss-themer')({
 			defaultTheme: {
 				extend: {
@@ -48,6 +49,11 @@ module.exports = {
 							300: '#a5b4fc',
 							500: '#6366f1',
 							700: '#a5b4fc',
+						},
+						info: {
+							300: '#6ee7b7',
+							500: '#10b981',
+							700: '#047857',
 						},
 						success: {
 							300: '#86efac',
@@ -120,5 +126,32 @@ module.exports = {
 				},
 			]
 		})
-	]
-}
+	],
+	daisyui: {
+		themes: [
+			{
+				base: {
+					"base-100": "#ffffff",
+					"base-200": "#f9fafb",
+					"base-300": "#d1d5db",
+					"base-content": "#1f2937",
+					primary: "#a991f7",
+					secondary: "#f6d860",
+					accent: "#37cdbe",
+					neutral: "#553CF8",
+					"neutral-focus": "#3d2f99",
+
+					// Feedback
+					info: "#2094f3",
+					"info-content": "#ffffff",
+					success: "#009485",
+					"success-content": "#ffffff",
+					warning: "#ff9900",
+					"warning-content": "#ffffff",
+					error: "#ff5724",
+					"error-content": "#ffffff",
+				},
+			},
+		]
+	}
+};

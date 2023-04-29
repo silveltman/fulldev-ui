@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Hst, RadioContent } from '$lib/types'
-	import Radio from './Radio.svelte'
-	export let Hst: Hst
+	import type { Hst, RadioContent } from '$lib/types';
+	import Radio from './Radio.svelte';
+	export let Hst: Hst;
 
 	let options: RadioContent = [
 		{
@@ -16,9 +16,12 @@
 			value: 'option2',
 			required: false
 		}
-	]
+	];
 </script>
 
 <Hst.Story>
-	<Radio {options} />
+	<Radio
+		{options}
+		name="radio"
+	/>
 </Hst.Story>

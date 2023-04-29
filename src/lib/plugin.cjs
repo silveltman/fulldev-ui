@@ -46,11 +46,13 @@ module.exports = plugin(
 			},
 			'body,html': {
 				fontFamily: theme('fontFamily.body'),
-				fontSize: theme('fontSize.md'),
 				lineHeight: theme('lineHeight.relaxed'),
 				color: theme('textColor.500'),
 				fontWeight: theme('fontWeight.light'),
 				backgroundColor: theme('backgroundColor.500'),
+			},
+			body: {
+				fontSize: theme('fontSize.md'),
 			},
 			'h1, h2, h3, h4, h5, h6': {
 				color: theme('textColor.700'),

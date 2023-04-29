@@ -1,14 +1,15 @@
 <script lang="ts">
-	import type { Hst, ButtonContent } from '$lib/types'
-	import Button from './Button.svelte'
-	export let Hst: Hst
+	import type { Hst, ButtonContent } from '$lib/types';
+	import Button from './Button.svelte';
+	export let Hst: Hst;
 
 	let content: ButtonContent = {
 		text: 'Click me',
 		href: '#'
-	}
+	};
 
-	let disabled: boolean = false
+	let disabled: true | undefined = undefined;
+	let size: 'sm' | 'md' | 'lg' = 'md';
 </script>
 
 <Hst.Story layout={{ type: 'grid', width: 200 }}>
@@ -21,30 +22,35 @@
 			title="Disabled"
 			bind:value={disabled}
 		/>
+		<Hst.Select
+			title="size"
+			bind:value={size}
+			options={['sm', 'md', 'lg']}
+		/>
 	</svelte:fragment>
 
 	<Hst.Variant title="Primary">
 		<Button
 			{content}
 			{disabled}
+			{size}
 			variant="primary"
-			size="sm"
 		/>
 	</Hst.Variant>
 	<Hst.Variant title="Secondary">
 		<Button
 			{content}
 			{disabled}
+			{size}
 			variant="secondary"
-			size="sm"
 		/>
 	</Hst.Variant>
 	<Hst.Variant title="Tertiary">
 		<Button
 			{content}
 			{disabled}
+			{size}
 			variant="tertiary"
-			size="sm"
 		/>
 	</Hst.Variant>
 </Hst.Story>
