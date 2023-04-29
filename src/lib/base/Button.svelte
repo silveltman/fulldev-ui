@@ -32,8 +32,3 @@
 	{content.text}
 	<slot name="end" />
 </svelte:element>
-
-<div class="h-20 w-20 bg-base-content" />
-<div class="h-20 w-20 bg-content-100" />
-<div class="h-20 w-20 bg-content-200" />
-<div class="h-20 w-20 bg-content-300" />
