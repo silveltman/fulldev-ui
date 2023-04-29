@@ -51,6 +51,7 @@
 
 	<Card
 		{content}
+		{size}
 		{box}
 		{split}
 		{center}

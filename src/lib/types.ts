@@ -140,6 +140,9 @@ export interface SlotNewsletterContent {
 	button: ButtonContent
 }
 
+export type SlotGalleryContent = ImageContent[]
+
+
 
 // --------------------------------------------
 // Block

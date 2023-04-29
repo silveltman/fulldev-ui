@@ -11,7 +11,7 @@
 	export let rel: string = 'prefetch';
 </script>
 
-<svelte:element
+<!-- <svelte:element
 	this={content.href ? 'a' : 'button'}
 	on:click
 	rel={content.href ? rel : undefined}
@@ -25,7 +25,7 @@
 			{variant === 'primary' &&
 		'shadow-button hover:text-button-primary-hover bg-button-primary text-button-primary ring-1 ring-inset ring-button-primary hover:bg-button-primary-hover hover:ring-button-primary-hover'}
 			{variant === 'secondary' &&
-		'shadow-button hover:text-button-secondary-hover bg-button-secondary text-button-secondary ring-1 ring-inset ring-button-secondary hover:bg-button-secondary-hover hover:ring-button-secondary-hover'}
+		'shadow-button hover:text-button-secondary-hover bg-button-secondary hover:bg-button-secondary-hover text-button-secondary ring-1 ring-inset ring-button-secondary hover:ring-button-secondary-hover'}
 			{variant === 'tertiary' && 'text-button !p-0 decoration-1 hover:underline'}
 			
 			{className}
@@ -33,4 +33,14 @@
 	{...$$restProps}
 >
 	{content.text}
+</svelte:element> -->
+
+<svelte:element
+	this={content.href ? 'a' : 'button'}
+	on:click
+	rel={content.href ? rel : undefined}
+	href={content.href}
+	{...$$restProps}
+>
+	{content.text} HELLO
 </svelte:element>

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { SlotCardsContent, Hst } from '$lib/types'
-	import SlotCards from 'slot/SlotCards.svelte'
+	import type { SlotCardsContent, Hst } from '$lib/types';
+	import SlotCards from 'slot/SlotCardGrid.svelte';
 
-	export let Hst: Hst
+	export let Hst: Hst;
 
 	let content: SlotCardsContent = [
 		{
@@ -29,7 +29,7 @@
 				alt: 'Alt text'
 			}
 		}
-	]
+	];
 </script>
 
 <Hst.Story>

@@ -1,7 +1,7 @@
 <script lang="ts">
-	// import type { Hst, ToggleContent } from '$lib/types'
-	// import Toggle from './Toggle.svelte'
-	// export let Hst: Hst
+	import type { Hst, ToggleContent } from '$lib/types';
+	import Toggle from './Toggle.svelte';
+	export let Hst: Hst;
 
 	// let content: ToggleContent = {
 	// 	heading: 'Annual',
@@ -11,6 +11,6 @@
 	// }
 </script>
 
-<!-- <Hst.Story>
-	<Toggle {content} />
-</Hst.Story> -->
+<Hst.Story>
+	<Toggle />
+</Hst.Story>
