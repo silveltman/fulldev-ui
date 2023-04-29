@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { ButtonContent } from '$lib/types';
-	import { IconChevronRight } from '@tabler/icons-svelte';
 
 	let className = '';
 	export { className as class };
@@ -11,7 +10,7 @@
 	export let rel: string = 'prefetch';
 </script>
 
-<!-- <svelte:element
+<svelte:element
 	this={content.href ? 'a' : 'button'}
 	on:click
 	rel={content.href ? rel : undefined}
@@ -33,14 +32,4 @@
 	{...$$restProps}
 >
 	{content.text}
-</svelte:element> -->
-
-<svelte:element
-	this={content.href ? 'a' : 'button'}
-	on:click
-	rel={content.href ? rel : undefined}
-	href={content.href}
-	{...$$restProps}
->
-	{content.text} HELLO
 </svelte:element>
