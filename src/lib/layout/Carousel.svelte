@@ -6,7 +6,7 @@
 
 <svelte:element
 	this={as}
-	class="carousel items-center gap-x-md pb-md !scrollbar scrollbar-track-base-300 scrollbar-thumb-content-100 [&::-webkit-scrollbar]:block
+	class="carousel items-center gap-x-md pb-md !scrollbar scrollbar-track-base-300 scrollbar-thumb-content-300 [&::-webkit-scrollbar]:block
 
         {className}
     "

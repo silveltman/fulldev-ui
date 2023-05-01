@@ -25,14 +25,9 @@
 		lg: {
 			base: '100vw',
 			sm: '50vw',
+			lg: '33vw',
 			'2xl': '512px'
 		}
-	};
-
-	const tailwindClasses = {
-		sm: 'basis-[40%] max-w-[50vw] sm:max-w-[33vw] lg:max-w-[16vw] 2xl:max-w-[256px]',
-		md: 'max-w-[50vw] lg:max-w-[25vw] 2xl:max-w-[384px]',
-		lg: 'basis-[90%] max-w-[100vw] sm:max-w-[50vw] 2xl:max-w-[512px]'
 	};
 </script>
 
@@ -42,7 +37,9 @@
 	class="group card grow {className}
 	  	{center ? 'items-center text-center' : 'items-start'}
 		{box ? 'rounded-box overflow-hidden bg-base-300' : 'gap-y-md gap-x-xl'}
-		{tailwindClasses[size]}
+		{size === 'sm' && 'max-w-[50vw] basis-[40%] sm:max-w-[33vw] lg:max-w-[16vw] 2xl:max-w-[256px]'}
+		{size === 'md' && 'max-w-[50vw] lg:max-w-[25vw] 2xl:max-w-[384px]'}
+		{size === 'lg' && 'max-w-[100vw] basis-[90%] sm:max-w-[50vw] lg:max-w-[33vw] 2xl:max-w-[512px]'}
 		{className}
 
 	"
