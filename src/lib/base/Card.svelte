@@ -24,7 +24,7 @@
 		},
 		lg: {
 			base: '100vw',
-			sm: '50vw',
+			md: '50vw',
 			lg: '33vw',
 			'2xl': '512px'
 		}
@@ -39,7 +39,7 @@
 		{box ? 'rounded-box overflow-hidden bg-base-300' : 'gap-y-md gap-x-xl'}
 		{size === 'sm' && 'max-w-[50vw] basis-[40%] sm:max-w-[33vw] lg:max-w-[16vw] 2xl:max-w-[256px]'}
 		{size === 'md' && 'max-w-[50vw] lg:max-w-[25vw] 2xl:max-w-[384px]'}
-		{size === 'lg' && 'max-w-[100vw] basis-[90%] sm:max-w-[50vw] lg:max-w-[33vw] 2xl:max-w-[512px]'}
+		{size === 'lg' && 'max-w-[100vw] basis-[90%] md:max-w-[50vw] lg:max-w-[33vw] 2xl:max-w-[512px]'}
 		{className}
 
 	"

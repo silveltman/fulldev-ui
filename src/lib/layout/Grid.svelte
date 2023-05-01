@@ -9,8 +9,8 @@
 	this={as}
 	class="grid w-full gap-x-md gap-y-xl md:gap-y-2xl md:gap-x-lg
 		{size === 'sm' && 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-6'}
-		{size === 'md' && 'grid-cols-2 sm:grid-cols-2 lg:grid-cols-4'}
-		{size === 'lg' && 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}
+		{size === 'md' && 'grid-cols-2 lg:grid-cols-4'}
+		{size === 'lg' && 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'}
 		{className}
 	"
 >

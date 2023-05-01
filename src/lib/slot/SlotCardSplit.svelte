@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { SlotCardContent } from '$lib/types';
 	import Card from 'base/Card.svelte';
-	import Masonry from 'layout/Masonry.svelte';
+	import Split from 'layout/Split.svelte';
 
 	export let content: SlotCardContent;
 
@@ -10,7 +10,7 @@
 	export let cardProps: any = {};
 </script>
 
-<Masonry {size}>
+<Split class="md:auto-cols-fr md:grid-flow-col ">
 	{#each content as item}
 		<Card
 			{size}
@@ -18,4 +18,4 @@
 			{...cardProps}
 		/>
 	{/each}
-</Masonry>
+</Split>
