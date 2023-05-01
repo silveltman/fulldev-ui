@@ -6,7 +6,9 @@
 
 <svelte:element
 	this={as}
-	class="mx-auto w-full max-w-screen-2xl px-4 md:px-2xl {className}"
+	class="carousel items-center gap-x-md pb-md !scrollbar scrollbar-track-base-300 scrollbar-thumb-content-100 [&::-webkit-scrollbar]:block
+        {className}
+    "
 >
 	<slot />
 </svelte:element>

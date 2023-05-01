@@ -15,10 +15,10 @@
 	on:click
 	rel={content.href ? rel : undefined}
 	href={content.href}
-	class="text-base btn-primary btn font-medium normal-case
+	class="btn-primary btn font-button
 
 		{size === 'sm' && 'btn-sm text-sm'}
-		{size === 'md' && 'btn-md text-md'}
+		{size === 'md' && 'text-base btn-md'}
 		{size === 'lg' && 'btn-lg text-lg'}
 
 		{variant === 'primary' && 'btn-primary'}

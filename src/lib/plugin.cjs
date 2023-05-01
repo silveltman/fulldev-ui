@@ -7,7 +7,7 @@ module.exports = plugin(
 			':root': {
 				'--text-xs': '12px',
 				'--text-sm': '14px',
-				'--text-md': '16px',
+				'--text-base': '16px',
 				'--text-lg': '18px',
 				'--text-xl': '24px',
 				'--text-2xl': '30px',
@@ -27,7 +27,7 @@ module.exports = plugin(
 				':root': {
 					'--text-xs': '14px',
 					'--text-sm': '16px',
-					'--text-md': '18px',
+					'--text-base': '18px',
 					'--text-lg': '20px',
 					'--text-xl': '26px',
 					'--text-2xl': '36px',
@@ -45,54 +45,43 @@ module.exports = plugin(
 				}
 			},
 			'body,html': {
-				fontFamily: theme('fontFamily.body'),
-				lineHeight: theme('lineHeight.relaxed'),
-				color: theme('color.content-500'),
-				fontWeight: theme('fontWeight.light'),
-				backgroundColor: theme('color.base-200'),
+				fontFamily: theme('fontFamily.base'),
+				lineHeight: theme('lineHeight.base'),
+				color: theme('colors.content.200'),
 			},
 			body: {
-				fontSize: theme('fontSize.md'),
-			},
-			'h1, h2, h3, h4, h5, h6': {
-				color: theme('color.content-300'),
+				fontSize: theme('fontSize.base'),
 			},
 			'h1, h2, h3': {
 				fontFamily: theme('fontFamily.heading'),
+				fontWeight: theme('fontWeight.heading'),
+				lineHeight: theme('lineHeight.heading'),
+				color: theme('colors.content.100'),
+			},
+			'h4, h5, h6': {
+				fontFamily: theme('fontFamily.subheading'),
+				fontWeight: theme('fontWeight.subheading'),
+				lineHeight: theme('lineHeight.subheading'),
+				color: theme('colors.content.100'),
 			},
 			h1: {
 				fontSize: theme('fontSize.3xl'),
-				fontWeight: theme('fontWeight.bold'),
-				lineHeight: theme('lineHeight.none'),
-				letterSpacing: theme('letterSpacing.tight'),
 			},
 			h2: {
 				fontSize: theme('fontSize.2xl'),
-				fontWeight: theme('fontWeight.bold'),
-				lineHeight: theme('lineHeight.none'),
-				letterSpacing: theme('letterSpacing.tight'),
 			},
 			h3: {
 				fontSize: theme('fontSize.xl'),
-				fontWeight: theme('fontWeight.bold'),
-				lineHeight: theme('lineHeight.none'),
-				letterSpacing: theme('letterSpacing.tight'),
 			},
 			h4: {
 				fontSize: theme('fontSize.lg'),
-				fontWeight: theme('fontWeight.medium'),
 			},
 			h5: {
 				fontSize: theme('fontSize.md'),
-				fontWeight: theme('fontWeight.medium'),
 			},
 			h6: {
 				fontSize: theme('fontSize.sm'),
-				fontWeight: theme('fontWeight.medium'),
 			},
-			'p, ul, ol, dl, dd, blockquote, pre, figure, hr': {
-				color: theme('color.content-200'),
-			}
 		})
 	},
 	{
@@ -101,17 +90,11 @@ module.exports = plugin(
 			container: false
 		},
 		theme: {
-			// Font family
-			fontFamily: {
-				heading: '"Inter", sans-serif',
-				body: '"Inter", sans-serif',
-			},
-
 			// Font size
 			fontSize: {
 				'xs': 'var(--text-xs)',
 				'sm': 'var(--text-sm)',
-				'md': 'var(--text-md)',
+				'base': 'var(--text-base)',
 				'lg': 'var(--text-lg)',
 				'xl': 'var(--text-xl)',
 				'2xl': 'var(--text-2xl)',
@@ -131,9 +114,11 @@ module.exports = plugin(
 					'5xl': 'var(--space-5xl)'
 				},
 				colors: {
-					'content-100': 'var(--content-100)',
-					'content-200': 'var(--content-200)',
-					'content-300': 'var(--content-300)',
+					content: {
+						100: 'var(--content-100)',
+						200: 'var(--content-200)',
+						300: 'var(--content-300)',
+					},
 				}
 			}
 		}

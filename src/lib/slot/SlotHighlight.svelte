@@ -3,6 +3,8 @@
 	import Button from 'base/Button.svelte';
 	import Eyebrow from 'base/Eyebrow.svelte';
 
+	let className = '';
+	export { className as class };
 	export let content: SlotHighlightContent;
 
 	const headingMap: {
@@ -21,9 +23,11 @@
 
 <div
 	class="slot-highlight relative
-	{size === 'lg' && 'max-w-2xl'}
-	{size === 'md' && 'max-w-xl'}
-	{size === 'sm' && 'max-w-md'}
+	{size === 'lg' && 'max-w-3xl'}
+	{size === 'md' && 'max-w-2xl'}
+	{size === 'sm' && 'max-w-xl'}
+
+	{className}
 	"
 >
 	{#if content.eyebrow}

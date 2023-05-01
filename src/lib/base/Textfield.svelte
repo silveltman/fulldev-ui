@@ -32,6 +32,6 @@
 		{name}
 		placeholder={content.placeholder}
 		{required}
-		class="input-bordered input text-md"
+		class="text-base input-bordered input"
 	/>
 </div>

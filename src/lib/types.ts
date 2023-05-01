@@ -25,24 +25,14 @@ export interface LinkContent {
 	href: string
 }
 
-export interface LogoContent {
-	light?: ImageContent
-	dark?: ImageContent
-}
-
-export interface PersonContent {
-	heading?: string
-	text?: string
-	image?: ImageContent
-}
+export type LogoContent = ImageContent
 
 export interface CardContent {
+	image?: ImageContent
 	eyebrow?: string
 	heading?: string
 	textarea?: string
 	href?: string
-	image?: ImageContent
-	person?: PersonContent
 }
 
 // -------------------------------------------- 

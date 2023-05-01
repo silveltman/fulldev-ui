@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { LogoContent } from '$lib/types'
+	import type { LogoContent } from '$lib/types';
 
-	let className = ''
-	export { className as class }
-	export let content: LogoContent
-	export let disableLink: boolean = false
+	let className = '';
+	export { className as class };
+	export let content: LogoContent;
+	export let disableLink: boolean = false;
 </script>
 
 <svelte:element
@@ -13,18 +13,9 @@
 	href={disableLink ? undefined : '/'}
 	{...$$restProps}
 >
-	{#if content.light}
-		<img
-			class="inline-block dark:hidden"
-			src={content.light.src}
-			alt={content.light.alt}
-		/>
-	{/if}
-	{#if content.dark}
-		<img
-			class="hidden dark:inline-block"
-			src={content.dark.src}
-			alt={content.dark.alt}
-		/>
-	{/if}
+	<img
+		class="inline-block dark:hidden"
+		src={content.src}
+		alt={content.alt}
+	/>
 </svelte:element>

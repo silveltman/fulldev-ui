@@ -5,6 +5,8 @@
 	export let content: SlotCardContent;
 
 	export let size: 'sm' | 'md' | 'lg' = 'lg';
+
+	export let cardProps: any;
 </script>
 
 <div
@@ -16,8 +18,10 @@
 >
 	{#each content as item}
 		<Card
+			{size}
 			class="break-inside-avoid-column"
 			content={item}
+			{...cardProps}
 		/>
 	{/each}
 </div>

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { CardContent } from '$lib/types';
 	import Image from 'base/Image.svelte';
-	import Person from 'base/Person.svelte';
 
 	let className = '';
 	export { className as class };
@@ -16,29 +15,36 @@
 <svelte:element
 	this={content.href ? 'a' : 'div'}
 	href={content.href}
-	class="group gap-lg {className}
-	  {box ? 'rounded-card bg-300 overflow-hidden p-lg' : ''}
+	class="group card {className}
 	  {split ? 'grid grid-cols-1 sm:grid-cols-2' : 'flex flex-col'}
-	  {split && center ? 'sm:items-center' : ''}
+	  {center ? 'items-center' : 'items-start'}
+	  {center && !split ? 'text-center' : ''}
+
+		{box ? 'rounded-box overflow-hidden bg-base-300' : 'gap-y-md gap-x-xl'}
 	"
 	{...$$restProps}
 >
 	{#if content.image}
 		<Image
-			class={content.href ? 'group-hover:opacity-75' : ''}
+			class="rounded-box {content.href ? 'group-hover:opacity-75' : ''}"
 			content={content.image}
 		/>
 	{/if}
-	<div class="flex flex-col gap-lg">
+
+	<div
+		class="flex flex-col gap-lg
+		{box ? 'bg-base-300 p-lg' : ''}
+	"
+	>
 		{#if content.eyebrow || content.heading || content.textarea}
 			<div class="flex flex-col gap-xs">
 				{#if content.eyebrow}
 					<span
-						class="content-100 text-sm
-				{size === 'lg' ? 'text-sm' : 'text-xs'}
-			  "
+						class="text-sm text-content-300
+						{size === 'sm' ? 'text-sm' : 'text-xs'}
+					"
 					>
-						Lorem ipsum
+						{content.eyebrow}
 					</span>
 				{/if}
 				{#if content.heading}
@@ -47,15 +53,9 @@
 					</svelte:element>
 				{/if}
 				{#if content.textarea}
-					<p class={size == 'lg' ? 'text-md' : 'text-sm'}>{content.textarea}</p>
+					<p class={size == 'lg' ? 'text-base' : 'text-sm'}>{content.textarea}</p>
 				{/if}
 			</div>
-		{/if}
-		{#if content.person}
-			<Person
-				{size}
-				content={content.person}
-			/>
 		{/if}
 	</div>
 </svelte:element>
