@@ -19,6 +19,7 @@ export { default as SlotAccordion } from 'slot/SlotAccordion.svelte'
 export { default as SlotCardCarousel } from 'slot/SlotCardCarousel.svelte'
 export { default as SlotCardGrid } from 'slot/SlotCardGrid.svelte'
 export { default as SlotCardMasonry } from 'slot/SlotCardMasonry.svelte'
+export { default as SlotCardSplit } from 'slot/SlotCardSplit.svelte'
 export { default as SlotChecklist } from 'slot/SlotChecklist.svelte'
 export { default as SlotGallery } from 'slot/SlotGallery.svelte'
 export { default as SlotHighlight } from 'slot/SlotHighlight.svelte'
@@ -27,12 +28,14 @@ export { default as SlotRichtext } from 'slot/SlotRichtext.svelte'
 export { default as SlotStats } from 'slot/SlotStats.svelte'
 
 // Layout
+export { default as Block } from 'layout/Block.svelte'
+export { default as Box } from 'layout/Box.svelte'
+export { default as Carousel } from 'layout/Carousel.svelte'
 export { default as Container } from 'layout/Container.svelte'
-export { default as Section } from 'layout/Section.svelte'
-export { default as SectionBox } from 'layout/SectionBox.svelte'
-export { default as SectionFill } from 'layout/SectionFill.svelte'
-export { default as SectionSplit } from 'layout/SectionSplit.svelte'
-export { default as SectionStack } from 'layout/SectionStack.svelte'
+export { default as Grid } from 'layout/Grid.svelte'
+export { default as Masonry } from 'layout/Masonry.svelte'
+export { default as Split } from 'layout/Split.svelte'
+export { default as Stack } from 'layout/Stack.svelte'
 
 
 
