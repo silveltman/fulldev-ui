@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { SlotCardContent } from '$lib/types';
 	import Card from 'base/Card.svelte';
+	import Masonry from 'layout/Masonry.svelte';
 
 	export let content: SlotCardContent;
 
@@ -9,19 +10,12 @@
 	export let cardProps: any;
 </script>
 
-<div
-	class="w-full gap-x-md space-y-xl md:gap-x-lg md:space-y-2xl
-		{size === 'sm' && 'columns-2 sm:columns-3 lg:columns-6'}
-		{size === 'md' && 'columns-2 sm:columns-2 lg:columns-4'}
-		{size === 'lg' && 'columns-1 sm:columns-2 lg:columns-3'}
-		"
->
+<Masonry {size}>
 	{#each content as item}
 		<Card
 			{size}
-			class="break-inside-avoid-column"
 			content={item}
 			{...cardProps}
 		/>
 	{/each}
-</div>
+</Masonry>

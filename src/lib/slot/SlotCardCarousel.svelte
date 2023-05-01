@@ -1,29 +1,19 @@
 <script lang="ts">
 	import type { SlotCardContent } from '$lib/types';
 	import Card from 'base/Card.svelte';
+	import Carousel from 'layout/Carousel.svelte';
 
 	export let content: SlotCardContent;
 
 	export let size: 'sm' | 'md' | 'lg' = 'lg';
 </script>
 
-<div
-	class="scrollbar-block carousel relative flex items-center gap-md pb-lg !scrollbar scrollbar-track-base-300 scrollbar-thumb-content-100"
->
+<Carousel>
 	{#each content as item}
 		<Card
+			{size}
 			content={item}
-			class="carousel-item
-			{size === 'sm' && 'w-48'}
-			{size === 'md' && 'w-64'}
-			{size === 'lg' && 'w-80'}
-			"
+			class="carousel-item"
 		/>
 	{/each}
-</div>
-
-<style lang="postcss">
-	.scrollbar-block::-webkit-scrollbar {
-		display: block !important;
-	}
-</style>
+</Carousel>
