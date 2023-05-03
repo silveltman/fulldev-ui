@@ -4,7 +4,7 @@
 	import Split from 'layout/Split.svelte';
 	import Box from 'layout/Box.svelte';
 	import Grid from 'layout/Grid.svelte';
-	import SlotGallery from 'slot/SlotGallery.svelte';
+	import SlotGallery from 'slot/SlotGalleryCarousel.svelte';
 	import Block from 'layout/Block.svelte';
 </script>
 
