@@ -1,25 +1,21 @@
 <script lang="ts">
 	import type { SlotGalleryContent } from '$lib/types';
 	import Image from '$lib/base/Image.svelte';
+
+	let className = '';
+	export { className as class };
 	export let content: SlotGalleryContent;
 </script>
 
 <div
-	class="bg-base-300 !scrollbar-thin scrollbar-track-base-300 scrollbar-thumb-content-300 md:carousel [&::-webkit-scrollbar]:block md:[&>*]:break-inside-avoid-column"
+	class="max-lg:carousel max-lg:bg-base-300 max-lg:scrollbar-thin max-lg:scrollbar-track-base-300 max-lg:scrollbar-thumb-content-300 lg:columns-2 lg:gap-sm lg:space-y-sm max-lg:[&::-webkit-scrollbar]:block
+	{className}
+	"
 >
-	{#each content as item, i}
+	{#each content as item}
 		<Image
-			class="carousel-item h-auto w-full object-contain"
+			class="h-auto w-full object-contain max-lg:carousel-item"
 			content={item}
 		/>
 	{/each}
 </div>
-
-<!-- <div class="carousel-vertical carousel h-[50vh] gap-sm">
-	{#each content as item, i}
-		<Image
-			class="cursor-zoom-in rounded-[4px]"
-			content={item}
-		/>
-	{/each}
-</div> -->

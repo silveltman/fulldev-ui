@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { SlotGalleryContent, Hst } from '$lib/types';
-	import SlotGalleryCarousel from 'slot/SlotGalleryCarousel.svelte';
+	import SlotGallery from 'slot/SlotGallery.svelte';
 
 	export let Hst: Hst;
 
@@ -57,5 +57,5 @@
 </script>
 
 <Hst.Story>
-	<SlotGalleryCarousel {content} />
+	<SlotGallery {content} />
 </Hst.Story>

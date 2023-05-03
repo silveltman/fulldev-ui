@@ -5,7 +5,7 @@
 
 	export let content: SlotCardContent;
 
-	export let size: 'sm' | 'md' | 'lg' = 'lg';
+	export let size: 'sm' | 'md' | 'lg' = 'md';
 </script>
 
 <Carousel>

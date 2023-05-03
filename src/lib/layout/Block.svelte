@@ -6,7 +6,7 @@
 
 <svelte:element
 	this={as}
-	class="relative w-full overflow-x-hidden py-3xl {className}"
+	class="relative w-full py-4xl {className}"
 >
 	<slot />
 </svelte:element>

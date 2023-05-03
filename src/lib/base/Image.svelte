@@ -5,10 +5,10 @@
 	export { className as class };
 	export let content: ImageContent;
 
-	export let widths: number[] = [320, 640, 1024, 1280, 1920];
-	export let loading: 'eager' | 'lazy' = 'lazy';
-	export let decoding: 'async' | 'auto' | 'sync' = 'async';
-	export let ratio: number | undefined = undefined;
+	// export let widths: number[] = [320, 640, 1024, 1280, 1920];
+	// export let loading: 'eager' | 'lazy' = 'lazy';
+	// export let decoding: 'async' | 'auto' | 'sync' = 'async';
+	// export let ratio: number | undefined = undefined;
 
 	export let sizes: {
 		base?: string;
@@ -31,30 +31,40 @@
 	`;
 
 	// functions
-	function getTransformedSrc(src: string, width: number = 1920) {
-		if (!src || !width) return;
-		const baseUrl = '/image/upload/';
-		const params =
-			[`f_auto`, `g_auto`, `q_auto`, `w_${width}`, ratio ? `ar_${ratio},c_crop` : ''].join('/') +
-			'/';
-		const url = src.replace(baseUrl, baseUrl + params);
-		return url;
-	}
+	// function getTransformedSrc(src: string, width: number = 1920) {
+	// 	if (!src || !width) return;
+	// 	const baseUrl = '/image/upload/';
+	// 	const params =
+	// 		[`f_auto`, `g_auto`, `q_auto`, `w_${width}`, ratio ? `ar_${ratio},c_crop` : ''].join('/') +
+	// 		'/';
+	// 	const url = src.replace(baseUrl, baseUrl + params);
+	// 	return url;
+	// }
 
-	// computed
-	const srcset = widths
-		.map((width) => `${getTransformedSrc(content.src, width)} ${width}w`)
-		.join(', ');
+	// // computed
+	// const srcset = widths
+	// 	.map((width) => `${getTransformedSrc(content.src, width)} ${width}w`)
+	// 	.join(', ');
 </script>
 
-{#if content.src}
+<!-- {#if content.src}
 	<img
 		sizes={content.src.includes('cloudinary') ? sizesString : undefined}
 		srcset={content.src.includes('cloudinary') ? srcset : undefined}
 		src={getTransformedSrc(content.src)}
 		alt={content.alt}
+		width=""
 		{loading}
 		{decoding}
+		class="rounded-image h-auto w-full {className}"
+	/>
+{/if} -->
+
+{#if content.src}
+	<img
+		sizes={sizesString}
+		src={content.src}
+		alt={content.alt}
 		class="rounded-image h-auto w-full {className}"
 	/>
 {/if}
