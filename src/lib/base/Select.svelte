@@ -34,7 +34,7 @@
 		id={name}
 		{name}
 		{required}
-		class="text-base select-bordered select"
+		class="select border border-middle-200 text-base font-base"
 	>
 		{#if content.placeholder}
 			<option

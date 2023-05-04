@@ -11,7 +11,7 @@
 </script>
 
 <div
-	class="form-control{className}"
+	class="form-control {className}"
 	{...$$restProps}
 >
 	{#if content.label}
@@ -31,6 +31,6 @@
 		{name}
 		placeholder={content.placeholder}
 		{required}
-		class="textarea-bordered textarea text-sm"
+		class="textarea-bordered textarea border-middle-200 text-sm"
 	/>
 </div>

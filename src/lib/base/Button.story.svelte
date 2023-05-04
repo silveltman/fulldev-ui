@@ -26,19 +26,23 @@
 	</svelte:fragment>
 
 	<Hst.Variant title="Primary">
-		<Button
-			{content}
-			{disabled}
-			{size}
-			variant="primary"
-		/>
+		<div class="p-4">
+			<Button
+				{content}
+				{disabled}
+				{size}
+				variant="primary"
+			/>
+		</div>
 	</Hst.Variant>
 	<Hst.Variant title="Secondary">
-		<Button
-			{content}
-			{disabled}
-			{size}
-			variant="secondary"
-		/>
+		<div class="p-4">
+			<Button
+				{content}
+				{disabled}
+				{size}
+				variant="secondary"
+			/>
+		</div>
 	</Hst.Variant>
 </Hst.Story>

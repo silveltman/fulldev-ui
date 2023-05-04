@@ -11,20 +11,18 @@
 	export let name: string;
 </script>
 
-<div
+<label
+	for={name}
 	class="form-control w-full {className}"
 	{...$$restProps}
 >
 	{#if content.label}
-		<label
-			for={name}
-			class="label text-sm"
-		>
+		<span class="label text-sm">
 			{content.label}
 			{#if required}
 				*
 			{/if}
-		</label>
+		</span>
 	{/if}
 	<input
 		{type}
@@ -32,6 +30,6 @@
 		{name}
 		placeholder={content.placeholder}
 		{required}
-		class="text-base input-bordered input"
+		class="input-bordered input border-middle-200 text-base"
 	/>
-</div>
+</label>

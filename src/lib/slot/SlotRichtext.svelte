@@ -41,7 +41,7 @@
 		}
 
 		:global(a[href]) {
-			@apply text-content-300 hover:underline;
+			@apply text-front-300 hover:underline;
 		}
 	}
 </style>

@@ -47,7 +47,7 @@ module.exports = plugin(
 			'body,html': {
 				fontFamily: theme('fontFamily.base'),
 				lineHeight: theme('lineHeight.base'),
-				color: theme('colors.content.200'),
+				color: theme('colors.front.200'),
 			},
 			body: {
 				fontSize: theme('fontSize.base'),
@@ -56,13 +56,13 @@ module.exports = plugin(
 				fontFamily: theme('fontFamily.heading'),
 				fontWeight: theme('fontWeight.heading'),
 				lineHeight: theme('lineHeight.heading'),
-				color: theme('colors.content.100'),
+				color: theme('colors.front.100'),
 			},
 			'h4, h5, h6': {
 				fontFamily: theme('fontFamily.subheading'),
 				fontWeight: theme('fontWeight.subheading'),
 				lineHeight: theme('lineHeight.subheading'),
-				color: theme('colors.content.100'),
+				color: theme('colors.front.100'),
 			},
 			h1: {
 				fontSize: theme('fontSize.3xl'),
@@ -85,10 +85,6 @@ module.exports = plugin(
 		})
 	},
 	{
-		corePlugins: {
-			aspectRatio: false,
-			container: false
-		},
 		theme: {
 			// Font size
 			fontSize: {
@@ -113,14 +109,21 @@ module.exports = plugin(
 					'4xl': 'var(--space-4xl)',
 					'5xl': 'var(--space-5xl)'
 				},
-				colors: {
-					content: {
-						100: 'var(--content-100)',
-						200: 'var(--content-200)',
-						300: 'var(--content-300)',
-					},
-				}
 			}
+		},
+		corePlugins: {
+			aspectRatio: false,
+			container: false
+		},
+		daisyui: {
+			themes: [
+				{
+					'base': {
+						"--btn-text-case": "none",
+						"--btn-focus-scale": "1",
+					}
+				}
+			]
 		}
-	}
+	},
 )

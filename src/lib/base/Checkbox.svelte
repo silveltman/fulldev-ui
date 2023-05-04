@@ -17,7 +17,7 @@
 >
 	<input
 		type="checkbox"
-		class="checkbox checkbox-sm mr-sm"
+		class="background-image appearance form-checkbox checkbox-sm mr-sm border-front-300 bg-none text-front-300"
 		id={name}
 		value={name}
 		{name}
@@ -30,3 +30,9 @@
 		<p class="inline text-sm">{content.text}</p>
 	{/if}
 </label>
+
+<style>
+	.appearance {
+		appearance: auto;
+	}
+</style>

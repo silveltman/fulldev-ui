@@ -21,7 +21,7 @@
 		>
 			<input
 				type="radio"
-				class="radio radio-sm mr-sm"
+				class="radio radio-sm mr-sm border-front-300 checked:bg-front-300"
 				id="{option.heading} - {option.text}"
 				value="{option.heading} - {option.text}"
 				{name}

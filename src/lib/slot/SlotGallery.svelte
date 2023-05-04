@@ -10,7 +10,7 @@
 
 <div class="grid w-full auto-cols-fr grid-flow-col items-start gap-xs {className}">
 	<div
-		class="carousel-vertical relative hidden max-h-[70vw] gap-md overflow-x-hidden pr-xs !scrollbar-thin scrollbar-track-base-300 scrollbar-thumb-content-300 sm:carousel [&::-webkit-scrollbar]:block"
+		class="carousel-vertical relative hidden max-h-[70vw] gap-md overflow-x-hidden pr-xs !scrollbar-thin scrollbar-track-base-300 scrollbar-thumb-front-300 sm:carousel [&::-webkit-scrollbar]:block"
 	>
 		{#each content as item, i}
 			<a
@@ -26,7 +26,7 @@
 	</div>
 
 	<div
-		class="carousel col-span-7 gap-px scroll-auto bg-base-300 !scrollbar-thin scrollbar-track-base-300 scrollbar-thumb-content-300 [&::-webkit-scrollbar]:block"
+		class="carousel col-span-7 gap-px scroll-auto bg-base-300 !scrollbar-thin scrollbar-track-base-300 scrollbar-thumb-front-300 [&::-webkit-scrollbar]:block"
 	>
 		{#each content as item, i}
 			<div

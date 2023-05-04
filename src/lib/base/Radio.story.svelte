@@ -6,15 +6,11 @@
 	let options: RadioContent = [
 		{
 			heading: 'Option 1',
-			text: 'This is option 1',
-			value: 'option1',
-			required: true
+			text: 'This is option 1'
 		},
 		{
 			heading: 'Option 2',
-			text: 'This is option 2',
-			value: 'option2',
-			required: false
+			text: 'This is option 2'
 		}
 	];
 </script>

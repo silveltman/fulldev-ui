@@ -15,14 +15,16 @@
 	on:click
 	rel={content.href ? rel : undefined}
 	href={content.href}
-	class="btn-primary btn font-button
+	class="btn !scale-100 rounded-button border font-button hover:ring-1 hover:ring-offset-2 active:focus:ring-offset-0 active:hover:ring-offset-0
 
 		{size === 'sm' && 'btn-sm text-sm'}
-		{size === 'md' && 'text-base btn-md'}
+		{size === 'md' && 'text-base'}
 		{size === 'lg' && 'btn-lg text-lg'}
 
-		{variant === 'primary' && 'btn-primary'}
-		{variant === 'secondary' && 'btn-outline btn-secondary'}
+		{variant === 'primary' &&
+		'!border-primary-middle !bg-primary-back text-primary-front ring-primary-middle'}
+		{variant === 'secondary' &&
+		'!border-secondary-middle !bg-secondary-back text-secondary-front ring-secondary-middle'}
 		
 		{className}
 		"
