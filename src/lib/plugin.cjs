@@ -48,6 +48,7 @@ module.exports = plugin(
 				fontFamily: theme('fontFamily.base'),
 				lineHeight: theme('lineHeight.base'),
 				color: theme('colors.front.200'),
+				backgroundColor: theme('colors.back.100'),
 			},
 			body: {
 				fontSize: theme('fontSize.base'),
@@ -83,6 +84,12 @@ module.exports = plugin(
 				fontSize: theme('fontSize.sm'),
 			},
 		})
+
+		// const components = {
+		// 	'btn-primary': {
+		// 		backgroundColor
+		// 	},
+		// }
 	},
 	{
 		theme: {
@@ -113,17 +120,10 @@ module.exports = plugin(
 		},
 		corePlugins: {
 			aspectRatio: false,
-			container: false
+			container: false,
 		},
 		daisyui: {
-			themes: [
-				{
-					'base': {
-						"--btn-text-case": "none",
-						"--btn-focus-scale": "1",
-					}
-				}
-			]
+			themes: []
 		}
 	},
 )

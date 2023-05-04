@@ -40,8 +40,8 @@
 			@apply mt-lg;
 		}
 
-		:global(a[href]) {
+		/* :global(a[href]) {
 			@apply text-front-300 hover:underline;
-		}
+		} */
 	}
 </style>

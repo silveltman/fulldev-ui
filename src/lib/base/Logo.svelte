@@ -14,7 +14,7 @@
 	{...$$restProps}
 >
 	<img
-		class="inline-block dark:hidden"
+		class="inline-block"
 		src={content.src}
 		alt={content.alt}
 	/>

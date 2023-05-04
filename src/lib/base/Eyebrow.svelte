@@ -16,8 +16,8 @@
 	{size == 'md' && 'text-base'}
 	{size == 'lg' && 'text-lg'}
 
-	{variant == 'primary' && 'text-primary-700'}
-	{variant == 'secondary' && 'text-secondary-700'}
+	{variant == 'primary' && 'text-front-200'}
+	{variant == 'secondary' && 'text-front-200'}
 
 	{className}
 	"

@@ -15,16 +15,16 @@
 	on:click
 	rel={content.href ? rel : undefined}
 	href={content.href}
-	class="btn !scale-100 rounded-button border font-button hover:ring-1 hover:ring-offset-2 active:focus:ring-offset-0 active:hover:ring-offset-0
+	class="btn !scale-100 rounded-button border font-button
 
 		{size === 'sm' && 'btn-sm text-sm'}
 		{size === 'md' && 'text-base'}
 		{size === 'lg' && 'btn-lg text-lg'}
 
 		{variant === 'primary' &&
-		'!border-primary-middle !bg-primary-back text-primary-front ring-primary-middle'}
+		'!border-primary-middle !bg-primary-back text-primary-front ring-primary-middle border'}
 		{variant === 'secondary' &&
-		'!border-secondary-middle !bg-secondary-back text-secondary-front ring-secondary-middle'}
+		'!border-primary-middle !bg-secondary-back text-secondary-front ring-secondary-middle border'}
 		
 		{className}
 		"
@@ -34,3 +34,5 @@
 	{content.text}
 	<slot name="end" />
 </svelte:element>
+
+<div class="button-primary" />
