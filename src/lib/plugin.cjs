@@ -84,12 +84,6 @@ module.exports = plugin(
 				fontSize: theme('fontSize.sm'),
 			},
 		})
-
-		// const components = {
-		// 	'btn-primary': {
-		// 		backgroundColor
-		// 	},
-		// }
 	},
 	{
 		theme: {
@@ -122,8 +116,5 @@ module.exports = plugin(
 			aspectRatio: false,
 			container: false,
 		},
-		daisyui: {
-			themes: []
-		}
 	},
 )

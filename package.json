@@ -59,10 +59,14 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
+		"@radix-ui/colors": "^0.1.8",
 		"@tabler/icons-svelte": "^2.13.2",
 		"@tailwindcss/forms": "^0.5.3",
 		"@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
 		"@tailwindcss/typography": "^0.5.9",
-		"daisyui": "^2.51.6"
+		"daisyui": "^2.51.6",
+		"rippleui": "^1.12.1",
+		"tailwind-component-classes": "^2.0.4",
+		"windy-radix-palette": "^0.6.1"
 	}
 }

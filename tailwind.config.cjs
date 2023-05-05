@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 
+const radixColors = require("@radix-ui/colors");
+const { toRadixVars } = require("windy-radix-palette/vars");
+
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
+	darkMode: 'class',
 	theme: {
 		fontFamily: {
 			base: '"Inter", sans-serif',
@@ -30,34 +34,32 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				base: {
-					// Foundation, mostly used for backgrounds.
-					100: 'white',
-					200: '#f1f5f9',
-					300: '#cbd5e1',
-					// Medium contrast, mostly used for borders.
-					400: '#94a3b8',
-					500: '#64748b',
-					600: '#475569',
-					// High contrast, mostly used for text.
-					700: '#1e293b',
-					800: '#0f172a',
-					900: '#020617',
-				},
-				primary: {
-					bg: 'blue',
-					ring: 'blue',
-					text: 'white',
-					hover: 'blue',
-				},
+				test1: toRadixVars('blue')
+			}
+		}
+	},
+	plugins: [
+		require('tailwind-scrollbar'),
+		require('@tailwindcss/typography'),
+		require('rippleui')({
+			defaultStyle: false,
+			removeThemes: ['light', 'dark'],
+		}),
+		require('windy-radix-palette')({
+			colors: {
+				blue: radixColors.blue,
+				red: radixColors.red,
 			},
-		},
-		plugins: [
-			require("daisyui"),
-			require('tailwind-scrollbar'),
-			require('@tailwindcss/typography'),
-			require('tailwindcss-themer')({}),
-			require('./src/lib/plugin.cjs'),
-		],
-	}
+		}),
+		require('tailwindcss-themer')({
+			defaultTheme: {
+				extend: {
+					colors: {
+						test2: toRadixVars('red')
+					}
+				}
+			},
+		}),
+		require('./src/lib/plugin.cjs'),
+	],
 };

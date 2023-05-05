@@ -7,32 +7,33 @@
 
 	export let variant: 'primary' | 'secondary' = 'primary';
 	export let size: 'sm' | 'md' | 'lg' = 'md';
-	export let rel: string = 'prefetch';
 </script>
 
 <svelte:element
 	this={content.href ? 'a' : 'button'}
 	on:click
-	rel={content.href ? rel : undefined}
+	type={content.href ? undefined : 'button'}
 	href={content.href}
-	class="btn !scale-100 rounded-button border font-button
+	class="btn
 
-		{size === 'sm' && 'btn-sm text-sm'}
-		{size === 'md' && 'text-base'}
-		{size === 'lg' && 'btn-lg text-lg'}
+		{size === 'sm' && 'btn-sm text-xs'}
+		{size === 'md' && 'text-sm'}
+		{size === 'lg' && 'btn-lg text-base'}
 
-		{variant === 'primary' &&
-		'!border-primary-middle !bg-primary-back text-primary-front ring-primary-middle border'}
-		{variant === 'secondary' &&
-		'!border-primary-middle !bg-secondary-back text-secondary-front ring-secondary-middle border'}
+		{variant === 'primary' && ''}
+		{variant === 'secondary' && ''}
 		
 		{className}
 		"
 	{...$$restProps}
 >
 	<slot name="start" />
+
 	{content.text}
+
 	<slot name="end" />
 </svelte:element>
 
-<div class="button-primary" />
+<div class="">
+	<div class="h-20 w-20 bg-test-5" />
+</div>

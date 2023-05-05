@@ -12,7 +12,7 @@
 
 <style lang="postcss">
 	.slot-richtext {
-		:global(h2:not(:first-child)),
+		/* :global(h2:not(:first-child)),
 		:global(h3:not(:first-child)) {
 			@apply mt-3xl;
 		}
@@ -38,7 +38,7 @@
 
 		:global(p:not(:first-child)) {
 			@apply mt-lg;
-		}
+		} */
 
 		/* :global(a[href]) {
 			@apply text-front-300 hover:underline;

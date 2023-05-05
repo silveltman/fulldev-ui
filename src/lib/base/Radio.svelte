@@ -17,21 +17,21 @@
 	{#each options as option}
 		<label
 			for="{option.heading} - {option.text}"
-			class="flex flex-wrap items-center gap-x-sm gap-y-xs cursor-pointer{className}"
+			class="flex cursor-pointer flex-wrap items-center gap-x-sm gap-y-xs text-sm {className}"
 		>
 			<input
 				type="radio"
-				class="radio radio-sm mr-sm border-front-300 checked:bg-front-300"
+				class="radio"
 				id="{option.heading} - {option.text}"
 				value="{option.heading} - {option.text}"
 				{name}
 				{required}
 			/>
 			{#if option.heading}
-				<h6 class="inline">{option.heading}</h6>
+				<span class="font-subheading">{option.heading}</span>
 			{/if}
 			{#if option.text}
-				<p class="inline text-sm">{option.text}</p>
+				<span>{option.text}</span>
 			{/if}
 		</label>
 	{/each}

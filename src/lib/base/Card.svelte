@@ -57,7 +57,7 @@
 		<div class="flex flex-col gap-xs {box && 'bg-back-300 p-lg'}">
 			{#if content.eyebrow}
 				<span
-					class="text-sm text-front-300
+					class="text-front-300 text-sm
 						{size === 'sm' ? 'text-sm' : 'text-xs'}
 					"
 				>
@@ -75,5 +75,3 @@
 		</div>
 	{/if}
 </svelte:element>
-
-<div class="scrollbar-thumb-hello" />

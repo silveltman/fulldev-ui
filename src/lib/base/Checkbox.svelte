@@ -12,27 +12,21 @@
 
 <label
 	for={name}
-	class="flex flex-wrap items-center gap-x-md gap-y-xs cursor-pointer{className}"
+	class="flex cursor-pointer flex-wrap items-center gap-x-md gap-y-xs text-sm {className}"
 	{...$$restProps}
 >
 	<input
 		type="checkbox"
-		class="background-image appearance form-checkbox checkbox-sm mr-sm border-front-300 bg-none text-front-300"
+		class="checkbox"
 		id={name}
 		value={name}
 		{name}
 		{required}
 	/>
 	{#if content.heading}
-		<h6 class="inline">{content.heading}</h6>
+		<span class="font-subheading">{content.heading}</span>
 	{/if}
 	{#if content.text}
-		<p class="inline text-sm">{content.text}</p>
+		<span>{content.text}</span>
 	{/if}
 </label>
-
-<style>
-	.appearance {
-		appearance: auto;
-	}
-</style>
