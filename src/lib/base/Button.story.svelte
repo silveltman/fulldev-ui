@@ -10,6 +10,7 @@
 
 	let disabled: true | undefined = undefined;
 	let size: 'sm' | 'md' | 'lg' = 'md';
+	let variant: 'solid' | 'ringed' | 'soft' = 'solid';
 </script>
 
 <Hst.Story layout={{ type: 'grid', width: 200 }}>
@@ -25,24 +26,30 @@
 		/>
 	</svelte:fragment>
 
-	<Hst.Variant title="Primary">
-		<div class="p-4">
+	<div class="orange-dark">
+		<Hst.Variant title="Solid">
 			<Button
 				{content}
 				{disabled}
 				{size}
-				variant="primary"
+				variant="solid"
 			/>
-		</div>
-	</Hst.Variant>
-	<Hst.Variant title="Secondary">
-		<div class="p-4">
+		</Hst.Variant>
+		<Hst.Variant title="Ringed">
 			<Button
 				{content}
 				{disabled}
 				{size}
-				variant="secondary"
+				variant="ringed"
 			/>
-		</div>
-	</Hst.Variant>
+		</Hst.Variant>
+		<Hst.Variant title="Soft">
+			<Button
+				{content}
+				{disabled}
+				{size}
+				variant="soft"
+			/>
+		</Hst.Variant>
+	</div>
 </Hst.Story>

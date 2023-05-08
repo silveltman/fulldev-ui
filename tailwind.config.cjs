@@ -1,11 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 
 const radixColors = require("@radix-ui/colors");
-const { toRadixVars } = require("windy-radix-palette/vars");
+
+function getRadixColors(object) {
+	const newObject = {}
+	Object.keys(object).forEach((item, index) => {
+		newObject[index + 1] = object[item]
+	})
+	return newObject
+}
 
 module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-	darkMode: 'class',
 	theme: {
 		fontFamily: {
 			base: '"Inter", sans-serif',
@@ -32,34 +38,50 @@ module.exports = {
 			card: '1rem',
 			image: '1rem',
 		},
-		extend: {
-			colors: {
-				test1: toRadixVars('blue')
-			}
-		}
 	},
 	plugins: [
 		require('tailwind-scrollbar'),
 		require('@tailwindcss/typography'),
 		require('rippleui')({
 			defaultStyle: false,
-			removeThemes: ['light', 'dark'],
-		}),
-		require('windy-radix-palette')({
-			colors: {
-				blue: radixColors.blue,
-				red: radixColors.red,
-			},
+			themes: [],
+
 		}),
 		require('tailwindcss-themer')({
 			defaultTheme: {
 				extend: {
 					colors: {
-						test2: toRadixVars('red')
+						base: getRadixColors(radixColors.gray)
 					}
 				}
 			},
+			themes: [
+				{
+					name: 'dark',
+					extend: {
+						colors: {
+							base: getRadixColors(radixColors.grayDark)
+						}
+					}
+				},
+				{
+					name: 'orange-light',
+					extend: {
+						colors: {
+							base: getRadixColors(radixColors.orange)
+						}
+					}
+				},
+				{
+					name: 'orange-dark',
+					extend: {
+						colors: {
+							base: getRadixColors(radixColors.orangeDark)
+						}
+					}
+				}
+			]
 		}),
 		require('./src/lib/plugin.cjs'),
-	],
-};
+	]
+}

@@ -1,4 +1,8 @@
 <script lang="ts">
-</script>
+	import Button from '$lib/base/Button.svelte';
 
-<div class="h-20 w-20 bg-test1-6 bg-test2-6">hiii</div>
+	const content = {
+		text: 'Test',
+		href: 'https://google.com'
+	};
+</script>
