@@ -75,7 +75,7 @@
 			{#if content.button_secondary}
 				<Button
 					{size}
-					variant="secondary"
+					variant="ringed"
 					content={content.button_secondary}
 				/>
 			{/if}

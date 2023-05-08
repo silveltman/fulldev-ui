@@ -10,7 +10,8 @@
 		image: {
 			src: 'https://via.placeholder.com/150',
 			alt: 'Alt text'
-		}
+		},
+		href: '#'
 	};
 
 	let size: 'sm' | 'md' | 'lg' = 'md';

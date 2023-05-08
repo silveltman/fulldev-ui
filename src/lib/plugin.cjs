@@ -2,7 +2,7 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = plugin(
-	function ({ addBase, theme }) {
+	function ({ addBase, addVariant, addComponents, theme }) {
 		addBase({
 			':root': {
 				'--text-xs': '12px',
@@ -81,6 +81,32 @@ module.exports = plugin(
 			h6: {
 				fontSize: theme('fontSize.sm'),
 			},
+		})
+
+		// Add selectors for components, like button:my-property.
+		const components = ['button', 'textfield', 'card']
+		components.forEach(component => {
+			addVariant(component, `& .${component}`)
+		})
+
+		// Add variants for sizes. Use size-x to enable and size-x:my-property to style.
+		const variants = ['size-sm', 'size-md', 'size-lg']
+		variants.forEach(item => {
+			addVariant(`${item}`, [
+				`&.${item}`,
+				`.${item} &`,
+			])
+		})
+
+		console.log(theme('border'))
+
+		addComponents({
+			'.ringo': {
+				// boxShadow: theme('ring.1'),
+				backgroundColor: 'red',
+				color: 'white',
+				// '--tw-ring-color': theme('colors.base.7'),
+			}
 		})
 	},
 	{

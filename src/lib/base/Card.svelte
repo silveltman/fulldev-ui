@@ -34,9 +34,10 @@
 <svelte:element
 	this={content.href ? 'a' : 'div'}
 	href={content.href}
-	class="card group flex grow flex-col {className}
+	class="group flex grow flex-col {className}
 	  	{center ? 'items-center text-center' : 'items-start'}
-		{box ? 'overflow-hidden rounded-box bg-base-2' : 'gap-y-md gap-x-xl'}
+		{box ? 'overflow-hidden rounded-box border border-base-6 bg-base-2' : 'gap-y-md gap-x-xl'}
+		{box && content.href && 'hover:border-base-8'}
 		{size === 'sm' && 'max-w-[50vw] basis-[40%] sm:max-w-[33vw] lg:max-w-[16vw] 2xl:max-w-[256px]'}
 		{size === 'md' && 'max-w-[50vw] lg:max-w-[25vw] 2xl:max-w-[384px]'}
 		{size === 'lg' && 'max-w-[100vw] basis-[90%] md:max-w-[50vw] lg:max-w-[33vw] 2xl:max-w-[512px]'}
@@ -70,7 +71,7 @@
 			{/if}
 			{#if content.textarea}
 				<p
-					class="mt-xs"
+					class="mt-sm"
 					class:text-sm={size == 'sm' || size == 'md'}
 				>
 					{content.textarea}

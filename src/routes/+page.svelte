@@ -6,3 +6,5 @@
 		href: 'https://google.com'
 	};
 </script>
+
+<div class="font-base" />

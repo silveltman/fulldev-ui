@@ -18,6 +18,11 @@ module.exports = {
 			heading: '"Inter", sans-serif',
 			subheading: '"Inter", sans-serif',
 		},
+		lineHeight: {
+			base: 1.5,
+			heading: 1.125,
+			subheading: 1.125,
+		},
 		fontWeight: {
 			base: 400,
 			heading: 700,
@@ -25,11 +30,6 @@ module.exports = {
 			button: 500,
 			label: 500,
 			eyebrow: 500,
-		},
-		lineHeight: {
-			base: 1.5,
-			heading: 1.125,
-			subheading: 1.125,
 		},
 		borderRadius: {
 			box: '1rem',
@@ -79,7 +79,16 @@ module.exports = {
 							base: getRadixColors(radixColors.orangeDark)
 						}
 					}
-				}
+				},
+				{
+					name: 'size-sm',
+				},
+				{
+					name: 'size-md',
+				},
+				{
+					name: 'size-lg'
+				},
 			]
 		}),
 		require('./src/lib/plugin.cjs'),

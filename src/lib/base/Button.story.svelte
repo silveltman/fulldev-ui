@@ -10,7 +10,6 @@
 
 	let disabled: true | undefined = undefined;
 	let size: 'sm' | 'md' | 'lg' = 'md';
-	let variant: 'solid' | 'ringed' | 'soft' = 'solid';
 </script>
 
 <Hst.Story layout={{ type: 'grid', width: 200 }}>
@@ -20,36 +19,34 @@
 			bind:value={disabled}
 		/>
 		<Hst.Select
-			title="size"
+			title="Size"
 			bind:value={size}
 			options={['sm', 'md', 'lg']}
 		/>
 	</svelte:fragment>
 
-	<div class="orange-dark">
-		<Hst.Variant title="Solid">
-			<Button
-				{content}
-				{disabled}
-				{size}
-				variant="solid"
-			/>
-		</Hst.Variant>
-		<Hst.Variant title="Ringed">
-			<Button
-				{content}
-				{disabled}
-				{size}
-				variant="ringed"
-			/>
-		</Hst.Variant>
-		<Hst.Variant title="Soft">
-			<Button
-				{content}
-				{disabled}
-				{size}
-				variant="soft"
-			/>
-		</Hst.Variant>
-	</div>
+	<Hst.Variant title="Solid">
+		<Button
+			class="size-{size}"
+			{content}
+			{disabled}
+			variant="solid"
+		/>
+	</Hst.Variant>
+	<Hst.Variant title="Ringed">
+		<Button
+			class="size-{size}"
+			{content}
+			{disabled}
+			variant="ringed"
+		/>
+	</Hst.Variant>
+	<Hst.Variant title="Soft">
+		<Button
+			class="size-{size}"
+			{content}
+			{disabled}
+			variant="soft"
+		/>
+	</Hst.Variant>
 </Hst.Story>
