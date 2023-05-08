@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { CardContent, Hst } from '$lib/types';
 	import Card from './Card.svelte';
-	import Select from './Select.svelte';
 	export let Hst: Hst;
 
 	let content: CardContent = {
@@ -11,20 +10,11 @@
 		image: {
 			src: 'https://via.placeholder.com/150',
 			alt: 'Alt text'
-		},
-		person: {
-			heading: 'John Doe',
-			text: 'Engineer',
-			image: {
-				src: 'https://via.placeholder.com/150',
-				alt: 'Engineer'
-			}
 		}
 	};
 
 	let size: 'sm' | 'md' | 'lg' = 'md';
 	let box: boolean = false;
-	let split: boolean = false;
 	let center: boolean = false;
 </script>
 
@@ -40,10 +30,6 @@
 			bind:value={box}
 		/>
 		<Hst.Checkbox
-			title="Split"
-			bind:value={split}
-		/>
-		<Hst.Checkbox
 			title="Center"
 			bind:value={center}
 		/>
@@ -53,7 +39,6 @@
 		{content}
 		{size}
 		{box}
-		{split}
 		{center}
 	/>
 </Hst.Story>

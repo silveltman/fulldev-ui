@@ -1,31 +1,25 @@
 <script lang="ts">
-	import type { Hst, EyebrowContent } from '$lib/types'
-	import Eyebrow from './Eyebrow.svelte'
-	export let Hst: Hst
+	import type { Hst, EyebrowContent } from '$lib/types';
+	import Eyebrow from './Eyebrow.svelte';
+	import Select from './Select.svelte';
+	export let Hst: Hst;
 
-	export let content: EyebrowContent = 'Lorem ipsum'
+	let content: EyebrowContent = 'Lorem ipsum';
+	let size: 'sm' | 'md' | 'lg' = 'md';
 </script>
 
-<Hst.Story layout={{ type: 'grid', width: 300 }}>
+<Hst.Story>
 	<svelte:fragment slot="controls">
-		<Hst.Json
-			bind:value={content}
-			title="Content"
+		<Hst.Select
+			bind:value={size}
+			title="Size"
+			options={['sm', 'md', 'lg']}
 		/>
 	</svelte:fragment>
 
-	<Hst.Variant title="Primary">
-		<Eyebrow
-			{content}
-			size="sm"
-			variant="primary"
-		/>
-	</Hst.Variant>
-	<Hst.Variant title="Secondary">
-		<Eyebrow
-			{content}
-			size="md"
-			variant="secondary"
-		/>
-	</Hst.Variant>
+	<Eyebrow
+		{content}
+		{size}
+		variant="primary"
+	/>
 </Hst.Story>

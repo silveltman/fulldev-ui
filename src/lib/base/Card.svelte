@@ -34,14 +34,13 @@
 <svelte:element
 	this={content.href ? 'a' : 'div'}
 	href={content.href}
-	class="group card grow {className}
+	class="card group flex grow flex-col {className}
 	  	{center ? 'items-center text-center' : 'items-start'}
-		{box ? 'overflow-hidden rounded-box bg-base-300' : 'gap-y-md gap-x-xl'}
+		{box ? 'overflow-hidden rounded-box bg-base-2' : 'gap-y-md gap-x-xl'}
 		{size === 'sm' && 'max-w-[50vw] basis-[40%] sm:max-w-[33vw] lg:max-w-[16vw] 2xl:max-w-[256px]'}
 		{size === 'md' && 'max-w-[50vw] lg:max-w-[25vw] 2xl:max-w-[384px]'}
 		{size === 'lg' && 'max-w-[100vw] basis-[90%] md:max-w-[50vw] lg:max-w-[33vw] 2xl:max-w-[512px]'}
 		{className}
-
 	"
 	{...$$restProps}
 >
@@ -54,12 +53,12 @@
 	{/if}
 
 	{#if content.eyebrow || content.heading || content.textarea}
-		<div class="flex flex-col gap-xs {box && 'bg-back-300 p-lg'}">
+		<div class="flex flex-col gap-xs {box && 'p-lg'}">
 			{#if content.eyebrow}
 				<span
-					class="text-sm text-front-300
-						{size === 'sm' ? 'text-sm' : 'text-xs'}
-					"
+					class="text-sm text-base-11"
+					class:text-xs={size === 'md' || size === 'sm'}
+					class:text-sm={size === 'lg'}
 				>
 					{content.eyebrow}
 				</span>
@@ -70,10 +69,13 @@
 				</svelte:element>
 			{/if}
 			{#if content.textarea}
-				<p class={size == 'lg' ? 'text-base' : 'text-sm'}>{content.textarea}</p>
+				<p
+					class="mt-xs"
+					class:text-sm={size == 'sm' || size == 'md'}
+				>
+					{content.textarea}
+				</p>
 			{/if}
 		</div>
 	{/if}
 </svelte:element>
-
-<div class="scrollbar-thumb-hello" />

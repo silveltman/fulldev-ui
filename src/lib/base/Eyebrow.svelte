@@ -6,18 +6,14 @@
 	export let content: EyebrowContent;
 
 	export let size: 'sm' | 'md' | 'lg' = 'md';
-	export let variant: 'primary' | 'secondary' = 'primary';
 </script>
 
 <p
-	class="inline-block font-eyebrow
+	class="inline-block font-eyebrow text-base-11
 
 	{size == 'sm' && 'text-sm'}
 	{size == 'md' && 'text-base'}
 	{size == 'lg' && 'text-lg'}
-
-	{variant == 'primary' && 'text-front-200'}
-	{variant == 'secondary' && 'text-front-200'}
 
 	{className}
 	"

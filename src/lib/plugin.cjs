@@ -47,8 +47,8 @@ module.exports = plugin(
 			'body,html': {
 				fontFamily: theme('fontFamily.base'),
 				lineHeight: theme('lineHeight.base'),
-				color: theme('colors.front.200'),
-				backgroundColor: theme('colors.back.100'),
+				color: theme('colors.base.12'),
+				backgroundColor: theme('colors.base.1'),
 			},
 			body: {
 				fontSize: theme('fontSize.base'),
@@ -57,13 +57,11 @@ module.exports = plugin(
 				fontFamily: theme('fontFamily.heading'),
 				fontWeight: theme('fontWeight.heading'),
 				lineHeight: theme('lineHeight.heading'),
-				color: theme('colors.front.100'),
 			},
 			'h4, h5, h6': {
 				fontFamily: theme('fontFamily.subheading'),
 				fontWeight: theme('fontWeight.subheading'),
 				lineHeight: theme('lineHeight.subheading'),
-				color: theme('colors.front.100'),
 			},
 			h1: {
 				fontSize: theme('fontSize.3xl'),
@@ -84,16 +82,9 @@ module.exports = plugin(
 				fontSize: theme('fontSize.sm'),
 			},
 		})
-
-		// const components = {
-		// 	'btn-primary': {
-		// 		backgroundColor
-		// 	},
-		// }
 	},
 	{
 		theme: {
-			// Font size
 			fontSize: {
 				'xs': 'var(--text-xs)',
 				'sm': 'var(--text-sm)',
@@ -104,7 +95,6 @@ module.exports = plugin(
 				'3xl': 'var(--text-3xl)',
 			},
 			extend: {
-				// Spacing
 				spacing: {
 					xs: 'var(--space-xs)',
 					sm: 'var(--space-sm)',
@@ -122,8 +112,5 @@ module.exports = plugin(
 			aspectRatio: false,
 			container: false,
 		},
-		daisyui: {
-			themes: []
-		}
 	},
 )
