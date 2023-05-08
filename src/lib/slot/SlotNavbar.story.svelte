@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { SlotAccordionContent, Hst } from '$lib/types';
+	import type { AccordionContent, Hst } from '$lib/types';
 	import SlotNavbar from 'slot/SlotNavbar.svelte';
 
 	export let Hst: Hst;

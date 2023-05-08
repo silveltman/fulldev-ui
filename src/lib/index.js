@@ -15,7 +15,7 @@ export { default as Textfield } from 'base/Textfield.svelte'
 export { default as Whatsapp } from 'base/Whatsapp.svelte'
 
 // Slot
-export { default as SlotAccordion } from 'slot/SlotAccordion.svelte'
+export { default as Accordion } from 'base/Accordion.svelte'
 export { default as SlotCardCarousel } from 'slot/SlotCardCarousel.svelte'
 export { default as SlotCardGrid } from 'slot/SlotCardGrid.svelte'
 export { default as SlotCardMasonry } from 'slot/SlotCardMasonry.svelte'

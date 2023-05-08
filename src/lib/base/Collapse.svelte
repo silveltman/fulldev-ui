@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { DisclosureContent } from '$lib/types';
+	import type { CollapseContent } from '$lib/types';
 	import { IconChevronLeft } from '@tabler/icons-svelte';
 
 	let className = '';
 	export { className as class };
-	export let content: DisclosureContent;
+	export let content: CollapseContent;
 </script>
 
 <div class="accordion {className}">

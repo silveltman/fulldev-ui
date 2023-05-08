@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { CardContent, Hst } from '$lib/types';
+	import Button from './Button.svelte';
 	import Card from './Card.svelte';
 	export let Hst: Hst;
 
@@ -10,8 +11,7 @@
 		image: {
 			src: 'https://via.placeholder.com/150',
 			alt: 'Alt text'
-		},
-		href: '#'
+		}
 	};
 
 	let size: 'sm' | 'md' | 'lg' = 'md';
@@ -43,5 +43,10 @@
 		{box}
 		{center}
 		{split}
-	/>
+	>
+		<Button
+			slot="buttons"
+			content={{ text: 'click me' }}
+		/>
+	</Card>
 </Hst.Story>

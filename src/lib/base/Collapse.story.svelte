@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { DisclosureContent, Hst } from '$lib/types';
+	import type { CollapseContent, Hst } from '$lib/types';
 	import Collapse from './Collapse.svelte';
 	export let Hst: Hst;
 
-	let content: DisclosureContent = {
+	let content: CollapseContent = {
 		heading: 'Lorem ipsum dolor sit amet',
 		textarea: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.'
 	};

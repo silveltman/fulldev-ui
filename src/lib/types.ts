@@ -8,7 +8,7 @@ export interface ButtonContent {
 	href?: string
 }
 
-export interface DisclosureContent {
+export interface CollapseContent {
 	heading: string
 	textarea: string
 }
@@ -116,7 +116,7 @@ export interface SocialContent {
 // Slot
 // --------------------------------------------
 
-export type SlotAccordionContent = DisclosureContent[]
+export type AccordionContent = CollapseContent[]
 
 interface ChecklistItem {
 	heading?: string
@@ -174,7 +174,7 @@ export interface CtaContent {
 
 export interface FaqContent {
 	highlight?: SlotHighlightContent
-	accordion?: SlotAccordionContent
+	accordion?: AccordionContent
 }
 
 export interface FeaturesContent {

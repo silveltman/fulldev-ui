@@ -57,5 +57,9 @@
 			{/if}
 		</slot>
 	</div>
-	<slot name="footer" />
+	{#if $$slots.buttons}
+		<div class="flex flex-wrap gap-lg">
+			<slot name="buttons" />
+		</div>
+	{/if}
 </svelte:element>

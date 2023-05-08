@@ -49,4 +49,12 @@
 			variant="soft"
 		/>
 	</Hst.Variant>
+	<Hst.Variant title="Transparent">
+		<Button
+			class="size-{size}"
+			{content}
+			{disabled}
+			variant="transparent"
+		/>
+	</Hst.Variant>
 </Hst.Story>
