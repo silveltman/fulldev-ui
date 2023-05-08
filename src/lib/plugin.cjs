@@ -97,17 +97,6 @@ module.exports = plugin(
 				`.${item} &`,
 			])
 		})
-
-		console.log(theme('border'))
-
-		addComponents({
-			'.ringo': {
-				// boxShadow: theme('ring.1'),
-				backgroundColor: 'red',
-				color: 'white',
-				// '--tw-ring-color': theme('colors.base.7'),
-			}
-		})
 	},
 	{
 		theme: {

@@ -1,10 +1,44 @@
 <script lang="ts">
-	import Button from '$lib/base/Button.svelte';
+	import Masonry from 'layout/Masonry.svelte';
+	import Image from 'base/Image.svelte';
+	import Card from 'layout/Card.svelte';
+	import Eyebrow from 'base/Eyebrow.svelte';
 
-	const content = {
-		text: 'Test',
-		href: 'https://google.com'
-	};
+	const images = [
+		{
+			src: 'https://picsum.photos/seed/picsum/512/512',
+			alt: 'Lorem Picsum'
+		},
+		{
+			src: 'https://picsum.photos/seed/picsum/512/512',
+			alt: 'Lorem Picsum'
+		},
+		{
+			src: 'https://picsum.photos/seed/picsum/512/512',
+			alt: 'Lorem Picsum'
+		},
+		{
+			src: 'https://picsum.photos/seed/picsum/512/512',
+			alt: 'Lorem Picsum'
+		},
+		{
+			src: 'https://picsum.photos/seed/picsum/512/512',
+			alt: 'Lorem Picsum'
+		}
+	];
 </script>
 
-<div class="font-base" />
+<Masonry
+	let:imageSizes
+	class="lg"
+>
+	{#each images as content}
+		<Card>
+			<Image
+				sizes={imageSizes}
+				{content}
+			/>
+			<h5>Hello world</h5>
+		</Card>
+	{/each}
+</Masonry>

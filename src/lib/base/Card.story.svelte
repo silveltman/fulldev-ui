@@ -17,6 +17,7 @@
 	let size: 'sm' | 'md' | 'lg' = 'md';
 	let box: boolean = false;
 	let center: boolean = false;
+	let split: boolean = false;
 </script>
 
 <Hst.Story>
@@ -38,8 +39,9 @@
 
 	<Card
 		{content}
-		{size}
+		class="size-{size}"
 		{box}
 		{center}
+		{split}
 	/>
 </Hst.Story>

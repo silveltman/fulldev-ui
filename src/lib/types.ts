@@ -20,6 +20,31 @@ export interface ImageContent {
 	alt: string
 }
 
+type LengthUnit =
+	| `${number}px`
+	| `${number}vw`
+	| `${number}vh`
+	| `${number}em`
+	| `${number}rem`
+	| `${number}%`;
+
+type CalcFunction =
+	| `calc(${LengthUnit} + ${LengthUnit})`
+	| `calc(${LengthUnit} - ${LengthUnit})`
+	| `calc(${LengthUnit} * ${number})`
+	| `calc(${LengthUnit} / ${number})`;
+
+type ImageSizesValue = LengthUnit | CalcFunction | undefined;
+
+export interface ImageSizes {
+	base?: ImageSizesValue;
+	sm?: ImageSizesValue;
+	md?: ImageSizesValue;
+	lg?: ImageSizesValue;
+	xl?: ImageSizesValue;
+	'2xl'?: ImageSizesValue;
+}
+
 export interface LinkContent {
 	text: string
 	href: string
