@@ -8,7 +8,7 @@
 </script>
 
 <div
-	class="max-lg:scrollbar-thumb-front-300 max-lg:daisy-carousel max-lg:bg-base-300 max-lg:scrollbar-thin max-lg:scrollbar-track-base-300 lg:columns-2 lg:gap-sm lg:space-y-sm max-lg:[&::-webkit-scrollbar]:block
+	class="scrollbar-track-base-3 scrollbar-thumb-base-7 max-lg:daisy-carousel hover:scrollbar-thumb-base-8 max-lg:bg-base-2 max-lg:scrollbar-thin lg:columns-2 lg:gap-sm lg:space-y-sm max-lg:[&::-webkit-scrollbar]:block
 	{className}
 	"
 >
