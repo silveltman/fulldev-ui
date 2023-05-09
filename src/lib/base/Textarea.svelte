@@ -11,7 +11,7 @@
 </script>
 
 <div
-	class="form-control {className}"
+	class="flex flex-col {className}"
 	{...$$restProps}
 >
 	{#if content.label}
@@ -31,6 +31,6 @@
 		{name}
 		placeholder={content.placeholder}
 		{required}
-		class="textarea-bordered textarea border-middle-200 text-sm"
+		class="textarea max-w-none border border-base-7 bg-base-2 bg-transparent text-base text-base-12 focus:border-base-8 active:border-base-8"
 	/>
 </div>

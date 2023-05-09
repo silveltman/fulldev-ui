@@ -18,6 +18,8 @@
 	  	
 		{center ? 'items-center text-center' : 'items-start'}
 		{box ? 'overflow-hidden rounded-box border border-base-6 bg-base-2' : 'gap-lg size-sm:gap-md'}
+		{box && content.href && 'group hover:border-base-8'}
+		
 
 		{className}
 	"
@@ -27,8 +29,9 @@
 		{#if content.image}
 			<Image
 				{sizes}
-				class="rounded-box group-hover:opacity-75
+				class="rounded-box 
 				{box && '!rounded-b-[0px]'}
+				{content.href && 'group-hover:opacity-75'}
 				"
 				content={content.image}
 			/>

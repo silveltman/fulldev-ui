@@ -16,7 +16,7 @@
 </script>
 
 <div
-	class="form-control w-full {className}"
+	class="flex w-full flex-col {className}"
 	{...$$restProps}
 >
 	{#if content.label}
@@ -34,7 +34,7 @@
 		id={name}
 		{name}
 		{required}
-		class="select border border-middle-200 text-base font-base"
+		class="select max-w-none border border-base-7 bg-base-2 bg-transparent text-base text-base-12 focus:border-base-8 active:border-base-8"
 	>
 		{#if content.placeholder}
 			<option

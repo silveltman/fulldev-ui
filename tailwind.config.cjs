@@ -92,5 +92,13 @@ module.exports = {
 			]
 		}),
 		require('./src/lib/plugin.cjs'),
-	]
+		require("daisyui")
+	],
+	daisyui: {
+		styled: false,
+		themes: false,
+		base: false,
+		utils: false,
+		prefix: "daisy-",
+	},
 }

@@ -20,7 +20,7 @@
 	{#if content.heading}
 		<svelte:element
 			this={heading}
-			class="text-2xl size-sm:mb-xl size-lg:mb-3xl"
+			class="text-2xl size-sm:text-xl size-lg:text-3xl"
 		>
 			{content.heading}
 		</svelte:element>
