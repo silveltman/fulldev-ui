@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { SlotHighlightContent } from '$lib/types';
+	import type { HighlightContent } from '$lib/types';
 	import Eyebrow from 'base/Eyebrow.svelte';
 
 	let className = '';
 	export { className as class };
-	export let content: SlotHighlightContent;
+	export let content: HighlightContent;
 
 	export let heading: 'h1' | 'h2' | 'h3' = 'h2';
 </script>

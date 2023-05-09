@@ -1,13 +1,12 @@
 <script lang="ts">
-	import type { SlotHighlightContent, Hst } from '$lib/types';
-	import SlotHighlight from 'slot/SlotHighlight.svelte';
+	import type { HighlightContent, Hst } from '$lib/types';
+	import Highlight from 'base/Highlight.svelte';
 	export let Hst: Hst;
 
-	// Styling props
 	let size: 'lg' | 'md' | 'sm' = 'md';
 
 	// Content props
-	let content: SlotHighlightContent = {
+	let content: HighlightContent = {
 		eyebrow: 'Lorem ipsum',
 		heading: 'Lorem ipsum dolor sit amet',
 		textarea:
@@ -17,10 +16,6 @@
 			href: '#'
 		},
 		button_secondary: {
-			text: 'Lorem ipsum',
-			href: '#'
-		},
-		button_tertiary: {
 			text: 'Lorem ipsum',
 			href: '#'
 		}
@@ -36,8 +31,8 @@
 		/>
 	</svelte:fragment>
 
-	<SlotHighlight
-		{size}
+	<Highlight
+		class="size-{size}"
 		{content}
 	/>
 </Hst.Story>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { RichtextContent, Hst } from '$lib/types';
-	import SlotRichtext from 'slot/SlotRichtext.svelte';
+	import Richtext from 'base/Richtext.svelte';
 
 	export let Hst: Hst;
 
@@ -17,5 +17,5 @@
 		/>
 	</svelte:fragment>
 
-	<SlotRichtext {content} />
+	<Richtext {content} />
 </Hst.Story>

@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { SlotStatsContent, Hst } from '$lib/types'
-	import SlotStats from 'slot/SlotStats.svelte'
+	import type { StatsContent, Hst } from '$lib/types';
+	import Stats from 'base/Stats.svelte';
 
-	export let Hst: Hst
+	export let Hst: Hst;
 
-	let content: SlotStatsContent = [
+	let content: StatsContent = [
 		{
 			value: '800+',
 			label: 'Lorem ipsum'
@@ -17,9 +17,9 @@
 			value: '800+',
 			label: 'Lorem ipsum'
 		}
-	]
+	];
 </script>
 
 <Hst.Story>
-	<SlotStats {content} />
+	<Stats {content} />
 </Hst.Story>

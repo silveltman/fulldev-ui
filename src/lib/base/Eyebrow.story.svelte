@@ -19,7 +19,7 @@
 
 	<Eyebrow
 		{content}
-		{size}
+		class="size-{size}"
 		variant="primary"
 	/>
 </Hst.Story>

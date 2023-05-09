@@ -125,7 +125,7 @@ interface ChecklistItem {
 }
 export type SlotChecklistContent = ChecklistItem[]
 
-export interface SlotHighlightContent {
+export interface HighlightContent {
 	eyebrow?: string
 	heading?: string
 	textarea?: string
@@ -143,11 +143,11 @@ interface StatsItem {
 	label?: string
 	value?: string
 }
-export type SlotStatsContent = StatsItem[]
+export type StatsContent = StatsItem[]
 
 export type SlotCardContent = CardContent[]
 
-export interface SlotNewsletterContent {
+export interface NewsletterContent {
 	textfield: {
 		placeholder?: string
 	}
@@ -163,28 +163,28 @@ export type SlotGalleryContent = ImageContent[]
 // --------------------------------------------
 
 export interface HeroContent {
-	highlight?: SlotHighlightContent
+	highlight?: HighlightContent
 	media?: SlotMediaContent
 }
 
 export interface CtaContent {
-	highlight?: SlotHighlightContent
+	highlight?: HighlightContent
 	media?: SlotMediaContent
 }
 
 export interface FaqContent {
-	highlight?: SlotHighlightContent
+	highlight?: HighlightContent
 	accordion?: AccordionContent
 }
 
 export interface FeaturesContent {
-	highlight?: SlotHighlightContent
+	highlight?: HighlightContent
 	checklist?: SlotChecklistContent
 	media?: SlotMediaContent
 }
 
 export interface BlockCardsContent {
-	highlight?: SlotHighlightContent
+	highlight?: HighlightContent
 	cards?: SlotCardContent
 }
 

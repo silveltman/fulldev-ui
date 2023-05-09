@@ -4,15 +4,15 @@
 	export let content: RichtextContent;
 </script>
 
-<div class="slot-richtext max-w-2xl">
+<div class="richtext max-w-2xl">
 	{#if content.html}
 		{@html content.html}
 	{/if}
 </div>
 
 <style lang="postcss">
-	.slot-richtext {
-		/* :global(h2:not(:first-child)),
+	.richtext {
+		:global(h2:not(:first-child)),
 		:global(h3:not(:first-child)) {
 			@apply mt-3xl;
 		}
@@ -38,10 +38,10 @@
 
 		:global(p:not(:first-child)) {
 			@apply mt-lg;
-		} */
+		}
 
-		/* :global(a[href]) {
-			@apply text-front-300 hover:underline;
-		} */
+		:global(a[href]) {
+			@apply underline;
+		}
 	}
 </style>

@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { SlotNewsletterContent } from '$lib/types';
+	import type { NewsletterContent } from '$lib/types';
 	import Form from 'base/Form.svelte';
 	import Textfield from 'base/Textfield.svelte';
 	import Button from 'base/Button.svelte';
 
-	export let content: SlotNewsletterContent;
+	export let content: NewsletterContent;
 </script>
 
 <Form

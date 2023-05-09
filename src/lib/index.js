@@ -24,10 +24,10 @@ export { default as SlotChecklist } from 'slot/SlotChecklist.svelte'
 export { default as SlotGallery } from 'slot/SlotGallery.svelte'
 export { default as SlotGalleryMasonry } from 'slot/SlotGalleryMasonry.svelte'
 
-export { default as SlotHighlight } from 'slot/SlotHighlight.svelte'
-export { default as SlotNewsletter } from 'slot/SlotNewsletter.svelte'
-export { default as SlotRichtext } from 'slot/SlotRichtext.svelte'
-export { default as SlotStats } from 'slot/SlotStats.svelte'
+export { default as Highlight } from 'base/Highlight.svelte'
+export { default as Newsletter } from 'base/Newsletter.svelte'
+export { default as Richtext } from 'slot/Richtext.svelte'
+export { default as Stats } from 'slot/Stats.svelte'
 
 // Layout
 export { default as Block } from 'layout/Block.svelte'
