@@ -11,7 +11,7 @@
 </script>
 
 <div
-	class="flex flex-col {className}"
+	class="flex flex-col gap-xs {className}"
 	{...$$restProps}
 >
 	{#if content.label}
@@ -31,6 +31,6 @@
 		{name}
 		placeholder={content.placeholder}
 		{required}
-		class="textarea max-w-none border-2 border-base-7 bg-base-2 bg-transparent text-base text-base-12 focus:border-base-8 active:border-base-8"
+		class="ringed textarea max-w-none rounded-input text-base"
 	/>
 </div>

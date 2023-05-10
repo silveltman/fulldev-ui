@@ -14,8 +14,8 @@
 >
 	<Container>
 		<nav
-			class="navbar 
-				{floating ? `rounded-box border border-base-6 bg-base-2 px-md py-sm ${className}` : ''}
+			class="navbar shadow-none
+				{floating ? `rounded-box border border-base-6 bg-base-2 p-sm ${className}` : 'bg-transparent p-0'}
 			"
 		>
 			{#if $$slots.start}
@@ -33,15 +33,6 @@
 					<slot name="end" />
 				</div>
 			{/if}
-			{#if $$slots.hamburger}
-				<slot name="hamburger" />
-			{/if}
 		</nav>
 	</Container>
 </header>
-
-<style>
-	.navbar {
-		@apply bg-transparent p-0 shadow-none;
-	}
-</style>

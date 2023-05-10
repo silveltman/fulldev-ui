@@ -13,7 +13,7 @@
 
 <label
 	for={name}
-	class="flex w-full flex-col {className}"
+	class="flex w-full flex-col gap-xs {className}"
 	{...$$restProps}
 >
 	{#if content.label}
@@ -30,6 +30,6 @@
 		{name}
 		placeholder={content.placeholder}
 		{required}
-		class="input max-w-none border border-base-7 bg-base-2 bg-transparent text-base text-base-12 focus:border-base-8 active:border-base-8"
+		class="ringed input max-w-none rounded-input text-base"
 	/>
 </label>

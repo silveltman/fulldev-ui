@@ -15,7 +15,7 @@
 	/>
 	<label
 		for={content.heading}
-		class="accordion-title"
+		class="accordion-title bg-transparent"
 	>
 		<h5>
 			{content.heading}

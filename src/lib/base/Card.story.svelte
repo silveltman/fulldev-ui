@@ -43,10 +43,5 @@
 		{box}
 		{center}
 		{split}
-	>
-		<Button
-			slot="buttons"
-			content={{ text: 'click me' }}
-		/>
-	</Card>
+	/>
 </Hst.Story>

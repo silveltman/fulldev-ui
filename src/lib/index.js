@@ -33,6 +33,3 @@ export { default as Grid } from 'layout/Grid.svelte'
 export { default as Masonry } from 'layout/Masonry.svelte'
 export { default as Split } from 'layout/Split.svelte'
 export { default as Stack } from 'layout/Stack.svelte'
-
-
-export { default as ButtonTest } from 'base/ButtonTest.svelte'
