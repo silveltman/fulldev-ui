@@ -54,7 +54,7 @@
 			class="size-{size}"
 			{content}
 			{disabled}
-			variant="transparent"
+			variant="ghost"
 		/>
 	</Hst.Variant>
 </Hst.Story>

@@ -35,4 +35,4 @@ export { default as Split } from 'layout/Split.svelte'
 export { default as Stack } from 'layout/Stack.svelte'
 
 
-
+export { default as ButtonTest } from 'base/ButtonTest.svelte'

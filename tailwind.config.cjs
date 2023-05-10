@@ -45,7 +45,6 @@ module.exports = {
 		require('rippleui')({
 			defaultStyle: false,
 			themes: [],
-
 		}),
 		require('tailwindcss-themer')({
 			defaultTheme: {

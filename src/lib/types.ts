@@ -95,7 +95,7 @@ export interface TextFieldContent {
 	placeholder?: string,
 }
 
-export interface TextAreaContent {
+export interface TextareaContent {
 	label?: string,
 	placeholder?: string,
 }

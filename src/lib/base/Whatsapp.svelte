@@ -11,7 +11,7 @@
 <a
 	target="_blank"
 	href="https://wa.me/{content.tel}"
-	class="absolute right-1 bottom-1 rounded-[12px] bg-[#24D466] p-1 hover:bg-[#1DB954]
+	class="fixed right-md bottom-md rounded-[12px] bg-[#02CB20] p-1 hover:bg-[#00BE1C]
 		{className}
 	"
 	{...$$restProps}

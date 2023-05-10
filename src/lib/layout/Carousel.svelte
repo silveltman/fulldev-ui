@@ -6,7 +6,7 @@
 
 <svelte:element
 	this={as}
-	class="scrollbar-thumb-front-300 daisy-carousel items-start gap-x-md pb-md !scrollbar-thin scrollbar-track-base-300 [&>*]:daisy-carousel-item lg:pb-lg [&::-webkit-scrollbar]:block
+	class="daisy-carousel items-start gap-x-md pb-md !scrollbar !scrollbar-track-base-3 !scrollbar-thumb-base-7 [&>*]:daisy-carousel-item hover:!scrollbar-thumb-base-8 lg:pb-lg [&::-webkit-scrollbar]:block
 
         {className}
     "

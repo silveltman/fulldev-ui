@@ -97,6 +97,45 @@ module.exports = plugin(
 				`.${item} &`,
 			])
 		})
+
+		addComponents({
+			'.solid': {
+				backgroundColor: theme('colors.base.9'),
+				color: 'white',
+				'&:hover': {
+					backgroundColor: theme('colors.base.10'),
+				},
+			},
+			'.soft': {
+				backgroundColor: theme('colors.base.3'),
+				color: theme('colors.base.11'),
+				'&:hover': {
+					backgroundColor: theme('colors.base.4'),
+				},
+				'&:active, &:focus': {
+					backgroundColor: theme('colors.base.5'),
+				},
+			},
+			'.ringed': {
+				borderWidth: '2px',
+				borderColor: theme('colors.base.7'),
+				backgroundColor: 'transparent',
+				color: theme('colors.base.11'),
+				'&:hover, &:active, &:focus': {
+					borderColor: theme('colors.base.8'),
+				},
+			},
+			'.ghost': {
+				backgroundColor: 'transparent',
+				color: theme('colors.base.11'),
+				'&:hover': {
+					backgroundColor: theme('colors.base.4'),
+				},
+				'&:active, &:focus': {
+					backgroundColor: theme('colors.base.5'),
+				},
+			},
+		})
 	},
 	{
 		theme: {
