@@ -18,7 +18,9 @@
 	class="group flex w-full grow flex-col
 	  	
 		{center ? 'items-center text-center' : 'items-start'}
-		{box ? 'overflow-hidden rounded-box border border-base-6 bg-base-2' : 'gap-lg size-sm:gap-md'}
+		{box
+		? 'overflow-hidden rounded-card border border-base-6 bg-base-2'
+		: 'gap-md size-sm:gap-sm size-lg:gap-lg '}
 		{box && content.href && 'group hover:border-base-8'}
 		
 
@@ -37,7 +39,7 @@
 			>
 				<Image
 					{sizes}
-					class="rounded-box object-cover
+					class="rounded-card object-cover
 					{box && '!rounded-b-[0px]'}
 					{content.href && 'group-hover:opacity-75'}
 					"
@@ -48,7 +50,7 @@
 	</slot>
 	<div
 		class="flex flex-col gap-sm 
-		{box && 'p-lg'}
+		{box && 'p-md size-sm:p-sm size-lg:p-lg'}
 	"
 	>
 		<slot name="body">
@@ -58,12 +60,12 @@
 				</span>
 			{/if}
 			{#if content.heading}
-				<h4 class="size-sm:text-base">
+				<h4 class="text-base size-sm:text-sm size-lg:text-lg">
 					{content.heading}
 				</h4>
 			{/if}
 			{#if content.textarea}
-				<p class="size-sm:text-sm">
+				<p class="text-sm size-sm:text-xs size-lg:text-base">
 					{content.textarea}
 				</p>
 			{/if}

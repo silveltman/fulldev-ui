@@ -27,7 +27,7 @@
 
 <svelte:element
 	this={as}
-	class="scrollbar flex snap-x snap-start items-start gap-x-md overflow-x-scroll scroll-smooth pb-md max-sm:-mx-4  max-sm:px-4 [&>*]:w-60 [&>*]:shrink-0 [&>*]:snap-center [&>*]:size-sm:w-40 [&>*]:size-lg:w-80 [&>*]:sm:w-[320px] [&>*]:size-sm:sm:w-[218px] [&>*]:size-lg:sm:w-[448px] {className}"
+	class="scrollbar -mx-4 flex snap-x snap-start items-start gap-x-md overflow-x-scroll scroll-smooth px-4 pb-md md:-mx-2xl md:px-2xl 2xl:-mx-[calc(50vw-720px)] 2xl:px-[calc(50vw-720px)]  [&>*]:w-60 [&>*]:shrink-0 [&>*]:snap-center [&>*]:size-sm:w-40 [&>*]:size-lg:w-80 [&>*]:sm:w-[320px] [&>*]:size-sm:sm:w-[218px] [&>*]:size-lg:sm:w-[448px] {className}"
 >
 	<slot {imageSizes} />
 </svelte:element>

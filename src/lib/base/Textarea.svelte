@@ -20,7 +20,7 @@
 		placeholder={label}
 		{rows}
 		{required}
-		class="peer w-full rounded-input !border-2 border-base-7 px-2.5 pt-7 pb-3 text-base placeholder:text-base-11 placeholder-shown:py-3"
+		class="peer w-full rounded-input !border-2 border-base-7 bg-transparent px-2.5 pt-7 pb-3 text-base placeholder:text-base-11 placeholder-shown:py-3"
 	/>
 	<span class="absolute top-2 px-3 text-xs text-base-11 peer-placeholder-shown:hidden">
 		{label}

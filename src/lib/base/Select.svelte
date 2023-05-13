@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { IconAsterisk } from '@tabler/icons-svelte';
+	import { IconAsterisk, IconChevronDown } from '@tabler/icons-svelte';
 
 	let className = '';
 	export { className as class };
@@ -19,7 +19,7 @@
 		name={id}
 		placeholder={label}
 		{required}
-		class="h-12 w-full rounded-input !border-2 border-base-7 pl-2.5 pt-4 pb-0 text-base leading-[1] placeholder:text-base-11"
+		class="h-12 w-full rounded-input !border-2 border-base-7 bg-transparent fill-red-500 pl-2.5 pt-4 pb-0 text-base leading-[1] placeholder:text-base-11"
 	>
 		{#if label}
 			<option

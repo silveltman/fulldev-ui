@@ -12,6 +12,8 @@
 	import Textfield from 'base/Textfield.svelte';
 	import Textarea from 'base/Textarea.svelte';
 	import Select from 'base/Select.svelte';
+	import Radio from 'base/Radio.svelte';
+	import Card from 'base/Card.svelte';
 
 	const images = [
 		{

@@ -20,7 +20,7 @@
 		name={id}
 		placeholder={label}
 		{required}
-		class="peer h-12 w-full rounded-input !border-2 border-base-7 px-2.5 pt-6 text-base leading-[1.5] !ring-0 placeholder:text-base-11 placeholder-shown:py-3 "
+		class="peer h-12 w-full rounded-input !border-2 border-base-7 bg-transparent px-2.5 pt-6 text-base leading-[1.5] !ring-0 placeholder:text-base-11 placeholder-shown:py-3 "
 	/>
 	<span class="absolute top-0.5 px-3 text-xs text-base-11 peer-placeholder-shown:hidden">
 		{label}

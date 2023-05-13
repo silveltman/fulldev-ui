@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import type { SocialContent } from '$lib/types';
 
 	import {
@@ -42,9 +42,9 @@
 	export let content: SocialContent;
 
 	export let size: 'sm' | 'md' | 'lg' = 'md';
-</script>
+</script> -->
 
-<a
+<!-- <a
 	target="_blank"
 	href={content.href}
 	title={content.icon}
@@ -67,4 +67,4 @@
 		this={componentMap[content.icon]}
 		stroke={1.5}
 	/>
-</a>
+</a> -->

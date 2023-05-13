@@ -19,9 +19,9 @@ module.exports = {
 			subheading: '"Inter", sans-serif',
 		},
 		lineHeight: {
-			base: 1.5,
-			heading: 1.125,
-			subheading: 1.125,
+			heading: 1.25,
+			subheading: 1.25,
+			base: 1.625,
 		},
 		fontWeight: {
 			base: 400,

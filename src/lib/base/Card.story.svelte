@@ -5,9 +5,9 @@
 	export let Hst: Hst;
 
 	let content: CardContent = {
-		eyebrow: 'Lorem ipsum',
+		// eyebrow: 'Lorem ipsum',
 		heading: 'Heading',
-		textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		// textarea: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 		image: {
 			src: 'https://via.placeholder.com/150',
 			alt: 'Alt text'
