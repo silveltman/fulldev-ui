@@ -7,6 +7,8 @@
 	import Block from 'layout/Block.svelte';
 	import Box from 'layout/Box.svelte';
 	import Grid from 'layout/Grid.svelte';
+	import Carousel from 'layout/Carousel.svelte';
+	import Container from 'layout/Container.svelte';
 
 	const images = [
 		{
@@ -77,10 +79,22 @@
 	</svelte:fragment>
 </Navbar> -->
 
-<Block>
-	<Grid>
+<Container>
+	<Carousel class="size-sm">
 		{#each { length: 12 } as i}
 			<div class="h-20 w-full bg-red-100 ring-1 ring-inset ring-black" />
 		{/each}
-	</Grid>
-</Block>
+	</Carousel>
+	<Carousel>
+		{#each { length: 12 } as i}
+			<div class="h-20 w-full bg-red-100 ring-1 ring-inset ring-black" />
+		{/each}
+	</Carousel>
+	<Carousel class="size-lg">
+		{#each { length: 12 } as i}
+			<div class="h-20 w-full bg-red-100 ring-1 ring-inset ring-black" />
+		{/each}
+	</Carousel>
+</Container>
+
+<div class="h-[2000px]" />

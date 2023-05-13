@@ -140,6 +140,22 @@ module.exports = plugin(
 					backgroundColor: theme('colors.base.5'),
 				},
 			},
+			'.scrollbar': {
+				scrollbarColor: theme('colors.base.3'),
+				scrollbarWidth: 'auto',
+				'&::-webkit-scrollbar': {
+				},
+				'&::-webkit-scrollbar-track': {
+					background: theme('colors.base.3'),
+				},
+				'&::-webkit-scrollbar-thumb': {
+					backgroundColor: theme('colors.base.7'),
+					borderRadius: theme('borderRadius.card'),
+					'&:hover': {
+						backgroundColor: theme('colors.blue.8'),
+					},
+				},
+			},
 		})
 	},
 	{

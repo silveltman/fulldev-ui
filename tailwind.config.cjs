@@ -33,14 +33,13 @@ module.exports = {
 		},
 		borderRadius: {
 			box: '1rem',
-			panel: '1rem',
+			card: '1rem',
 			button: '0.5rem',
 			input: '0.5rem',
 			image: '1rem',
 		},
 	},
 	plugins: [
-		require('tailwind-scrollbar'),
 		require('@tailwindcss/typography'),
 		require('@tailwindcss/aspect-ratio'),
 		require('rippleui')({
