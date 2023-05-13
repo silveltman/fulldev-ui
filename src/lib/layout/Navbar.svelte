@@ -4,7 +4,7 @@
 	let className = '';
 	export { className as class };
 
-	export let box: boolean = false;
+	export let box: boolean = true;
 	export let position: 'relative' | 'fixed' | 'absolute' | 'sticky' = 'relative';
 </script>
 

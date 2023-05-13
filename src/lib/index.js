@@ -38,6 +38,6 @@ export { default as Drawer } from 'layout/Drawer.svelte'
 export { default as Prose } from 'layout/Prose.svelte'
 
 // Navigation
-export { default as Navbar } from 'slot/Navbar.svelte'
-export { default as Footer } from 'slot/Footer.svelte'
+export { default as Navbar } from 'layout/Navbar.svelte'
+export { default as Footer } from 'layout/Footer.svelte'
 

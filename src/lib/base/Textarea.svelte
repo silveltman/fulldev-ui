@@ -1,36 +1,34 @@
 <script lang="ts">
-	import type { TextareaContent } from '$lib/types';
+	import { IconAsterisk } from '@tabler/icons-svelte';
 
 	let className = '';
 	export { className as class };
-	export let content: TextareaContent;
-
 	export let required: boolean = false;
-	export let name: string;
 	export let rows: number = 5;
+	export let id: string;
+	export let label: string;
 </script>
 
-<div
-	class="flex flex-col gap-xs {className}"
+<label
+	for={id}
+	class="relative flex {className}"
 	{...$$restProps}
 >
-	{#if content.label}
-		<label
-			for={name}
-			class="label text-sm"
-		>
-			{content.label}
-			{#if required}
-				*
-			{/if}
-		</label>
-	{/if}
 	<textarea
-		id={name}
+		{id}
+		name={id}
+		placeholder={label}
 		{rows}
-		{name}
-		placeholder={content.placeholder}
 		{required}
-		class="ringed textarea max-w-none rounded-input text-base"
+		class="peer w-full rounded-input !border-2 border-base-7 px-2.5 pt-7 pb-3 text-base placeholder:text-base-11 placeholder-shown:py-3"
 	/>
-</div>
+	<span class="absolute top-2 px-3 text-xs text-base-11 peer-placeholder-shown:hidden">
+		{label}
+	</span>
+	{#if required}
+		<IconAsterisk
+			size={12}
+			class="absolute right-2 top-1 hidden text-base-11 peer-placeholder-shown:block"
+		/>
+	{/if}
+</label>

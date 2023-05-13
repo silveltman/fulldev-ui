@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { Hst, WhatsappContent } from '$lib/types'
-	import Whatsapp from './Whatsapp.svelte'
-	export let Hst: Hst
+	import type { Hst } from '$lib/types';
+	import Whatsapp from './Whatsapp.svelte';
+	export let Hst: Hst;
 
-	export let content: WhatsappContent = { tel: '31683485163' }
+	let tel: string = '31683485163';
 </script>
 
 <Hst.Story>
-	<Whatsapp {content} />
+	<Whatsapp {tel} />
 </Hst.Story>

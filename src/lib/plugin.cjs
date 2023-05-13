@@ -103,6 +103,9 @@ module.exports = plugin(
 			])
 		})
 
+
+		addVariant('has-no-value', '&:has(option:checked[value=""])')
+
 		addComponents({
 			'.solid': {
 				backgroundColor: theme('colors.base.9'),

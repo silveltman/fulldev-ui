@@ -1,35 +1,34 @@
 <script lang="ts">
-	import type { TextFieldContent } from '$lib/types';
+	import { IconAsterisk } from '@tabler/icons-svelte';
 
 	let className = '';
 	export { className as class };
-
-	export let content: TextFieldContent;
-
 	export let type: 'text' | 'email' | 'password' | 'tel' | 'url' | 'search' = 'text';
 	export let required: boolean = false;
-	export let name: string;
+	export let id: string;
+	export let label: string;
 </script>
 
 <label
-	for={name}
-	class="flex w-full flex-col gap-xs {className}"
+	for={id}
+	class="relative flex items-center {className}"
 	{...$$restProps}
 >
-	{#if content.label}
-		<span class="label text-sm">
-			{content.label}
-			{#if required}
-				*
-			{/if}
-		</span>
-	{/if}
 	<input
 		{type}
-		id={name}
-		{name}
-		placeholder={content.placeholder}
+		{id}
+		name={id}
+		placeholder={label}
 		{required}
-		class="ringed input max-w-none rounded-input text-base"
+		class="peer h-12 w-full rounded-input !border-2 border-base-7 px-2.5 pt-6 text-base leading-[1.5] !ring-0 placeholder:text-base-11 placeholder-shown:py-3 "
 	/>
+	<span class="absolute top-0.5 px-3 text-xs text-base-11 peer-placeholder-shown:hidden">
+		{label}
+	</span>
+	{#if required}
+		<IconAsterisk
+			size={12}
+			class="absolute top-2 right-2 hidden text-base-11 peer-placeholder-shown:block"
+		/>
+	{/if}
 </label>

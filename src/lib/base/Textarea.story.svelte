@@ -1,31 +1,22 @@
 <script lang="ts">
-	import type { Hst, TextAreaContent } from '$lib/types';
+	import type { Hst } from '$lib/types';
 	import Textarea from './Textarea.svelte';
 	export let Hst: Hst;
 
-	let content: TextAreaContent = {
-		label: 'Label',
-		placeholder: 'Placeholder'
-	};
-
-	let rows = 5;
+	let required: boolean = false;
 </script>
 
 <Hst.Story>
 	<svelte:fragment slot="controls">
-		<Hst.Json
-			title="Content"
-			bind:value={content}
-		/>
-		<Hst.Number
-			title="Rows"
-			bind:value={rows}
+		<Hst.Checkbox
+			title="Required"
+			bind:value={required}
 		/>
 	</svelte:fragment>
 
 	<Textarea
-		{content}
-		{rows}
-		name="textarea"
+		{required}
+		label="Label"
+		id="textarea"
 	/>
 </Hst.Story>
