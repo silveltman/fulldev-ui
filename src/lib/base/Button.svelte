@@ -13,7 +13,7 @@
 	on:click
 	type={content.href ? undefined : 'button'}
 	href={content.href}
-	class="button btn !scale-100 rounded-button px-5 py-2.5 text-sm font-button transition-none size-sm:btn-sm size-lg:btn-lg size-sm:text-xs size-lg:text-base 
+	class="button btn !scale-100 rounded-button px-5 py-2.5 text-base font-button transition-none size-sm:btn-sm size-lg:btn-lg size-sm:text-sm size-lg:text-lg 
 		{variant}
 		{className}
 	"

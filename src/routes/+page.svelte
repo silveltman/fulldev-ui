@@ -1,10 +1,12 @@
 <script lang="ts">
-	import Navbar from '$lib/Navbar/Navbar.svelte';
+	import Navbar from 'slot/Navbar.svelte';
 	import Button from 'base/Button.svelte';
 	import Link from 'base/Link.svelte';
 	import Drawer from 'layout/Drawer.svelte';
-	import DrawerToggle from 'layout/DrawerToggle.svelte';
-	import { text } from 'svelte/internal';
+	import Footer from 'slot/Footer.svelte';
+	import Block from 'layout/Block.svelte';
+	import Box from 'layout/Box.svelte';
+	import Grid from 'layout/Grid.svelte';
 
 	const images = [
 		{
@@ -30,7 +32,7 @@
 	];
 </script>
 
-<Navbar>
+<!-- <Navbar floating>
 	<svelte:fragment slot="start">
 		<Drawer position="top">
 			<Link
@@ -73,4 +75,12 @@
 			content={{ text: 'Sign up' }}
 		/>
 	</svelte:fragment>
-</Navbar>
+</Navbar> -->
+
+<Block>
+	<Grid>
+		{#each { length: 12 } as i}
+			<div class="h-20 w-full bg-red-100 ring-1 ring-inset ring-black" />
+		{/each}
+	</Grid>
+</Block>

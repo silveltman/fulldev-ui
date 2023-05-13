@@ -23,5 +23,5 @@
 	sizes={sizesString}
 	src={content.src}
 	alt={content.alt}
-	class="h-auto w-full rounded-image {className}"
+	class={className}
 />

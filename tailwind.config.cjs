@@ -33,15 +33,16 @@ module.exports = {
 		},
 		borderRadius: {
 			box: '1rem',
+			panel: '1rem',
 			button: '0.5rem',
 			input: '0.5rem',
-			card: '1rem',
 			image: '1rem',
 		},
 	},
 	plugins: [
 		require('tailwind-scrollbar'),
 		require('@tailwindcss/typography'),
+		require('@tailwindcss/aspect-ratio'),
 		require('rippleui')({
 			defaultStyle: false,
 			themes: [],
@@ -100,4 +101,5 @@ module.exports = {
 		utils: false,
 		prefix: "daisy-",
 	},
+	assets: './src/assets'
 }

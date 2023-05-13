@@ -81,6 +81,11 @@ module.exports = plugin(
 			h6: {
 				fontSize: theme('fontSize.sm'),
 			},
+			img: {
+				borderRadius: theme('borderRadius.image'),
+				width: '100%',
+				height: 'auto',
+			}
 		})
 
 		// Add selectors for components, like button:my-property.

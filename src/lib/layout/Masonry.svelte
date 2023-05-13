@@ -12,29 +12,29 @@
 	} = {
 		sm: {
 			base: '50vw',
-			sm: '33vw',
-			lg: '16vw',
-			'2xl': '256px'
+			sm: '330px'
 		},
 		md: {
 			base: '50vw',
-			lg: '25vw',
-			'2xl': '384px'
+			sm: '461px'
 		},
 		lg: {
 			base: '100vw',
-			md: '50vw',
-			lg: '33vw',
-			'2xl': '512px'
+			sm: '50vw',
+			md: '576px'
 		}
 	};
+
+	// const imageSizes = {
+	// 	sm: '(max-width: 640px) 50vw, 330px',
+	// 	md: '(max-width: 640px) 50vw, 461px',
+	// 	lg: '(max-width: 640px) 100vw, (max-width: 768px) 50vw, 576px'
+	// };
 </script>
 
 <svelte:element
 	this={as}
-	class="w-full columns-2 gap-x-md space-y-xl size-sm:columns-2 size-lg:columns-1 size-sm:sm:columns-3 md:gap-x-lg md:space-y-2xl size-lg:md:columns-2 lg:columns-4 size-sm:lg:columns-6 size-lg:lg:columns-3 [&>*]:break-inside-avoid-column
-        {className}
-    "
+	class="size-lg w-full columns-2 gap-x-0 size-sm:columns-2 size-lg:columns-1 sm:columns-[308px] size-sm:sm:columns-[220px] size-lg:sm:columns-2 size-lg:md:columns-[385px] {className}"
 >
 	<slot {imageSizes} />
 </svelte:element>

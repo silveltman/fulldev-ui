@@ -6,7 +6,7 @@
 
 <svelte:element
 	this={as}
-	class="relative w-full rounded-box border border-base-6 bg-base-2 px-4 py-2xl md:px-2xl {className}"
+	class="relative w-full rounded-panel border border-base-6 bg-base-2 px-4 py-2xl md:px-2xl {className}"
 >
 	<slot />
 </svelte:element>

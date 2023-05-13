@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { HighlightContent } from '$lib/types';
 	import Eyebrow from 'base/Eyebrow.svelte';
+	import Button from './Button.svelte';
 
 	let className = '';
 	export { className as class };
@@ -18,10 +19,7 @@
 	{/if}
 
 	{#if content.heading}
-		<svelte:element
-			this={heading}
-			class="text-2xl size-sm:text-xl size-lg:text-3xl"
-		>
+		<svelte:element this={heading}>
 			{content.heading}
 		</svelte:element>
 	{/if}
@@ -32,7 +30,14 @@
 		</p>
 	{/if}
 
-	<div class="mt-2xl flex w-full flex-col gap-md sm:inline-flex sm:w-auto sm:flex-row">
-		<slot name="buttons" />
-	</div>
+	{#if content.button_primary || content.button_secondary}
+		<div class="mt-2xl flex w-full flex-col gap-md sm:inline-flex sm:w-auto sm:flex-row">
+			{#if content.button_primary}
+				<Button content={content.button_primary} />
+			{/if}
+			{#if content.button_secondary}
+				<Button content={content.button_secondary} />
+			{/if}
+		</div>
+	{/if}
 </div>

@@ -18,7 +18,7 @@
 	class={className}
 >
 	<slot name="toggle">
-		<div class="ghost btn-circle btn ml-auto text-base-11 transition-none">
+		<div class="btn-circle btn ghost ml-auto text-base-11 transition-none">
 			<IconMenu2 />
 		</div>
 	</slot>
@@ -26,7 +26,7 @@
 
 <!-- Overlay -->
 <label
-	class="overlay bg-base-12/20"
+	class="overlay bg-black/30"
 	for="drawer-{position}"
 />
 
@@ -41,14 +41,14 @@
 
 		{className}"
 >
-	<header class="flex justify-between border-b p-sm">
+	<header class="flex justify-between border-b border-base-6 p-sm">
 		<Container
 			class="flex justify-between {position === 'left' || position === 'right' ? '!px-0' : ''}"
 		>
 			<slot name="header" />
 			<label
 				for="drawer-{position}"
-				class="ghost btn-circle btn ml-auto text-base-11 transition-none"
+				class="btn-circle btn ghost ml-auto text-base-11 transition-none"
 			>
 				<IconX />
 			</label>
