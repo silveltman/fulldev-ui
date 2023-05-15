@@ -1,10 +1,8 @@
 <script lang="ts">
-	import type { Hst, EyebrowContent } from '$lib/types';
+	import type { Hst } from '$lib/types';
 	import Eyebrow from './Eyebrow.svelte';
-	import Select from './Select.svelte';
 	export let Hst: Hst;
 
-	let content: EyebrowContent = 'Lorem ipsum';
 	let size: 'sm' | 'md' | 'lg' = 'md';
 </script>
 
@@ -18,7 +16,7 @@
 	</svelte:fragment>
 
 	<Eyebrow
-		{content}
+		text="Lorem ipsum"
 		class="size-{size}"
 		variant="primary"
 	/>

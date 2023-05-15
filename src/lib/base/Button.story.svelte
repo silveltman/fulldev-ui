@@ -1,13 +1,10 @@
 <script lang="ts">
-	import type { Hst, ButtonContent } from '$lib/types';
+	import type { Hst } from '$lib/types';
 	import Button from './Button.svelte';
 	export let Hst: Hst;
 
-	let content: ButtonContent = {
-		text: 'Click me',
-		href: '#'
-	};
-
+	let text: string = 'Click me';
+	let href: string = '#';
 	let disabled: true | undefined = undefined;
 	let size: 'sm' | 'md' | 'lg' = 'md';
 </script>
@@ -28,7 +25,8 @@
 	<Hst.Variant title="Solid">
 		<Button
 			class="size-{size}"
-			{content}
+			{text}
+			{href}
 			{disabled}
 			variant="solid"
 		/>
@@ -36,7 +34,8 @@
 	<Hst.Variant title="Ringed">
 		<Button
 			class="size-{size}"
-			{content}
+			{text}
+			{href}
 			{disabled}
 			variant="ringed"
 		/>
@@ -44,7 +43,8 @@
 	<Hst.Variant title="Soft">
 		<Button
 			class="size-{size}"
-			{content}
+			{text}
+			{href}
 			{disabled}
 			variant="soft"
 		/>
@@ -52,7 +52,8 @@
 	<Hst.Variant title="Transparent">
 		<Button
 			class="size-{size}"
-			{content}
+			{text}
+			{href}
 			{disabled}
 			variant="ghost"
 		/>

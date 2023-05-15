@@ -43,7 +43,7 @@
 					{box && '!rounded-b-[0px]'}
 					{content.href && 'group-hover:opacity-75'}
 					"
-					content={content.image}
+					{...content.image}
 				/>
 			</div>
 		{/if}
@@ -71,9 +71,9 @@
 			{/if}
 		</slot>
 	</div>
-	{#if $$slots.buttons}
+	{#if $$slots.footer}
 		<div class="flex flex-wrap gap-lg">
-			<slot name="buttons" />
+			<slot name="footer" />
 		</div>
 	{/if}
 </svelte:element>

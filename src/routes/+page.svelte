@@ -14,6 +14,7 @@
 	import Select from 'base/Select.svelte';
 	import Radio from 'base/Radio.svelte';
 	import Card from 'base/Card.svelte';
+	import Masonry from 'layout/Masonry.svelte';
 
 	const images = [
 		{
@@ -23,57 +24,36 @@
 		{
 			src: 'https://picsum.photos/seed/picsum/512/512',
 			alt: 'Lorem Picsum'
-		},
-		{
-			src: 'https://picsum.photos/seed/picsum/512/512',
-			alt: 'Lorem Picsum'
-		},
-		{
-			src: 'https://picsum.photos/seed/picsum/512/512',
-			alt: 'Lorem Picsum'
-		},
-		{
-			src: 'https://picsum.photos/seed/picsum/512/512',
-			alt: 'Lorem Picsum'
 		}
+		// {
+		// 	src: 'https://picsum.photos/seed/picsum/512/512',
+		// 	alt: 'Lorem Picsum'
+		// },
+		// {
+		// 	src: 'https://picsum.photos/seed/picsum/512/512',
+		// 	alt: 'Lorem Picsum'
+		// },
+		// {
+		// 	src: 'https://picsum.photos/seed/picsum/512/512',
+		// 	alt: 'Lorem Picsum'
+		// }
 	];
 </script>
 
-<div class="flex flex-col gap-md">
-	<Textfield
-		label="naam"
-		id="naam"
-	/>
-	<div class="flex gap-md">
-		<Textfield
-			label="postcode"
-			id="postcode"
+<Masonry>
+	{#each images as image}
+		<img
+			src={image.src}
+			alt={image.alt}
 		/>
-		<Textfield
-			label="huisnummer"
-			id="huisnummer"
+	{/each}
+</Masonry>
+
+<Grid>
+	{#each images as image}
+		<img
+			src={image.src}
+			alt={image.alt}
 		/>
-	</div>
-	<Select
-		required
-		options={['hello', 'world']}
-		id="select"
-		label="Label"
-	/>
-	<Textarea
-		label="bericht"
-		id="bericht"
-	/>
-</div>
-<Button
-	text="Click me"
-	class="size-sm"
-/>
-<Button
-	text="Click me"
-	class="size-md"
-/>
-<Button
-	text="Click me"
-	class="size-lg"
-/>
+	{/each}
+</Grid>

@@ -6,52 +6,24 @@
 
 	let content: SlotGalleryContent = [
 		{
-			src: 'https://picsum.photos/500/500',
-			alt: 'Image 1'
+			src: '/static/placeholder-portrait.jpeg',
+			alt: 'My alt text'
 		},
 		{
-			src: 'https://picsum.photos/600/800',
-			alt: 'Image 2'
+			src: '/static/placeholder-landscape.jpeg',
+			alt: 'My alt text'
 		},
 		{
-			src: 'https://picsum.photos/700/400',
-			alt: 'Image 3'
+			src: '/static/placeholder-portrait.jpeg',
+			alt: 'My alt text'
 		},
 		{
-			src: 'https://picsum.photos/800/800',
-			alt: 'Image 1'
+			src: '/static/placeholder-landscape.jpeg',
+			alt: 'My alt text'
 		},
 		{
-			src: 'https://picsum.photos/500/500',
-			alt: 'Image 1'
-		},
-		{
-			src: 'https://picsum.photos/600/800',
-			alt: 'Image 2'
-		},
-		{
-			src: 'https://picsum.photos/700/400',
-			alt: 'Image 3'
-		},
-		{
-			src: 'https://picsum.photos/800/800',
-			alt: 'Image 1'
-		},
-		{
-			src: 'https://picsum.photos/500/500',
-			alt: 'Image 1'
-		},
-		{
-			src: 'https://picsum.photos/600/800',
-			alt: 'Image 2'
-		},
-		{
-			src: 'https://picsum.photos/700/400',
-			alt: 'Image 3'
-		},
-		{
-			src: 'https://picsum.photos/800/800',
-			alt: 'Image 1'
+			src: '/static/placeholder-portrait.jpeg',
+			alt: 'My alt text'
 		}
 	];
 </script>

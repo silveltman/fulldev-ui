@@ -1,9 +1,10 @@
 <script lang="ts">
-	import type { ImageContent, ImageSizes } from '$lib/types';
+	import type { ImageSizes } from '$lib/types';
 
 	let className = '';
 	export { className as class };
-	export let content: ImageContent;
+	export let src: string;
+	export let alt: string;
 
 	export let sizes: ImageSizes = {
 		base: '100vw'
@@ -21,7 +22,7 @@
 
 <img
 	sizes={sizesString}
-	src={content.src}
-	alt={content.alt}
+	{src}
+	{alt}
 	class={className}
 />

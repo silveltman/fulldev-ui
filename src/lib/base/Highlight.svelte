@@ -14,7 +14,7 @@
 	{#if content.eyebrow}
 		<Eyebrow
 			class="mb-lg size-sm:mb-md size-lg:mb-xl"
-			content={content.eyebrow}
+			text={content.eyebrow}
 		/>
 	{/if}
 
@@ -33,10 +33,10 @@
 	{#if content.button_primary || content.button_secondary}
 		<div class="mt-2xl flex w-full flex-col gap-md sm:inline-flex sm:w-auto sm:flex-row">
 			{#if content.button_primary}
-				<Button content={content.button_primary} />
+				<Button {...content.button_primary} />
 			{/if}
 			{#if content.button_secondary}
-				<Button content={content.button_secondary} />
+				<Button {...content.button_secondary} />
 			{/if}
 		</div>
 	{/if}
