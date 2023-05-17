@@ -4,7 +4,7 @@
 	import Link from 'base/Link.svelte';
 	import Drawer from 'layout/Drawer.svelte';
 	import Footer from 'layout/Footer.svelte';
-	import Block from 'layout/Block.svelte';
+	import Block from 'layout/Section.svelte';
 	import Box from 'layout/Box.svelte';
 	import Grid from 'layout/Grid.svelte';
 	import Carousel from 'layout/Carousel.svelte';
@@ -43,6 +43,7 @@
 <Masonry>
 	{#each images as image}
 		<img
+		class="sm:bg-black"
 			src={image.src}
 			alt={image.alt}
 		/>

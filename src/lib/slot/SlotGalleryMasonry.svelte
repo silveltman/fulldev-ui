@@ -14,7 +14,7 @@
 	{#each content as item}
 		<Image
 			class="h-auto w-full shrink-0 snap-start object-contain max-lg:rounded-[0px]"
-			content={item}
+			{...item}
 		/>
 	{/each}
 

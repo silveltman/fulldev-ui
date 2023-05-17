@@ -26,7 +26,7 @@ export { default as SlotGallery } from 'slot/SlotGallery.svelte'
 export { default as SlotGalleryMasonry } from 'slot/SlotGalleryMasonry.svelte'
 
 // Layout
-export { default as Block } from 'layout/Block.svelte'
+export { default as Block } from 'layout/Section.svelte'
 export { default as Box } from 'layout/Box.svelte'
 export { default as Carousel } from 'layout/Carousel.svelte'
 export { default as Container } from 'layout/Container.svelte'

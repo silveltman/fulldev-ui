@@ -7,6 +7,7 @@
 <svelte:element
 	this={as}
 	class="relative w-full py-4xl {className}"
+	{...$$restProps}
 >
 	<slot />
 </svelte:element>
