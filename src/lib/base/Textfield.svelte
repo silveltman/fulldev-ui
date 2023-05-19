@@ -29,7 +29,7 @@
 			{placeholder}
 			{required}
 			{disabled}
-			class="peer w-full rounded-input !border-none py-space-3 px-space-4 text-2 leading-[1.25] !ring-2 !ring-inset ring-base-7 placeholder:text-base-11 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
+			class="peer w-full rounded-input !border-none bg-transparent py-space-3 px-space-4 text-2 leading-[1.25] !ring-2 !ring-inset ring-base-7 placeholder:text-base-11 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
 		/>
 		{#if required}
 			<IconAsterisk

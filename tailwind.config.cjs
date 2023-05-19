@@ -48,31 +48,31 @@ module.exports = {
 			themes: []
 		}),
 		require('tailwindcss-themer')({
-			defaultTheme: {
-				extend: {
-					colors: {
-						base: getRadixColors(radixColors.gray)
-					},
-					fontSize: {
-						1: 'var(--text-sm)',
-						2: 'var(--text-base)',
-						3: 'var(--text-2xl)'
-					},
-					spacing: {
-						'space-1': '4px',
-						'space-2': '8px',
-						'space-3': '12px',
-						'space-4': '16px',
-						'space-5': '24px',
-						'space-6': '32px',
-						'space-7': '48px',
-						'space-8': '64px',
-						'space-9': '96px',
-						'space-10': '128px',
-						'space-11': '192px'
-					}
-				}
-			},
+			// defaultTheme: {
+			// 	extend: {
+			// 		colors: {
+			// 			base: getRadixColors(radixColors.gray)
+			// 		},
+			// 		fontSize: {
+			// 			1: 'var(--text-sm)',
+			// 			2: 'var(--text-base)',
+			// 			3: 'var(--text-2xl)'
+			// 		},
+			// 		spacing: {
+			// 			'space-1': '4px',
+			// 			'space-2': '8px',
+			// 			'space-3': '12px',
+			// 			'space-4': '16px',
+			// 			'space-5': '24px',
+			// 			'space-6': '32px',
+			// 			'space-7': '48px',
+			// 			'space-8': '64px',
+			// 			'space-9': '96px',
+			// 			'space-10': '128px',
+			// 			'space-11': '192px'
+			// 		}
+			// 	}
+			// },
 			themes: [
 				{
 					name: 'light',
