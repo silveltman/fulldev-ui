@@ -1,12 +1,13 @@
 <script lang="ts">
 	let className: string = '';
 	export { className as class };
-	export let as: string = 'div';
+	export let as: string = 'section';
 </script>
 
 <svelte:element
 	this={as}
-	class="relative w-full rounded-box border border-base-6 bg-base-2 px-4 py-2xl md:px-2xl {className}"
+	class="relative w-full py-4xl {className}"
+	{...$$restProps}
 >
 	<slot />
 </svelte:element>

@@ -2,9 +2,10 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = plugin(
-	function ({ addBase, theme }) {
+	function ({ addBase, addVariant, addComponents, theme }) {
 		addBase({
 			':root': {
+				// 75%
 				'--text-xs': '12px',
 				'--text-sm': '14px',
 				'--text-base': '16px',
@@ -15,8 +16,9 @@ module.exports = plugin(
 
 				'--space-xs': '3px',
 				'--space-sm': '6px',
-				'--space-md': '12px',
-				'--space-lg': '18px',
+				'--space-md': '9px',
+				'--space-lg': '12px',
+				'--space-lgg': '18px',
 				'--space-xl': '24px',
 				'--space-2xl': '36px',
 				'--space-3xl': '48px',
@@ -25,6 +27,7 @@ module.exports = plugin(
 			},
 			'@screen sm': {
 				':root': {
+					// 100%
 					'--text-xs': '14px',
 					'--text-sm': '16px',
 					'--text-base': '18px',
@@ -35,8 +38,9 @@ module.exports = plugin(
 
 					'--space-xs': '4px',
 					'--space-sm': '8px',
-					'--space-md': '16px',
-					'--space-lg': '24px',
+					'--space-md': '12px',
+					'--space-lg': '16px',
+					'--space-xl': '24px',
 					'--space-xl': '32px',
 					'--space-2xl': '48px',
 					'--space-3xl': '64px',
@@ -51,35 +55,97 @@ module.exports = plugin(
 				backgroundColor: theme('colors.base.1'),
 			},
 			body: {
-				fontSize: theme('fontSize.base'),
+				fontSize: theme('fontSize.2'),
 			},
 			'h1, h2, h3': {
 				fontFamily: theme('fontFamily.heading'),
 				fontWeight: theme('fontWeight.heading'),
 				lineHeight: theme('lineHeight.heading'),
+				fontSize: theme('fontSize.3'),
 			},
 			'h4, h5, h6': {
 				fontFamily: theme('fontFamily.subheading'),
 				fontWeight: theme('fontWeight.subheading'),
 				lineHeight: theme('lineHeight.subheading'),
+				fontSize: theme('fontSize.2'),
 			},
-			h1: {
-				fontSize: theme('fontSize.3xl'),
+			img: {
+				borderRadius: theme('borderRadius.image'),
+				width: '100%',
+				height: 'auto',
+			}
+		})
+
+		// Add selectors for components, like button:my-property.
+		const components = ['button', 'textfield', 'card']
+		components.forEach(component => {
+			addVariant(component, `& .${component}`)
+		})
+
+		// Add variants for sizes. Use size-x to enable and size-x:my-property to style.
+		const variants = ['size-sm', 'size-md', 'size-lg']
+		variants.forEach(item => {
+			addVariant(`${item}`, [
+				`&.${item}`,
+				`.${item} &`,
+			])
+		})
+
+
+		addVariant('has-no-value', '&:has(option:checked[value=""])')
+
+		addComponents({
+			'.solid': {
+				backgroundColor: theme('colors.base.9'),
+				color: 'white',
+				'&:hover': {
+					backgroundColor: theme('colors.base.10'),
+				},
 			},
-			h2: {
-				fontSize: theme('fontSize.2xl'),
+			'.soft': {
+				backgroundColor: theme('colors.base.3'),
+				color: theme('colors.base.11'),
+				'&:hover': {
+					backgroundColor: theme('colors.base.4'),
+				},
+				'&:active, &:focus': {
+					backgroundColor: theme('colors.base.5'),
+				},
 			},
-			h3: {
-				fontSize: theme('fontSize.xl'),
+			'.ringed': {
+				borderWidth: '2px',
+				borderColor: theme('colors.base.7'),
+				backgroundColor: 'transparent',
+				color: theme('colors.base.11'),
+				'&:hover, &:active, &:focus': {
+					borderColor: theme('colors.base.8'),
+				},
 			},
-			h4: {
-				fontSize: theme('fontSize.lg'),
+			'.ghost': {
+				backgroundColor: 'transparent',
+				color: theme('colors.base.11'),
+				'&:hover': {
+					backgroundColor: theme('colors.base.4'),
+				},
+				'&:active, &:focus': {
+					backgroundColor: theme('colors.base.5'),
+				},
 			},
-			h5: {
-				fontSize: theme('fontSize.md'),
-			},
-			h6: {
-				fontSize: theme('fontSize.sm'),
+			'.scrollbar': {
+				scrollbarColor: theme('colors.base.3'),
+				scrollbarWidth: 'auto',
+				'&::-webkit-scrollbar': {
+				},
+				'&::-webkit-scrollbar-track': {
+					background: theme('colors.base.3'),
+				},
+				'&::-webkit-scrollbar-thumb': {
+					backgroundColor: theme('colors.base.7'),
+					borderRadius: theme('borderRadius.card'),
+					'&:hover': {
+						backgroundColor: theme('colors.blue.8'),
+					},
+				},
 			},
 		})
 	},

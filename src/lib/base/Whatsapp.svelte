@@ -1,23 +1,21 @@
 <script lang="ts">
-	import type { WhatsappContent } from '$lib/types';
 	import { IconBrandWhatsapp } from '@tabler/icons-svelte';
 
 	let className = '';
 	export { className as class };
-
-	export let content: WhatsappContent;
+	export let tel: string;
 </script>
 
 <a
 	target="_blank"
-	href="https://wa.me/{content.tel}"
-	class="absolute right-1 bottom-1 rounded-[12px] bg-[#24D466] p-1 hover:bg-[#1DB954]
+	href="https://wa.me/{tel}"
+	class="fixed right-md bottom-md rounded-[12px] bg-[#46A758] p-1 hover:bg-[#3D9B50]
 		{className}
 	"
 	{...$$restProps}
 >
 	<IconBrandWhatsapp
-		class="text-white"
+		class="-translate-y-px translate-x-px text-[#FBFEFC]"
 		size={48}
 		stroke={1.6}
 	/>

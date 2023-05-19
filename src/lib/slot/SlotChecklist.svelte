@@ -18,8 +18,8 @@
 			<p class="inline">{item.textarea}</p>
 			{#if item.button}
 				<Button
+					{...item.button}
 					class="btn-link mt-md"
-					content={item.button}
 				/>
 			{/if}
 		</li>

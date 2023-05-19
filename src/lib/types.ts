@@ -8,7 +8,7 @@ export interface ButtonContent {
 	href?: string
 }
 
-export interface DisclosureContent {
+export interface CollapseContent {
 	heading: string
 	textarea: string
 }
@@ -18,6 +18,31 @@ export type EyebrowContent = string
 export interface ImageContent {
 	src: string
 	alt: string
+}
+
+type LengthUnit =
+	| `${number}px`
+	| `${number}vw`
+	| `${number}vh`
+	| `${number}em`
+	| `${number}rem`
+	| `${number}%`;
+
+type CalcFunction =
+	| `calc(${LengthUnit} + ${LengthUnit})`
+	| `calc(${LengthUnit} - ${LengthUnit})`
+	| `calc(${LengthUnit} * ${number})`
+	| `calc(${LengthUnit} / ${number})`;
+
+type ImageSizesValue = LengthUnit | CalcFunction | undefined;
+
+export interface ImageSizes {
+	base?: ImageSizesValue;
+	sm?: ImageSizesValue;
+	md?: ImageSizesValue;
+	lg?: ImageSizesValue;
+	xl?: ImageSizesValue;
+	'2xl'?: ImageSizesValue;
 }
 
 export interface LinkContent {
@@ -70,7 +95,7 @@ export interface TextFieldContent {
 	placeholder?: string,
 }
 
-export interface TextAreaContent {
+export interface TextareaContent {
 	label?: string,
 	placeholder?: string,
 }
@@ -91,7 +116,7 @@ export interface SocialContent {
 // Slot
 // --------------------------------------------
 
-export type SlotAccordionContent = DisclosureContent[]
+export type AccordionContent = CollapseContent[]
 
 interface ChecklistItem {
 	heading?: string
@@ -100,7 +125,7 @@ interface ChecklistItem {
 }
 export type SlotChecklistContent = ChecklistItem[]
 
-export interface SlotHighlightContent {
+export interface HighlightContent {
 	eyebrow?: string
 	heading?: string
 	textarea?: string
@@ -118,11 +143,11 @@ interface StatsItem {
 	label?: string
 	value?: string
 }
-export type SlotStatsContent = StatsItem[]
+export type StatsContent = StatsItem[]
 
 export type SlotCardContent = CardContent[]
 
-export interface SlotNewsletterContent {
+export interface NewsletterContent {
 	textfield: {
 		placeholder?: string
 	}
@@ -138,28 +163,28 @@ export type SlotGalleryContent = ImageContent[]
 // --------------------------------------------
 
 export interface HeroContent {
-	highlight?: SlotHighlightContent
+	highlight?: HighlightContent
 	media?: SlotMediaContent
 }
 
 export interface CtaContent {
-	highlight?: SlotHighlightContent
+	highlight?: HighlightContent
 	media?: SlotMediaContent
 }
 
 export interface FaqContent {
-	highlight?: SlotHighlightContent
-	accordion?: SlotAccordionContent
+	highlight?: HighlightContent
+	accordion?: AccordionContent
 }
 
 export interface FeaturesContent {
-	highlight?: SlotHighlightContent
+	highlight?: HighlightContent
 	checklist?: SlotChecklistContent
 	media?: SlotMediaContent
 }
 
 export interface BlockCardsContent {
-	highlight?: SlotHighlightContent
+	highlight?: HighlightContent
 	cards?: SlotCardContent
 }
 
