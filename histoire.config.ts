@@ -9,5 +9,5 @@ export default defineConfig({
 		},
 		HstSvelte()
 	],
-	storyMatch: ['**/stories/*.story.svelte']
+	storyMatch: ['**/histoire/*.story.svelte']
 });
