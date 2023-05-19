@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Hst, RadioContent } from '$lib/types';
-	import Radio from './Radio.svelte';
+	import Radio from '../base/Radio.svelte';
 	export let Hst: Hst;
 
 	let options: RadioContent = [

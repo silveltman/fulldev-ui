@@ -3,9 +3,8 @@
 	import Highlight from 'base/Highlight.svelte';
 	export let Hst: Hst;
 
-	let size: 'lg' | 'md' | 'sm' = 'md';
+	let size: 'large' | 'medium' | 'small' = 'medium';
 
-	// Content props
 	let content: HighlightContent = {
 		eyebrow: 'Lorem ipsum',
 		heading: 'Lorem ipsum dolor sit amet',
@@ -27,12 +26,12 @@
 		<Hst.Select
 			title="size"
 			bind:value={size}
-			options={['sm', 'md', 'lg']}
+			options={['small', 'medium', 'large']}
 		/>
 	</svelte:fragment>
 
 	<Highlight
-		class="size-{size}"
+		class={size}
 		{content}
 	/>
 </Hst.Story>

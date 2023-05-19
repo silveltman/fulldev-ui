@@ -8,7 +8,7 @@
 
 <a
 	{href}
-	class="whitespace-nowrap text-base-11 hover:text-base-12
+	class="whitespace-nowrap text-2 text-base-11 hover:text-base-12 disabled:pointer-events-none disabled:opacity-50
     {activePathname === href && 'text-base-12'}
     {className}
 	"

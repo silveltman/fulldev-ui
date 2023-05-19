@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { CardContent, Hst } from '$lib/types';
-	import Card from './Card.svelte';
+	import Card from 'base/Card.svelte';
 	export let Hst: Hst;
 
 	let content: CardContent = {
@@ -13,18 +13,18 @@
 		}
 	};
 
-	let size: 'sm' | 'md' | 'lg' = 'md';
+	let size: 'small' | 'medium' | 'large' = 'medium';
 	let box: boolean = false;
 	let center: boolean = false;
 	let split: boolean = false;
 </script>
 
-<Hst.Story>
+<Hst.Story layout={{ type: 'grid', width: 384 }}>
 	<svelte:fragment slot="controls">
 		<Hst.Select
 			title="size"
 			bind:value={size}
-			options={['sm', 'md', 'lg']}
+			options={['small', 'medium', 'large']}
 		/>
 		<Hst.Checkbox
 			title="Box"
@@ -38,7 +38,7 @@
 
 	<Card
 		{content}
-		class="size-{size}"
+		class={size}
 		{box}
 		{center}
 		{split}

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { CollapseContent, Hst } from '$lib/types';
-	import Collapse from './Collapse.svelte';
+	import Collapse from '../base/Collapse.svelte';
 	export let Hst: Hst;
 
 	let content: CollapseContent = {

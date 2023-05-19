@@ -15,7 +15,7 @@
 <svelte:element
 	this={content.href ? 'a' : 'div'}
 	href={content.href}
-	class="group flex w-full grow flex-col
+	class="group light flex w-full grow flex-col
 	  	
 		{center ? 'items-center text-center' : 'items-start'}
 		{box
@@ -49,31 +49,26 @@
 		{/if}
 	</slot>
 	<div
-		class="flex flex-col gap-sm 
-		{box && 'p-md size-sm:p-sm size-lg:p-lg'}
+		class="flex flex-col gap-1
+		{box && 'p-4'}
 	"
 	>
 		<slot name="body">
 			{#if content.eyebrow}
-				<span class="text-sm text-base-11 size-sm:text-xs">
+				<span class="text-1 text-base-11">
 					{content.eyebrow}
 				</span>
 			{/if}
 			{#if content.heading}
-				<h4 class="text-base size-sm:text-sm size-lg:text-lg">
+				<h4 class="text-2">
 					{content.heading}
 				</h4>
 			{/if}
 			{#if content.textarea}
-				<p class="text-sm size-sm:text-xs size-lg:text-base">
+				<p class="text-1">
 					{content.textarea}
 				</p>
 			{/if}
 		</slot>
 	</div>
-	{#if $$slots.footer}
-		<div class="flex flex-wrap gap-lg">
-			<slot name="footer" />
-		</div>
-	{/if}
 </svelte:element>

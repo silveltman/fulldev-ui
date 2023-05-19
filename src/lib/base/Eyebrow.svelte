@@ -5,7 +5,7 @@
 </script>
 
 <span
-	class="inline-block text-base font-eyebrow text-base-11 size-sm:text-sm size-lg:text-lg {className}"
+	class="inline-block font-eyebrow text-base-11 text-1 {className}"
 	{...$$restProps}
 >
 	{text}

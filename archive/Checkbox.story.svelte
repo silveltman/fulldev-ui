@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { CheckboxContent, Hst } from '$lib/types';
-	import Checkbox from './Checkbox.svelte';
+	import Checkbox from '../base/Checkbox.svelte';
 
 	export let Hst: Hst;
 

@@ -10,28 +10,31 @@
 	export let heading: 'h1' | 'h2' | 'h3' = 'h2';
 </script>
 
-<div class="slot-highlight relative max-w-2xl size-sm:max-w-xl size-lg:max-w-3xl {className}">
+<div class="relative max-w-2xl small:max-w-xl large:max-w-3xl {className}">
 	{#if content.eyebrow}
 		<Eyebrow
-			class="mb-lg size-sm:mb-md size-lg:mb-xl"
+			class="mb-2 !text-1"
 			text={content.eyebrow}
 		/>
 	{/if}
 
 	{#if content.heading}
-		<svelte:element this={heading}>
+		<svelte:element
+			this={heading}
+			class="text-3"
+		>
 			{content.heading}
 		</svelte:element>
 	{/if}
 
 	{#if content.textarea}
-		<p class="pt-lg size-lg:text-lg">
+		<p class="pt-3 text-2">
 			{content.textarea}
 		</p>
 	{/if}
 
 	{#if content.button_primary || content.button_secondary}
-		<div class="mt-2xl flex w-full flex-col gap-md sm:inline-flex sm:w-auto sm:flex-row">
+		<div class="mt-6 flex w-full flex-col gap-md sm:inline-flex sm:w-auto sm:flex-row">
 			{#if content.button_primary}
 				<Button {...content.button_primary} />
 			{/if}
