@@ -78,7 +78,7 @@ module.exports = plugin(
 				'--text-md': '18px',
 				'--text-lg': '36px',
 
-				'@media sm': {
+				'@screen sm': {
 					'--text-sm': '18px',
 					'--text-md': '20px',
 					'--text-lg': '60px'

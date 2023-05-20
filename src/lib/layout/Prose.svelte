@@ -11,14 +11,14 @@
 	.c-richtext {
 		:global(h2:not(:first-child)),
 		:global(h3:not(:first-child)) {
-			@apply mt-space-8;
+			@apply mt-xl;
 		}
 		:global(img:not(:first-child)) {
-			@apply mt-space-8;
+			@apply mt-xl;
 		}
 
 		:global(blockquote:not(:first-child)) {
-			@apply mt-space-7;
+			@apply mt-lg;
 		}
 
 		:global(ul:not(:first-child)),
@@ -34,7 +34,7 @@
 		}
 
 		:global(p:not(:first-child)) {
-			@apply mt-space-5;
+			@apply mt-md;
 		}
 
 		:global(a[href]) {

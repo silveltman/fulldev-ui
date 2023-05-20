@@ -18,7 +18,7 @@
 	{#if $$slots.media}
 		<figure
 			class="group-hover:opacity-75
-		{box ? '' : 'mb-space-3'}
+		{box ? '' : 'mb-md'}
 		"
 		>
 			<slot name="media" />
@@ -27,13 +27,13 @@
 
 	<div
 		class="flex flex-col gap-sm  [&_*:not(h1,h2,h3,h4,h5,h6)]:text-sm 
-		{box ? 'p-space-3' : ''}"
+		{box ? 'p-md' : ''}"
 	>
 		<slot />
 	</div>
 
 	{#if $$slots.footer}
-		<footer class="flex flex-wrap gap-sm {box ? 'pb-space-3 px-md' : 'pt-space-4'}">
+		<footer class="flex flex-wrap gap-sm {box ? 'px-md pb-md' : 'pt-lg'}">
 			<slot name="footer" />
 		</footer>
 	{/if}

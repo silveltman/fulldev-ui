@@ -13,7 +13,7 @@
 >
 	<slot />
 	{#if $$slots.footer}
-		<footer class="gap-mdpt-space-3 flex flex-wrap">
+		<footer class="flex flex-wrap gap-md pt-md">
 			<slot name="footer" />
 		</footer>
 	{/if}
