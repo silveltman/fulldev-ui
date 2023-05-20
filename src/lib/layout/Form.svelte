@@ -1,16 +1,16 @@
 <script lang="ts">
-	let className = ''
-	export { className as class }
+	let className = '';
+	export { className as class };
 
-	export let key: string | undefined = undefined
-	export let subject: string | undefined = undefined
-	export let action: string | undefined = undefined
+	export let key: string | undefined = undefined;
+	export let subject: string | undefined = undefined;
+	export let action: string | undefined = undefined;
 </script>
 
 <form
 	{action}
 	method="POST"
-	class="flex w-full max-w-md flex-col gap-md 
+	class="gap-mdsmall:max-w-sm large:max-w-lg flex w-full max-w-md flex-col
 	{className}"
 	{...$$restProps}
 >

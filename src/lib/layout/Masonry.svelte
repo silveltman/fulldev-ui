@@ -28,7 +28,7 @@
 
 <svelte:element
 	this={as}
-	class="w-full columns-2 gap-x-lg space-y-2xl size-sm:columns-2 size-sm:gap-x-md size-sm:space-y-xl size-lg:columns-1 size-lg:gap-x-xl size-lg:space-y-3xl sm:columns-[308px] size-sm:sm:columns-[220px] size-lg:sm:columns-2 size-lg:md:columns-[385px] [&>*]:break-inside-avoid-column {className}"
+	class="gap-x-mdspace-y-lg small:columns-2 large:columns-1 small:sm:columns-[220px] large:sm:columns-2 large:md:columns-[385px] w-full columns-2 sm:columns-[308px] [&>*]:break-inside-avoid-column {className}"
 >
 	<slot {imageSizes} />
 </svelte:element>

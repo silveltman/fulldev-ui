@@ -7,17 +7,17 @@
 	export let required: boolean = false;
 	export let disabled: boolean = false;
 	export let id: string;
-	export let label: string;
-	export let placeholder: string;
+	export let label: string | null = null;
+	export let placeholder: string | null = null;
 </script>
 
 <label
 	for={id}
-	class="relative flex flex-col gap-1 {className}"
+	class="relative flex flex-col gap-xs {className}"
 	{...$$restProps}
 >
 	{#if label}
-		<span class="relative text-1 text-base-11">
+		<span class="relative text-sm text-base-11">
 			{label}
 		</span>
 	{/if}
@@ -29,12 +29,12 @@
 			{rows}
 			{required}
 			{disabled}
-			class="peer w-full rounded-input !border-2 border-base-7 bg-transparent px-space-4 py-space-3 text-base leading-[1.25] placeholder:text-base-11 disabled:pointer-events-none disabled:opacity-50"
+			class="p-mdtext-md peer block w-full rounded-input !border-none bg-transparent leading-[1] !ring-2 !ring-inset ring-base-7 placeholder:text-base-11 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
 		/>
 		{#if required}
 			<IconAsterisk
 				size={12}
-				class="absolute right-space-2 top-space-2 text-base-11  peer-disabled:opacity-50"
+				class="absolute right-sm top-sm text-base-11  peer-disabled:opacity-50"
 			/>
 		{/if}
 	</div>

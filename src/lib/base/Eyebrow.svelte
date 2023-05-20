@@ -5,8 +5,10 @@
 </script>
 
 <span
-	class="large inline-block text-1 font-eyebrow text-base-11 {className}"
+	class="inline-block text-sm font-eyebrow leading-[1] text-base-11 {className}"
 	{...$$restProps}
 >
-	{text}
+	<slot>
+		{text}
+	</slot>
 </span>

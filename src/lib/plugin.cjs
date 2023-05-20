@@ -1,116 +1,108 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const plugin = require('tailwindcss/plugin')
+const plugin = require('tailwindcss/plugin');
 
 module.exports = plugin(
-	function ({ addBase, addVariant, addComponents, theme }) {
+	function ({ addBase, addVariant, addComponents, addUtilities, theme }) {
 		addBase({
 			':root': {
-				// 75%
-				'--text-xs': '12px',
-				'--text-sm': '14px',
-				'--text-base': '16px',
-				'--text-lg': '18px',
-				'--text-xl': '24px',
-				'--text-2xl': '30px',
-				'--text-3xl': '36px',
+				'--space-media': '0.75',
 
-				'--space-xs': '3px',
-				'--space-sm': '6px',
-				'--space-md': '9px',
-				'--space-lg': '12px',
-				'--space-lgg': '18px',
-				'--space-xl': '24px',
-				'--space-2xl': '36px',
-				'--space-3xl': '48px',
-				'--space-4xl': '96px',
-				'--space-5xl': '192px',
-			},
-			'@screen sm': {
-				':root': {
-					// 100%
-					'--text-xs': '14px',
-					'--text-sm': '16px',
-					'--text-base': '18px',
-					'--text-lg': '20px',
-					'--text-xl': '26px',
-					'--text-2xl': '36px',
-					'--text-3xl': '60px',
-
-					'--space-xs': '4px',
-					'--space-sm': '8px',
-					'--space-md': '12px',
-					'--space-lg': '16px',
-					'--space-xl': '24px',
-					'--space-xl': '32px',
-					'--space-2xl': '48px',
-					'--space-3xl': '64px',
-					'--space-4xl': '128px',
-					'--space-5xl': '256px',
+				'@screen sm': {
+					'--space-media': '1'
 				}
 			},
 			'body,html': {
 				fontFamily: theme('fontFamily.base'),
 				lineHeight: theme('lineHeight.base'),
 				color: theme('colors.base.12'),
-				backgroundColor: theme('colors.base.1'),
+				backgroundColor: theme('colors.base.1')
 			},
-			body: {
-				fontSize: theme('fontSize.2'),
+			'body, p': {
+				fontSize: theme('fontSize.md')
 			},
 			'h1, h2, h3': {
 				fontFamily: theme('fontFamily.heading'),
 				fontWeight: theme('fontWeight.heading'),
 				lineHeight: theme('lineHeight.heading'),
-				fontSize: theme('fontSize.3'),
+				fontSize: theme('fontSize.lg')
 			},
 			'h4, h5, h6': {
 				fontFamily: theme('fontFamily.subheading'),
 				fontWeight: theme('fontWeight.subheading'),
 				lineHeight: theme('lineHeight.subheading'),
-				fontSize: theme('fontSize.2'),
+				fontSize: theme('fontSize.md')
 			},
 			img: {
 				borderRadius: theme('borderRadius.image'),
 				width: '100%',
-				height: 'auto',
+				height: 'auto'
 			}
-		})
+		});
 
 		// Add selectors for components, like button:my-property.
-		const components = ['button', 'textfield', 'card']
-		components.forEach(component => {
-			addVariant(component, `& .${component}`)
-		})
+		const components = ['button', 'textfield', 'card'];
+		components.forEach((component) => {
+			addVariant(component, `& .${component}`);
+		});
 
-		// Add variants for sizes. Use size-x to enable and size-x:my-property to style.
-		const variants = ['size-sm', 'size-md', 'size-lg']
-		variants.forEach(item => {
-			addVariant(`${item}`, [
-				`&.${item}`,
-				`.${item} &`,
-			])
-		})
+		addVariant('small', [`&.small`, `.small &`]);
+		addVariant('medium', [`&.medium`, `.medium &`]);
+		addVariant('large', [`&.large`, `.large &`]);
+		addUtilities({
+			'.small': {
+				'--space-multiplier': '0.5',
+				'--text-sm': '12px',
+				'--text-md': '14px',
+				'--text-lg': '24px',
+				'@screen sm': {
+					'--text-sm': '14px',
+					'--text-md': '16px',
+					'--text-lg': '26px'
+				}
+			},
+			'.medium': {
+				'--space-multiplier': '1',
+				'--text-sm': '14px',
+				'--text-md': '16px',
+				'--text-lg': '30px',
 
+				'@screen sm': {
+					'--text-sm': '16px',
+					'--text-md': '18px',
+					'--text-lg': '36px'
+				}
+			},
+			'.large': {
+				'--space-multiplier': '1.5',
+				'--text-sm': '16px',
+				'--text-md': '18px',
+				'--text-lg': '36px',
 
-		addVariant('has-no-value', '&:has(option:checked[value=""])')
+				'@media sm': {
+					'--text-sm': '18px',
+					'--text-md': '20px',
+					'--text-lg': '60px'
+				}
+			}
+		});
 
 		addComponents({
 			'.solid': {
 				backgroundColor: theme('colors.base.9'),
 				color: 'white',
 				'&:hover': {
-					backgroundColor: theme('colors.base.10'),
-				},
+					backgroundColor: theme('colors.base.10')
+				}
 			},
 			'.soft': {
 				backgroundColor: theme('colors.base.3'),
 				color: theme('colors.base.11'),
 				'&:hover': {
-					backgroundColor: theme('colors.base.4'),
+					backgroundColor: theme('colors.base.4')
 				},
-				'&:active, &:focus': {
-					backgroundColor: theme('colors.base.5'),
-				},
+				'&:active': {
+					backgroundColor: theme('colors.base.5')
+				}
 			},
 			'.ringed': {
 				borderWidth: '2px',
@@ -118,65 +110,57 @@ module.exports = plugin(
 				backgroundColor: 'transparent',
 				color: theme('colors.base.11'),
 				'&:hover, &:active, &:focus': {
-					borderColor: theme('colors.base.8'),
-				},
+					borderColor: theme('colors.base.8')
+				}
 			},
 			'.ghost': {
 				backgroundColor: 'transparent',
 				color: theme('colors.base.11'),
 				'&:hover': {
-					backgroundColor: theme('colors.base.4'),
+					backgroundColor: theme('colors.base.4')
 				},
-				'&:active, &:focus': {
-					backgroundColor: theme('colors.base.5'),
-				},
+				'&:active': {
+					backgroundColor: theme('colors.base.5')
+				}
 			},
 			'.scrollbar': {
 				scrollbarColor: theme('colors.base.3'),
 				scrollbarWidth: 'auto',
-				'&::-webkit-scrollbar': {
-				},
+				'&::-webkit-scrollbar': {},
 				'&::-webkit-scrollbar-track': {
-					background: theme('colors.base.3'),
+					background: theme('colors.base.3')
 				},
 				'&::-webkit-scrollbar-thumb': {
 					backgroundColor: theme('colors.base.7'),
 					borderRadius: theme('borderRadius.card'),
 					'&:hover': {
-						backgroundColor: theme('colors.blue.8'),
-					},
-				},
-			},
-		})
+						backgroundColor: theme('colors.blue.8')
+					}
+				}
+			}
+		});
 	},
 	{
 		theme: {
 			fontSize: {
-				'xs': 'var(--text-xs)',
-				'sm': 'var(--text-sm)',
-				'base': 'var(--text-base)',
-				'lg': 'var(--text-lg)',
-				'xl': 'var(--text-xl)',
-				'2xl': 'var(--text-2xl)',
-				'3xl': 'var(--text-3xl)',
+				sm: 'var(--text-sm)',
+				md: 'var(--text-md)',
+				lg: 'var(--text-lg)'
 			},
 			extend: {
 				spacing: {
-					xs: 'var(--space-xs)',
-					sm: 'var(--space-sm)',
-					md: 'var(--space-md)',
-					lg: 'var(--space-lg)',
-					xl: 'var(--space-xl)',
-					'2xl': 'var(--space-2xl)',
-					'3xl': 'var(--space-3xl)',
-					'4xl': 'var(--space-4xl)',
-					'5xl': 'var(--space-5xl)'
-				},
+					xs: 'calc(0.25rem * var(--space-multiplier, 1) * var(--space-media, 1))',
+					sm: 'calc(0.5rem * var(--space-multiplier, 1) * var(--space-media, 1))',
+					md: 'calc(1rem * var(--space-multiplier, 1) * var(--space-media, 1))',
+					lg: 'calc(2rem * var(--space-multiplier, 1) * var(--space-media, 1))',
+					xl: 'calc(4rem * var(--space-multiplier, 1) * var(--space-media, 1))',
+					'2xl': 'calc(8rem * var(--space-multiplier, 1) * var(--space-media, 1))'
+				}
 			}
 		},
 		corePlugins: {
 			aspectRatio: false,
-			container: false,
-		},
-	},
-)
+			container: false
+		}
+	}
+);

@@ -12,11 +12,13 @@
 	on:click
 	type={href ? undefined : 'button'}
 	{href}
-	class="button inline-flex items-center justify-center rounded-button px-space-4 py-space-3 text-center text-2 font-button leading-[1.25] transition-all active:scale-95 disabled:pointer-events-none disabled:opacity-50
+	class="button p-mdtext-md inline-flex items-center justify-center rounded-button text-center font-button leading-[1] transition-all active:scale-95 disabled:pointer-events-none disabled:opacity-50
 		{variant}
 		{className}
 	"
 	{...$$restProps}
 >
-	{text}
+	<slot>
+		{text}
+	</slot>
 </svelte:element>

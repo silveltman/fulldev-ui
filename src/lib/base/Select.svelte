@@ -4,18 +4,18 @@
 	export let required: boolean = false;
 	export let disabled: boolean = false;
 	export let id: string;
-	export let label: string;
-	export let placeholder: string;
+	export let label: string | null = null;
+	export let placeholder: string | null = null;
 	export let options: string[];
 </script>
 
 <label
 	for={id}
-	class="relative flex flex-col gap-1 {className}"
+	class="relative flex flex-col gap-xs {className}"
 	{...$$restProps}
 >
 	{#if label}
-		<span class="relative text-1 text-base-11">
+		<span class="relative text-sm text-base-11">
 			{label}
 		</span>
 	{/if}
@@ -25,7 +25,7 @@
 			name={id}
 			{required}
 			{disabled}
-			class="inline-flex w-full rounded-input !border-2 border-base-7 bg-transparent px-space-4 py-space-3 text-2 leading-[1.25] disabled:pointer-events-none disabled:opacity-50"
+			class="p-mdtext-md block w-full rounded-input !border-none bg-transparent leading-[1] !ring-2 !ring-inset ring-base-7 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
 		>
 			{#if placeholder}
 				<option
@@ -44,3 +44,10 @@
 		</select>
 	</div>
 </label>
+
+<style lang="postcss">
+	/* Apply styles when no value selected */
+	select:has(option:checked[value='']) {
+		@apply text-base-11;
+	}
+</style>

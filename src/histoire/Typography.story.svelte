@@ -21,7 +21,7 @@
 	</svelte:fragment>
 
 	<Hst.Variant title="Step 1 (text)">
-		<p class="{size} text-1">
+		<p class="{size} text-sm">
 			{text}
 		</p>
 	</Hst.Variant>
@@ -32,7 +32,7 @@
 		/>
 	</Hst.Variant>
 	<Hst.Variant title="Step 2 (text)">
-		<p class="{size} text-2">
+		<p class="{size} text-md">
 			{text}
 		</p>
 	</Hst.Variant>

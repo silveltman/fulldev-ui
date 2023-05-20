@@ -1,60 +1,56 @@
 <script lang="ts">
-	import Navbar from 'layout/Navbar.svelte';
-	import Button from 'base/Button.svelte';
-	import Link from 'base/Link.svelte';
-	import Drawer from 'layout/Drawer.svelte';
-	import Footer from 'layout/Footer.svelte';
-	import Block from 'layout/Section.svelte';
-	import Box from 'layout/Box.svelte';
-	import Grid from 'layout/Grid.svelte';
-	import Carousel from 'layout/Carousel.svelte';
 	import Container from 'layout/Container.svelte';
+
+	import Highlight2 from 'layout/Highlight.svelte';
+	import Card from 'layout/Card.svelte';
+
+	import Eyebrow from 'base/Eyebrow.svelte';
+	import Button from 'base/Button.svelte';
+	import Image from 'base/Image.svelte';
+	import Panel from 'layout/Card.svelte';
 	import Textfield from 'base/Textfield.svelte';
 	import Textarea from 'base/Textarea.svelte';
 	import Select from 'base/Select.svelte';
-	import Radio from 'base/Radio.svelte';
-	import Card from 'base/Card.svelte';
+	import Form from 'layout/Form.svelte';
+	import Buttons from '../histoire/Buttons.story.svelte';
+	import { text } from 'svelte/internal';
+	import Grid from 'layout/Grid.svelte';
+	import Split from 'layout/Split.svelte';
 	import Masonry from 'layout/Masonry.svelte';
+	import Carousel from 'layout/Carousel.svelte';
+	import Box from 'layout/Box.svelte';
 
-	const images = [
-		{
-			src: 'https://picsum.photos/seed/picsum/512/512',
-			alt: 'Lorem Picsum'
+	const count = 20;
+
+	const content = {
+		eyebrow: 'Eyebrow',
+		heading: 'Heading',
+		textarea: 'Textarea',
+		button_primary: {
+			text: 'Button',
+			href: '#'
 		},
-		{
-			src: 'https://picsum.photos/seed/picsum/512/512',
-			alt: 'Lorem Picsum'
+		button_secondary: {
+			text: 'Button',
+			href: '#'
 		}
-		// {
-		// 	src: 'https://picsum.photos/seed/picsum/512/512',
-		// 	alt: 'Lorem Picsum'
-		// },
-		// {
-		// 	src: 'https://picsum.photos/seed/picsum/512/512',
-		// 	alt: 'Lorem Picsum'
-		// },
-		// {
-		// 	src: 'https://picsum.photos/seed/picsum/512/512',
-		// 	alt: 'Lorem Picsum'
-		// }
-	];
+	};
 </script>
 
-<Masonry>
-	{#each images as image}
-		<img
-		class="sm:bg-black"
-			src={image.src}
-			alt={image.alt}
-		/>
-	{/each}
-</Masonry>
-
-<Grid>
-	{#each images as image}
-		<img
-			src={image.src}
-			alt={image.alt}
-		/>
-	{/each}
-</Grid>
+<Container class="large py-20">
+	<!-- <Box>Hello</Box> -->
+	<!-- <Carousel>
+		{#each { length: count } as item}
+			<div class="h-40 bg-blue-200" />
+		{/each}
+	</Carousel> -->
+</Container>
+<div class="large">
+	<div class="my-[10px] h-10 w-xs bg-blue-100" />
+	<div class="my-[10px] h-10 w-sm bg-blue-100" />
+	<div class="my-[10px] h-10 w-md bg-blue-100" />
+	<div class="my-[10px] h-10 w-lg bg-blue-100" />
+	<div class="my-[10px] h-10 w-xl bg-blue-100" />
+	<div class="my-[10px] h-10 w-2xl bg-blue-100" />
+	<h1>Hello</h1>
+</div>

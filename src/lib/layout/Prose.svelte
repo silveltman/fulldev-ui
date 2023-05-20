@@ -3,27 +3,27 @@
 	export { className as class };
 </script>
 
-<div class="richtext max-w-2xl {className}">
+<div class="c-richtext small:max-w-xl large:max-w-3xl max-w-2xl {className}">
 	<slot />
 </div>
 
 <style lang="postcss">
-	.richtext {
+	.c-richtext {
 		:global(h2:not(:first-child)),
 		:global(h3:not(:first-child)) {
-			@apply mt-3xl;
+			@apply mt-space-8;
 		}
 		:global(img:not(:first-child)) {
-			@apply mt-3xl;
+			@apply mt-space-8;
 		}
 
 		:global(blockquote:not(:first-child)) {
-			@apply mt-2xl;
+			@apply mt-space-7;
 		}
 
 		:global(ul:not(:first-child)),
 		:global(ol:not(:first-child)) {
-			@apply mt-xl list-inside;
+			@apply mt-2xl list-inside;
 		}
 
 		:global(ul) {
@@ -34,7 +34,7 @@
 		}
 
 		:global(p:not(:first-child)) {
-			@apply mt-lg;
+			@apply mt-space-5;
 		}
 
 		:global(a[href]) {
