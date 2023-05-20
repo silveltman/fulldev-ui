@@ -22,7 +22,7 @@
 		</span>
 	{/if}
 	<!-- Wrapped in a box with the right dimensions, because lineheight on input is not possbile -->
-	<div class="p-mdrelative leading-[1]">
+	<div class="relative p-md leading-[1]">
 		<!-- nbsp to ensure the correct lineheight -->
 		&nbsp;
 		<input
@@ -32,7 +32,7 @@
 			name={id}
 			{required}
 			{disabled}
-			class="p-mdtext-md peer absolute inset-0 w-full rounded-input !border-none bg-transparent !leading-[1] !ring-2 !ring-inset ring-base-7 placeholder:text-base-11 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
+			class="text-md peer absolute inset-0 w-full rounded-input !border-none bg-transparent p-md !leading-[1] !ring-2 !ring-inset ring-base-7 placeholder:text-base-11 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
 		/>
 		{#if required}
 			<IconAsterisk

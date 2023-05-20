@@ -12,7 +12,7 @@
 	on:click
 	type={href ? undefined : 'button'}
 	{href}
-	class="button p-mdtext-md inline-flex items-center justify-center rounded-button text-center font-button leading-[1] transition-all active:scale-95 disabled:pointer-events-none disabled:opacity-50
+	class="button text-md inline-flex items-center justify-center rounded-button p-md text-center font-button leading-[1] transition-all active:scale-95 disabled:pointer-events-none disabled:opacity-50
 		{variant}
 		{className}
 	"

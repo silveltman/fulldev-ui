@@ -9,7 +9,7 @@
 <a
 	target="_blank"
 	href="https://wa.me/{tel}"
-	class="fixed right-md bottom-md rounded-[12px] bg-[#46A758] p-1 hover:bg-[#3D9B50]
+	class="fixed right-md bottom-md rounded-[12px] bg-[#46A758] p-xs hover:bg-[#3D9B50]
 		{className}
 	"
 	{...$$restProps}

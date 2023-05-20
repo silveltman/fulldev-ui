@@ -25,7 +25,7 @@
 			name={id}
 			{required}
 			{disabled}
-			class="p-mdtext-md block w-full rounded-input !border-none bg-transparent leading-[1] !ring-2 !ring-inset ring-base-7 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
+			class="text-md block w-full rounded-input !border-none bg-transparent p-md leading-[1] !ring-2 !ring-inset ring-base-7 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
 		>
 			{#if placeholder}
 				<option

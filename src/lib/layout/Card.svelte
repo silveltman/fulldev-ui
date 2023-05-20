@@ -33,7 +33,7 @@
 	</div>
 
 	{#if $$slots.footer}
-		<footer class="flex flex-wrap gap-sm {box ? 'px-mdpb-space-3' : 'pt-space-4'}">
+		<footer class="flex flex-wrap gap-sm {box ? 'pb-space-3 px-md' : 'pt-space-4'}">
 			<slot name="footer" />
 		</footer>
 	{/if}
