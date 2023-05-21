@@ -28,7 +28,7 @@
 
 <svelte:element
 	this={as}
-	class="gap-x-mdsmall:grid-cols-2 small:gap-x-md small:gap-y-lg large:grid-cols-1 large:gap-x-xl large:gap-y-2xl small:sm:grid-cols-[repeat(auto-fill,minmax(220px,1fr))] large:sm:grid-cols-2 large:md:grid-cols-[repeat(auto-fill,minmax(385px,1fr))] grid w-full grid-cols-2 gap-y-lg sm:grid-cols-[repeat(auto-fill,minmax(308px,1fr))] {className}"
+	class="grid w-full grid-cols-2 gap-x-md gap-y-lg small:grid-cols-2 large:grid-cols-1 sm:grid-cols-[repeat(auto-fill,minmax(308px,1fr))] small:sm:grid-cols-[repeat(auto-fill,minmax(220px,1fr))] large:sm:grid-cols-2 large:md:grid-cols-[repeat(auto-fill,minmax(385px,1fr))] {className}"
 >
 	<slot {imageSizes} />
 </svelte:element>

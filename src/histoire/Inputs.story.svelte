@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { Hst } from '$lib/types';
-	import Textfield from 'base/Textfield.svelte';
 	import Textarea from 'base/Textarea.svelte';
 	import Select from 'base/Select.svelte';
+	import Input from 'base/Input.svelte';
 	export let Hst: Hst;
 
 	let label: string = 'Label';
@@ -38,7 +38,7 @@
 	</svelte:fragment>
 
 	<Hst.Variant title="Textfield">
-		<Textfield
+		<Input
 			{label}
 			{placeholder}
 			{disabled}

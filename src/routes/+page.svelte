@@ -8,7 +8,7 @@
 	import Button from 'base/Button.svelte';
 	import Image from 'base/Image.svelte';
 	import Panel from 'layout/Card.svelte';
-	import Textfield from 'base/Textfield.svelte';
+	import Textfield from 'base/Input.svelte';
 	import Textarea from 'base/Textarea.svelte';
 	import Select from 'base/Select.svelte';
 	import Form from 'layout/Form.svelte';
@@ -37,7 +37,7 @@
 	};
 </script>
 
-<Container class="large py-20">
+<Container class="py-20 small">
 	<!-- <Box>Hello</Box> -->
 	<!-- <Carousel>
 		{#each { length: count } as item}
@@ -52,5 +52,4 @@
 	<div class="my-[10px] h-10 w-lg bg-blue-100" />
 	<div class="my-[10px] h-10 w-xl bg-blue-100" />
 	<div class="my-[10px] h-10 w-2xl bg-blue-100" />
-	<h1>Hello</h1>
 </div>

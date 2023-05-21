@@ -10,7 +10,7 @@
 	this={href ? 'a' : 'div'}
 	{href}
 	class="flex w-full grow flex-col
-		{center ? 'flex flex-col items-center text-center' : ''}
+		{center ? 'items-center text-center' : 'items-start text-left'}
 		{box ? 'rounded-card border border-base-6 bg-base-2' : ''}
 		{href && 'group hover:border-base-8'}
 		{className}"
@@ -26,14 +26,15 @@
 	{/if}
 
 	<div
-		class="flex flex-col gap-sm  [&_*:not(h1,h2,h3,h4,h5,h6)]:text-sm 
+		class="flex w-full flex-col gap-sm  [&_*:not(h1,h2,h3,h4,h5,h6)]:text-sm
+		{center ? 'items-center text-center' : 'items-start text-left'}
 		{box ? 'p-md' : ''}"
 	>
 		<slot />
 	</div>
 
 	{#if $$slots.footer}
-		<footer class="flex flex-wrap gap-sm {box ? 'px-md pb-md' : 'pt-lg'}">
+		<footer class="flex w-full flex-wrap gap-sm {box ? 'px-md pb-md' : 'pt-lg'}">
 			<slot name="footer" />
 		</footer>
 	{/if}
