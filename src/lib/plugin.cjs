@@ -100,7 +100,8 @@ module.exports = plugin(
 					md: 'calc(1rem * var(--space-multiplier, 1) * var(--space-media, 1))',
 					lg: 'calc(2rem * var(--space-multiplier, 1) * var(--space-media, 1))',
 					xl: 'calc(4rem * var(--space-multiplier, 1) * var(--space-media, 1))',
-					'2xl': 'calc(8rem * var(--space-multiplier, 1) * var(--space-media, 1))'
+					'2xl': 'calc(8rem * var(--space-multiplier, 1) * var(--space-media, 1))',
+					'3xl': 'calc(16rem * var(--space-multiplier, 1) * var(--space-media, 1))'
 				}
 			}
 		},
