@@ -16,7 +16,7 @@
 		{variant === 'solid' && 'bg-base-9 text-base-9-content hover:bg-base-10'}
 		{variant === 'soft' && 'bg-base-3 text-base-11 hover:bg-base-4 hover:text-base-12 active:bg-base-5'}
 		{variant === 'ringed' &&
-		'bg-transparent text-base-11 ring ring-inset ring-base-7 hover:text-base-12 hover:ring-base-8'}
+		'bg-transparent text-base-11 ring-2 ring-inset ring-base-7 hover:text-base-12 hover:ring-base-8'}
 		{variant === 'ghost' &&
 		'bg-transparent text-base-11 hover:bg-base-4 hover:text-base-12 active:bg-base-5'}
 		{className}
