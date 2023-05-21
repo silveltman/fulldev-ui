@@ -8,7 +8,7 @@
 <svelte:element
 	this={as}
 	class="flex w-full flex-col gap-y-lg
-        {center ? 'items-center text-center' : 'items-start text-left'}
+        {center && 'items-center'}
         {className}
     "
 >

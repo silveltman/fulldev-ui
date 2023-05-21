@@ -17,7 +17,7 @@
 >
 	{#if $$slots.media}
 		<figure
-			class="group-hover:opacity-75
+			class="w-full group-hover:opacity-75
 		{box ? '' : 'mb-md'}
 		"
 		>
