@@ -10,6 +10,5 @@
 	style="padding-bottom:{(1 / ratio) * 100}%"
 	class="relative w-full overflow-hidden [&>*]:absolute [&>*]:inset-0 [&>*]:h-full [&>*]:w-full {className}"
 >
-	Hello
 	<slot />
 </svelte:element>

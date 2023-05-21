@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Hst } from '$lib/types';
-	import Eyebrow from 'base/Eyebrow.svelte';
+	import Eyebrow from '../../archive/Eyebrow.svelte';
 	export let Hst: Hst;
 
 	let text: string = 'Lorem opsim dolor sit';
@@ -26,10 +26,10 @@
 		</p>
 	</Hst.Variant>
 	<Hst.Variant title="Step 1 (eyebrow)">
-		<Eyebrow
+		<!-- <Eyebrow
 			{text}
 			class={size}
-		/>
+		/> -->
 	</Hst.Variant>
 	<Hst.Variant title="Step 2 (text)">
 		<p class="{size} text-md">

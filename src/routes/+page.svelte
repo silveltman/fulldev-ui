@@ -4,7 +4,7 @@
 	import Highlight2 from 'layout/Highlight.svelte';
 	import Card from 'layout/Card.svelte';
 
-	import Eyebrow from 'base/Eyebrow.svelte';
+	import Eyebrow from '../../archive/Eyebrow.svelte';
 	import Button from 'base/Button.svelte';
 	import Image from 'base/Image.svelte';
 	import Panel from 'layout/Card.svelte';
