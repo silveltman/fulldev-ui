@@ -2,7 +2,7 @@
 const plugin = require('tailwindcss/plugin');
 
 module.exports = plugin(
-	function ({ addBase, addVariant, addComponents, addUtilities, theme }) {
+	function ({ addBase, addVariant, addUtilities, theme }) {
 		addBase({
 			':root': {
 				'--space-media': '0.75',
@@ -37,12 +37,6 @@ module.exports = plugin(
 				width: '100%',
 				height: 'auto'
 			}
-		});
-
-		// Add selectors for components, like button:my-property.
-		const components = ['button', 'textfield', 'card'];
-		components.forEach((component) => {
-			addVariant(component, `& .${component}`);
 		});
 
 		addVariant('small', [`&.small`, `.small &`]);
@@ -86,59 +80,11 @@ module.exports = plugin(
 			}
 		});
 
-		addComponents({
-			'.solid': {
-				backgroundColor: theme('colors.base.9'),
-				color: 'white',
-				'&:hover': {
-					backgroundColor: theme('colors.base.10')
-				}
-			},
-			'.soft': {
-				backgroundColor: theme('colors.base.3'),
-				color: theme('colors.base.11'),
-				'&:hover': {
-					backgroundColor: theme('colors.base.4')
-				},
-				'&:active': {
-					backgroundColor: theme('colors.base.5')
-				}
-			},
-			'.ringed': {
-				borderWidth: '2px',
-				borderColor: theme('colors.base.7'),
-				backgroundColor: 'transparent',
-				color: theme('colors.base.11'),
-				'&:hover, &:active, &:focus': {
-					borderColor: theme('colors.base.8')
-				}
-			},
-			'.ghost': {
-				backgroundColor: 'transparent',
-				color: theme('colors.base.11'),
-				'&:hover': {
-					backgroundColor: theme('colors.base.4')
-				},
-				'&:active': {
-					backgroundColor: theme('colors.base.5')
-				}
-			},
-			'.scrollbar': {
-				scrollbarColor: theme('colors.base.3'),
-				scrollbarWidth: 'auto',
-				'&::-webkit-scrollbar': {},
-				'&::-webkit-scrollbar-track': {
-					background: theme('colors.base.3')
-				},
-				'&::-webkit-scrollbar-thumb': {
-					backgroundColor: theme('colors.base.7'),
-					borderRadius: theme('borderRadius.card'),
-					'&:hover': {
-						backgroundColor: theme('colors.blue.8')
-					}
-				}
-			}
-		});
+		// Add selectors for components, like button:my-property.
+		// const components = ['button', 'textfield', 'card'];
+		// components.forEach((component) => {
+		// 	addVariant(component, `& .${component}`);
+		// });
 	},
 	{
 		theme: {

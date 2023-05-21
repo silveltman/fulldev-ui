@@ -37,19 +37,44 @@
 	};
 </script>
 
-<Container class="py-20 small">
-	<!-- <Box>Hello</Box> -->
-	<!-- <Carousel>
-		{#each { length: count } as item}
-			<div class="h-40 bg-blue-200" />
-		{/each}
-	</Carousel> -->
+<Container class="py-20 medium">
+	<div class="flex flex-col gap-2">
+		<div class="my-[10px] h-10 w-xs bg-base-9" />
+		<div class="my-[10px] h-10 w-sm bg-base-9" />
+		<div class="my-[10px] h-10 w-md bg-base-9" />
+		<div class="my-[10px] h-10 w-lg bg-base-9" />
+		<div class="my-[10px] h-10 w-xl bg-base-9" />
+		<div class="my-[10px] h-10 w-2xl bg-base-9" />
+	</div>
+	<div class="my-20 flex border-4">
+		<div class="h-10 w-full bg-base-1" />
+		<div class="h-10 w-full bg-base-2" />
+		<div class="h-10 w-full bg-base-3" />
+		<div class="h-10 w-full bg-base-4" />
+		<div class="h-10 w-full bg-base-5" />
+		<div class="h-10 w-full bg-base-6" />
+		<div class="h-10 w-full bg-base-7" />
+		<div class="h-10 w-full bg-base-8" />
+		<div class="h-10 w-full bg-base-9" />
+		<div class="h-10 w-full bg-base-10" />
+		<div class="h-10 w-full bg-base-11" />
+		<div class="h-10 w-full bg-base-12" />
+	</div>
+
+	<Button
+		variant="solid"
+		text="Button"
+	/>
+	<Button
+		variant="ghost"
+		text="Button"
+	/>
+	<Button
+		variant="ringed"
+		text="Button"
+	/>
+	<Button
+		variant="soft"
+		text="Button"
+	/>
 </Container>
-<div class="large">
-	<div class="my-[10px] h-10 w-xs bg-blue-100" />
-	<div class="my-[10px] h-10 w-sm bg-blue-100" />
-	<div class="my-[10px] h-10 w-md bg-blue-100" />
-	<div class="my-[10px] h-10 w-lg bg-blue-100" />
-	<div class="my-[10px] h-10 w-xl bg-blue-100" />
-	<div class="my-[10px] h-10 w-2xl bg-blue-100" />
-</div>
