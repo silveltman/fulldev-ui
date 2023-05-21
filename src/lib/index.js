@@ -1,6 +1,5 @@
 // Base
 export { default as Button } from 'base/Button.svelte';
-export { default as Eyebrow } from '../../archive/Eyebrow.svelte';
 export { default as Image } from 'base/Image.svelte';
 export { default as Logo } from 'base/Logo.svelte';
 export { default as Select } from 'base/Select.svelte';
