@@ -23,7 +23,5 @@
 	"
 	{...$$restProps}
 >
-	<slot>
-		{text}
-	</slot>
+	{text}
 </svelte:element>

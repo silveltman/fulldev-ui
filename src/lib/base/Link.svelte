@@ -8,13 +8,11 @@
 
 <a
 	{href}
-	class="text-md whitespace-nowrap text-base-11 hover:text-base-12 disabled:pointer-events-none disabled:opacity-50
+	class="whitespace-nowrap text-md text-base-11 hover:text-base-12 disabled:pointer-events-none disabled:opacity-50
     {activePathname === href && 'text-base-12'}
     {className}
 	"
 	{...$$restProps}
 >
-	<slot>
-		{text}
-	</slot>
+	{text}
 </a>
