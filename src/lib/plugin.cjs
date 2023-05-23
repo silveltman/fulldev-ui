@@ -15,7 +15,8 @@ module.exports = plugin(
 				fontFamily: theme('fontFamily.base'),
 				lineHeight: theme('lineHeight.base'),
 				color: theme('colors.base.12'),
-				backgroundColor: theme('colors.base.1')
+				backgroundColor: theme('colors.base.1'),
+				'@apply light': {}
 			},
 			'body, p': {
 				fontSize: theme('fontSize.md')
