@@ -3,27 +3,40 @@
 	export { className as class };
 </script>
 
-<div class="c-richtext max-w-2xl small:max-w-xl large:max-w-3xl {className}">
+
+<div class="c-prose max-w-2xl small:max-w-xl large:max-w-3xl {className}">
 	<slot />
 </div>
 
 <style lang="postcss">
-	.c-richtext {
+	.c-prose {
+		:global(h1),
+		:global(h4) {
+			@apply large;
+		}
+		:global(h2),
+		:global(h5) {
+			@apply medium;
+		}
+		:global(h3),
+		:global(h6) {
+			@apply small;
+		}
+
+		:global(h1:not(:first-child)),
 		:global(h2:not(:first-child)),
 		:global(h3:not(:first-child)) {
-			@apply mt-xl;
+			@apply mt-2xl;
 		}
-		:global(img:not(:first-child)) {
-			@apply mt-xl;
-		}
-
-		:global(blockquote:not(:first-child)) {
-			@apply mt-lg;
+		:global(img) {
+			@apply my-xl;
 		}
 
+		:global(p:not(:first-child)),
+		:global(blockquote:not(:first-child)),
 		:global(ul:not(:first-child)),
 		:global(ol:not(:first-child)) {
-			@apply mt-2xl list-inside;
+			@apply mt-md list-inside text-base-12/80;
 		}
 
 		:global(ul) {
@@ -31,10 +44,6 @@
 		}
 		:global(ol) {
 			@apply list-decimal;
-		}
-
-		:global(p:not(:first-child)) {
-			@apply mt-md;
 		}
 
 		:global(a[href]) {
