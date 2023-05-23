@@ -9,7 +9,7 @@
 </script>
 
 <header
-	class="top-0 left-0 right-0 z-50 w-full py-sm {position}
+	class="left-0 right-0 top-0 z-50 w-full py-sm {position}
 	{box ? 'bg-transparent' : `border-b border-base-6 bg-base-2 ${className}`}
 "
 >

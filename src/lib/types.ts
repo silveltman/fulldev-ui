@@ -1,23 +1,21 @@
-export type { Hst } from '@histoire/plugin-svelte'
-
 // --------------------------------------------
-// Base 
+// Base
 // --------------------------------------------
 export interface ButtonContent {
-	text: string
-	href?: string
+	text: string;
+	href?: string;
 }
 
 export interface CollapseContent {
-	heading: string
-	textarea: string
+	heading: string;
+	textarea: string;
 }
 
-export type EyebrowContent = string
+export type EyebrowContent = string;
 
 export interface ImageContent {
-	src: string
-	alt: string
+	src: string;
+	alt: string;
 }
 
 type LengthUnit =
@@ -46,26 +44,26 @@ export interface ImageSizes {
 }
 
 export interface LinkContent {
-	text: string
-	href: string
+	text: string;
+	href: string;
 }
 
-export type LogoContent = ImageContent
+export type LogoContent = ImageContent;
 
 export interface CardContent {
-	image?: ImageContent
-	eyebrow?: string
-	heading?: string
-	textarea?: string
-	href?: string
+	image?: ImageContent;
+	eyebrow?: string;
+	heading?: string;
+	textarea?: string;
+	href?: string;
 }
 
-// -------------------------------------------- 
+// --------------------------------------------
 export interface ToggleContent {
-	heading: string,
-	text: string,
-	id: string,
-	required?: boolean
+	heading: string;
+	text: string;
+	id: string;
+	required?: boolean;
 }
 
 export interface SelectContent {
@@ -75,138 +73,136 @@ export interface SelectContent {
 }
 
 export interface RadioItem {
-	heading?: string,
-	text?: string,
+	heading?: string;
+	text?: string;
 }
 
-export type RadioContent = RadioItem[]
+export type RadioContent = RadioItem[];
 
 export interface CheckboxContent {
-	heading?: string,
-	text?: string,
+	heading?: string;
+	text?: string;
 }
 
 export interface WhatsappContent {
-	tel: string,
+	tel: string;
 }
 
 export interface TextFieldContent {
-	label?: string,
-	placeholder?: string,
+	label?: string;
+	placeholder?: string;
 }
 
 export interface TextareaContent {
-	label?: string,
-	placeholder?: string,
+	label?: string;
+	placeholder?: string;
 }
 
 export interface SocialContent {
-	icon: | 'facebook'
-	| 'twitter'
-	| 'linkedin'
-	| 'pinterest'
-	| 'whatsapp'
-	| 'telegram'
-	| 'email'
-	| 'phone',
-	href: string
+	icon:
+		| 'facebook'
+		| 'twitter'
+		| 'linkedin'
+		| 'pinterest'
+		| 'whatsapp'
+		| 'telegram'
+		| 'email'
+		| 'phone';
+	href: string;
 }
 
 // --------------------------------------------
 // Slot
 // --------------------------------------------
 
-export type AccordionContent = CollapseContent[]
+export type AccordionContent = CollapseContent[];
 
 interface ChecklistItem {
-	heading?: string
-	textarea?: string
-	button?: ButtonContent
+	heading?: string;
+	textarea?: string;
+	button?: ButtonContent;
 }
-export type SlotChecklistContent = ChecklistItem[]
+export type SlotChecklistContent = ChecklistItem[];
 
 export interface HighlightContent {
-	eyebrow?: string
-	heading?: string
-	textarea?: string
-	button_primary?: ButtonContent
-	button_secondary?: ButtonContent
+	eyebrow?: string;
+	heading?: string;
+	textarea?: string;
+	button_primary?: ButtonContent;
+	button_secondary?: ButtonContent;
 }
 
-export type SlotMediaContent = ImageContent
+export type SlotMediaContent = ImageContent;
 
 export interface RichtextContent {
-	html?: string
+	html?: string;
 }
 
 interface StatsItem {
-	label?: string
-	value?: string
+	label?: string;
+	value?: string;
 }
-export type StatsContent = StatsItem[]
+export type StatsContent = StatsItem[];
 
-export type SlotCardContent = CardContent[]
+export type SlotCardContent = CardContent[];
 
 export interface NewsletterContent {
 	textfield: {
-		placeholder?: string
-	}
-	button: ButtonContent
+		placeholder?: string;
+	};
+	button: ButtonContent;
 }
 
-export type SlotGalleryContent = ImageContent[]
-
-
+export type SlotGalleryContent = ImageContent[];
 
 // --------------------------------------------
 // Block
 // --------------------------------------------
 
 export interface HeroContent {
-	highlight?: HighlightContent
-	media?: SlotMediaContent
+	highlight?: HighlightContent;
+	media?: SlotMediaContent;
 }
 
 export interface CtaContent {
-	highlight?: HighlightContent
-	media?: SlotMediaContent
+	highlight?: HighlightContent;
+	media?: SlotMediaContent;
 }
 
 export interface FaqContent {
-	highlight?: HighlightContent
-	accordion?: AccordionContent
+	highlight?: HighlightContent;
+	accordion?: AccordionContent;
 }
 
 export interface FeaturesContent {
-	highlight?: HighlightContent
-	checklist?: SlotChecklistContent
-	media?: SlotMediaContent
+	highlight?: HighlightContent;
+	checklist?: SlotChecklistContent;
+	media?: SlotMediaContent;
 }
 
 export interface BlockCardsContent {
-	highlight?: HighlightContent
-	cards?: SlotCardContent
+	highlight?: HighlightContent;
+	cards?: SlotCardContent;
 }
 
 export interface HeaderContent {
-	logo?: LogoContent
-	links?: LinkContent[]
+	logo?: LogoContent;
+	links?: LinkContent[];
 }
 
 export interface FooterContent {
-	text?: string
-	logo?: LogoContent
-	links?: LinkContent[]
+	text?: string;
+	logo?: LogoContent;
+	links?: LinkContent[];
 }
-
 
 // --------------------------------------------
 // Rest
 // --------------------------------------------
 
 export interface Layout {
-	box?: boolean
-	split?: boolean
-	center?: boolean
-	reverse?: boolean
+	box?: boolean;
+	split?: boolean;
+	center?: boolean;
+	reverse?: boolean;
 }

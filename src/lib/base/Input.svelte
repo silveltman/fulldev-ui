@@ -32,7 +32,7 @@
 			name={id}
 			{required}
 			{disabled}
-			class="text-md peer absolute inset-0 w-full rounded-input !border-none bg-transparent p-md !leading-[1] !ring-2 !ring-inset ring-base-7 placeholder:text-base-11 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
+			class="peer absolute inset-0 w-full rounded-input !border-none bg-transparent p-md text-md !leading-[1] !ring-2 !ring-inset ring-base-7 placeholder:text-base-11 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
 		/>
 		{#if required}
 			<IconAsterisk

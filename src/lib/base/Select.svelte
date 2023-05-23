@@ -25,7 +25,7 @@
 			name={id}
 			{required}
 			{disabled}
-			class="text-md block w-full rounded-input !border-none bg-transparent p-md leading-[1] !ring-2 !ring-inset ring-base-7 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
+			class="block w-full rounded-input !border-none bg-transparent p-md text-md leading-[1] !ring-2 !ring-inset ring-base-7 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
 		>
 			{#if placeholder}
 				<option
@@ -37,7 +37,7 @@
 			{/if}
 			{#each options as option}
 				<option
-					class="leading-[1] text-base-12 "
+					class="leading-[1] text-base-12"
 					value={option}>{option}</option
 				>
 			{/each}

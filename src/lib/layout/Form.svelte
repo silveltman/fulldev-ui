@@ -10,7 +10,7 @@
 <form
 	{action}
 	method="POST"
-	class="small:max-w-sm large:max-w-lg flex w-full max-w-md flex-col gap-md
+	class="flex w-full max-w-md flex-col gap-md small:max-w-sm large:max-w-lg
 	{className}"
 	{...$$restProps}
 >

@@ -26,7 +26,7 @@
 	{/if}
 
 	<div
-		class="flex w-full flex-col gap-sm  [&_*:not(h1,h2,h3,h4,h5,h6)]:text-sm
+		class="flex w-full flex-col gap-sm [&_*:not(h1,h2,h3,h4,h5,h6)]:text-sm
 		{center ? 'items-center text-center' : 'items-start text-left'}
 		{box ? 'p-md' : ''}"
 	>

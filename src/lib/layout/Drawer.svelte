@@ -18,7 +18,7 @@
 	class={className}
 >
 	<slot name="toggle">
-		<div class="btn-circle btn ghost ml-auto text-base-11 transition-none">
+		<div class="ghost btn-circle btn ml-auto text-base-11 transition-none">
 			<IconMenu2 />
 		</div>
 	</slot>
@@ -48,7 +48,7 @@
 			<slot name="header" />
 			<label
 				for="drawer-{position}"
-				class="btn-circle btn ghost ml-auto text-base-11 transition-none"
+				class="ghost btn-circle btn ml-auto text-base-11 transition-none"
 			>
 				<IconX />
 			</label>

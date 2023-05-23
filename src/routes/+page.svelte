@@ -4,7 +4,6 @@
 	import Highlight2 from 'layout/Highlight.svelte';
 	import Card from 'layout/Card.svelte';
 
-	import Eyebrow from '../../archive/Eyebrow.svelte';
 	import Button from 'base/Button.svelte';
 	import Image from 'base/Image.svelte';
 	import Panel from 'layout/Card.svelte';
@@ -12,7 +11,6 @@
 	import Textarea from 'base/Textarea.svelte';
 	import Select from 'base/Select.svelte';
 	import Form from 'layout/Form.svelte';
-	import Buttons from '../histoire/Buttons.story.svelte';
 	import { text } from 'svelte/internal';
 	import Grid from 'layout/Grid.svelte';
 	import Split from 'layout/Split.svelte';

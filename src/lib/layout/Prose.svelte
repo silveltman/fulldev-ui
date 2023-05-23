@@ -3,7 +3,7 @@
 	export { className as class };
 </script>
 
-<div class="c-richtext small:max-w-xl large:max-w-3xl max-w-2xl {className}">
+<div class="c-richtext max-w-2xl small:max-w-xl large:max-w-3xl {className}">
 	<slot />
 </div>
 

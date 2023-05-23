@@ -7,7 +7,7 @@
 
 <svelte:element
 	this={as}
-	class="small:max-w-xl large:max-w-3xl relative flex max-w-2xl flex-col gap-md
+	class="relative flex max-w-2xl flex-col gap-md small:max-w-xl large:max-w-3xl
 		{center ? 'mx-auto items-center text-center' : 'items-start'}
 		{className}"
 >

@@ -19,7 +19,8 @@
 			>
 				<Image
 					class="h-auto w-full"
-					{item}
+					src={item.src}
+					alt={item.alt}
 				/>
 			</a>
 		{/each}
@@ -39,7 +40,11 @@
 				>
 					<IconChevronLeft />
 				</a> -->
-				<Image content={item} />
+				<Image
+					class="h-auto w-full"
+					src={item.src}
+					alt={item.alt}
+				/>
 				<!-- <a
 					class="btn-outline btn-square btn-sm btn absolute right-sm hidden opacity-50 group-hover:opacity-100 sm:flex"
 					href="#image{i + 1 > content.length - 1 ? 0 : i + 1}"
