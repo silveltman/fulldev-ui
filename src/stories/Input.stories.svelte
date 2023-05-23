@@ -1,15 +1,16 @@
 <script>
 	import { Meta, Story, Template } from '@storybook/addon-svelte-csf';
-	import Textfield from 'base/Input.svelte';
+	import Input from 'base/Input.svelte';
 </script>
 
 <Meta
 	title="Textfield"
-	component={Textfield}
+	tags={['autodocs']}
+	component={Input}
 />
 
 <Template let:args>
-	<Textfield {...args} />
+	<Input {...args} />
 </Template>
 
 <Story
