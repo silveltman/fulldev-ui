@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 const plugin = require('tailwindcss/plugin');
 
 module.exports = plugin(
@@ -15,7 +14,11 @@ module.exports = plugin(
 				fontFamily: theme('fontFamily.base'),
 				lineHeight: theme('lineHeight.base'),
 				color: theme('colors.base.12'),
-				backgroundColor: theme('colors.base.1')
+				backgroundColor: theme('colors.base.1'),
+				scrollBehavior: 'smooth',
+				width: '100%',
+				overflowX: 'hidden',
+				height: '100%'
 			},
 			'body, p': {
 				fontSize: theme('fontSize.md')
@@ -79,7 +82,7 @@ module.exports = plugin(
 				}
 			}
 		});
-
+		// // TODO: Add variants for all base components, like button:small.
 		// Add selectors for components, like button:my-property.
 		// const components = ['button', 'textfield', 'card'];
 		// components.forEach((component) => {
