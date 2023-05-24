@@ -25,7 +25,7 @@
 		:global(h1:not(:first-child)),
 		:global(h2:not(:first-child)),
 		:global(h3:not(:first-child)) {
-			@apply mt-2xl;
+			@apply mt-xl;
 		}
 		:global(img) {
 			@apply my-xl;

@@ -4,19 +4,21 @@
 </script>
 
 <Meta
-	title="Split"
+	title="Layout/Split"
 	tags={['autodocs']}
 	component={Split}
 />
 
 <Template let:args>
 	<Split {...args}>
-		<div class="h-40 w-full rounded-card bg-blue-400" />
-		<div class="h-40 w-full rounded-card bg-blue-400" />
+		<div class="h-20 rounded-[8px] bg-blue-400" />
+		<div class="h-40 rounded-[8px] bg-blue-400" />
 	</Split>
 </Template>
 
+<Story name="Default" />
+
 <Story
-	name="Base"
-	args={{ label: 'Textfield Label', placeholder: 'Textfield Placeholder' }}
+	name="Center"
+	args={{ center: true }}
 />

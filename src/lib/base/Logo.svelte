@@ -8,11 +8,12 @@
 
 <svelte:element
 	this={disableLink ? 'div' : 'a'}
-	class="block {className}"
+	class="inline-block h-auto w-auto {className}"
 	href={disableLink ? undefined : '/'}
 	{...$$restProps}
 >
 	<img
+		class="h-auto w-auto rounded-[0px]"
 		{src}
 		{alt}
 	/>
