@@ -21,19 +21,22 @@ module.exports = plugin(
 				height: '100%'
 			},
 			'body, p': {
-				fontSize: theme('fontSize.md')
+				fontSize: theme('fontSize.md'),
+				color: theme('colors.base.12')
 			},
 			'h1, h2, h3': {
 				fontFamily: theme('fontFamily.heading'),
 				fontWeight: theme('fontWeight.heading'),
 				lineHeight: theme('lineHeight.heading'),
-				fontSize: theme('fontSize.lg')
+				fontSize: theme('fontSize.lg'),
+				color: theme('colors.base.12')
 			},
 			'h4, h5, h6': {
 				fontFamily: theme('fontFamily.subheading'),
 				fontWeight: theme('fontWeight.subheading'),
 				lineHeight: theme('lineHeight.subheading'),
-				fontSize: theme('fontSize.md')
+				fontSize: theme('fontSize.md'),
+				color: theme('colors.base.12')
 			},
 			img: {
 				borderRadius: theme('borderRadius.image'),
