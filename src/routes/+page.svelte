@@ -19,6 +19,7 @@
 	import Masonry from 'layout/Masonry.svelte';
 	import Carousel from 'layout/Carousel.svelte';
 	import Box from 'layout/Box.svelte';
+	import Heading from 'base/Heading.svelte';
 
 	const count = 20;
 
@@ -76,5 +77,10 @@
 	<Button
 		variant="soft"
 		text="Button"
+	/>
+
+	<Heading
+		as="h2"
+		text="Hello"
 	/>
 </Container>
