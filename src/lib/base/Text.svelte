@@ -2,9 +2,9 @@
 	let className = '';
 	export { className as class };
 
-	export let text: string;
 	export let as: string = 'p';
 	export let secondary: boolean = false;
+	export let text: string;
 </script>
 
 <svelte:element

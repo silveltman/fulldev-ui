@@ -4,7 +4,7 @@ export { default as Image } from 'base/Image.svelte';
 export { default as Logo } from 'base/Logo.svelte';
 export { default as Select } from 'base/Select.svelte';
 export { default as Textarea } from 'base/Textarea.svelte';
-export { default as Textfield } from 'base/Input.svelte';
+export { default as Input } from 'base/Input.svelte';
 export { default as Whatsapp } from 'base/Whatsapp.svelte';
 export { default as Link } from 'base/Link.svelte';
 

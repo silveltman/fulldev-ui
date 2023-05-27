@@ -3,9 +3,9 @@
 	export { className as class };
 </script>
 
-<div class="c-prose max-w-2xl small:max-w-xl large:max-w-3xl {className}">
+<article class="c-prose max-w-3xl !medium {className}">
 	<slot />
-</div>
+</article>
 
 <style lang="postcss">
 	.c-prose {

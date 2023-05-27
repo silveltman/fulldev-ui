@@ -4,7 +4,6 @@
 	import Highlight2 from 'layout/Highlight.svelte';
 	import Card from 'layout/Card.svelte';
 
-	import Eyebrow from '../../archive/Eyebrow.svelte';
 	import Button from 'base/Button.svelte';
 	import Image from 'base/Image.svelte';
 	import Panel from 'layout/Card.svelte';
@@ -20,6 +19,7 @@
 	import Carousel from 'layout/Carousel.svelte';
 	import Box from 'layout/Box.svelte';
 	import Heading from 'base/Heading.svelte';
+	import WrapBlock from 'layout/WrapBlock.svelte';
 
 	const count = 20;
 
@@ -38,49 +38,6 @@
 	};
 </script>
 
-<Container class="py-20 medium">
-	<div class="flex flex-col gap-2">
-		<div class="my-[10px] h-10 w-xs bg-base-9" />
-		<div class="my-[10px] h-10 w-sm bg-base-9" />
-		<div class="my-[10px] h-10 w-md bg-base-9" />
-		<div class="my-[10px] h-10 w-lg bg-base-9" />
-		<div class="my-[10px] h-10 w-xl bg-base-9" />
-		<div class="my-[10px] h-10 w-2xl bg-base-9" />
-	</div>
-	<div class="my-20 flex border-4">
-		<div class="h-10 w-full bg-base-1" />
-		<div class="h-10 w-full bg-base-2" />
-		<div class="h-10 w-full bg-base-3" />
-		<div class="h-10 w-full bg-base-4" />
-		<div class="h-10 w-full bg-base-5" />
-		<div class="h-10 w-full bg-base-6" />
-		<div class="h-10 w-full bg-base-7" />
-		<div class="h-10 w-full bg-base-8" />
-		<div class="h-10 w-full bg-base-9" />
-		<div class="h-10 w-full bg-base-10" />
-		<div class="h-10 w-full bg-base-11" />
-		<div class="h-10 w-full bg-base-12" />
-	</div>
-
-	<Button
-		variant="solid"
-		text="Button"
-	/>
-	<Button
-		variant="ghost"
-		text="Button"
-	/>
-	<Button
-		variant="ringed"
-		text="Button"
-	/>
-	<Button
-		variant="soft"
-		text="Button"
-	/>
-
-	<Heading
-		as="h2"
-		text="Hello"
-	/>
-</Container>
+<WrapBlock>
+	<div class="h-40 w-full bg-blue-500" />
+</WrapBlock>
