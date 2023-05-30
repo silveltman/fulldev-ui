@@ -16,11 +16,12 @@ export { default as Prose } from 'group/Prose.svelte';
 
 // Wrap
 export { default as Carousel } from 'wrap/Carousel.svelte';
+export { default as Container } from 'wrap/Container.svelte'
 export { default as Flow } from 'wrap/Flow.svelte';
 export { default as Grid } from 'wrap/Grid.svelte';
-export { default as Inner } from 'wrap/Inner.svelte';
-export { default as Outer } from 'wrap/Outer.svelte';
+export { default as Panel } from 'wrap/Panel.svelte';
 export { default as Ratio } from 'wrap/Ratio.svelte';
+export { default as Section } from 'wrap/Section.svelte';
 
 // Slot
 export { default as SlotChecklist } from 'slot/SlotChecklist.svelte';
