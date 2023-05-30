@@ -13,7 +13,8 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			base: './src/lib/base',
-			block: './src/lib/block',
+			group: './src/lib/group',
+			wrap: './src/lib/wrap',
 			layout: './src/lib/layout',
 			slot: './src/lib/slot',
 			lib: './src/lib'
