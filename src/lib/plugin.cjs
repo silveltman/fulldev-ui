@@ -38,11 +38,6 @@ module.exports = plugin(
 				lineHeight: theme('lineHeight.subheading'),
 				fontSize: theme('fontSize.md'),
 				color: theme('colors.base.12')
-			},
-			img: {
-				borderRadius: theme('borderRadius.image'),
-				width: '100%',
-				height: 'auto'
 			}
 		});
 

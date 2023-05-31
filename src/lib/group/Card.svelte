@@ -11,14 +11,14 @@
 	{href}
 	class="flex w-full grow flex-col
 		{center ? 'items-center text-center' : 'items-start text-left'}
-		{box ? 'rounded-card border border-base-6 bg-base-2' : ''}
+		{box && 'rounded-card border border-base-6 bg-base-2'}
 		{href && 'group hover:border-base-8'}
 		{className}"
 >
 	{#if $$slots.media}
 		<figure
-			class="w-full group-hover:opacity-75
-		{box ? '' : 'mb-md'}
+			class="w-full overflow-hidden group-hover:opacity-75 [&_img]:!rounded-[0px]
+		{box ? 'rounded-t-card' : 'mb-md overflow-hidden rounded-card'}
 		"
 		>
 			<slot name="media" />
@@ -26,7 +26,7 @@
 	{/if}
 
 	<div
-		class="flex w-full flex-col gap-sm  [&_*:not(h1,h2,h3,h4,h5,h6)]:text-sm
+		class="flex w-full flex-col gap-sm [&_*:not(h1,h2,h3,h4,h5,h6)]:text-sm
 		{center ? 'items-center text-center' : 'items-start text-left'}
 		{box ? 'p-md' : ''}"
 	>

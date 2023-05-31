@@ -6,7 +6,7 @@
 
 <svelte:element
 	this={as}
-	class="relative w-full bg-base-1 py-2xl {className}"
+	class="relative w-full py-2xl {className}"
 	{...$$restProps}
 >
 	<slot />

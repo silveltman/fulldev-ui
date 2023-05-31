@@ -48,5 +48,9 @@
 		:global(a[href]) {
 			@apply underline;
 		}
+
+		:global(img) {
+			@apply h-auto w-full rounded-image;
+		}
 	}
 </style>

@@ -3,18 +3,35 @@
 	export { className as class };
 	export let as: string = 'div';
 	export let center: boolean = false;
+	export let row: boolean = false;
 </script>
 
 <svelte:element
 	this={as}
-	class="small:max-w-xl large:max-w-3xl relative flex max-w-2xl flex-col gap-md
-		{center ? 'mx-auto items-center text-center' : 'items-start'}
-		{className}"
+	class="flex w-full gap-x-xl gap-y-md
+	{row
+		? 'max-md:flex-col md:justify-between'
+		: 'max-w-2xl flex-col gap-y-md small:max-w-xl large:max-w-3xl'}
+	{center && row && 'md:items-center'}
+	{center && !row && 'mx-auto items-center text-center'}
+	{className}"
+	{...$$restProps}
 >
-	<slot />
-	{#if $$slots.footer}
-		<footer class="flex flex-wrap gap-md pt-md">
-			<slot name="footer" />
-		</footer>
+	{#if row}
+		<div class="flex flex-col gap-sm">
+			<slot />
+		</div>
+	{:else}
+		<slot />
+	{/if}
+
+	{#if $$slots.actions}
+		<div
+			class="flex flex-wrap gap-md max-md:pt-md
+			{!row && 'md:pt-md'}
+			"
+		>
+			<slot name="actions" />
+		</div>
 	{/if}
 </svelte:element>

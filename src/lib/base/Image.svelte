@@ -23,5 +23,5 @@
 	sizes={sizesString}
 	{src}
 	{alt}
-	class="h-auto w-full {className}"
+	class="block h-auto w-full min-w-0 {className}"
 />

@@ -7,59 +7,43 @@
 	import Section from 'wrap/Section.svelte';
 	import Container from 'wrap/Container.svelte';
 	import Panel from 'wrap/Panel.svelte';
+	import Highlight from 'group/Highlight.svelte';
+	import Heading from 'base/Heading.svelte';
+	import Text from 'base/Text.svelte';
+	import Card from 'group/Card.svelte';
+	import Image from 'base/Image.svelte';
 </script>
 
 <Section>
 	<Container>
-		<Flow>
-			<div class="h-40 w-full bg-blue-500" />
-			<Flow row>
-				<div class="h-40 w-full bg-blue-500" />
-				<div class="h-40 w-full bg-blue-500" />
-			</Flow>
-		</Flow>
-	</Container>
-</Section>
-
-<Section>
-	<Container>
-		<Panel>
-			<Flow>
-				<div class="h-40 w-full bg-blue-500" />
-				<Flow row>
-					<div class="h-40 w-full bg-blue-500" />
-					<div class="h-40 w-full bg-blue-500" />
-				</Flow>
-			</Flow>
-		</Panel>
-	</Container>
-</Section>
-
-<Section>
-	<Container>
-		<Carousel>
-			<div class="h-40 w-full bg-blue-500" />
-			<div class="h-40 w-full bg-blue-500" />
-			<div class="h-40 w-full bg-blue-500" />
-			<div class="h-40 w-full bg-blue-500" />
-			<div class="h-40 w-full bg-blue-500" />
-			<div class="h-40 w-full bg-blue-500" />
-		</Carousel>
-	</Container>
-</Section>
-
-<Section>
-	<Container>
-		<Grid masonry>
-			<div class="h-40 w-full bg-blue-500" />
-			<div class="h-80 w-full bg-blue-500" />
-			<div class="h-80 w-full bg-blue-500" />
-			<div class="h-40 w-full bg-blue-500" />
-			<div class="h-40 w-full bg-blue-500" />
-			<div class="h-40 w-full bg-blue-500" />
-			<div class="h-40 w-full bg-blue-500" />
-			<div class="h-40 w-full bg-blue-500" />
-			<div class="h-40 w-full bg-blue-500" />
+		<!-- <Highlight
+			row
+			center
+		>
+			<Heading text="Heading" />
+			<Text text="Text" />
+			<svelte:fragment slot="actions">
+				<button class="btn-primary btn">Button</button>
+				<button class="btn-secondary btn">Button</button>
+			</svelte:fragment>
+		</Highlight> -->
+		<Grid>
+			<Card box>
+				<Image
+					slot="media"
+					src="https://picsum.photos/seed/1/400/300"
+					alt="test"
+				/>
+				<Heading
+					as="h4"
+					text="Heading"
+				/>
+				<Text text="Text" />
+				<svelte:fragment slot="actions">
+					<button class="btn-primary btn">Button</button>
+					<button class="btn-secondary btn">Button</button>
+				</svelte:fragment>
+			</Card>
 		</Grid>
 	</Container>
 </Section>
