@@ -1,49 +1,67 @@
 <script lang="ts">
-	import Carousel from 'wrap/Carousel.svelte';
 	import Flow from 'wrap/Flow.svelte';
-	import Grid from 'wrap/Grid.svelte';
-	import Inner from 'wrap/Container.svelte';
-	import Outer from 'wrap/Section.svelte';
 	import Section from 'wrap/Section.svelte';
 	import Container from 'wrap/Container.svelte';
-	import Panel from 'wrap/Panel.svelte';
 	import Highlight from 'group/Highlight.svelte';
-	import Heading from 'base/Heading.svelte';
-	import Text from 'base/Text.svelte';
-	import Card from 'group/Card.svelte';
 	import Image from 'base/Image.svelte';
+	import Gallery from 'group/Gallery.svelte';
+	import Button from 'base/Button.svelte';
+	import Select from 'base/Select.svelte';
 </script>
 
 <Section>
 	<Container>
-		<!-- <Highlight
-			row
-			center
-		>
-			<Heading text="Heading" />
-			<Text text="Text" />
-			<svelte:fragment slot="actions">
-				<button class="btn-primary btn">Button</button>
-				<button class="btn-secondary btn">Button</button>
-			</svelte:fragment>
-		</Highlight> -->
-		<Grid>
-			<Card box>
+		<Flow row>
+			<Gallery class="lg:col-span-2">
 				<Image
-					slot="media"
-					src="https://picsum.photos/seed/1/400/300"
-					alt="test"
+					src="https://picsum.photos/1200/1200"
+					alt="alt"
 				/>
-				<Heading
-					as="h4"
-					text="Heading"
+				<Image
+					src="https://picsum.photos/1200/1200"
+					alt="alt"
 				/>
-				<Text text="Text" />
+				<Image
+					src="https://picsum.photos/1200/1200"
+					alt="alt"
+				/>
+				<Image
+					src="https://picsum.photos/1200/800"
+					alt="alt"
+				/>
+				<Image
+					src="https://picsum.photos/1200/1200"
+					alt="alt"
+				/>
+				<Image
+					src="https://picsum.photos/1200/400"
+					alt="alt"
+				/>
+				<Image
+					src="https://picsum.photos/1200/1200"
+					alt="alt"
+				/>
+				<Image
+					src="https://picsum.photos/1200/1200"
+					alt="alt"
+				/>
+			</Gallery>
+			<Highlight>
+				<h1>Hello world</h1>
 				<svelte:fragment slot="actions">
-					<button class="btn-primary btn">Button</button>
-					<button class="btn-secondary btn">Button</button>
+					<Select
+						id="groefdikte"
+						placeholder="Kies groefdikte"
+						options={['1', '2']}
+					/>
+					<Button
+						class="light-orange w-full"
+						variant="soft"
+						text="Inmeet instructies"
+						href="#"
+					/>
 				</svelte:fragment>
-			</Card>
-		</Grid>
+			</Highlight>
+		</Flow>
 	</Container>
 </Section>

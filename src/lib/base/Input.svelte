@@ -13,7 +13,7 @@
 
 <label
 	for={id}
-	class="relative flex flex-col gap-xs {className}"
+	class="relative flex flex-col gap-xs shrink-0 {className}"
 	{...$$restProps}
 >
 	{#if label}

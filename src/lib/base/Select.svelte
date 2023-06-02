@@ -11,7 +11,7 @@
 
 <label
 	for={id}
-	class="relative flex flex-col gap-xs {className}"
+	class="relative flex flex-col gap-xs shrink-0 {className}"
 	{...$$restProps}
 >
 	{#if label}
@@ -19,13 +19,13 @@
 			{label}
 		</span>
 	{/if}
-	<div class="relative">
+	<div class="relative leading-[1]">
 		<select
 			{id}
 			name={id}
 			{required}
 			{disabled}
-			class="text-md block w-full rounded-input !border-none bg-transparent p-md leading-[1] !ring-2 !ring-inset ring-base-7 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
+			class="block w-full rounded-input !border-none bg-transparent p-md pr-[40px] text-md leading-[1] !ring-2 !ring-inset ring-base-7 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
 		>
 			{#if placeholder}
 				<option
@@ -37,7 +37,7 @@
 			{/if}
 			{#each options as option}
 				<option
-					class="leading-[1] text-base-12 "
+					class="leading-[1] text-base-12"
 					value={option}>{option}</option
 				>
 			{/each}

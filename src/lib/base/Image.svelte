@@ -23,5 +23,6 @@
 	sizes={sizesString}
 	{src}
 	{alt}
-	class="block h-auto w-full min-w-0 {className}"
+	{...$$restProps}
+	class="block h-auto w-full min-w-0 rounded-image {className}"
 />

@@ -16,6 +16,7 @@ export { default as Card } from 'group/Card.svelte';
 export { default as Form } from 'group/Form.svelte';
 export { default as Highlight } from 'group/Highlight.svelte';
 export { default as Prose } from 'group/Prose.svelte';
+export { default as Gallery } from 'group/Gallery.svelte';
 
 // Wrap
 export { default as Carousel } from 'wrap/Carousel.svelte';

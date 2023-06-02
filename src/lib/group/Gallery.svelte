@@ -1,24 +1,18 @@
 <script lang="ts">
-	import type { SlotGalleryContent } from '$lib/types';
-	import Image from '$lib/base/Image.svelte';
 	import { IconArrowNarrowDown } from '@tabler/icons-svelte';
 
 	let className = '';
 	export { className as class };
-	export let content: SlotGalleryContent;
 </script>
 
-<div
-	class="relative snap-x scroll-smooth max-lg:flex max-lg:overflow-x-scroll max-lg:bg-base-2 lg:columns-2 lg:gap-sm lg:space-y-sm {className}"
->
-	{#each content as item}
-		<Image
-			class="h-auto w-full shrink-0 snap-start object-contain max-lg:rounded-[0px]"
-			{...item}
-		/>
-	{/each}
+<div class="dark relative -mx-4 md:-mx-12 lg:mx-0 {className}">
+	<div
+		class="snap-x scroll-smooth max-lg:flex max-lg:overflow-x-scroll lg:columns-1 lg:gap-sm lg:space-y-sm xl:columns-2 [&_img]:shrink-0 [&_img]:snap-start [&_img]:object-contain [&_img]:max-lg:rounded-[0px]"
+	>
+		<slot />
+	</div>
 
-	<div class="absolute bottom-xl right-xl z-10 -rotate-90 lg:hidden">
+	<div class="scroll-indicator absolute bottom-xl right-xl z-10 -rotate-90 lg:hidden">
 		<div class="animate-bounce rounded-[999px] bg-base-9/75 p-sm text-white">
 			<IconArrowNarrowDown />
 		</div>
