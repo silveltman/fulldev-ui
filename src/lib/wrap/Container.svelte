@@ -8,6 +8,7 @@
 	this={as}
 	class="mx-auto w-full max-w-screen-2xl px-4 md:px-12
 	{className}"
+	{...$$restProps}
 >
 	<slot />
 </svelte:element>

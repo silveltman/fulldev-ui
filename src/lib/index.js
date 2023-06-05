@@ -10,6 +10,7 @@ export { default as Text } from 'base/Text.svelte';
 export { default as Textarea } from 'base/Textarea.svelte';
 export { default as Video } from 'base/Video.svelte';
 export { default as Whatsapp } from 'base/Whatsapp.svelte';
+export { default as Icon } from 'base/Icon.svelte';
 
 // Group
 export { default as Card } from 'group/Card.svelte';

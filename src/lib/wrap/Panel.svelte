@@ -8,6 +8,7 @@
 	this={as}
 	class="relative w-full overflow-hidden rounded-box border border-base-6 bg-base-2 px-md py-xl md:px-xl
 	{className}"
+	{...$$restProps}
 >
 	<slot />
 </svelte:element>
