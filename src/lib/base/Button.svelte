@@ -3,14 +3,22 @@
 	export { className as class };
 
 	export let text: string | null = null;
+	export let label: string | null = null;
 	export let href: string | undefined = undefined;
 	export let variant: 'solid' | 'ringed' | 'soft' | 'ghost' = 'soft';
+
+	const element = () => {
+		if (label) return 'label';
+		else if (href) return 'a';
+		else return 'button';
+	};
 </script>
 
 <svelte:element
-	this={href ? 'a' : 'button'}
+	this={element()}
 	href={href ? href : undefined}
-	type={!href ? 'button' : undefined}
+	for={label ? label : undefined}
+	type={!href && !label ? 'button' : undefined}
 	on:click
 	class="button inline-flex cursor-pointer items-center justify-center whitespace-nowrap rounded-button p-md text-center text-md font-button leading-[1] transition-all active:scale-95 disabled:pointer-events-none disabled:opacity-50
 

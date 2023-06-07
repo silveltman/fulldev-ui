@@ -24,7 +24,10 @@
 
 		:global(h1:not(:first-child)),
 		:global(h2:not(:first-child)),
-		:global(h3:not(:first-child)) {
+		:global(h3:not(:first-child)),
+		:global(h4:not(:first-child)),
+		:global(h5:not(:first-child)),
+		:global(h6:not(:first-child)) {
 			@apply mt-xl;
 		}
 		:global(img) {

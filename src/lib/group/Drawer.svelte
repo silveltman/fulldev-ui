@@ -14,13 +14,13 @@
 	id="drawer-{position}"
 	class="peer absolute h-0 w-0 appearance-none opacity-0"
 />
-<label
+<!-- <label
 	for="drawer-{position}"
 	class={className}
 >
 	<slot name="toggle">
 		<Button
-			class="small"
+			class="pointer-events-none small"
 			variant="ghost"
 		>
 			<Icon
@@ -29,7 +29,20 @@
 			/>
 		</Button>
 	</slot>
-</label>
+</label> -->
+
+<Button
+	label="drawer-{position}"
+	class="small"
+	variant="ghost"
+>
+	<slot name="toggle">
+		<Icon
+			size={24}
+			name="menu"
+		/>
+	</slot>
+</Button>
 
 <!-- Overlay -->
 <label
@@ -55,20 +68,17 @@
 				: ''}"
 		>
 			<slot name="header" />
-			<label
-				for="drawer-{position}"
-				class="ml-auto"
+
+			<Button
+				label="drawer-{position}"
+				class="ml-auto small"
+				variant="ghost"
 			>
-				<Button
-					class="small"
-					variant="ghost"
-				>
-					<Icon
-						size={24}
-						name="close"
-					/>
-				</Button>
-			</label>
+				<Icon
+					size={24}
+					name="close"
+				/>
+			</Button>
 		</Container>
 	</header>
 	<Container class={position === 'left' || position === 'right' ? 'py-md lg:px-md' : 'py-md'}>
