@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { IconArrowNarrowDown } from '@tabler/icons-svelte';
+	import Icon from 'base/Icon.svelte';
 
 	let className = '';
 	export { className as class };
@@ -14,7 +14,7 @@
 
 	<div class="scroll-indicator absolute bottom-xl right-xl z-10 -rotate-90 lg:hidden">
 		<div class="animate-bounce rounded-[999px] bg-base-9/75 p-sm text-white">
-			<IconArrowNarrowDown />
+			<Icon name="expand_more" />
 		</div>
 	</div>
 </div>
