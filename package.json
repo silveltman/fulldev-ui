@@ -1,6 +1,6 @@
 {
   "name": "fulldev-ui",
-  "version": "0.5.9",
+  "version": "0.5.10",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
@@ -17,6 +17,10 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+  "files": [
+    "dist"
+  ],
+  "svelte": "./dist/index.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -24,9 +28,8 @@
     },
     "./plugin": "./dist/plugin.cjs"
   },
-  "files": [
-    "dist"
-  ],
+  "types": "./dist/index.d.ts",
+  "type": "module",
   "peerDependencies": {
     "svelte": "^3.54.0"
   },
@@ -63,9 +66,6 @@
     "typescript": "^5.0.4",
     "vite": "^4.3.8"
   },
-  "svelte": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "type": "module",
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
     "@rodneylab/svelte-social-icons": "^0.0.26",
