@@ -10,9 +10,9 @@
 	this={as}
 	class="flex w-full gap-x-xl gap-y-md
 	{row
-		? 'max-md:flex-col md:justify-between'
+		? 'max-lg:flex-col lg:justify-between'
 		: 'max-w-2xl flex-col gap-y-md small:max-w-xl large:max-w-3xl'}
-	{center && row && 'md:items-center'}
+	{center && row && 'lg:items-center'}
 	{center && !row && 'mx-auto items-center text-center'}
 	{className}"
 	{...$$restProps}
@@ -27,8 +27,8 @@
 
 	{#if $$slots.actions}
 		<div
-			class="flex flex-wrap gap-md max-md:pt-md
-			{!row && 'md:pt-md'}
+			class="flex flex-wrap gap-md max-lg:pt-md
+			{!row && 'lg:pt-md'}
 			"
 		>
 			<slot name="actions" />

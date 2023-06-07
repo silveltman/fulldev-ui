@@ -4,7 +4,7 @@
 
 	export let as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' = 'h2';
 	export let secondary: boolean = as == 'h1' || as == 'h2' || as == 'h3' ? false : true;
-	export let text: string;
+	export let text: string | null = null;
 </script>
 
 <svelte:element
@@ -15,5 +15,7 @@
     "
 	{...$$restProps}
 >
-	{text}
+	<slot>
+		{text}
+	</slot>
 </svelte:element>

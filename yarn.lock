@@ -1590,6 +1590,11 @@
   resolved "https://registry.yarnpkg.com/@radix-ui/colors/-/colors-0.1.8.tgz#b08c62536fc462a87632165fb28e9b18f9bd047e"
   integrity sha512-jwRMXYwC0hUo0mv6wGpuw254Pd9p/R6Td5xsRpOmaWkUHlooNWqVcadgyzlRumMq3xfOTXwJReU0Jv+EIy4Jbw==
 
+"@rodneylab/svelte-social-icons@^0.0.26":
+  version "0.0.26"
+  resolved "https://registry.yarnpkg.com/@rodneylab/svelte-social-icons/-/svelte-social-icons-0.0.26.tgz#566cd528d7f66b25877487971eb834e8d265486e"
+  integrity sha512-VnCjCpTZvpAsVcI5S7bKDPJQLA2a29Prx+1Dwvar/AebFypzKOxG0p2Pd/msmvdUEOuvokaATAUWH7Nrp4xVUA==
+
 "@sinclair/typebox@^0.25.16":
   version "0.25.24"
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.25.24.tgz#8c7688559979f7079aacaf31aa881c3aa410b718"
@@ -2512,18 +2517,6 @@
     magic-string "^0.30.0"
     svelte-hmr "^0.15.1"
     vitefu "^0.2.4"
-
-"@tabler/icons-svelte@^2.20.0":
-  version "2.20.0"
-  resolved "https://registry.yarnpkg.com/@tabler/icons-svelte/-/icons-svelte-2.20.0.tgz#f3df3b6bb8cbc7adf390ce2e971de520d2f92693"
-  integrity sha512-FePpKKSTA2edRr37CR1aOOd+GUkx/wRaMwUcJOIGP+CGlSGaZw2fXOzwNkuCZtLZYAQVxgsQoD9URiFcrhrHzw==
-  dependencies:
-    "@tabler/icons" "2.20.0"
-
-"@tabler/icons@2.20.0":
-  version "2.20.0"
-  resolved "https://registry.yarnpkg.com/@tabler/icons/-/icons-2.20.0.tgz#42a11bb91b9d347fdf6b296274cf68998122bb10"
-  integrity sha512-BsUEJoqREs8bqcrf5HfJBq6/rDvsRI3h+T+0X1o7i8LBHonsH0iAngcyL0I82YKoSy9NiVDvM3LV63zDP0nPYQ==
 
 "@tailwindcss/aspect-ratio@^0.4.2":
   version "0.4.2"

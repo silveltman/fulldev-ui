@@ -3,17 +3,18 @@
 	export { className as class };
 
 	export let as: string = 'p';
+	export let text: string | null = null;
 	export let secondary: boolean = false;
-	export let text: string;
 </script>
 
 <svelte:element
 	this={as}
-	class="
-    {secondary ? 'text-sm text-base-11' : 'text-md text-base-12'}
-    {className}
-    "
+	class="text-base-12 {className}
+	{secondary ? 'text-sm' : 'text-md'}
+	"
 	{...$$restProps}
 >
-	{text}
+	<slot>
+		{text}
+	</slot>
 </svelte:element>

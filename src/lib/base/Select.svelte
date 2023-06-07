@@ -1,52 +1,46 @@
 <script lang="ts">
+	type Option = string | number | { label: string | number; value: string | number };
+
 	let className = '';
 	export { className as class };
+	export let id: string;
+	export let placeholder: string | null = null;
 	export let required: boolean = false;
 	export let disabled: boolean = false;
-	export let id: string;
-	export let label: string | null = null;
-	export let placeholder: string | null = null;
-	export let options: string[];
+	export let selected: string | number | null = null;
+	export let options: Option[];
+
+	const value = (option: Option) => (typeof option === 'object' ? option.value : option);
 </script>
 
-<label
-	for={id}
-	class="relative flex flex-col gap-xs shrink-0 {className}"
+<select
+	{id}
+	name={id}
+	{required}
+	{disabled}
+	class="shrink-0 rounded-input !border-none bg-transparent py-3 pl-md text-md !ring-2 !ring-inset ring-base-7 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50 small:py-2 large:py-4
+	{className}
+	"
 	{...$$restProps}
 >
-	{#if label}
-		<span class="relative text-sm text-base-11">
-			{label}
-		</span>
-	{/if}
-	<div class="relative leading-[1]">
-		<select
-			{id}
-			name={id}
-			{required}
-			{disabled}
-			class="block w-full rounded-input !border-none bg-transparent p-md pr-[40px] text-md leading-[1] !ring-2 !ring-inset ring-base-7 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50"
+	{#if placeholder}
+		<option
+			value=""
+			disabled
+			selected>{placeholder}</option
 		>
-			{#if placeholder}
-				<option
-					value=""
-					disabled
-					class="leading-[1] text-base-11"
-					selected>{placeholder}</option
-				>
-			{/if}
-			{#each options as option}
-				<option
-					class="leading-[1] text-base-12"
-					value={option}>{option}</option
-				>
-			{/each}
-		</select>
-	</div>
-</label>
+	{/if}
+	{#each options as option}
+		<option
+			value={value(option)}
+			selected={value(option) === selected}
+		>
+			{value(option)}
+		</option>
+	{/each}
+</select>
 
 <style lang="postcss">
-	/* Apply styles when no value selected */
 	select:has(option:checked[value='']) {
 		@apply text-base-11;
 	}

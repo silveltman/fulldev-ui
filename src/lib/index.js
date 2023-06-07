@@ -35,5 +35,6 @@ export { default as SlotGalleryMasonry } from 'slot/SlotGalleryMasonry.svelte';
 
 // Layout
 // Rest
-// export { default as Navbar } from 'layout/Navbar.svelte';
-// export { default as Footer } from 'layout/Footer.svelte';
+export { default as Navbar } from 'group/Navbar.svelte';
+export { default as Drawer } from 'group/Drawer.svelte';
+// export { default as Footer } from 'group/Footer.svelte';

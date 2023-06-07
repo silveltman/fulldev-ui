@@ -1,9 +1,10 @@
 <script lang="ts">
 	let className = '';
 	export { className as class };
-	export let name: string = 'circle';
+
+	export let name: string;
 	export let fill: boolean = false;
-	export let size: 20 | 24 | 32 | 48 = 24;
+	export let size: 20 | 24 | 40 | 48 = 24;
 </script>
 
 <i

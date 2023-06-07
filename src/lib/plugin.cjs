@@ -17,9 +17,8 @@ module.exports = plugin(
 				backgroundColor: theme('colors.base.1'),
 				scrollBehavior: 'smooth',
 				width: '100%',
-				overflowX: 'hidden',
 				height: '100%',
-				'@apply light medium': {}
+				'@apply medium': {}
 			},
 			'body, p': {
 				fontSize: theme('fontSize.md'),
