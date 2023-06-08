@@ -8,11 +8,8 @@
 	export let required: boolean = false;
 	export let disabled: boolean = false;
 	export let options: Option[];
-	export let value: string | number;
-
 	const optionValue = (option: Option) => (typeof option === 'object' ? option.value : option);
-
-	const onChange = (e: any) => (value = e.target.value);
+	export let value: string | number = optionValue(options[0]);
 </script>
 
 <select
@@ -20,7 +17,7 @@
 	name={id}
 	{required}
 	{disabled}
-	on:change={onChange}
+	bind:value
 	class="shrink-0 rounded-input !border-none bg-transparent py-3 pl-md text-md !ring-2 !ring-inset ring-base-7 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50 small:py-2 large:py-4
 	{className}
 	"
