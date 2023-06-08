@@ -1,6 +1,6 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import Container from 'wrap/Container.svelte';
-	import Split from 'wrap/Flow.svelte';
+	import Split from 'wrap/Stack.svelte';
 
 	let className = '';
 	export { className as class };
@@ -10,4 +10,4 @@
 	<Container>
 		<slot />
 	</Container>
-</footer>
+</footer> -->

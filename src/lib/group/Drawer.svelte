@@ -33,7 +33,7 @@
 
 <Button
 	label="drawer-{position}"
-	class="small"
+	class="small {className}"
 	variant="ghost"
 >
 	<slot name="toggle">
@@ -59,7 +59,7 @@
 		{position === 'top' && 'drawer-top bottom-auto w-full -translate-y-full border-b'}
 		{position === 'bottom' && 'drawer-bottom top-auto w-full translate-y-full border-t'}
 
-		{className}"
+"
 >
 	<header class="flex justify-between border-b border-base-6 py-sm">
 		<Container

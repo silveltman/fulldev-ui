@@ -8,9 +8,12 @@
 	import Textarea from 'base/Textarea.svelte';
 	import Whatsapp from 'base/Whatsapp.svelte';
 	import Social from 'base/Social.svelte';
+	import Flow from 'wrap/Stack.svelte';
+	import Grid from 'wrap/Grid.svelte';
+	import GridV2 from 'wrap/GridV2.svelte';
 </script>
 
-<Navbar>
+<!-- <Navbar>
 	<Drawer position="left">
 		<h1 slot="header">Hallo</h1>
 		<h1>Hallo</h1>
@@ -50,8 +53,8 @@
 
 	<Social name="facebook" />
 	<Social name="instagram" />
-	<Social name="twitter" />
-	<!-- <Social name="youtube" />
+	<Social name="twitter" /> -->
+<!-- <Social name="youtube" />
 	<Social name="linkedin" />
 	<Social name="pinterest" />
 	<Social name="tiktok" />
@@ -69,4 +72,31 @@
 	<Social name="medium" />
 	<Social name="vimeo" />
 	<Social name="discord" /> -->
+<!-- </div> -->
+
+<!-- <Flow row>
+	<div class="h-80 w-full bg-blue-100">hello</div>
+	<div class="h-80 w-full bg-blue-100">hello</div>
+</Flow> -->
+
+<div class="flex flex-col gap-2">
+	<Grid class="bg-gray-200 pb-lg small">
+		<div class="grid-item h-12 w-full bg-blue-200" />
+		<div class="grid-item h-12 w-full bg-blue-200" />
+		<div class="grid-item h-12 w-full bg-blue-200" />
+		<div class="grid-item h-12 w-full bg-blue-200" />
+		<div class="grid-item h-12 w-full bg-blue-200" />
+		<div class="grid-item h-12 w-full bg-blue-200" />
+	</Grid>
+	<Grid class="bg-gray-200 pb-lg">
+		<div class="grid-item h-12 w-full bg-blue-200" />
+		<div class="grid-item h-12 w-full bg-blue-200" />
+		<div class="grid-item h-12 w-full bg-blue-200" />
+		<div class="grid-item h-12 w-full bg-blue-200" />
+	</Grid>
+	<Grid class="bg-gray-200 pb-lg large">
+		<div class="grid-item h-12 w-full bg-blue-200" />
+		<div class="grid-item h-12 w-full bg-blue-200" />
+		<div class="grid-item h-12 w-full bg-blue-200" />
+	</Grid>
 </div>

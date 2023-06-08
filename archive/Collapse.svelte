@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { CollapseContent } from '$lib/types';
-	import { IconChevronLeft } from '@tabler/icons-svelte';
+	// import { IconChevronLeft } from '@tabler/icons-svelte';
 
 	let className = '';
 	export { className as class };
@@ -20,7 +20,7 @@
 		<h5>
 			{content.heading}
 		</h5>
-		<IconChevronLeft class="accordion-icon" />
+		<!-- <IconChevronLeft class="accordion-icon" /> -->
 	</label>
 	<div class="accordion-content">
 		<p class="min-h-0">{content.textarea}</p>
