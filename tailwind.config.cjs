@@ -40,13 +40,7 @@ module.exports = {
 		}
 	},
 	plugins: [
-		// require('@tailwindcss/typography'),
-		require('@tailwindcss/aspect-ratio'),
 		require('@tailwindcss/forms'),
-		require('rippleui')({
-			defaultStyle: false,
-			themes: []
-		}),
 		require('tailwindcss-themer')({
 			themes: [
 				{
