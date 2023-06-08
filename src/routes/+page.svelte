@@ -10,6 +10,9 @@
 	import Social from 'base/Social.svelte';
 	import Flow from 'wrap/Stack.svelte';
 	import Grid from 'wrap/Grid.svelte';
+
+	let textfield = '';
+	let selected: any;
 </script>
 
 <Navbar>
@@ -98,4 +101,18 @@
 		<div class="grid-item h-12 w-full bg-blue-200" />
 		<div class="grid-item h-12 w-full bg-blue-200" />
 	</Grid> -->
+
+	text: {textfield}
+	<Input
+		id="textfield"
+		bind:value={textfield}
+	/>
+
+	text: {selected}
+
+	<Select
+		id="selectvalue"
+		options={['1', '2', '3']}
+		bind:value={selected}
+	/>
 </div>

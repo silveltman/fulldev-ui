@@ -7,10 +7,12 @@
 	export let placeholder: string | null = null;
 	export let required: boolean = false;
 	export let disabled: boolean = false;
-	export let selected: string | number | null = null;
 	export let options: Option[];
+	export let value: string | number;
 
-	const value = (option: Option) => (typeof option === 'object' ? option.value : option);
+	const optionValue = (option: Option) => (typeof option === 'object' ? option.value : option);
+
+	const onChange = (e: any) => (value = e.target.value);
 </script>
 
 <select
@@ -18,6 +20,7 @@
 	name={id}
 	{required}
 	{disabled}
+	on:change={onChange}
 	class="shrink-0 rounded-input !border-none bg-transparent py-3 pl-md text-md !ring-2 !ring-inset ring-base-7 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50 small:py-2 large:py-4
 	{className}
 	"
@@ -31,11 +34,8 @@
 		>
 	{/if}
 	{#each options as option}
-		<option
-			value={value(option)}
-			selected={value(option) === selected}
-		>
-			{value(option)}
+		<option value={optionValue(option)}>
+			{optionValue(option)}
 		</option>
 	{/each}
 </select>
