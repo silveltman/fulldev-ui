@@ -1,5 +1,5 @@
 <script lang="ts">
-	type Option = string | number | { label: string | number; value: string | number };
+	type Option = string | { label: string; value: string };
 
 	let className = '';
 	export { className as class };
@@ -9,7 +9,7 @@
 	export let disabled: boolean = false;
 	export let options: Option[];
 	const optionValue = (option: Option) => (typeof option === 'object' ? option.value : option);
-	export let value: string | number = optionValue(options[0]);
+	export let value: string = optionValue(options[0]);
 </script>
 
 <select

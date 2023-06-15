@@ -10,7 +10,7 @@
 <Button
 	target="_blank"
 	href="https://wa.me/{tel}"
-	class="fixed bottom-md right-md z-10 !bg-[#46A758] !p-0 !text-white medium hover:!bg-[#3D9B50] {className}"
+	class="fixed bottom-md right-md z-20 !bg-[#46A758] !p-0 !text-white medium hover:!bg-[#3D9B50] {className}"
 >
 	<SocialIcons
 		height={64}

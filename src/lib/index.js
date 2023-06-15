@@ -12,6 +12,7 @@ export { default as Text } from 'base/Text.svelte';
 export { default as Textarea } from 'base/Textarea.svelte';
 export { default as Video } from 'base/Video.svelte';
 export { default as Whatsapp } from 'base/Whatsapp.svelte';
+export { default as Toggle } from 'base/Toggle.svelte';
 
 // Group
 export { default as Card } from 'group/Card.svelte';
@@ -22,6 +23,7 @@ export { default as Gallery } from 'group/Gallery.svelte';
 export { default as Highlight } from 'group/Highlight.svelte';
 export { default as Navbar } from 'group/Navbar.svelte';
 export { default as Prose } from 'group/Prose.svelte';
+export { default as GalleryScroll } from 'group/GalleryScroll.svelte';
 
 // Wrap
 export { default as Carousel } from 'wrap/Carousel.svelte';

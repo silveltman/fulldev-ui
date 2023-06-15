@@ -20,7 +20,7 @@
 	for={label ? label : undefined}
 	type={!href && !label ? 'button' : undefined}
 	on:click
-	class="button inline-flex cursor-pointer items-center justify-center whitespace-nowrap rounded-button p-md text-center text-md font-button leading-[1] transition-all active:scale-95 disabled:pointer-events-none disabled:opacity-50
+	class="button inline-flex cursor-pointer items-center justify-center whitespace-nowrap rounded-button p-md text-center text-md font-button leading-[1] transition active:scale-95 disabled:pointer-events-none disabled:opacity-50
 
 		{variant === 'solid' && 'bg-base-9 text-base-9-content hover:bg-base-10'}
 		{variant === 'soft' && 'bg-base-3 text-base-11 hover:bg-base-4 hover:text-base-12 active:bg-base-5'}
