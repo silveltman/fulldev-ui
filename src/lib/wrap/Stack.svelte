@@ -7,7 +7,7 @@
 
 <svelte:element
 	this={as}
-	class="grid w-full auto-cols-fr grid-flow-row gap-x-xl gap-y-lg
+	class="grid w-full auto-cols-fr grid-flow-row gap-xl
 	{row && 'lg:grid-flow-col'}
 	{className}"
 	{...$$restProps}

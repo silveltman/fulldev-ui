@@ -14,6 +14,7 @@
 		{box && 'rounded-card border border-base-6 bg-base-2'}
 		{href && 'group hover:border-base-8'}
 		{className}"
+	{...$$restProps}
 >
 	{#if $$slots.media}
 		<figure
@@ -26,7 +27,7 @@
 	{/if}
 
 	<div
-		class="flex w-full flex-col gap-sm [&_*:not(h1,h2,h3,h4,h5,h6)]:text-sm
+		class="[&_* p:not(h1,h2,h3,h4,h5,h6)]:text-sm flex w-full flex-col gap-sm
 		{center ? 'items-center text-center' : 'items-start text-left'}
 		{box ? 'p-md' : ''}"
 	>

@@ -2,7 +2,7 @@
 	let className = '';
 	export { className as class };
 
-	export let name: string;
+	export let name: string | null = null;
 	export let fill: boolean = false;
 	export let size: 20 | 24 | 40 | 48 = 24;
 </script>
@@ -12,5 +12,7 @@
 	class="material-symbols-rounded material-symbols-outlined material-symbols-sharp {className}"
 	{...$$restProps}
 >
-	{name}
+	<slot>
+		{name}
+	</slot>
 </i>

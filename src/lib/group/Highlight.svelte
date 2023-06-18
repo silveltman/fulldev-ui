@@ -28,6 +28,7 @@
 	{#if $$slots.actions}
 		<div
 			class="flex flex-wrap gap-md max-lg:pt-md
+			{center && !row && 'justify-center'}
 			{!row && 'lg:pt-md'}
 			"
 		>

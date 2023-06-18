@@ -32,7 +32,7 @@ type CalcFunction =
 	| `calc(${LengthUnit} * ${number})`
 	| `calc(${LengthUnit} / ${number})`;
 
-type ImageSizesValue = LengthUnit | CalcFunction | undefined;
+export type ImageSizesValue = LengthUnit | CalcFunction;
 
 export interface ImageSizes {
 	base?: ImageSizesValue;
