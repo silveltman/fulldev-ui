@@ -22,7 +22,7 @@
 	let selected: any;
 </script>
 
-<Section class="light- small">
+<!-- <Section class="light- small">
 	<Container>
 		<Panel>
 			<Stack class="items-start justify-start">
@@ -35,4 +35,6 @@
 			</Stack>
 		</Panel>
 	</Container>
-</Section>
+</Section> -->
+
+<Text class="text-base-11">Hello world</Text>
