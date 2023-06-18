@@ -1,0 +1,3 @@
+.input {
+	@apply rounded-input !border-0 bg-transparent px-md py-3 text-base-12 !ring-2 !ring-inset ring-base-7 placeholder:text-base-11 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50 small:py-2 large:py-4;
+}

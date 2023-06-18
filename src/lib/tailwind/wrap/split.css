@@ -1,0 +1,3 @@
+.split {
+	@apply grid w-full auto-cols-fr grid-flow-row gap-xl lg:grid-flow-col;
+}

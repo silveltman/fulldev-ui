@@ -1,0 +1,3 @@
+.a {
+	@apply whitespace-nowrap text-md text-base-11 hover:text-base-12 disabled:pointer-events-none disabled:opacity-50;
+}

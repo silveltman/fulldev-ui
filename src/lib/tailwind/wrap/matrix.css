@@ -1,0 +1,11 @@
+.matrix {
+	@apply grid w-full grid-cols-2 gap-x-md gap-y-lg small:grid-cols-2 large:grid-cols-1 [&>*]:grow;
+
+	@media screen(sm) {
+		@apply grid-cols-[repeat(auto-fill,minmax(308px,1fr))] small:grid-cols-[repeat(auto-fill,minmax(220px,1fr))] large:grid-cols-2;
+	}
+
+	@media screen(md) {
+		@apply large:grid-cols-[repeat(auto-fill,minmax(385px,1fr))];
+	}
+}

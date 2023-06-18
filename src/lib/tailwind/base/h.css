@@ -1,0 +1,11 @@
+.h1,
+.h2,
+.h3 {
+	@apply text-lg font-heading text-base-12;
+}
+
+.h4,
+.h5,
+.h6 {
+	@apply text-md font-subheading text-base-12;
+}

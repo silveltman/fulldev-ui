@@ -1,11 +1,21 @@
+const fs = require('fs');
+const postcss = require('postcss');
+const postcssJs = require('postcss-js');
 const plugin = require('tailwindcss/plugin');
+const path = require('path');
+
+const componentsPath = path.resolve(__dirname, 'main.css');
 
 module.exports = plugin(
-	function ({ addBase, addVariant, addUtilities, theme }) {
+	function ({ addBase, addVariant, addUtilities, addComponents, theme }) {
+		const componentsContent = fs.readFileSync(componentsPath, 'utf8');
+		const componentsCss = postcss.parse(componentsContent);
+		const componentsObject = postcssJs.objectify(componentsCss);
+		addComponents(componentsObject);
+
 		addBase({
 			':root': {
 				'--space-media': '0.75',
-
 				'@screen sm': {
 					'--space-media': '1'
 				}
@@ -13,7 +23,6 @@ module.exports = plugin(
 			'body,html': {
 				fontFamily: theme('fontFamily.base'),
 				lineHeight: theme('lineHeight.base'),
-				color: theme('colors.base.12'),
 				backgroundColor: theme('colors.base.1'),
 				scrollBehavior: 'smooth',
 				width: '100%',
@@ -27,22 +36,19 @@ module.exports = plugin(
 			'h1, h2, h3': {
 				fontFamily: theme('fontFamily.heading'),
 				fontWeight: theme('fontWeight.heading'),
-				lineHeight: theme('lineHeight.heading'),
-				fontSize: theme('fontSize.lg'),
-				color: theme('colors.base.12')
+				lineHeight: theme('lineHeight.heading')
 			},
 			'h4, h5, h6': {
 				fontFamily: theme('fontFamily.subheading'),
 				fontWeight: theme('fontWeight.subheading'),
-				lineHeight: theme('lineHeight.subheading'),
-				fontSize: theme('fontSize.md'),
-				color: theme('colors.base.12')
+				lineHeight: theme('lineHeight.subheading')
 			}
 		});
 
 		addVariant('small', [`&.small`, `.small &`]);
 		addVariant('medium', [`&.medium`, `.medium &`]);
 		addVariant('large', [`&.large`, `.large &`]);
+
 		addUtilities({
 			'.small': {
 				'--space-multiplier': '0.5',
@@ -60,7 +66,6 @@ module.exports = plugin(
 				'--text-sm': '14px',
 				'--text-md': '16px',
 				'--text-lg': '30px',
-
 				'@screen sm': {
 					'--text-sm': '16px',
 					'--text-md': '18px',
@@ -72,7 +77,6 @@ module.exports = plugin(
 				'--text-sm': '16px',
 				'--text-md': '18px',
 				'--text-lg': '36px',
-
 				'@screen sm': {
 					'--text-sm': '18px',
 					'--text-md': '20px',
@@ -80,12 +84,6 @@ module.exports = plugin(
 				}
 			}
 		});
-		// // TODO: Add variants for all base components, like button:small.
-		// Add selectors for components, like button:my-property.
-		// const components = ['button', 'textfield', 'card'];
-		// components.forEach((component) => {
-		// 	addVariant(component, `& .${component}`);
-		// });
 	},
 	{
 		theme: {
