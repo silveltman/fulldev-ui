@@ -1,10 +1,10 @@
-@import './base/a.css';
+@import './base/link.css';
 @import './base/button.css';
-@import './base/h.css';
+@import './base/heading.css';
 @import './base/img.css';
 @import './base/input.css';
 @import './base/label.css';
-@import './base/p.css';
+@import './base/text.css';
 @import './base/select.css';
 @import './base/textarea.css';
 

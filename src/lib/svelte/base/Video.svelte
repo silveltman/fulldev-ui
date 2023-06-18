@@ -1,6 +1,4 @@
 <script lang="ts">
-	import Ratio from 'wrap/Ratio.svelte';
-
 	let className: string = '';
 	export { className as class };
 	export let id: string;
@@ -10,16 +8,11 @@
 	export let ratio: number = 16 / 9;
 </script>
 
-<Ratio
-	{ratio}
-	class={className}
->
-	<iframe
-		{title}
-		src="https://player.vimeo.com/video/{id}&autoplay={autoplay}&loop={loop}&title=0&byline=0&portrait=0&controls=1&autopause=0&pip=0"
-		style="position:absolute;top:0;left:0;width:100%;height:100%;"
-		frameborder="0"
-		allow="autoplay; fullscreen; picture-in-picture"
-		allowfullscreen
-	/>
-</Ratio>
+<iframe
+	{title}
+	src="https://player.vimeo.com/video/{id}&autoplay={autoplay}&loop={loop}&title=0&byline=0&portrait=0&controls=1&autopause=0&pip=0"
+	style="position:absolute;top:0;left:0;width:100%;height:100%;"
+	frameborder="0"
+	allow="autoplay; fullscreen; picture-in-picture"
+	allowfullscreen
+/>

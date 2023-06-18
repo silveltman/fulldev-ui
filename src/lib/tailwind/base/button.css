@@ -1,3 +1,19 @@
 .button {
 	@apply inline-flex cursor-pointer items-center justify-center whitespace-nowrap rounded-button p-md text-center text-md font-button leading-[1] transition active:scale-95 disabled:pointer-events-none disabled:opacity-50;
 }
+
+.button-ghost {
+}
+
+.button-soft {
+}
+
+.button-ringed {
+}
+
+.button-solid {
+}
+
+/* .button--solid {
+	@apply 
+} */

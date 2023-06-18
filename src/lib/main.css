@@ -1,14 +1,14 @@
-.a {
+.link {
 white-space: nowrap;
 font-size: var(--text-md);
 --tw-text-opacity: 1;
 color: rgba(var(--colors-base-11), var(--tw-text-opacity))
 }
-.a:hover {
+.link:hover {
 --tw-text-opacity: 1;
 color: rgba(var(--colors-base-12), var(--tw-text-opacity))
 }
-.a:disabled {
+.link:disabled {
 pointer-events: none;
 opacity: 0.5
 }
@@ -39,6 +39,17 @@ transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--
 pointer-events: none;
 opacity: 0.5
 }
+.button-ghost {
+}
+.button-soft {
+}
+.button-ringed {
+}
+.button-solid {
+}
+/* .button--solid {
+	@apply 
+} */
 .h1,
 .h2,
 .h3 {
@@ -118,7 +129,7 @@ font-size: var(--text-sm);
 --tw-text-opacity: 1;
 color: rgba(var(--colors-base-12), var(--tw-text-opacity))
 }
-.p {
+.text {
 font-size: var(--text-md);
 --tw-text-opacity: 1;
 color: rgba(var(--colors-base-11), var(--tw-text-opacity))
