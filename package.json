@@ -6,7 +6,7 @@
     "build": "yarn tailwind:build && yarn vite:build",
     "vite:dev": "vite",
     "vite:build": "vite build",
-    "tailwind:build": "postcss ./src/lib/tailwind/main.css --dir ./src/lib",
+    "tailwind:build": "postcss ./src/lib/tailwind/main.css --dir ./dist/tailwind",
     "story:dev": "histoire dev",
     "story:build": "histoire build",
     "story:preview": "histoire preview",

@@ -8,7 +8,7 @@ const componentsPath = path.resolve(__dirname, 'main.css');
 
 module.exports = plugin(
 	function ({ addBase, addVariant, addUtilities, addComponents, theme }) {
-		// console.log('pah', componentsPath)
+		console.log('loggin path', componentsPath);
 		// if(componentsPath) {
 
 		// 	const componentsContent = fs.readFileSync(componentsPath, 'utf8');
