@@ -3,7 +3,7 @@
 	import Highlight from 'group/Highlight.svelte';
 </script>
 
-<section class="dark container section stack bg-base-1">
+<section class=" container section stack bg-base-1">
 	<div class="dark panel bg-base-1 max-md:-mx-4 max-md:rounded-[0px] md:rounded-box md:shadow-lg">
 		<Video
 			ratio={10 / 3.97}
@@ -23,7 +23,7 @@
 		<h1 class="h1">Nooit meer een gladde vlonder</h1>
 		<a
 			href="/"
-			class="button--solid light-orange button"
+			class="light-orange button button-solid"
 			slot="actions">Bekijk producten</a
 		>
 	</Highlight>

@@ -1,7 +1,6 @@
 ---
 title: tailwind/Intro
 icon: 'carbon:bookmark'
-group: top
 ---
 
 # Tailwind component classes

@@ -8,10 +8,15 @@ const componentsPath = path.resolve(__dirname, 'main.css');
 
 module.exports = plugin(
 	function ({ addBase, addVariant, addUtilities, addComponents, theme }) {
-		const componentsContent = fs.readFileSync(componentsPath, 'utf8');
-		const componentsCss = postcss.parse(componentsContent);
-		const componentsObject = postcssJs.objectify(componentsCss);
-		addComponents(componentsObject);
+		// console.log('pah', componentsPath)
+		// if(componentsPath) {
+
+		// 	const componentsContent = fs.readFileSync(componentsPath, 'utf8');
+		// 	const componentsCss = postcss.parse(componentsContent);
+		// 	const componentsObject = postcssJs.objectify(componentsCss);
+		// 	// console.log(componentsObject, 'ran')
+		// 	addComponents(componentsObject);
+		// }
 
 		addBase({
 			':root': {

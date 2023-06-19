@@ -2,11 +2,10 @@
   "name": "fulldev-ui",
   "version": "0.5.16",
   "scripts": {
-    "dev": "yarn tailwind:dev & yarn vite:dev & yarn story:dev",
+    "dev": "yarn vite:dev & yarn story:dev",
     "build": "yarn tailwind:build && yarn vite:build",
     "vite:dev": "vite",
     "vite:build": "vite build",
-    "tailwind:dev": "postcss ./src/lib/tailwind/main.css --dir ./src/lib -w",
     "tailwind:build": "postcss ./src/lib/tailwind/main.css --dir ./src/lib",
     "story:dev": "histoire dev",
     "story:build": "histoire build",
