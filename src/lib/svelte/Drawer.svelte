@@ -1,8 +1,4 @@
 <script lang="ts">
-	import Container from 'wrap/Container.svelte';
-	import Button from 'base/Button.svelte';
-	import Icon from 'lib/svelte/base/Icon.svelte';
-
 	let className: string = '';
 	export { className as class };
 	export let position: 'left' | 'right' | 'top' | 'bottom';
@@ -15,18 +11,14 @@
 	class="peer absolute h-0 w-0 appearance-none opacity-0"
 />
 
-<Button
-	label="drawer-{position}"
-	class="small {className}"
-	variant="ghost"
+<label
+	for="drawer-{position}"
+	class="button button-ghost small {className}"
 >
 	<slot name="toggle">
-		<Icon
-			size={24}
-			name="menu"
-		/>
+		<i class="i-tabler:menu-2 text" />
 	</slot>
-</Button>
+</label>
 
 <!-- Overlay -->
 <label
@@ -36,7 +28,7 @@
 
 <!-- Body  -->
 <div
-	class="fixed inset-0 z-50 border-base-6 bg-base-2 transition-all peer-checked:!translate-x-0 peer-checked:translate-y-0
+	class="border-hue6 bg-hue2 fixed inset-0 z-50 transition-all peer-checked:!translate-x-0 peer-checked:translate-y-0
 
 		{position === 'left' && 'right-auto w-full max-w-md -translate-x-full border-r'}
 		{position === 'right' && 'left-auto w-full max-w-md translate-x-full border-l'}
@@ -45,27 +37,24 @@
 
 "
 >
-	<header class="flex justify-between border-b border-base-6 py-sm">
-		<Container
-			class="flex items-center justify-between lg:px-md {position === 'left' || position === 'right'
+	<header class="border-hue6 py-sm flex justify-between border-b">
+		<div
+			class="lg:px-md container flex items-center justify-between {position === 'left' ||
+			position === 'right'
 				? '!pr-sm'
 				: ''}"
 		>
 			<slot name="header" />
 
-			<Button
-				label="drawer-{position}"
-				class="ml-auto small"
-				variant="ghost"
+			<label
+				for="drawer-{position}"
+				class="button button-ghost small ml-auto"
 			>
-				<Icon
-					size={24}
-					name="close"
-				/>
-			</Button>
-		</Container>
+				<i class="i-tabler:x text" />
+			</label>
+		</div>
 	</header>
-	<Container class={position === 'left' || position === 'right' ? 'py-md lg:px-md' : 'py-md'}>
+	<div class="container {position === 'left' || position === 'right' ? 'py-md lg:px-md' : 'py-md'}">
 		<slot />
-	</Container>
+	</div>
 </div>

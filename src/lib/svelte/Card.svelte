@@ -9,17 +9,23 @@
 <svelte:element
 	this={href ? 'a' : 'div'}
 	{href}
+	{...$$restProps}
+/>
+
+<svelte:element
+	this={href ? 'a' : 'div'}
+	{href}
 	class="flex w-full grow flex-col
 		{center ? 'items-center text-center' : 'items-start text-left'}
-		{box && 'rounded-card border border-base-6 bg-base-2'}
-		{href && 'group hover:border-base-8'}
+		{box && 'rounded-card border-hue6 bg-hue2 border'}
+		{href && 'hover:border-hue8 group'}
 		{className}"
 	{...$$restProps}
 >
 	{#if $$slots.media}
 		<figure
 			class="w-full overflow-hidden group-hover:opacity-75 [&_img]:!rounded-[0px]
-		{box ? 'rounded-t-card' : 'mb-md overflow-hidden rounded-card'}
+		{box ? 'rounded-t-card' : 'mb-md rounded-card overflow-hidden'}
 		"
 		>
 			<slot name="media" />
@@ -27,7 +33,7 @@
 	{/if}
 
 	<div
-		class="[&_* p:not(h1,h2,h3,h4,h5,h6)]:text-sm flex w-full flex-col gap-sm
+		class="[&_* p:not(h1,h2,h3,h4,h5,h6)]:text-sm gap-sm flex w-full flex-col
 		{center ? 'items-center text-center' : 'items-start text-left'}
 		{box ? 'p-md' : ''}"
 	>
@@ -35,7 +41,7 @@
 	</div>
 
 	{#if $$slots.footer}
-		<footer class="flex w-full flex-wrap gap-sm {box ? 'px-md pb-md' : 'pt-lg'}">
+		<footer class="gap-sm flex w-full flex-wrap {box ? 'px-md pb-md' : 'pt-lg'}">
 			<slot name="footer" />
 		</footer>
 	{/if}

@@ -14,7 +14,7 @@
 	{...$$restProps}
 >
 	<img
-		class="h-auto w-auto rounded-[0px]"
+		class="h-auto w-auto"
 		{src}
 		{alt}
 	/>

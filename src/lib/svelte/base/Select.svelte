@@ -18,7 +18,7 @@
 	{required}
 	{disabled}
 	bind:value
-	class="shrink-0 rounded-input !border-none bg-transparent py-3 pl-md text-md !ring-2 !ring-inset ring-base-7 focus:ring-base-8 disabled:pointer-events-none disabled:opacity-50 small:py-2 large:py-4
+	class="rounded-input pl-md text-md ring-hue7 focus:ring-hue8 small:py-2 large:py-4 shrink-0 !border-none bg-transparent py-3 !ring-2 !ring-inset disabled:pointer-events-none disabled:opacity-50
 	{className}
 	"
 	{...$$restProps}
@@ -39,6 +39,6 @@
 
 <style lang="postcss">
 	select:has(option:checked[value='']) {
-		@apply text-base-11;
+		@apply text-hue11;
 	}
 </style>

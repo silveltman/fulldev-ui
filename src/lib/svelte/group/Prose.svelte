@@ -3,7 +3,7 @@
 	export { className as class };
 </script>
 
-<article class="c-prose max-w-3xl !medium {className}">
+<article class="c-prose !medium max-w-3xl {className}">
 	<slot />
 </article>
 
@@ -38,7 +38,7 @@
 		:global(blockquote:not(:first-child)),
 		:global(ul:not(:first-child)),
 		:global(ol:not(:first-child)) {
-			@apply mt-md list-inside text-base-12/80;
+			@apply mt-md text-hue12/80 list-inside;
 		}
 
 		:global(ul) {
@@ -53,7 +53,7 @@
 		}
 
 		:global(img) {
-			@apply h-auto w-full rounded-image;
+			@apply rounded-image h-auto w-full;
 		}
 	}
 </style>
