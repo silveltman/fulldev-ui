@@ -3,11 +3,5 @@ import { HstSvelte } from '@histoire/plugin-svelte';
 
 export default defineConfig({
 	setupFile: '/src/histoire-setup.js',
-	plugins: [
-		{
-			name: 'builtin:tailwind-tokens'
-		},
-		HstSvelte()
-	],
-	storyMatch: ['**/histoire/*.story.svelte']
+	plugins: [HstSvelte()]
 });

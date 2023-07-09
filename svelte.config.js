@@ -12,12 +12,12 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter(),
 		alias: {
-			base: './src/lib/base',
-			group: './src/lib/group',
-			wrap: './src/lib/wrap',
-			layout: './src/lib/layout',
-			slot: './src/lib/slot',
-			lib: './src/lib'
+			base: './src/lib/svelte/base',
+			group: './src/lib/svelte/group',
+			wrap: './src/lib/svelte/wrap',
+			layout: './src/lib/svelte/layout',
+			slot: './src/lib/svelte/slot',
+			lib: './src/lib/svelte'
 		}
 	}
 };
