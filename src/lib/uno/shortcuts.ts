@@ -8,7 +8,7 @@ export default function myPreset(options: any = null): Preset {
 			heading: 'text-hue12 text-lg leading-heading font-heading',
 			text: 'text-hue11 text-md leading-base font-base',
 			button:
-				'inline-flex cursor-pointer items-center justify-center whitespace-nowrap rounded-button p-md text-center text-md font-button leading-[1] transition active:scale-95 disabled:pointer-events-none disabled:opacity-50',
+				'inline-flex cursor-pointer items-center justify-center whitespace-nowrap rounded-button p-md text-center text-md font-button leading-[1] transition active:scale-95 disabled:pointer-events-none disabled:opacity-50 disabled:cursor-not-allowed',
 			'button-ghost': 'bg-transparent text-hue11 hover:bg-hue3 hover:text-hue12 active:bg-hue4',
 			'button-soft': 'bg-hue3 text-hue11 hover:bg-hue4 hover:text-hue12 active:bg-hue5',
 			'button-ringed':
