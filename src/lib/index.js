@@ -1,3 +1,4 @@
+// Svelte components
 export { default as Card } from './svelte/Card.svelte';
 export { default as Drawer } from './svelte/Drawer.svelte';
 export { default as Gallery } from './svelte/Gallery.svelte';

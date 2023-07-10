@@ -18,7 +18,11 @@
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
 		},
-		"./uno": "./dist/uno.js"
+		"./uno": {
+			"import": "./dist/uno/index.js",
+			"require": "./dist/uno/index.js",
+			"types": "./dist/uno/index.d.ts"
+		}
 	},
 	"types": "./dist/index.d.ts",
 	"type": "module",
