@@ -4,7 +4,7 @@ export default function myPreset(options: any = null): Preset {
 	return {
 		name: 'homme-shortcuts',
 		shortcuts: {
-			// Base
+			// Base components
 			heading: 'text-hue12 text-lg leading-heading font-heading',
 			text: 'text-hue11 text-md leading-base font-base',
 			button:
@@ -24,13 +24,15 @@ export default function myPreset(options: any = null): Preset {
 			textarea:
 				'rounded-input !border-none bg-transparent p-md text-md leading-[1] text-hue12 !ring-2 !ring-inset ring-hue7 placeholder:text-hue11 focus:ring-hue8 disabled:pointer-events-none disabled:opacity-50',
 
-			// Layout
+			// Layout components
 			container: 'mx-auto w-full max-w-screen-2xl px-4 md:px-12',
-			carousel: `relative flex flex-row items-center justify-center overflow-hidden -mx-4 flex snap-x snap-start items-start gap-x-md overflow-x-auto scroll-smooth px-4 pb-md  [&>*]:w-60 [&>*]:shrink-0 [&>*]:grow-0 [&>*]:snap-center [&>*]:small:w-40 [&>*]:large:w-80
-      sm[&>*]:w-[320px] sm:[&>*]:small:w-[218px] sm:[&>*]:large:w-[448px]
-      md:-mx-12 md:px-12
-      2xl:-mx-[calc(50vw-720px)] 2xl:px-[calc(50vw-720px)]
-      `,
+			carousel: `gap-x-md pb-md relative flex flex snap-x flex-row items-start justify-start overflow-hidden overflow-x-auto scroll-smooth  
+				px-4 -mx-4 md:-mx-12 md:px-12 2xl:-mx-[calc(50vw-720px)] 2xl:px-[calc(50vw-720px)] 
+				[&>*]:shrink-0 [&>*]:grow-0 [&>*]:snap-center [&>*]:w-60 sm:[&>*]:w-[320px] 
+				small:[&>*]:w-40 sm:small:[&>*]:w-[218px]
+				large:[&>*]:w-80 sm:large:[&>*]:w-[448px]
+			`,
+
 			masonry: `w-full columns-2 gap-x-md gap-y-lg space-y-lg small:columns-2 large:columns-1 [&>*]:grow [&>*]:break-inside-avoid-column
       sm:columns-[308px] small:sm:columns-[220px] large:sm:columns-2
       large:md:columns-[385px]
@@ -40,10 +42,13 @@ export default function myPreset(options: any = null): Preset {
       `,
 			panel:
 				'relative w-full overflow-hidden rounded-panel border border-hue6 bg-hue2 px-lg py-xl md:px-xl',
-			box: 'relative w-full overflow-hidden rounded-card border border-hue6 bg-hue2 p-md text-sm',
+			box: 'relative w-full overflow-hidden rounded-card border border-hue6 bg-hue2 p-md',
 			section: 'relative w-full py-2xl',
 			split: 'grid w-full auto-cols-fr grid-flow-row gap-xl lg:grid-flow-col',
-			stack: 'grid w-full grid-flow-row gap-xl'
+			stack: 'grid w-full grid-flow-row gap-xl',
+
+			// Helper classes
+			border: 'border border-hue6'
 		}
 	};
 }
