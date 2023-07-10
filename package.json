@@ -1,6 +1,6 @@
 {
 	"name": "hommeui",
-	"version": "0.6.0",
+	"version": "0.6.9",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
