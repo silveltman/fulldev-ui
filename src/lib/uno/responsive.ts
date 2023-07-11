@@ -1,6 +1,7 @@
 import type { Preset } from 'unocss';
+import { presetIcons, presetUno } from 'unocss';
 
-function createSizeVariant(size: string) {
+function buildVariant(size: string) {
 	return function (matcher: any) {
 		if (!matcher.startsWith(`${size}:`)) return matcher;
 		return {
@@ -10,95 +11,92 @@ function createSizeVariant(size: string) {
 	};
 }
 
+// Takes the viewport widths in pixels and the font sizes in rem
+function buildClamp(min: number, max: number, start: number = 360, end: number = 1536) {
+	const slope = (max - min) / (end - start);
+	const yAxisIntersection = -start * slope + min;
+	const clamp = `clamp( ${min}px, ${yAxisIntersection}px + ${slope * 100}vw, ${max}px )`;
+	return clamp;
+}
+
 export default function myPreset(options: any = null): Preset {
 	return {
 		name: 'homme-responsive',
 		preflights: [
 			{
 				getCSS: () => `
-          body, html {
-            scroll-behavior: smooth;
-            width: 100%;
-            height: 100%;
-          }
-        `
+					body, html {
+						scroll-behavior: smooth;
+						width: 100%;
+						height: 100%;
+					}
+				`
 			}
 		],
 		rules: [
 			[
-				/^small$/,
-				() => `
-          .small {
-            --space-multiplier: 0.375;
-            --text-sm: 12px;
-            --text-md: 14px;
-            --text-lg: 24px;
-          }
-          @media (min-width: 640px) {
-            .small{
-              --space-multiplier: 0.5;
-              --text-sm: 14px;
-              --text-md: 16px;
-              --text-lg: 26px;
-            }
-          }
-        `
+				'primary',
+				{
+					'--compact-multiplier': '1',
+					'--compact-toggle': '999px'
+				}
 			],
 			[
-				/^medium$/,
-				() => `
-          .medium {
-            --space-multiplier: 0.75;
-            --text-sm: 14px;
-            --text-md: 16px;
-            --text-lg: 30px;
-          }
-          @media (min-width: 640px) {
-            .medium {
-              --space-multiplier: 1;
-              --text-sm: 16px;
-              --text-md: 18px;
-              --text-lg: 36px;
-            }
-          }
-        `
+				'secondary',
+				{
+					'--compact-multiplier': '0.5',
+					'--compact-toggle': '0px'
+				}
 			],
 			[
-				/^large$/,
-				() => `
-            .large {
-              --space-multiplier: 1.125;
-              --text-sm: 16px;
-              --text-md: 18px;
-              --text-lg: 36px;
-            }
-            @media (min-width: 640px) {
-              .large {
-                --space-multiplier: 1.5;
-                --text-sm: 18px;
-                --text-md: 20px;
-                --text-lg: 60px;
-              }
-            }
-          `
+				'large',
+				{
+					'--size-multiplier': '1.5',
+					'--text3': buildClamp(36, 60),
+					'--text2': buildClamp(18, 20),
+					'--text1': buildClamp(16, 18)
+				}
+			],
+			[
+				'medium',
+				{
+					'--size-multiplier': '1',
+					'--text3': buildClamp(26, 40),
+					'--text2': buildClamp(16, 18),
+					'--text1': buildClamp(14, 16)
+				}
+			],
+			[
+				'small',
+				{
+					'--size-multiplier': '0.5',
+					'--text3': buildClamp(20, 24),
+					'--text2': buildClamp(14, 16),
+					'--text1': buildClamp(12, 14)
+				}
 			]
 		],
-		variants: [createSizeVariant('small'), createSizeVariant('medium'), createSizeVariant('large')],
 		theme: {
-			spacing: {
-				xs: 'calc(4px * var(--space-multiplier, 1))',
-				sm: 'calc(8px * var(--space-multiplier, 1))',
-				md: 'calc(16px * var(--space-multiplier, 1))',
-				lg: 'calc(32px * var(--space-multiplier, 1))',
-				xl: 'calc(64px * var(--space-multiplier, 1))',
-				'2xl': 'calc(128px * var(--space-multiplier, 1))',
-				'3xl': 'calc(256px * var(--space-multiplier, 1))'
-			},
 			fontSize: {
-				sm: 'var(--text-sm, 16px)',
-				md: 'var(--text-md, 18px)',
-				lg: 'var(--text-lg, 36px)'
+				3: 'min(var(--text3), calc(var(--text2) + var(--compact-toggle)))',
+				2: 'min(var(--text2), calc(var(--text2) + var(--compact-toggle) - 2px))',
+				1: 'min(var(--text1), calc(var(--text2) + var(--compact-toggle) - 4px))'
+			},
+			spacing: {
+				6: `calc(${buildClamp(96, 128)} * var(--size-multiplier) * var(--compact-multiplier))`,
+				5: `calc(${buildClamp(48, 64)} * var(--size-multiplier) * var(--compact-multiplier))`,
+				4: `calc(${buildClamp(24, 32)} * var(--size-multiplier) * var(--compact-multiplier))`,
+				3: `calc(${buildClamp(12, 16)} * var(--size-multiplier) * var(--compact-multiplier))`,
+				2: `calc(${buildClamp(6, 8)} * var(--size-multiplier) * var(--compact-multiplier))`,
+				1: `calc(${buildClamp(3, 4)} * var(--size-multiplier) * var(--compact-multiplier))`
 			}
-		}
+		},
+		variants: [
+			buildVariant('compact'),
+			buildVariant('large'),
+			buildVariant('medium'),
+			buildVariant('small')
+		],
+		presets: [presetUno(), presetIcons()]
 	};
 }
