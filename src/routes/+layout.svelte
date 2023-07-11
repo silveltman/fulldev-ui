@@ -3,6 +3,6 @@
 	import 'uno.css';
 </script>
 
-<main class="medium light hue-base">
+<main class="light medium hue-base primary">
 	<slot />
 </main>

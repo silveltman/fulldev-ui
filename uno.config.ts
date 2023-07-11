@@ -1,7 +1,7 @@
 // uno.config.ts
-import { defineConfig, presetIcons, presetUno, presetWebFonts } from 'unocss';
-import { presetRadix } from 'unocss-preset-radix';
+import { defineConfig, presetWebFonts } from 'unocss';
 import { presetShortcuts, presetResponsive } from './src/lib/uno';
+import { presetRadix } from 'unocss-preset-radix';
 
 export default defineConfig({
 	theme: {
@@ -23,32 +23,31 @@ export default defineConfig({
 		}
 	},
 	presets: [
-		presetUno(),
 		presetResponsive(),
 		presetShortcuts(),
-		presetIcons(),
+		//@ts-ignore
 		presetWebFonts({
 			fonts: {
 				heading: {
 					name: 'Inter',
 					weights: [600],
-					italic: true
+					italic: false
 				},
 				text: {
 					name: 'Inter',
-					weights: [300, 400, 500, 600, 700],
-					italic: true
+					weights: [400],
+					italic: false
 				}
 			}
 		}),
-		// @ts-ignore
+		//@ts-ignore
 		presetRadix({
 			lightSelector: '.light',
 			darkSelector: '.dark',
-			palette: ['slate', 'blue', 'red'],
+			palette: ['slate', 'tomato'],
 			aliases: {
 				base: 'slate',
-				primary: 'blue'
+				primary: 'tomato'
 			}
 		})
 	]
